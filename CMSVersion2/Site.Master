@@ -1,0 +1,164 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="CMSVersion2.SiteMaster" %>
+
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - AP CARGO</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+    <form runat="server">
+        <telerik:RadScriptManager runat="server"></telerik:RadScriptManager>
+       
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img runat="server" src="~/Images/logo1.png"/>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Dashboard</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Maintenance<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="~/Maintenance/CMSMaintenance/CMSMaintenance.aspx">CMS Maintenance</a></li>
+                                <li><a runat="server" href="~/Maintenance/FlightInformation/FlightInformation.aspx">Flight Information</a></li>
+                                <li><a runat="server" href="~/Maintenance/RateMatrix/RateMatrix.aspx">Rate Matrix</a></li>
+                                <li><a runat="server" href="~/Maintenance/TrackNTrace/TrackNTrace.aspx">TrackNTrace</a></li>
+                                <li><a runat="server" href="#">Truck Area Assignment</a></li>
+                                <li class="dropdown dropdown-submenu"">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">AWB Series</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a runat="server" href="~/Maintenance/AWBSeries/Inssuance.aspx">AWB Issuance</a></li>
+                                        <li><a runat="server" href="~/Maintenance/AWBSeries/Summary.aspx">AWB Issued Summary</a></li>
+                                        <li><a runat="server" href="~/Maintenance/AWBSeries/Monitoring.aspx">Series Monitoring</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a runat="server" href="~/Customer/Customer.aspx">Customers</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Corporate<b class="caret"></b></a>
+                            <ul class="dropdown-menu message-dropdown">
+                                <li><a runat="server" href="~/Corporate/Company.aspx">Company</a></li>
+                                <li><a runat="server" href="~/Corporate/Representative.aspx">Representatives</a></li>
+                                <li><a runat="server" href="~/Corporate/ApprovingAuthority.aspx">Approving Authority</a></li>
+                                <li><a runat="server" href="#">Statement of Account</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shipment<b class="caret"></b></a>
+                            <ul class="dropdown-menu message-dropdown">
+                                <li><a runat="server" href="~/Shipment/AWBTracking.aspx">AWB Tracking</a></li>
+                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">AWB Detailed Tracking</a></li>
+                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">View Shipments</a></li>
+                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">View Tracking Entry</a></li>
+                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">View Delivery</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Report<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown dropdown-submenu">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Operation</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown dropdown-submenu">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manifest</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a runat="server" href="~/portal/Operation/Manifest/PickupCargoManifestReport.aspx">Pickup Cargo</a></li>
+                                                <li><a runat="server" href="~/portal/Operation/Manifest/BranchAcceptanceReport.aspx">Branch Acceptance</a></li>
+                                                <li><a runat="server" href="~/portal/Operation/Manifest/BundleReport.aspx">Bundle</a></li>
+                                                <li><a runat="server" href="~/portal/Operation/Manifest/UnbundleReport.aspx">Unbundle</a></li>
+                                                <li><a runat="server" href="~/portal/Operation/Manifest/SegregationReport.aspx">Segregation</a></li>
+                                                <li><a runat="server" href="~/portal/Operation/Manifest/DailyTripReport.aspx">Daily Trip</a></li>                                                
+                                            </ul>
+                                        </li>                               
+                                        <li class="dropdown dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cargo Monitoring</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a runat="server" href="~/portal/Operation/CargoTransfer/CargoMonitoringDelivered.aspx">Delivered</a></li>
+                                                <li><a runat="server" href="~/portal/Operation/CargoTransfer/CargoMonitoringHold.aspx">Hold</a></li>
+                                                <li><a runat="server" href="~/portal/Operation/CargoTransfer/CargoMonitoringMisrouted.aspx">Misrouted</a></li>
+                                                <li><a runat="server" href="~/portal/Operation/CargoTransfer/CargoMonitoringOffloaded.aspx">Offloaded</a></li>
+                                                <li><a runat="server" href="~/portal/Operation/CargoTransfer/CargoMonitoringPending.aspx">Pending</a></li>
+                                                <li><a runat="server" href="~/portal/Operation/CargoTransfer/CargoMonitoringRUD.aspx">RUD</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown dropdown-submenu">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Finance</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown dropdown-submenu">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sales</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a runat="server" href="~/portal/Finance/Sales/MasterSalesReport.aspx">Master Sales</a></li>
+                                                <li><a runat="server" href="~/portal/Finance/Sales/BCOSalesSummary.aspx">Sales Per BCO</a></li>
+                                                <li><a runat="server" href="~/portal/Finance/Sales/SalesPerShipModeReport.aspx">Sales Per ShipMode</a></li>
+                                                <li><a runat="server" href="~/portal/Finance/Sales/SalesPerClientReport.aspx">Sales Per Client</a></li>
+                                                <li><a runat="server" href="~/portal/Finance/Sales/SalesPerRevenueUnitReport.aspx">Sales Per Revenue Unit</a></li>
+                                                <li><a runat="server" href="~/portal/Finance/Sales/SalesPerUserLevel.aspx">Sales Per User Level</a></li>
+                                            </ul>
+                                         </li>
+                                        <li><a runat="server" href="~/portal/Finance/CollectionReport.aspx">Collection</a></li>                                  
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administration<b class="caret"></b></a>
+                            <ul class="dropdown-menu message-dropdown">
+                                <li class="message-footer"><a runat="server" href="~/portal/ManageUsers.aspx">Manager Users</a></li>
+                                <li class="message-footer"><a runat="server" href="~/portal/ManageEmployee.aspx">Manage Employee</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <%--<li><a runat="server" href="~/Account/Register">Register</a></li>--%>
+                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
+                                <li>
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                </li>
+                            </ul>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - AP CARGO CMS Application</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
