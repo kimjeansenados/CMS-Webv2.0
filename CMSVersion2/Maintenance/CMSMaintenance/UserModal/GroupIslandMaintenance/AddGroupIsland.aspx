@@ -40,10 +40,10 @@
         <%--<asp:ScriptManager ID="ScriptManager2" runat="server" />--%>
         <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" Skin="Default" DecoratedControls="All" />
         <%--<asp:Button runat="server" Text="Close" ID="CloseButton"     OnClick="CloseButton_Click1"/>--%>
-        <div class="main-login main-center">
+        <div class="col-md-12">
             <div class="form-horizontal">
                 <div class="form-group">
-                    <label for="email" class="cols-sm-2 control-label">Group Island</label>
+                    <label for="email" class="cols-sm-2 control-label" style="text-align:left;">Group Island</label>
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
 
