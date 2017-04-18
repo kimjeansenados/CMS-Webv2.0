@@ -470,7 +470,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance
             {
                 //JHay
                 //Remove the another host
-                RadWindowRegion.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/RegionMaintenance/EditRegion.aspx?ID=" + regionid;
+                RadWindowRegion.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/RegionMaintenance/EditRegion.aspx?ID=" + regionid;
                 //RadWindowRegion.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/RegionMaintenance/EditRegion.aspx?ID=" + regionid;
                 string script = "function f(){$find(\"" + RadWindowRegion.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
@@ -500,7 +500,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance
             string groupdid = "";
 
 
-            rwAddregion.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/RegionMaintenance/AddRegion.aspx?ID=" + groupdid;
+            rwAddregion.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/RegionMaintenance/AddRegion.aspx?ID=" + groupdid;
             //rwAddregion.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/RegionMaintenance/AddRegion.aspx?ID=" + groupdid;
             string script = "function f(){$find(\"" + rwAddregion.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
@@ -516,7 +516,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance
 
 
             //rwProvinceAdd.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/ProvinceMaintenance/AddProvince.aspx?ID=" + groupdid;
-            rwProvinceAdd.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/ProvinceMaintenance/AddProvince.aspx?ID=" + groupdid;
+            rwProvinceAdd.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/ProvinceMaintenance/AddProvince.aspx?ID=" + groupdid;
             string script = "function f(){$find(\"" + rwProvinceAdd.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
@@ -532,7 +532,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance
             {
 
                 //rwProvinceEdit.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/ProvinceMaintenance/EditProvince.aspx?ID=" + ProvinceId;
-                rwProvinceEdit.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/ProvinceMaintenance/EditProvince.aspx?ID=" + ProvinceId;
+                rwProvinceEdit.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/ProvinceMaintenance/EditProvince.aspx?ID=" + ProvinceId;
                 string script = "function f(){$find(\"" + rwProvinceEdit.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
