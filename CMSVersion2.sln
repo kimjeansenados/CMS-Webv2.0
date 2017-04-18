@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMSVersion2", "CMSVersion2\CMSVersion2.csproj", "{204B1088-FBB5-4F07-B286-59266857FD29}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{F9C5EAF8-F627-45F0-80C3-25D258A8F9DE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{1EA9E4C1-0C5F-4114-A917-7FAE6C35FF15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS2.API", "CMS2.API\CMS2.API.csproj", "{E5DBB5DB-4E04-4439-9752-834224CD025B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{1EA9E4C1-0C5F-4114-A917-7FAE6C35FF15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EA9E4C1-0C5F-4114-A917-7FAE6C35FF15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EA9E4C1-0C5F-4114-A917-7FAE6C35FF15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5DBB5DB-4E04-4439-9752-834224CD025B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5DBB5DB-4E04-4439-9752-834224CD025B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5DBB5DB-4E04-4439-9752-834224CD025B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5DBB5DB-4E04-4439-9752-834224CD025B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

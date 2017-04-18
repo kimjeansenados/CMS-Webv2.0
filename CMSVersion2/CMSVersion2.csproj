@@ -224,8 +224,11 @@
     <Content Include="Corporate\ApprovingAuthority.aspx" />
     <Content Include="Corporate\Company.aspx" />
     <Content Include="Corporate\Representative.aspx" />
+    <Content Include="Corporate\StatementOfAccount.aspx" />
+    <Content Include="Corporate\StatementOfAccountAdjustment\AddAdjustment.aspx" />
+    <Content Include="Corporate\StatementOfAccountDetails\StatementOfAccountDetails.aspx" />
     <Content Include="Customer\Customer.aspx" />
-    <Content Include="Error\UnderMaintenance.aspx" />
+    <Content Include="Corporate\Error\UnderMaintenance.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -484,6 +487,18 @@
     <Compile Include="Corporate\Representative.aspx.designer.cs">
       <DependentUpon>Representative.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Corporate\StatementOfAccount.aspx.cs">
+      <DependentUpon>StatementOfAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corporate\StatementOfAccountAdjustment\AddAdjustment.aspx.cs">
+      <DependentUpon>AddAdjustment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corporate\StatementOfAccountDetails\StatementOfAccountDetails.aspx.cs">
+      <DependentUpon>StatementOfAccountDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Customer\Customer.aspx.cs">
       <DependentUpon>Customer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -498,11 +513,11 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Error\UnderMaintenance.aspx.cs">
+    <Compile Include="Corporate\Error\UnderMaintenance.aspx.cs">
       <DependentUpon>UnderMaintenance.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Error\UnderMaintenance.aspx.designer.cs">
+    <Compile Include="Corporate\Error\UnderMaintenance.aspx.designer.cs">
       <DependentUpon>UnderMaintenance.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
