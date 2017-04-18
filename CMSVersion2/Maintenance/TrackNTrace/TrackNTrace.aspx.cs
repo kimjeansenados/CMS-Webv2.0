@@ -20,10 +20,10 @@ namespace CMSVersion2.Maintenance.TrackNTrace
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
-            {
-                string usersession = Session["UsernameSession"].ToString();
-            }
+            //if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
+            //{
+            //    string usersession = Session["UsernameSession"].ToString();
+            //}
             if (!IsPostBack)
             {
                 InitLoad();
@@ -377,8 +377,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string host = HttpContext.Current.Request.Url.Authority;
             string batchid = "";
             string batchCode = "branchacceptance";
-
-            rwAdd_BA_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
+            rwAdd_BA_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Add.aspx?ID=" + batchid + "&batchCode=" + batchCode;
             //rwAdd_BA_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
             string script = "function f(){$find(\"" + rwAdd_BA_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
@@ -393,7 +392,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             {
 
                 // rwEdit_BA_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/EditBatch.aspx?ID= + groupdid;
-                rwEdit_BA_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/EditBatch.aspx?ID=" + batchid;
+                rwEdit_BA_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Edit.aspx?ID=" + batchid;
                 string script = "function f(){$find(\"" + rwEdit_BA_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
@@ -464,7 +463,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string batchCode = "gatewaytransmittal";
 
 
-            rwAdd_GT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
+            rwAdd_GT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Add.aspx?ID=" + batchid + "&batchCode=" + batchCode;
             //rwAdd_GT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/AddBatch.aspx?ID=" + groupdid;
             string script = "function f(){$find(\"" + rwAdd_GT_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
@@ -478,7 +477,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             {
 
                 // rwEdit_GT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/EditBatch.aspx?ID= + groupdid;
-                rwEdit_GT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/EditBatch.aspx?ID=" + batchid;
+                rwEdit_GT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Edit.aspx?ID=" + batchid;
                 string script = "function f(){$find(\"" + rwEdit_GT_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
@@ -546,7 +545,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string batchid = "";
             string batchCode = "gatewayoutbound";
 
-            rwAdd_GO_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
+            rwAdd_GO_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Add.aspx?ID=" + batchid + "&batchCode=" + batchCode;
             //rwAdd_GO_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
             string script = "function f(){$find(\"" + rwAdd_GO_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
@@ -561,7 +560,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             {
 
                 // rwEdit_GO_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/EditBatch.aspx?ID= + batchid;
-                rwEdit_GO_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/EditBatch.aspx?ID=" + batchid;
+                rwEdit_GO_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Edit.aspx?ID=" + batchid;
                 string script = "function f(){$find(\"" + rwEdit_GO_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
@@ -715,7 +714,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string batchid = "";
             string batchCode = "cargotransfer";
 
-            rwAdd_CT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
+            rwAdd_CT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Add.aspx?ID=" + batchid + "&batchCode=" + batchCode;
             //rwAdd_CT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
             string script = "function f(){$find(\"" + rwAdd_CT_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
@@ -730,7 +729,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             {
 
                 // rwEdit_CT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/EditBatch.aspx?ID= + groupdid;
-                rwEdit_CT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/EditBatch.aspx?ID=" + batchid;
+                rwEdit_CT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Edit.aspx?ID=" + batchid;
                 string script = "function f(){$find(\"" + rwEdit_CT_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
@@ -894,7 +893,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string batchid = "";
             string batchCode = "segregation";
 
-            rwAdd_SG_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
+            rwAdd_SG_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Add.aspx?ID=" + batchid + "&batchCode=" + batchCode;
             //rwAdd_SG_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
             string script = "function f(){$find(\"" + rwAdd_SG_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
@@ -909,7 +908,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             {
 
                 // rwEdit_SG_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/EditBatch.aspx?ID= + groupdid;
-                rwEdit_SG_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/EditBatch.aspx?ID=" + batchid;
+                rwEdit_SG_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Edit.aspx?ID=" + batchid;
                 string script = "function f(){$find(\"" + rwEdit_SG_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
@@ -978,7 +977,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string batchid = "";
             string batchCode = "distribution";
 
-            rwAdd_DIS_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
+            rwAdd_DIS_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Add.aspx?ID=" + batchid + "&batchCode=" + batchCode;
             //rwAdd_DIS_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
             string script = "function f(){$find(\"" + rwAdd_DIS_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
@@ -993,7 +992,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             {
 
                 // rwEdit_DIS_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/EditBatch.aspx?ID= + groupdid;
-                rwEdit_DIS_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/EditBatch.aspx?ID=" + batchid;
+                rwEdit_DIS_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Edit.aspx?ID=" + batchid;
                 string script = "function f(){$find(\"" + rwEdit_DIS_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 

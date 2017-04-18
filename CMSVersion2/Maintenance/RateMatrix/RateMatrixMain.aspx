@@ -1,15 +1,14 @@
-﻿<%@ Page Title="Rate Matrix" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RateMatrix.aspx.cs" Inherits="CMSVersion2.Maintenance.RateMatrix.RateMatrix" %>
+﻿<%@ Page Title="Rate Matrix" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RateMatrixMain.aspx.cs" Inherits="CMSVersion2.Maintenance.RateMatrix.RateMatrixMain" %>
 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-<telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwRUTEdit" Height="350px" Width="380px">
-                          </telerik:RadWindow>
-                          <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwRateMatrix" Height="350px" Width="50px">
-    </telerik:RadWindow>
-                          <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwRateMatrixedit" Height="350px" Width="50px">
-    </telerik:RadWindow>
-    <div id="wrapper">
+
+<telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwRUTEdit" Height="350px" Width="380px"></telerik:RadWindow>
+<telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwRateMatrix" Height="350px" Width="50px"></telerik:RadWindow>
+<telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwRateMatrixedit" Height="350px" Width="50px"></telerik:RadWindow>
+
+   <div id="wrapper">
    <div id="page-wrapper"  >
 
             <div class="container" >
@@ -190,7 +189,7 @@
                                        
 
                             |
-                                            <a href="#"  onclick="return ShowExportForm();">
+                                            <a href="#"  onclick="return ShowInsertForm();">
                                             <img src="../../Images/emblem.png" alt="CreateCombination" width="20px">
                                            Create Combination
                                             </a>
@@ -259,7 +258,7 @@
                                     var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
                                     grid.get_masterTableView().selectItem(rowControl, true);
 
-                                    window.radopen("ManageRateMatrixImport.aspx?ID=" + id, "UserListDialog");
+                                    window.radopen("RateMatrixEvent/Import.aspx?ID=" + id, "UserListDialog");
                                     return false;
                                 }
                                 function ShowEditRateForm(id, rowIndex) {
@@ -268,16 +267,17 @@
                                      var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
                                      grid.get_masterTableView().selectItem(rowControl, true);
 
-                                     window.radopen("UserModal/RateMatrix/EditRateMatrix.aspx?RateMatrixId=" + id, "EditRate");
+                                     window.radopen("RateMatrixEvent/Edit.aspx?RateMatrixId=" + id, "EditRate");
                                      return false;
                                  }
                                  function ShowInsertForm() {
-                                     //window.radopen("AddNewUser.aspx", "AddUser");
+                                     window.radopen("RateMatrixEvent/Add.aspx", "AddRate");
                                      return false;
                                  }
 
                                  function ShowExportForm() {
-                                     window.radopen("UserModal/RateMatrix/AddRateMatrix.aspx", "AddRate");
+                                     alert("Not Available");
+                                     //window.radopen("RateMatrixEvent/Add.aspx", "AddRate");
                                      return false;
                                  }
 
@@ -301,7 +301,7 @@
                                     MasterTable.fireCommand("MyClick2",ID);        
                                 --%>
                                     //ShowEditForm();
-                                    window.radopen("UserModal/RateMatrix/EditRateMatrix.aspx?RateMatrixId=" + eventArgs.getDataKeyValue("RateMatrixId"), "EditRate");
+                                    window.radopen("RateMatrixEvent/Edit.aspx?RateMatrixId=" + eventArgs.getDataKeyValue("RateMatrixId"), "EditRate");
                                 }
 
                             </script>

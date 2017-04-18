@@ -40,7 +40,7 @@
                     ID="radGridAwbSeriesMonitoring"
                     AllowPaging="True" 
                     PageSize="10"  
-                    AllowFilteringByColumn="True" 
+                    AllowFilteringByColumn="false" 
                     AutoGenerateColumns="false"
                     AllowSorting="true"
                     OnNeedDataSource="radGridAwbSeriesMonitoring_NeedDataSource">

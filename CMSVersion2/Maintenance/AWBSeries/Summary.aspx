@@ -41,7 +41,7 @@
                     ID="radGridAwbIssuedSummary"
                     AllowPaging="True" 
                     PageSize="10"  
-                    AllowFilteringByColumn="True" 
+                    AllowFilteringByColumn="false" 
                     AutoGenerateColumns="false"
                     AllowSorting="true"
                     OnNeedDataSource="radGridAwbIssuedSummary_NeedDataSource">

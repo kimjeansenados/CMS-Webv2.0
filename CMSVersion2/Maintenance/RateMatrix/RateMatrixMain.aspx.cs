@@ -11,7 +11,7 @@ using DAL = DataAccess;
 
 namespace CMSVersion2.Maintenance.RateMatrix
 {
-    public partial class RateMatrix : System.Web.UI.Page
+    public partial class RateMatrixMain : System.Web.UI.Page
     {
         Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
         protected void Page_Load(object sender, EventArgs e)

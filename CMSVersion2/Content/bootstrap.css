@@ -3557,7 +3557,7 @@ tbody.collapse.in {
    }
    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-     background-color: #ccc;
+     background-color: #f0ad4e;
    }
 
    .navbar-nav .open .dropdown-menu {

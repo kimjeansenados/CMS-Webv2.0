@@ -39,50 +39,50 @@
                             <telerik:RadGrid ID="RadGrid2" OnItemCreated="RadGrid2_ItemCreated"
                                 runat="server" AllowPaging="True" ExportSettings-Excel-DefaultCellAlignment="Right"
                                 PageSize="10" Skin="Glow" AllowSorting="true" OnItemCommand="RadGrid2_ItemCommand1"
-                                RenderMode="Mobile"
+                                
                                 DataKeyNames="ClientId" CommandItemDisplay="Top"
                                 OnNeedDataSource="RadGrid2_NeedDataSource"> 
-                                <ExportSettings ExportOnlyData="true" IgnorePaging="true"></ExportSettings>
+                                <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true"></ExportSettings>
                                 <MasterTableView AutoGenerateColumns="False" ClientDataKeyNames="ClientId"
                                     AllowFilteringByColumn="false"
                                     DataKeyNames="ClientId" CommandItemDisplay="Top" 
                                     InsertItemPageIndexAction="ShowItemOnFirstPage">
-                                   <CommandItemSettings ShowExportToWordButton="true" ShowExportToExcelButton="true" 
+                                   <CommandItemSettings  ShowExportToWordButton="true" ShowExportToExcelButton="true" 
             ShowExportToCsvButton="true" ShowExportToPdfButton="true"></CommandItemSettings>
                                     <Columns>
 
-                                        <telerik:GridNumericColumn DataField="Name" HeaderText="Client Name" SortExpression="Name"
+                                        <telerik:GridNumericColumn DataField="Name" HeaderText="Client Name" SortExpression="Name" Exportable="true"
                                             UniqueName="Name">
                                             <HeaderStyle />
                                         </telerik:GridNumericColumn>
 
                                         
-                                        <telerik:GridNumericColumn DataField="AccountNo" HeaderText="AccountNo" SortExpression="AccountNo"
+                                        <telerik:GridNumericColumn DataField="AccountNo" HeaderText="AccountNo" SortExpression="AccountNo" Exportable="true"
                                             UniqueName="AccountNo">
                                             <HeaderStyle />
                                         </telerik:GridNumericColumn>
 
-                                        <telerik:GridNumericColumn DataField="CompanyName" HeaderText="Company Name" SortExpression="CompanyName"
+                                        <telerik:GridNumericColumn DataField="CompanyName" HeaderText="Company Name" SortExpression="CompanyName" Exportable="true"
                                             UniqueName="CompanyName">
                                             <HeaderStyle />
                                         </telerik:GridNumericColumn>
 
-                                        <telerik:GridNumericColumn DataField="CityName" HeaderText="City Name" SortExpression="CityName"
+                                        <telerik:GridNumericColumn DataField="CityName" HeaderText="City Name" SortExpression="CityName" Exportable="true"
                                             UniqueName="CityName">
                                             <HeaderStyle />
                                         </telerik:GridNumericColumn>
                                         
-                                        <telerik:GridNumericColumn DataField="BranchCorpOfficeName" HeaderText="BranchCorpOffice" SortExpression="BranchCorpOfficeName"
+                                        <telerik:GridNumericColumn DataField="BranchCorpOfficeName" HeaderText="BranchCorpOffice" SortExpression="BranchCorpOfficeName" Exportable="true"
                                             UniqueName="BranchCorpOfficeName">
                                             <HeaderStyle />
                                         </telerik:GridNumericColumn>
 
-                                       <telerik:GridDateTimeColumn DataField="ModifiedDate" HeaderText="Date Modified" SortExpression="ModifiedDate"
+                                       <telerik:GridDateTimeColumn DataField="ModifiedDate" HeaderText="Date Modified" SortExpression="ModifiedDate" Exportable="true"
                                             UniqueName="ModifiedDate" PickerType="DatePicker" DataFormatString="{0:MM/dd/yyyy}">
                                             <HeaderStyle />
 
                                         </telerik:GridDateTimeColumn>
-                                        <telerik:GridTemplateColumn UniqueName="TemplateEditColumn" AllowFiltering="false">
+                                        <telerik:GridTemplateColumn UniqueName="TemplateEditColumn" AllowFiltering="false" Exportable="false">
                                             <ItemTemplate>
                                                 <asp:HyperLink  ID="EditLink" runat="server" Text="Edit"></asp:HyperLink>
                                             </ItemTemplate>
@@ -90,32 +90,14 @@
                                     <%--    <telerik:GridButtonColumn  CommandName="Delete" Text="Delete" UniqueName="DeleteColumn" HeaderText="">
                                             <HeaderStyle />
                                         </telerik:GridButtonColumn>--%>
-                                         <telerik:GridButtonColumn ConfirmText="Are you sure you want to deactivate this user?" ButtonType="LinkButton"
+                                         <telerik:GridButtonColumn ConfirmText="Are you sure you want to deactivate this user?" ButtonType="LinkButton" Exportable="false"
                                             ConfirmDialogType="RadWindow" ConfirmDialogHeight="150px" ConfirmTitle="Deactivate User" 
                                              CommandName="Delete" Text="Delete" UniqueName="DeleteColumn" HeaderText="">
                                             <HeaderStyle />
                                         </telerik:GridButtonColumn>
                                     </Columns>
 
-                                    <CommandItemTemplate>
-
-                            |
-                                        
-                                        <a href="#"  onclick="return ShowExportForm();">
-                                            <img src="../images/emblem.png" alt="Print Preview" width="20px">
-                                           Print Preview
-                                            </a>
-       |
-                   
-                                 
-                                        <a href="#"  onclick="location.reload();">
-                                            <img src="../images/emblem.png" alt="Export to Excel" width="20px">
-                                            Refresh Data
-                                            </a>
-                        
-                            |
-                                       
-                                    </CommandItemTemplate>
+                                   
                               
                                 </MasterTableView>
                                 <ClientSettings>

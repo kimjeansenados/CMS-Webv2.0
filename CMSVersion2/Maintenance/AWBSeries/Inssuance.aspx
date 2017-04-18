@@ -39,7 +39,7 @@
                 <br />
                 <br />--%>
                 
-                <div class="col-md-12">
+                <div class="row">
                      <div class="col-md-12">
                                 <telerik:RadLabel ID="lblBco" runat="server" Text="BCO:"></telerik:RadLabel>
                                 <telerik:RadComboBox ID="rcbBranchCorpOffice" Skin="Glow" Width="230px" Height="200px" runat="server"  AutoPostBack="true" OnSelectedIndexChanged="rcbBranchCorpOffice_SelectedIndexChanged"></telerik:RadComboBox>
@@ -142,31 +142,29 @@
                                     </telerik:GridButtonColumn>
                                 </Columns>
 
-                                <CommandItemTemplate>
-                                    <div class="center">
-                                    |
+                                <CommandItemTemplate>    
 
-                                         <a href="#" onclick="return ShowInsertForm();" class="alink">
+                                         <a href="#" onclick="return ShowInsertForm();" >
                                              <img src="../../Images/emblem.png" alt="Add Company" width="20">
                                              Add Series
                                          </a>
                                     |    
                                         
-                                        <a href="#" onclick="return ShowExportForm();" class="alink">
+                                        <a href="#" onclick="return ShowExportForm();">
                                             <img src="../../Images/emblem.png" alt="Print Preview" width="20">
                                             Print Preview
                                         </a>
                                     |
                    
                                  
-                                        <a href="" onclick="LoadRadGrid()" class="alink">
+                                        <a href="" onclick="LoadRadGrid()" >
                                             <img src="../../Images/emblem.png" alt="Export to Excel" width="20">
                                             Refresh Data
                                         </a>
                                         <asp:button id="btnSubmit" runat="server" text="Submit" xmlns:asp="#unknown"
                                             onclick="btnSubmit_Click" style="display:none" /> 
 
-                                    |</div>
+                                    
                                        
                                 </CommandItemTemplate>
 
@@ -219,12 +217,12 @@
                                     var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
                                     grid.get_masterTableView().selectItem(rowControl, true);
 
-                                    window.radopen("UserModal/AWBIssuance/EditAwbSeries.aspx?AwbIssuanceId=" + id, "ViewRepresentative");
+                                    window.radopen("InssuanceModal/Edit.aspx?AwbIssuanceId=" + id, "ViewRepresentative");
                                     return false;
                                 }
 
                                function ShowInsertForm() {
-                                   window.radopen("UserModal/AwbIssuance/AddAwbSeries.aspx", "AddUser");
+                                   window.radopen("InssuanceModal/Add.aspx", "AddUser");
                                    return false;
                                }
 

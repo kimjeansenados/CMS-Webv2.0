@@ -43,7 +43,7 @@
         <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" Skin="Default" DecoratedControls="All" />
         <%--<asp:Button runat="server" Text="Close" ID="CloseButton"     OnClick="CloseButton_Click1"/>--%>
          <div class="">
-            <form class="form-horizontal" method="post" action="#">
+            <div class="form-horizontal">
                
                  <div class="page">
                     <div class="col-xs-6">
@@ -102,7 +102,7 @@
                  <telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click"></telerik:RadButton>
                  <telerik:RadButton ID="btnCancel" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click"></telerik:RadButton>
                 </div>
-            </form>
+            </div>
 
 
         </div>

@@ -24,13 +24,13 @@ namespace CMSVersion2.Maintenance.CMSMaintenance
             //{
             //    string usersession = Session["UsernameSession"].ToString();
             //}
-            //if (!IsPostBack)
-            //{
+            if (!IsPostBack)
+            {
 
-            //    //host = getConstr.IISWebName;
+                //host = getConstr.IISWebName;
 
-            //    InitLoad();
-            //}
+                InitLoad();
+            }
         }
 
         private DataTable ReadExcelFile(string sheetName, string path)
@@ -65,42 +65,42 @@ namespace CMSVersion2.Maintenance.CMSMaintenance
         {
 
             LoadGroupIslands();
-            LoadRegion();
-            LoadProvince();
-            LoadBranchCorpOffice();
-            LoadCluster();
-            LoadCity();
-            LoadArea();
-            GetGateway();
-            GetBranch();
-            LoadRevenueType();
-            LoadApplicableRate();
-            LoadCommodity();
-            LoadCommodityType();
-            LoadGoodsDescription();
-            LoadShipmentBasicFee();
-            LoadCrating();
-            TransShipmentRoutes();
-            ServiceType();
-            ServiceMode();
-            PaymentMode();
-            PaymentTerm();
-            BookingRemark();
-            BookingStatus();
-            ShipMode();
-            DeliveryStatus();
-            DeliveryRemarks();
-            LoadPackaging();
-            BookingStatus();
-            BookingRemark();
-            DeliveryStatus();
-            DeliveryRemarks();
-            LoadAccountType();
-            LoadAccountStatus();
-            LoadBusinessType();
-            LoadOrganizationType();
-            LoadIndustry();
-            LoadBillingPeriod();
+            //LoadRegion();
+            //LoadProvince();
+            //LoadBranchCorpOffice();
+            //LoadCluster();
+            //LoadCity();
+            //LoadArea();
+            //GetGateway();
+            //GetBranch();
+            //LoadRevenueType();
+            //LoadApplicableRate();
+            //LoadCommodity();
+            //LoadCommodityType();
+            //LoadGoodsDescription();
+            //LoadShipmentBasicFee();
+            //LoadCrating();
+            //TransShipmentRoutes();
+            //ServiceType();
+            //ServiceMode();
+            //PaymentMode();
+            //PaymentTerm();
+            //BookingRemark();
+            //BookingStatus();
+            //ShipMode();
+            //DeliveryStatus();
+            //DeliveryRemarks();
+            //LoadPackaging();
+            //BookingStatus();
+            //BookingRemark();
+            //DeliveryStatus();
+            //DeliveryRemarks();
+            //LoadAccountType();
+            //LoadAccountStatus();
+            //LoadBusinessType();
+            //LoadOrganizationType();
+            //LoadIndustry();
+            //LoadBillingPeriod();
         }
 
         #region "Load datasources"
@@ -420,9 +420,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance
             string host = HttpContext.Current.Request.Url.Authority;
             string groupdid = "";
 
-
-            rwAddGroupIsland.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/GroupIslandMaintenance/AddGroupIsland.aspx?ID=" + groupdid;
-            //rwAddGroupIsland.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/GroupIslandMaintenance/AddGroupIsland.aspx?ID=" + groupdid;
+            rwAddGroupIsland.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/GroupIslandMaintenance/AddGroupIsland.aspx?ID=" + groupdid;
             string script = "function f(){$find(\"" + rwAddGroupIsland.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
@@ -440,7 +438,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance
             {
 
                 // RadWindow1.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/GroupIslandMaintenance/EditGroupIsland.aspx?ID=" + groupdid;
-                RadWindow1.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/GroupIslandMaintenance/EditGroupIsland.aspx?ID=" + groupdid;
+                RadWindow1.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/GroupIslandMaintenance/EditGroupIsland.aspx?ID=" + groupdid;
                 string script = "function f(){$find(\"" + RadWindow1.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
                 //}

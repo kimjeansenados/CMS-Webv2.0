@@ -7,7 +7,7 @@
             <!-- Page Heading -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h3><i class="glyphicon glyphicon-dashboard"></i>Dashboard</h3>
+                    <h3><i class="glyphicon glyphicon-dashboard"></i> Dashboard</h3>
                     <hr />
                 </div>
             </div>

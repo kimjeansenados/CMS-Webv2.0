@@ -3,7 +3,31 @@
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-<telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" Height="300px" Width="350px">
+    <script type="text/javascript">
+        function StandardConfirm(sender, args) {
+            args.set_cancel(!window.confirm("Are you sure you want to submit the page?"));
+        }
+
+        function RefreshParentPage()//function in parent page
+        {
+            document.location.reload();
+        }
+    </script>
+
+    <style>
+        div.RadUpload .ruBrowse {
+            background-position: 0 -23px;
+            width: 180px;
+            height: 30px;
+        }
+
+        div.RadUpload_Default .ruFileWrap .ruButtonHover {
+            background-position: 100% -23px !important;
+        }
+    </style>
+
+
+    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" Height="300px" Width="350px">
     </telerik:RadWindow>
     <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindowRegion" Height="350px" Width="380px">
     </telerik:RadWindow>

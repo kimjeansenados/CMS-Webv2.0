@@ -20,11 +20,11 @@ namespace CMSVersion2.Maintenance.AWBSeries
             //    string usersession = Session["UsernameSession"].ToString();
             //}
 
-            //if (!IsPostBack)
-            //{
-            //    InitLoad();
+            if (!IsPostBack)
+            {
+                InitLoad();
 
-            //}
+            }
         }
 
         #region InitLoad
