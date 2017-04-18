@@ -69,6 +69,8 @@
     <Compile Include="Reports\Segregation.cs" />
     <Compile Include="Reports\Unbundle.cs" />
     <Compile Include="Shipment.cs" />
+    <Compile Include="StatementOfAccount.cs" />
+    <Compile Include="StatementOfAccountAdjustment.cs" />
     <Compile Include="Status.cs" />
     <Compile Include="Tracking_BatchName.cs" />
     <Compile Include="BillingPeriod.cs" />

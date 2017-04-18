@@ -60,7 +60,7 @@
                                 <li><a runat="server" href="~/Corporate/Company.aspx">Company</a></li>
                                 <li><a runat="server" href="~/Corporate/Representative.aspx">Representatives</a></li>
                                 <li><a runat="server" href="~/Corporate/ApprovingAuthority.aspx">Approving Authority</a></li>
-                                <li><a runat="server" href="~/Error/UnderMaintenance.aspx">Statement of Account</a></li>
+                                <li><a runat="server" href="~/Corporate/StatementOfAccount.aspx">Statement of Account</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">

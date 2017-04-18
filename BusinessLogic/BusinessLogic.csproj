@@ -91,6 +91,8 @@
     <Compile Include="PaymentMode.cs" />
     <Compile Include="ServiceMode.cs" />
     <Compile Include="ServiceType.cs" />
+    <Compile Include="StatementOfAccount.cs" />
+    <Compile Include="StatementOfAccountAdjusment.cs" />
     <Compile Include="Status.cs" />
     <Compile Include="TransShipmentRoutes.cs" />
     <Compile Include="Packaging.cs" />

@@ -103,10 +103,10 @@
     <Reference Include="Telerik.Reporting.XpsRendering, Version=11.0.17.201, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
     <Reference Include="Telerik.ReportViewer.Html5.WebForms, Version=11.0.17.201, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
     <Reference Include="Telerik.Web.UI">
-      <HintPath>E:\AP CARGO - Back-up\CMS Web Central\CMS Web Central - (03-21-2017)\cmsversion2\Bin\Telerik.Web.UI.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX R1 2017\Bin45\Telerik.Web.UI.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Web.UI.Skins">
-      <HintPath>E:\AP CARGO - Back-up\CMS Web Central\CMS Web Central - (03-21-2017)\cmsversion2\Bin\Telerik.Web.UI.Skins.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX R1 2017\Bin45\Telerik.Web.UI.Skins.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Documents.Core, Version=2017.1.109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -225,8 +225,8 @@
     <Content Include="Corporate\Company.aspx" />
     <Content Include="Corporate\Representative.aspx" />
     <Content Include="Corporate\StatementOfAccount.aspx" />
-    <Content Include="Corporate\StatementOfAccountAdjustment\AddAdjustment.aspx" />
-    <Content Include="Corporate\StatementOfAccountDetails\StatementOfAccountDetails.aspx" />
+    <Content Include="Corporate\StatementOfAccountAdjustment\AddStatementOfAccountAdjustment.aspx" />
+    <Content Include="Corporate\StatementOfAccountDetails\StatementOfAccountDetail.aspx" />
     <Content Include="Customer\Customer.aspx" />
     <Content Include="Corporate\Error\UnderMaintenance.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -491,13 +491,22 @@
       <DependentUpon>StatementOfAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Corporate\StatementOfAccountAdjustment\AddAdjustment.aspx.cs">
-      <DependentUpon>AddAdjustment.aspx</DependentUpon>
+    <Compile Include="Corporate\StatementOfAccount.aspx.designer.cs">
+      <DependentUpon>StatementOfAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corporate\StatementOfAccountAdjustment\AddStatementOfAccountAdjustment.aspx.cs">
+      <DependentUpon>AddStatementOfAccountAdjustment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Corporate\StatementOfAccountDetails\StatementOfAccountDetails.aspx.cs">
-      <DependentUpon>StatementOfAccountDetails.aspx</DependentUpon>
+    <Compile Include="Corporate\StatementOfAccountAdjustment\AddStatementOfAccountAdjustment.aspx.designer.cs">
+      <DependentUpon>AddStatementOfAccountAdjustment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corporate\StatementOfAccountDetails\StatementOfAccountDetail.aspx.cs">
+      <DependentUpon>StatementOfAccountDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corporate\StatementOfAccountDetails\StatementOfAccountDetail.aspx.designer.cs">
+      <DependentUpon>StatementOfAccountDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Customer.aspx.cs">
       <DependentUpon>Customer.aspx</DependentUpon>

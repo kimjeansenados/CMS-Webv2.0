@@ -1,29 +1,6 @@
-﻿<%@ Page Title="Statement Of Account" Language="C#" MasterPageFile="~/cmsversion.master" AutoEventWireup="true" CodeFile="StatementOfAccount.aspx.cs" Inherits="portal_StatementOfAccount" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StatementOfAccount.aspx.cs" Inherits="CMSVersion2.Corporate.StatementOfAccount" %>
 
-<%@ MasterType VirtualPath="~/cmsversion.master" %>
-<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
-
-
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <link href="../styles/default.css" rel="stylesheet" />
-      <style type="text/css">
-        .alink{
-            text-decoration:none !important;
-            color:#c1c7ca !important;
-        }
-
-        .alink:hover{
-            text-decoration:none !important;
-            color:#c1c7ca !important;
-        }
-        .center {
-            text-align: center;
-        }
-          </style>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
-
-
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="wrapper">
         <div id="page-wrapper">
 
@@ -253,4 +230,3 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </asp:Content>
-
