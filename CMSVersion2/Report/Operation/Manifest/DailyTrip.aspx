@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DailyTrip.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.DailyTrip" %>
+﻿<%@ Page Title="Daily Trip" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DailyTrip.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.DailyTrip" %>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
@@ -15,6 +15,9 @@
                 </ol>
             </div>
             <!--- PAGE BODY--->
+            <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" AutoSize="true" AutoSizeBehaviors="HeightProportional" Width="1300px" Skin="Glow" VisibleStatusbar="false"></telerik:RadWindow>
+
+
             <div class="row">
 
                 <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
@@ -42,6 +45,8 @@
                  &nbsp;&nbsp;
 
                  <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" AutoPostBack="true" OnClick="Search_Click"> </telerik:RadButton>
+                <telerik:RadButton ID="btnPrint" Skin="Glow" OnClick="btnPrint_Click"
+                    runat="server" Text="PRINT" AutoPostBack="true"></telerik:RadButton>
             </div>
             <br />
             <div class="row">

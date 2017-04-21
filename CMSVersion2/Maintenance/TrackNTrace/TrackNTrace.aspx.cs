@@ -378,7 +378,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string batchid = "";
             string batchCode = "branchacceptance";
             rwAdd_BA_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Add.aspx?ID=" + batchid + "&batchCode=" + batchCode;
-            //rwAdd_BA_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
+            //rwAdd_BA_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
             string script = "function f(){$find(\"" + rwAdd_BA_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
@@ -391,7 +391,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             if (batchid != "")
             {
 
-                // rwEdit_BA_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/EditBatch.aspx?ID= + groupdid;
+                // rwEdit_BA_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/EditBatch.aspx?ID= + groupdid;
                 rwEdit_BA_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Edit.aspx?ID=" + batchid;
                 string script = "function f(){$find(\"" + rwEdit_BA_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
@@ -419,8 +419,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string remarksid = "";
             string remarkCode = "branchacceptance";
 
-            rwAdd_BA_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Remarks/AddRemarks.aspx?ID=" + remarksid + "&remarkCode=" + remarkCode;
-            //rwAdd_BA_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Remarks/AddRemarks.aspx?ID=" + remarksid + "&remarkCode=" + remarkCode;
+            rwAdd_BA_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Remarks/AddRemarks.aspx?ID=" + remarksid + "&remarkCode=" + remarkCode;
+            //rwAdd_BA_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Remarks/AddRemarks.aspx?ID=" + remarksid + "&remarkCode=" + remarkCode;
             string script = "function f(){$find(\"" + rwAdd_BA_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
@@ -433,8 +433,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             if (remarkId != "")
             {
 
-                // rwEdit_BA_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Remarks/EditRemarks.aspx?ID= + remarkId;
-                rwEdit_BA_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Remarks/EditRemarks.aspx?ID=" + remarkId;
+                // rwEdit_BA_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Remarks/EditRemarks.aspx?ID= + remarkId;
+                rwEdit_BA_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Remarks/EditRemarks.aspx?ID=" + remarkId;
                 string script = "function f(){$find(\"" + rwEdit_BA_Remarks.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
@@ -464,7 +464,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
 
 
             rwAdd_GT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Add.aspx?ID=" + batchid + "&batchCode=" + batchCode;
-            //rwAdd_GT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/AddBatch.aspx?ID=" + groupdid;
+            //rwAdd_GT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/AddBatch.aspx?ID=" + groupdid;
             string script = "function f(){$find(\"" + rwAdd_GT_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
@@ -476,7 +476,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             if (batchid != "")
             {
 
-                // rwEdit_GT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/EditBatch.aspx?ID= + groupdid;
+                // rwEdit_GT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/EditBatch.aspx?ID= + groupdid;
                 rwEdit_GT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Edit.aspx?ID=" + batchid;
                 string script = "function f(){$find(\"" + rwEdit_GT_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
@@ -504,8 +504,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string airlineid = "";
             string airlineCode = "gatewaytransmittal";
 
-            rwAdd_GT_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Airlines/AddAirlines.aspx?ID=" + airlineid + "&airlineCode=" + airlineCode;
-            //rwAdd_GT_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Airlines/AddAirlines.aspx?ID=" + airlineid + "&airlineCode=" + airlineCode;
+            rwAdd_GT_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Airlines/AddAirlines.aspx?ID=" + airlineid + "&airlineCode=" + airlineCode;
+            //rwAdd_GT_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Airlines/AddAirlines.aspx?ID=" + airlineid + "&airlineCode=" + airlineCode;
             string script = "function f(){$find(\"" + rwAdd_GT_Airlines.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
@@ -517,8 +517,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
 
             if (airlineid != "")
             {
-                // rwEdit_GT_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Airlines/EditAirlines.aspx?ID= + groupdid;
-                rwEdit_GT_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Airlines/EditAirlines.aspx?ID=" + airlineid;
+                // rwEdit_GT_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Airlines/EditAirlines.aspx?ID= + groupdid;
+                rwEdit_GT_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Airlines/EditAirlines.aspx?ID=" + airlineid;
                 string script = "function f(){$find(\"" + rwEdit_GT_Airlines.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
@@ -546,7 +546,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string batchCode = "gatewayoutbound";
 
             rwAdd_GO_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Add.aspx?ID=" + batchid + "&batchCode=" + batchCode;
-            //rwAdd_GO_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
+            //rwAdd_GO_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
             string script = "function f(){$find(\"" + rwAdd_GO_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
@@ -559,7 +559,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             if (batchid != "")
             {
 
-                // rwEdit_GO_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/EditBatch.aspx?ID= + batchid;
+                // rwEdit_GO_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/EditBatch.aspx?ID= + batchid;
                 rwEdit_GO_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Edit.aspx?ID=" + batchid;
                 string script = "function f(){$find(\"" + rwEdit_GO_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
@@ -588,8 +588,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string remarksid = "";
             string remarkCode = "gatewayoutbound";
 
-            rwAdd_GO_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Remarks/AddRemarks.aspx?ID=" + remarksid + "&remarkCode=" + remarkCode;
-            //rwAdd_GO_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Remarks/AddRemarks.aspx?ID=" + remarksid + "&remarkCode=" + remarkCode;
+            rwAdd_GO_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Remarks/AddRemarks.aspx?ID=" + remarksid + "&remarkCode=" + remarkCode;
+            //rwAdd_GO_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Remarks/AddRemarks.aspx?ID=" + remarksid + "&remarkCode=" + remarkCode;
             string script = "function f(){$find(\"" + rwAdd_GO_Remarks.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
@@ -602,8 +602,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             if (remarkId != "")
             {
 
-                // rwEdit_GO_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Remarks/EditRemarks.aspx?ID= + remarkId;
-                rwEdit_GO_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Remarks/EditRemarks.aspx?ID=" + remarkId;
+                // rwEdit_GO_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Remarks/EditRemarks.aspx?ID= + remarkId;
+                rwEdit_GO_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Remarks/EditRemarks.aspx?ID=" + remarkId;
                 string script = "function f(){$find(\"" + rwEdit_GO_Remarks.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
@@ -630,8 +630,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string airlineid = "";
             string airlineCode = "gatewayoutbound";
 
-            rwAdd_GO_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Airlines/AddAirlines.aspx?ID=" + airlineid + "&airlineCode=" + airlineCode;
-            //rwAdd_GO_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Airlines/AddAirlines.aspx?ID=" + airlineid + "&airlineCode=" + airlineCode;
+            rwAdd_GO_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Airlines/AddAirlines.aspx?ID=" + airlineid + "&airlineCode=" + airlineCode;
+            //rwAdd_GO_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Airlines/AddAirlines.aspx?ID=" + airlineid + "&airlineCode=" + airlineCode;
             string script = "function f(){$find(\"" + rwAdd_GO_Airlines.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
@@ -643,8 +643,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
 
             if (airlineid != "")
             {
-                // rwEdit_GO_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Airlines/EditAirlines.aspx?ID= + groupdid;
-                rwEdit_GO_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Airlines/EditAirlines.aspx?ID=" + airlineid;
+                // rwEdit_GO_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Airlines/EditAirlines.aspx?ID= + groupdid;
+                rwEdit_GO_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Airlines/EditAirlines.aspx?ID=" + airlineid;
                 string script = "function f(){$find(\"" + rwEdit_GO_Airlines.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
@@ -672,8 +672,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string remarksid = "";
             string remarkCode = "gatewayinbound";
 
-            rwAdd_GI_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Remarks/AddRemarks.aspx?ID=" + remarksid + "&remarkCode=" + remarkCode;
-            //rwAdd_GI_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Remarks/AddRemarks.aspx?ID=" + remarksid + "&remarkCode=" + remarkCode;
+            rwAdd_GI_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Remarks/AddRemarks.aspx?ID=" + remarksid + "&remarkCode=" + remarkCode;
+            //rwAdd_GI_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Remarks/AddRemarks.aspx?ID=" + remarksid + "&remarkCode=" + remarkCode;
             string script = "function f(){$find(\"" + rwAdd_GI_Remarks.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
@@ -686,8 +686,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             if (remarkId != "")
             {
 
-                // rwEdit_GI_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Remarks/EditRemarks.aspx?ID= + remarkId;
-                rwEdit_GI_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Remarks/EditRemarks.aspx?ID=" + remarkId;
+                // rwEdit_GI_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Remarks/EditRemarks.aspx?ID= + remarkId;
+                rwEdit_GI_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Remarks/EditRemarks.aspx?ID=" + remarkId;
                 string script = "function f(){$find(\"" + rwEdit_GI_Remarks.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
@@ -715,7 +715,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string batchCode = "cargotransfer";
 
             rwAdd_CT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Add.aspx?ID=" + batchid + "&batchCode=" + batchCode;
-            //rwAdd_CT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
+            //rwAdd_CT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
             string script = "function f(){$find(\"" + rwAdd_CT_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
@@ -728,7 +728,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             if (batchid != "")
             {
 
-                // rwEdit_CT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/EditBatch.aspx?ID= + groupdid;
+                // rwEdit_CT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/EditBatch.aspx?ID= + groupdid;
                 rwEdit_CT_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Edit.aspx?ID=" + batchid;
                 string script = "function f(){$find(\"" + rwEdit_CT_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
@@ -756,8 +756,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string airlineid = "";
             string airlineCode = "cargotransfer";
 
-            rwAdd_CT_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Airlines/AddAirlines.aspx?ID=" + airlineid + "&airlineCode=" + airlineCode;
-            //rwAdd_CT_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Airlines/AddAirlines.aspx?ID=" + airlineid + "&airlineCode=" + airlineCode;
+            rwAdd_CT_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Airlines/AddAirlines.aspx?ID=" + airlineid + "&airlineCode=" + airlineCode;
+            //rwAdd_CT_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Airlines/AddAirlines.aspx?ID=" + airlineid + "&airlineCode=" + airlineCode;
             string script = "function f(){$find(\"" + rwAdd_CT_Airlines.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
@@ -769,8 +769,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
 
             if (airlineid != "")
             {
-                // rwEdit_CT_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Airlines/EditAirlines.aspx?ID= + groupdid;
-                rwEdit_CT_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Airlines/EditAirlines.aspx?ID=" + airlineid;
+                // rwEdit_CT_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Airlines/EditAirlines.aspx?ID= + groupdid;
+                rwEdit_CT_Airlines.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Airlines/EditAirlines.aspx?ID=" + airlineid;
                 string script = "function f(){$find(\"" + rwEdit_CT_Airlines.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
@@ -797,8 +797,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string statusId = "";
             string statusCode = "cargotransfer";
 
-            rwAdd_CT_Status.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Status/AddStatus.aspx?ID=" + statusId + "&statusCode=" + statusCode;
-            //rwAdd_CT_Status.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Status/AddStatus.aspx?ID=" + statusId + "&statusCode=" + statusCode;
+            rwAdd_CT_Status.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Status/AddStatus.aspx?ID=" + statusId + "&statusCode=" + statusCode;
+            //rwAdd_CT_Status.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Status/AddStatus.aspx?ID=" + statusId + "&statusCode=" + statusCode;
             string script = "function f(){$find(\"" + rwAdd_CT_Status.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
@@ -810,8 +810,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
 
             if (statusId != "")
             {
-                // rwEdit_CT_Status.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Status/EditStatus.aspx?ID=" + statusId;
-                rwEdit_CT_Status.NavigateUrl = "http://" + host + "/portal/UserModal/Status/EditStatus.aspx?ID=" + statusId;
+                // rwEdit_CT_Status.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Status/EditStatus.aspx?ID=" + statusId;
+                rwEdit_CT_Status.NavigateUrl = "http://" + host + "/Maintenance/CMSMaintenance/UserModal/Status/EditStatus.aspx?ID=" + statusId;
                 string script = "function f(){$find(\"" + rwEdit_CT_Status.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
@@ -851,8 +851,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string reasonId = "";
             string statusCode = "cargotransfer";
 
-            rwAdd_CT_Reason.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Reason/AddReason.aspx?ID=" + reasonId + "&StatusCode=" + statusCode;
-            //rwAdd_CT_Reason.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Status/AddStatus.aspx?ID=" + statusId + "&statusCode=" + statusCode;
+            rwAdd_CT_Reason.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Reason/AddReason.aspx?ID=" + reasonId + "&StatusCode=" + statusCode;
+            //rwAdd_CT_Reason.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Status/AddStatus.aspx?ID=" + statusId + "&statusCode=" + statusCode;
             string script = "function f(){$find(\"" + rwAdd_CT_Reason.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
@@ -864,8 +864,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string statusCode = "cargotransfer";
             if (reasonId != "")
             {
-                // rwEdit_CT_Reason.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Reason/EditReason.aspx?ID=" + reasonId + "&StatusCode=" + statusCode;
-                rwEdit_CT_Reason.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Reason/EditReason.aspx?ID=" + reasonId + "&StatusCode=" + statusCode;
+                // rwEdit_CT_Reason.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Reason/EditReason.aspx?ID=" + reasonId + "&StatusCode=" + statusCode;
+                rwEdit_CT_Reason.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Reason/EditReason.aspx?ID=" + reasonId + "&StatusCode=" + statusCode;
                 string script = "function f(){$find(\"" + rwEdit_CT_Reason.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
@@ -894,7 +894,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string batchCode = "segregation";
 
             rwAdd_SG_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Add.aspx?ID=" + batchid + "&batchCode=" + batchCode;
-            //rwAdd_SG_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
+            //rwAdd_SG_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
             string script = "function f(){$find(\"" + rwAdd_SG_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
@@ -907,7 +907,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             if (batchid != "")
             {
 
-                // rwEdit_SG_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/EditBatch.aspx?ID= + groupdid;
+                // rwEdit_SG_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/EditBatch.aspx?ID= + groupdid;
                 rwEdit_SG_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Edit.aspx?ID=" + batchid;
                 string script = "function f(){$find(\"" + rwEdit_SG_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
@@ -935,8 +935,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string remarksid = "";
             string remarkCode = "segregation";
 
-            rwAdd_SG_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Remarks/AddRemarks.aspx?ID=" + remarksid + "&remarkCode=" + remarkCode;
-            //rwAdd_SG_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Remarks/AddRemarks.aspx?ID=" + remarksid + "&remarkCode=" + remarkCode;
+            rwAdd_SG_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Remarks/AddRemarks.aspx?ID=" + remarksid + "&remarkCode=" + remarkCode;
+            //rwAdd_SG_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Remarks/AddRemarks.aspx?ID=" + remarksid + "&remarkCode=" + remarkCode;
             string script = "function f(){$find(\"" + rwAdd_SG_Remarks.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
@@ -949,8 +949,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             if (remarkId != "")
             {
 
-                // rwEdit_SG_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Remarks/EditRemarks.aspx?ID= + remarkId;
-                rwEdit_SG_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Remarks/EditRemarks.aspx?ID=" + remarkId;
+                // rwEdit_SG_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Remarks/EditRemarks.aspx?ID= + remarkId;
+                rwEdit_SG_Remarks.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Remarks/EditRemarks.aspx?ID=" + remarkId;
                 string script = "function f(){$find(\"" + rwEdit_SG_Remarks.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
@@ -978,7 +978,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string batchCode = "distribution";
 
             rwAdd_DIS_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Add.aspx?ID=" + batchid + "&batchCode=" + batchCode;
-            //rwAdd_DIS_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
+            //rwAdd_DIS_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/AddBatch.aspx?ID=" + batchid + "&batchCode=" + batchCode;
             string script = "function f(){$find(\"" + rwAdd_DIS_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
@@ -991,7 +991,7 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             if (batchid != "")
             {
 
-                // rwEdit_DIS_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Batch/EditBatch.aspx?ID= + groupdid;
+                // rwEdit_DIS_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/EditBatch.aspx?ID= + groupdid;
                 rwEdit_DIS_Batch.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Batch/Edit.aspx?ID=" + batchid;
                 string script = "function f(){$find(\"" + rwEdit_DIS_Batch.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
@@ -1019,8 +1019,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string statusId = "";
             string statusCode = "holdcargo";
 
-            rwAdd_HC_Status.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Status/AddStatus.aspx?ID=" + statusId + "&statusCode=" + statusCode;
-            //rwAdd_HC_Status.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Status/AddStatus.aspx?ID=" + statusId + "&statusCode=" + statusCode;
+            rwAdd_HC_Status.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Status/AddStatus.aspx?ID=" + statusId + "&statusCode=" + statusCode;
+            //rwAdd_HC_Status.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Status/AddStatus.aspx?ID=" + statusId + "&statusCode=" + statusCode;
             string script = "function f(){$find(\"" + rwAdd_HC_Status.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
@@ -1032,8 +1032,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
 
             if (statusId != "")
             {
-                // rwEdit_HC_Status.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Status/EditStatus.aspx?ID=" + statusId;
-                rwEdit_HC_Status.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Status/EditStatus.aspx?ID=" + statusId;
+                // rwEdit_HC_Status.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Status/EditStatus.aspx?ID=" + statusId;
+                rwEdit_HC_Status.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Status/EditStatus.aspx?ID=" + statusId;
                 string script = "function f(){$find(\"" + rwEdit_HC_Status.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
@@ -1069,8 +1069,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string reasonId = "";
             string statusCode = "holdcargo";
 
-            rwAdd_HC_Reason.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Reason/AddReason.aspx?ID=" + reasonId + "&StatusCode=" + statusCode;
-            //rwAdd_HC_Reason.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Status/AddStatus.aspx?ID=" + statusId + "&statusCode=" + statusCode;
+            rwAdd_HC_Reason.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Reason/AddReason.aspx?ID=" + reasonId + "&StatusCode=" + statusCode;
+            //rwAdd_HC_Reason.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Status/AddStatus.aspx?ID=" + statusId + "&statusCode=" + statusCode;
             string script = "function f(){$find(\"" + rwAdd_HC_Reason.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
@@ -1082,8 +1082,8 @@ namespace CMSVersion2.Maintenance.TrackNTrace
             string statusCode = "holdcargo";
             if (reasonId != "")
             {
-                // rwEdit_HC_Reason.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Reason/EditReason.aspx?ID=" + reasonId + "&StatusCode=" + statusCode;
-                rwEdit_HC_Reason.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/Reason/EditReason.aspx?ID=" + reasonId + "&StatusCode=" + statusCode;
+                // rwEdit_HC_Reason.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Reason/EditReason.aspx?ID=" + reasonId + "&StatusCode=" + statusCode;
+                rwEdit_HC_Reason.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/Reason/EditReason.aspx?ID=" + reasonId + "&StatusCode=" + statusCode;
                 string script = "function f(){$find(\"" + rwEdit_HC_Reason.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 

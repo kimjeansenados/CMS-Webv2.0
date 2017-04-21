@@ -133,9 +133,7 @@
                                 </Columns>
 
                                 <CommandItemTemplate>
-                                    <div class="center">
-                                    |
-
+                                 
                                          <a href="#" onclick="return ShowInsertForm();" class="alink">
                                              <img src="../images/emblem.png" alt="Add Company" width="20">
                                              Add Company
@@ -156,8 +154,7 @@
                                         <asp:button id="btnSubmit" runat="server" text="Submit" xmlns:asp="#unknown"
                                             onclick="btnSubmit_Click" style="display:none" /> 
 
-                                    |
-                                       </div>
+                              
                                 </CommandItemTemplate>
 
                             </MasterTableView>
@@ -213,7 +210,7 @@
                                 var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
                                 grid.get_masterTableView().selectItem(rowControl, true);
 
-                                window.radopen("UserModal/Company/EditCompany.aspx?CompanyId=" + id, "CompanyListDialog");
+                                window.radopen("CompanyModal/Edit.aspx?CompanyId=" + id, "CompanyListDialog");
                                 return false;
                             }
 
@@ -223,7 +220,7 @@
                                     var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
                                     grid.get_masterTableView().selectItem(rowControl, true);
 
-                                    window.radopen("UserModal/ViewRepresentative.aspx?CompanyId=" + id, "ViewRepresentative");
+                                    window.radopen("RepresentativeModal/View.aspx?CompanyId=" + id, "ViewRepresentative");
                                     return false;
                                 }
 
@@ -233,12 +230,12 @@
                                    var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
                                    grid.get_masterTableView().selectItem(rowControl, true);
 
-                                   window.radopen("UserModal/ViewApprovingAuthority.aspx?CompanyId=" + id, "ViewAppAuthority");
+                                   window.radopen("ApprovingAuthorityModal/View.aspx?CompanyId=" + id, "ViewAppAuthority");
                                    return false;
                                }
 
                                function ShowInsertForm() {
-                                   window.radopen("UserModal/Company/AddCompany.aspx", "AddCompany");
+                                   window.radopen("CompanyModal/Add.aspx", "AddCompany");
                                    return false;
                                }
 
@@ -267,7 +264,7 @@
                                     MasterTable.fireCommand("MyClick2",ID);        
                                 --%>
                                     //ShowEditForm();
-                                    window.radopen("UserModal/Company/EditCompany.aspx?CompanyId=" + eventArgs.getDataKeyValue("CompanyId"), "CompanyListDialog");
+                                    window.radopen("CompanyModal/Edit.aspx?CompanyId=" + eventArgs.getDataKeyValue("CompanyId"), "CompanyListDialog");
                                 }
                             function LoadRadGrid(){ 
                                             document.getElementById("btnSubmit").click(); 

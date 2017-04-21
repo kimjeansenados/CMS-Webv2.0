@@ -27,57 +27,57 @@
     </style>
 
 
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" Height="300px" Width="350px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="RadWindow1" VisibleStatusbar="false" Height="300px" Width="350px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindowRegion" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="RadWindowRegion" VisibleStatusbar="false" Height="300px" Width="350px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwAddGroupIsland" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwAddGroupIsland" VisibleStatusbar="false"  Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwAddregion" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwAddregion" VisibleStatusbar="false" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwProvinceEdit" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwProvinceEdit" VisibleStatusbar="false" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwProvinceAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwProvinceAdd" VisibleStatusbar="false" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwBranchCodeEdit" Height="550px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwBranchCodeEdit" Height="550px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwBranchCodeAdd" Height="550px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwBranchCodeAdd" Height="550px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwClusterAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwClusterAdd" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwClusterEdit" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwClusterEdit" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwCityAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwCityAdd" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwCityEdit" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwCityEdit" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwAreaAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwAreaAdd" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwAreaEdit" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwAreaEdit" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwBranchSatOfficeAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwBranchSatOfficeAdd" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwBranchSatOfficeEdit" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwBranchSatOfficeEdit" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwGatewaySayOfficeAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwGatewaySayOfficeAdd" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwGatewaySayOfficeEdit" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwGatewaySayOfficeEdit" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwRUTAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwRUTAdd" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwRUTEdit" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwRUTEdit" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwApplicablerateAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwApplicablerateAdd" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwApplicablerateEdit" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwApplicablerateEdit" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwCommodityTypeEdit" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwCommodityTypeEdit" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwCommodityTypeAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwCommodityTypeAdd" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwCommodityAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwCommodityAdd" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwCommodityEdit" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwCommodityEdit" Height="350px" Width="380px">
     </telerik:RadWindow>
 
     <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwGoodsDescAdd" Height="350px" Width="380px">

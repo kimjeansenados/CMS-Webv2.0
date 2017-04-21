@@ -1,10 +1,14 @@
-﻿using System;
+﻿using CMSVersion2.Models;
+using CMSVersion2.Report.Operation.Manifest.Reports;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Telerik.Web.UI;
 using Telerik.Web.UI.ExportInfrastructure;
 using BLL = BusinessLogic;
 using Tools = utilities;
@@ -14,6 +18,7 @@ namespace CMSVersion2.Report.Operation.Manifest
     public partial class BranchAcceptance : System.Web.UI.Page
     {
         Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
+        public static string WebPathName = ConfigurationManager.ConnectionStrings["iiswebname"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -87,6 +92,23 @@ namespace CMSVersion2.Report.Operation.Manifest
             DataSet data = BLL.Report.BranchAcceptanceReport.GetBranchAcceptance(getConstr.ConStrCMS, DateStr, AreaStr, BatchStr, BCOStr);
             DataTable dt = new DataTable();
             dt = data.Tables[0];
+
+            
+            //FOR PRINTING     
+            GetColumnDataFromDataTable getColumn = new GetColumnDataFromDataTable();
+            DateStr = (DateStr == null) ? "All" : DateStr;
+            AreaStr = (AreaStr == null) ? "All" : AreaStr;
+
+            ReportGlobalModel.Report = "BranchAcceptance";
+            ReportGlobalModel.table1 = dt;
+            ReportGlobalModel.Date = DateStr;
+            ReportGlobalModel.Area = AreaStr;
+            ReportGlobalModel.Batch = BatchStr;
+            ReportGlobalModel.Driver = getColumn.get_Column_DataView(dt, "DRIVER");
+            ReportGlobalModel.Checker = getColumn.get_Column_DataView(dt, "CHECKER");
+            ReportGlobalModel.PlateNo = "All";
+            ReportGlobalModel.ScannedBy = getColumn.get_Column_DataView(dt, "SCANNEDBY");
+            
             return dt;
         }
 
@@ -120,15 +142,12 @@ namespace CMSVersion2.Report.Operation.Manifest
             grid_BranchAcceptance.Rebind();
         }
 
-        protected void grid_BranchAcceptance_InfrastructureExporting(object sender, Telerik.Web.UI.GridInfrastructureExportingEventArgs e)
+        protected void btnPrint_Click(object sender, EventArgs e)
         {
-            //Telerik.Web.UI.ExportInfrastructure.ExportStructure structure2 = new Telerik.Web.UI.ExportInfrastructure.ExportStructure();
-            //Telerik.Web.UI.ExportInfrastructure.Table table2 = new Telerik.Web.UI.ExportInfrastructure.Table("S1");
-            //table2.Cells["A1"].Value = "Wine";
-            //Telerik.Web.UI.ExportInfrastructure.Cell b2Cell = table2.Cells["B2"];
-            //b2Cell.Value = "White";
-            //b2Cell.Style.BackColor = System.Drawing.Color.Blue;
-            //structure2.Tables.Add(table2);
+            string host = HttpContext.Current.Request.Url.Authority;
+            RadWindow1.NavigateUrl = "http://" + host + "/" + WebPathName + "/Report/ReportViewerForm1.aspx";
+            string script = "function f(){$find(\"" + RadWindow1.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
+            RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
     }
 }

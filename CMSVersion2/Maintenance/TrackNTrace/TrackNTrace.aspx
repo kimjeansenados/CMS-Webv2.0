@@ -3,15 +3,36 @@
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <script type="text/javascript">
+        function StandardConfirm(sender, args) {
+            args.set_cancel(!window.confirm("Are you sure you want to submit the page?"));
+        }
 
+        function RefreshParentPage()//function in parent page
+        {
+            document.location.reload();
+        }
+    </script>
+
+    <style>
+        div.RadUpload .ruBrowse {
+            background-position: 0 -23px;
+            width: 180px;
+            height: 30px;
+        }
+
+        div.RadUpload_Default .ruFileWrap .ruButtonHover {
+            background-position: 100% -23px !important;
+        }
+    </style>
        <!--- PAGE HEADER--->
-            <div class="row">
-                <h3><i class="glyphicon glyphicon-eye-open"></i> TRACK N TRACE</h3>
-                <ol class="breadcrumb">
-                    <li>Maintenance</li>
-                    <li>Track N Trace</li>
-                </ol>
-            </div>
+    <div class="row">
+        <h3><i class="glyphicon glyphicon-eye-open"></i> TRACK N TRACE</h3>
+        <ol class="breadcrumb">
+            <li>Maintenance</li>
+            <li>Track N Trace</li>
+        </ol>
+    </div>
 
     <%-- BranchAcceptance - BATCH--%>
     <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwAdd_BA_Batch" Height="300px" Width="350px">

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Unbundle.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.Unbundle" %>
+﻿<%@ Page Title="Unbundle" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Unbundle.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.Unbundle" %>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
 
@@ -16,6 +16,9 @@
                 </ol>
             </div>
             <!--- PAGE BODY--->
+            <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" AutoSize="true" AutoSizeBehaviors="HeightProportional" Width="1300px" Skin="Glow" VisibleStatusbar="false"></telerik:RadWindow>
+
+
             <div class="row">
 
                 <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
@@ -32,7 +35,7 @@
                 &nbsp;&nbsp;
 
                 <telerik:RadLabel runat="server" Text="BCO:"></telerik:RadLabel>
-                <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="250px" 
+                <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="220px" 
                     AppendDataBoundItems="true" EnableTextSelection="true" 
                     AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" 
                     AutoPostBack="true" OnSelectedIndexChanged="BCO_SelectedIndexChanged">
@@ -53,6 +56,8 @@
                 &nbsp;&nbsp;
 
                 <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" AutoPostBack="true" OnClick="Search_Click"> </telerik:RadButton>
+                <telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click"> </telerik:RadButton>
+
             </div>
             <br />
             <div class="row">
@@ -63,22 +68,13 @@
                     AutoGenerateColumns="false"
                     AllowSorting="true" OnPreRender="grid_Unbundle_PreRender"
                     OnNeedDataSource="grid_Unbundle_NeedDataSource">    
-                <ExportSettings  HideStructureColumns="true" FileName="Unbundle"
-                     ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true">
-                    <Pdf Title="Unbundle Report" PageHeaderMargin="10px" PageTopMargin="130px"  
-                        BorderType="AllBorders" BorderStyle="Thin" DefaultFontFamily="Calibri" 
-                        PageTitle="Unbundle Report">
-                            <PageHeader>
-                              <MiddleCell  Text="<img src='../../../images/APCARGO-Logo.jpg' width='100%' height='100%'/>"/>
-                          </PageHeader>
-                        </Pdf>
-                </ExportSettings>          
+                  
                     <MasterTableView CommandItemDisplay="Top" Font-Size="Smaller">
-                        <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" 
+                        <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="false" 
                             ShowExportToWordButton="false" ShowExportToCsvButton="false" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />
                         <Columns>
                              <telerik:GridBoundColumn DataField="NO" HeaderText="NO"  HeaderStyle-Width="20px"></telerik:GridBoundColumn>
-                             <telerik:GridBoundColumn DataField="AWB #" HeaderText="AWB #" FooterText="TOTAL:"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="AWBNO" HeaderText="AWB #" FooterText="TOTAL:"></telerik:GridBoundColumn>
                              <telerik:GridBoundColumn DataField="SACKNO" HeaderText="SACK #" Exportable="false"></telerik:GridBoundColumn>
                              <telerik:GridBoundColumn DataField="SCANNED QTY" HeaderText="SCANNED QTY" ></telerik:GridBoundColumn>
                              <telerik:GridBoundColumn DataField="DISCREPENCY QTY" HeaderText="DISCREPENCY QTY"></telerik:GridBoundColumn>                   
