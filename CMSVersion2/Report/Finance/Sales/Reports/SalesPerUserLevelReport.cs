@@ -1,7 +1,9 @@
 namespace CMSVersion2.Report.Finance.Sales.Reports
 {
+    using Models;
     using System;
     using System.ComponentModel;
+    using System.Data;
     using System.Drawing;
     using System.Windows.Forms;
     using Telerik.Reporting;
@@ -19,9 +21,11 @@ namespace CMSVersion2.Report.Finance.Sales.Reports
             //
             InitializeComponent();
             var objectDataSource = new Telerik.Reporting.ObjectDataSource();
+
             DataTable dataTable = ReportGlobalModel.table1;
             objectDataSource.DataSource = dataTable;
             table1.DataSource = objectDataSource;
+            
             //
             // TODO: Add any constructor code after InitializeComponent call
             //

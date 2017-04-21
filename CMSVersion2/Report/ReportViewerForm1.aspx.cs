@@ -6,6 +6,7 @@
     using CargoMonitoring.Reports;
     using Finance.Sales.Reports;
     using Finance.Collection;
+    using Corporate.StatementOfAccountReport;
 
     public partial class ReportViewerForm1 : System.Web.UI.Page
     {
@@ -21,7 +22,7 @@
                     clientReportSource.Identifier = typeof(PickupReport).AssemblyQualifiedName;
                     break;
                 case "BranchAcceptance":
-                    clientReportSource.Identifier = typeof(BranchAcceptance).AssemblyQualifiedName;
+                    clientReportSource.Identifier = typeof(SOAReport).AssemblyQualifiedName;
                     break;
                 case "Bundle":
                     clientReportSource.Identifier = typeof(BundleReport).AssemblyQualifiedName;
