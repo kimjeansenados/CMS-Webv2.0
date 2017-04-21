@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StatementOfAccountDetail.aspx.cs" Inherits="CMSVersion2.Corporate.StatementOfAccountDetails.StatementOfAccountDetail" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StatementOfAccountPrint.aspx.cs" Inherits="CMSVersion2.Corporate.StatementOfAccountDetails.StatementOfAccountDetail" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="wrapper">

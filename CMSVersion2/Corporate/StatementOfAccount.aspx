@@ -22,13 +22,13 @@
                 </div>
 
                 <div class="size-wide">
-                    <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="radSearchUser" EmptyMessage="Search "
+                    <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="radSearchUser" EmptyMessage="Search SOA Number"
                         OnSearch="radSearchUser_Search" Width="300"
                         DataKeyNames="StatementOfAccountId"
                         DataTextField="StatementOfAccountNo"
                         DataValueField="StatementOfAccountId"
                         EnableAutoComplete="true"
-                        ShowSearchButton="false" Skin="Glow"
+                        ShowSearchButton="false" Skin="Office2010Black"
                         DataSourceID="StatementOfAccountDataSource">
 
                         <DropDownSettings Width="300" />
@@ -51,7 +51,7 @@
                     <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" DecorationZoneID="Grid" DecoratedControls="All" EnableRoundedCorners="false" />
                     <div id="Grid">
                         <telerik:RadGrid ID="RadGrid2"
-                            runat="server" AllowPaging="True" Skin="Glow" AllowSorting="True"
+                            runat="server" AllowPaging="True" Skin="Office2010Black" AllowSorting="True"
                             AllowFilteringByColumn="True"
                             DataKeyNames="CompanyId" CommandItemDisplay="Top"
                             DataSourceID="CompanyDataSource" ShowStatusBar="True"
@@ -67,10 +67,10 @@
                                 RetainExpandStateOnRebind="true">
                                 <CommandItemTemplate>
                                     <div class="center" style="align-content: center; text-align: left">
-                                        <a class="alink">
-                                            <img src="../images/emblem.png" alt="Print Preview" width="20" />
-                                            Companies
-                                        </a>
+                                        <asp:Label runat="server">
+                                            <img src="../Images/emblem.png" alt="" width="20" />
+                                            Company Accounts
+                                        </asp:Label>
                                     </div>
                                 </CommandItemTemplate>
                                 <DetailTables>
@@ -81,10 +81,10 @@
                                         EditMode="InPlace">
                                         <CommandItemTemplate>
                                             <div class="center" style="align-content: center; text-align: left">
-                                                <a class="alink">
-                                                    <img src="../images/emblem.png" alt="Print Preview" width="20" />
-                                                    Statenent Of Accounts
-                                                </a>
+                                                <asp:Label runat="server">
+                                                            <img src="../Images/emblem.png" alt="" width="20" />
+                                                            Statement Of Accounts
+                                                </asp:Label>
                                             </div>
                                         </CommandItemTemplate>
                                         <ParentTableRelation>
@@ -101,10 +101,10 @@
                                                 RetainExpandStateOnRebind="true">
                                                 <CommandItemTemplate>
                                                     <div class="center" style="align-content: center; text-align: left">
-                                                        <a class="alink">
-                                                            <img src="../images/emblem.png" alt="" width="20" />
+                                                        <asp:Label runat="server">
+                                                            <img src="../Images/emblem.png" alt="" width="20" />
                                                             Shipments
-                                                        </a>
+                                                        </asp:Label>
                                                     </div>
                                                 </CommandItemTemplate>
                                                 <ParentTableRelation>
@@ -121,7 +121,7 @@
                                                     <telerik:GridBoundColumn DataField="VatAmount" DataType="System.Decimal" UniqueName="VatAmount" HeaderText="Vat"></telerik:GridBoundColumn>
                                                     <telerik:GridBoundColumn DataField="TotalAmount" DataType="System.Decimal" UniqueName="TotalAmount" HeaderText="Amount"></telerik:GridBoundColumn>
                                                     <telerik:GridNumericColumn DataField="Adjustment" UniqueName="Adjustment" HeaderText="Adjsustment" DataType="System.Decimal" ReadOnly="true"></telerik:GridNumericColumn>
-                                                    <telerik:GridEditCommandColumn EditText="Adjust" ButtonType="LinkButton"></telerik:GridEditCommandColumn>
+                                                    <telerik:GridEditCommandColumn EditText="Make Adjustment" ButtonType="ImageButton"></telerik:GridEditCommandColumn>
 
                                                 </Columns>
 
@@ -135,12 +135,12 @@
                                             <telerik:GridBoundColumn DataField="StatementOfAccountNo" HeaderText="SOA No" UniqueName="SOANo" HeaderStyle-Font-Bold="true"></telerik:GridBoundColumn>
                                             <telerik:GridBoundColumn DataField="BillingPeriodName" HeaderText="Billing Period" SortExpression="BillingPeriodName" UniqueName="BillingPeriod"></telerik:GridBoundColumn>
                                             <telerik:GridDateTimeColumn DataField="SOADueDate" UniqueName="SOADueDate" HeaderText="Due Date"></telerik:GridDateTimeColumn>
-                                            <telerik:GridBoundColumn DataField="AmountDue" UniqueName="AmountDue" HeaderText="Amount Due" ></telerik:GridBoundColumn>
+                                            <telerik:GridBoundColumn DataField="AmountDue" UniqueName="AmountDue" HeaderText="Amount Due"></telerik:GridBoundColumn>
                                             <telerik:GridBoundColumn DataField="Adjustment" DataType="System.Decimal" HeaderText="Adjustment"></telerik:GridBoundColumn>
-                                            <telerik:GridEditCommandColumn EditText="Adjust" ButtonType="LinkButton"></telerik:GridEditCommandColumn>
+                                            <telerik:GridEditCommandColumn EditText="Make Adjustment" ButtonType="ImageButton"></telerik:GridEditCommandColumn>
                                             <telerik:GridTemplateColumn UniqueName="Details" AllowFiltering="false">
                                                 <ItemTemplate>
-                                                    <asp:HyperLink ID="DetailsLink" runat="server" NavigateUrl='<%# Eval("StatementOfAccountId", "~/Corporate/StatementOfAccountDetails/StatementOfAccountDetail.aspx?StatementOfAccountId={0}") %>' Text="Print"></asp:HyperLink>
+                                                    <asp:HyperLink ID="DetailsLink" runat="server" NavigateUrl='<%# Eval("StatementOfAccountId", "~/Corporate/StatementOfAccountPrint/StatementOfAccountPrint.aspx?StatementOfAccountId={0}") %>' Text="Print"></asp:HyperLink>
                                                 </ItemTemplate>
                                             </telerik:GridTemplateColumn>
 
@@ -149,9 +149,7 @@
                                     </telerik:GridTableView>
                                 </DetailTables>
                                 <Columns>
-                                    <telerik:GridEditCommandColumn UniqueName="AdjustmentColumn" HeaderStyle-Width="20px">
-                                        <HeaderStyle Width="20px" />
-                                    </telerik:GridEditCommandColumn>
+                                   
                                     <telerik:GridBoundColumn DataField="CompanyId" UniqueName="CompanyId" Visible="false"></telerik:GridBoundColumn>
                                     <telerik:GridBoundColumn DataField="AccountNo" UniqueName="AccountNo" HeaderText="Account No"></telerik:GridBoundColumn>
                                     <telerik:GridBoundColumn DataField="CompanyName" UniqueName="CompanyName" HeaderText="Company Name"></telerik:GridBoundColumn>

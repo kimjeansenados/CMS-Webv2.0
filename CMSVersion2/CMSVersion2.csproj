@@ -226,7 +226,7 @@
     <Content Include="Corporate\Representative.aspx" />
     <Content Include="Corporate\StatementOfAccount.aspx" />
     <Content Include="Corporate\StatementOfAccountAdjustment\AddStatementOfAccountAdjustment.aspx" />
-    <Content Include="Corporate\StatementOfAccountDetails\StatementOfAccountDetail.aspx" />
+    <Content Include="Corporate\StatementOfAccountPrint\StatementOfAccountPrint.aspx" />
     <Content Include="Customer\Customer.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -500,12 +500,12 @@
     <Compile Include="Corporate\StatementOfAccountAdjustment\AddStatementOfAccountAdjustment.aspx.designer.cs">
       <DependentUpon>AddStatementOfAccountAdjustment.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Corporate\StatementOfAccountDetails\StatementOfAccountDetail.aspx.cs">
-      <DependentUpon>StatementOfAccountDetail.aspx</DependentUpon>
+    <Compile Include="Corporate\StatementOfAccountPrint\StatementOfAccountPrint.aspx.cs">
+      <DependentUpon>StatementOfAccountPrint.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Corporate\StatementOfAccountDetails\StatementOfAccountDetail.aspx.designer.cs">
-      <DependentUpon>StatementOfAccountDetail.aspx</DependentUpon>
+    <Compile Include="Corporate\StatementOfAccountPrint\StatementOfAccountPrint.aspx.designer.cs">
+      <DependentUpon>StatementOfAccountPrint.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Customer.aspx.cs">
       <DependentUpon>Customer.aspx</DependentUpon>
