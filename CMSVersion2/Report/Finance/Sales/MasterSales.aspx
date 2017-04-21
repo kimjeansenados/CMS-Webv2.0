@@ -14,6 +14,8 @@
                     <li>Master Sales Report</li>
                 </ol>
             </div>
+            <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" AutoSize="true" AutoSizeBehaviors="HeightProportional" Width="1300px" Skin="Glow" VisibleStatusbar="false"></telerik:RadWindow>
+
            			<div class="row">
                 <telerik:RadLabel runat="server" Text="Date   :"></telerik:RadLabel>
                 <telerik:RadDatePicker ID="Date1" runat="server" Skin="Glow"></telerik:RadDatePicker>
@@ -82,6 +84,8 @@
                 </telerik:RadComboBox>
                  &nbsp;&nbsp;
                 <telerik:RadButton ID="Search" Text="Search" runat="server" Skin="Glow" AutoPostBack="true" OnClick="Search_Click"></telerik:RadButton>   
+                <teleri6k:RadButton ID="btnPrint" Skin="Glow" OnClick="btnPrint_Click"
+                    runat="server" Text="PRINT" AutoPostBack="true"></teleri6k:RadButton>
             </div>
             <br />
             <!--- PAGE BODY--->

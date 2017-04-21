@@ -42,26 +42,25 @@
         <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" Skin="Default" DecoratedControls="All" />
         <%--<asp:Button runat="server" Text="Close" ID="CloseButton"     OnClick="CloseButton_Click1"/>--%>
         <div class="main-login main-center">
-            <div class="form-horizontal">
+            <div class="form-horizontal" style="margin-left:80px;margin-top:40px;">
 
 
                 <div class="form-group">
 
-                    <div class="cols-sm-10">
                         <label for="email" class="cols-sm-2 control-label">Group Island</label>
                         <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
+                            
                             <telerik:RadComboBox ID="rcbGroup" runat="server"></telerik:RadComboBox>
                         </div>
                         <br />
                         <label for="email" class="cols-sm-2 control-label" style="font-style: normal">Region</label>
                         <div class="input-group" style="font-size: 12px">
 
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
+                            
 
                             <asp:Label ID="lblGroupID" runat="server" Text="" Visible="false"></asp:Label>
 
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtRegionName" Enabled="True" runat="server"></telerik:RadTextBox>
+                            <telerik:RadTextBox Width="200px" RenderMode="Mobile" ID="txtRegionName" Enabled="True" runat="server"></telerik:RadTextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
                                 ControlToValidate="txtRegionName"
                                 ErrorMessage="*"
@@ -69,9 +68,9 @@
                             </asp:RequiredFieldValidator>
                         </div>
                         <br />
-                        <telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click"></telerik:RadButton>
-                        <telerik:RadButton ID="btnCancel" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click" OnClientClicked="redirect"></telerik:RadButton>
-                    </div>
+                        <telerik:RadButton ID="btnSave" Skin="Glow" runat="server" Text="Save" OnClick="btnSave_Click"></telerik:RadButton>
+                        <telerik:RadButton ID="btnCancel" Skin="Glow" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click" OnClientClicked="redirect"></telerik:RadButton>
+                  
                 </div>
 
             </div>
@@ -79,7 +78,7 @@
 
         </div>
 
-        <script type="text/javascript" src="../../../js/bootstrap.js"></script>
+        <script type="text/javascript" src="../../../../Scripts/jquery.js"></script>
 
         <br />
     </form>

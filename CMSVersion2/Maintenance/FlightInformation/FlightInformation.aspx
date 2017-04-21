@@ -63,15 +63,20 @@
                 </ol>
             </div>
                 <!-- /.row -->
-                <div>
-                        <telerik:RadAsyncUpload Skin="Glow" runat="server" ID="FileUploadFlightInfo"
-                                            HideFileInput="true" Height="30px"  
+                <div class="row">
+                        <telerik:RadAsyncUpload Skin="Glow" runat="server" ID="FileUploadFlightInfo" 
+                                            HideFileInput="true" 
                                             AllowedFileExtensions=".xls,.xlsx,.csv"
                                             OnFileUploaded="FileUploadFlightInfo_FileUploaded"
                                             OnClientFilesUploaded="UploadFile"
                                             Localization-Select="Import File"/>
                         
-                        <telerik:RadButton ID="btnUpload" runat="server" Text="Upload" Visible="false" OnClick="btnUpload_Click"></telerik:RadButton>
+                        <telerik:RadButton ID="btnUpload" runat="server" Text="Upload" 
+                            Visible="false" OnClick="btnUpload_Click"></telerik:RadButton>
+                         <%--<a href="#" onclick="return ShowInsertForm();" class="alink">
+                                             <img src="../../Images/emblem.png" alt="Add Company" width="20">
+                                             Add FlightInfo
+                                         </a>--%>
                  </div>
                 
                <br />
@@ -185,6 +190,7 @@
                                 </Columns>
 
                                 <CommandItemTemplate>
+                                    
                                     <div class="center">
                                     |
                                          <a href="#" onclick="return ShowInsertForm();" class="alink">

@@ -15,6 +15,8 @@
                 </ol>
             </div>
             <!--- PAGE BODY--->
+            <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" AutoSize="true" AutoSizeBehaviors="HeightProportional" Width="1300px" Skin="Glow" VisibleStatusbar="false"></telerik:RadWindow>
+
             <div class="row">
                 <telerik:RadLabel ID="RadLabel1" runat="server" Text="Date:"></telerik:RadLabel>
                 <telerik:RadDatePicker ID="Date1" runat="server" Skin="Glow" AutoPostBack="true"></telerik:RadDatePicker>
@@ -30,7 +32,8 @@
                 </telerik:RadComboBox>
                  &nbsp;&nbsp;
                 <telerik:RadButton ID="Search" Text="Search" runat="server" Skin="Glow" AutoPostBack="true" OnClick="Search_Click"></telerik:RadButton>
-                   
+                <telerik:RadButton ID="btnPrint" Skin="Glow" OnClick="btnPrint_Click"
+                    runat="server" Text="PRINT" AutoPostBack="true"></telerik:RadButton>
             </div>
             <br />
             <div class="row">
@@ -63,7 +66,7 @@
                             <telerik:GridBoundColumn DataField="ORIGIN" HeaderText="ORIGIN" FooterText="Total: " Aggregate="Custom"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="DESTINATION" HeaderText="DESTINATION"></telerik:GridBoundColumn>
 
-                            <telerik:GridBoundColumn DataField="SHIPMODE" HeaderText="SHIPMODE" Visible="false"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="ShipModeName" HeaderText="SHIPMODE" Visible="false"></telerik:GridBoundColumn>
 
                             <telerik:GridBoundColumn DataField="PP" HeaderText="PP"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="FC" HeaderText="FC"></telerik:GridBoundColumn>

@@ -34,13 +34,13 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Dashboard</a></li>
+                        <li><a runat="server" href="~/"><i class="glyphicon glyphicon-dashboard"></i> Dashboard</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Maintenance<b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i> Maintenance<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a runat="server" href="~/Maintenance/CMSMaintenance/CMSMaintenance.aspx">CMS Maintenance</a></li>
                                 <li><a runat="server" href="~/Maintenance/FlightInformation/FlightInformation.aspx">Flight Information</a></li>
-                                <li><a runat="server" href="~/Maintenance/RateMatrix/RateMatrix.aspx">Rate Matrix</a></li>
+                                <li><a runat="server" href="~/Maintenance/RateMatrix/RateMatrixMain.aspx">Rate Matrix</a></li>
                                 <li><a runat="server" href="~/Maintenance/TrackNTrace/TrackNTrace.aspx">TrackNTrace</a></li>
                                 <li><a runat="server" href="~/Error/UnderMaintenance.aspx">Truck Area Assignment</a></li>
                                 <li class="dropdown dropdown-submenu"">
@@ -53,9 +53,9 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a runat="server" href="~/Customer/Customer.aspx">Customers</a></li>
+                        <li><a runat="server" href="~/Customer/Customer.aspx"><i class="glyphicon glyphicon-user"></i> Customers</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Corporate<b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-briefcase"></i> Corporate<b class="caret"></b></a>
                             <ul class="dropdown-menu message-dropdown">
                                 <li><a runat="server" href="~/Corporate/Company.aspx">Company</a></li>
                                 <li><a runat="server" href="~/Corporate/Representative.aspx">Representatives</a></li>
@@ -63,8 +63,8 @@
                                 <li><a runat="server" href="~/Corporate/StatementOfAccount.aspx">Statement of Account</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shipment<b class="caret"></b></a>
+                        <%--<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-plane"></i> Shipment<b class="caret"></b></a>
                             <ul class="dropdown-menu message-dropdown">
                                 <li><a runat="server" href="~/Shipment/AWBTracking.aspx">AWB Tracking</a></li>
                                 <li><a runat="server" href="~/Error/UnderMaintenance.aspx">AWB Detailed Tracking</a></li>
@@ -72,9 +72,9 @@
                                 <li><a runat="server" href="~/Error/UnderMaintenance.aspx">View Tracking Entry</a></li>
                                 <li><a runat="server" href="~/Error/UnderMaintenance.aspx">View Delivery</a></li>
                             </ul>
-                        </li>
+                        </li>--%>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Report<b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-print"></i> Report<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li class="dropdown dropdown-submenu">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Operation</a>
@@ -120,10 +120,11 @@
                                         <li><a runat="server" href="~/Report/Finance/Collection.aspx">Collection</a></li>                                  
                                     </ul>
                                 </li>
+                                 <li><a runat="server" href="~/Report/AWBTracking/AWBTracking.aspx">AWB Tracking</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administration<b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-wrench"></i> Administration<b class="caret"></b></a>
                             <ul class="dropdown-menu message-dropdown">
                                 <li class="message-footer"><a runat="server" href="~/Administration/Users.aspx">Manager Users</a></li>
                                 <li class="message-footer"><a runat="server" href="~/Administration/Employee.aspx">Manage Employee</a></li>

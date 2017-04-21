@@ -1,10 +1,14 @@
-﻿using System;
+﻿using CMSVersion2.Models;
+using CMSVersion2.Report.Operation.Manifest.Reports;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Telerik.Web.UI;
 using BLL = BusinessLogic;
 using Tools = utilities;
 
@@ -13,6 +17,7 @@ namespace CMSVersion2.Report.Operation.Manifest
     public partial class Segregation : System.Web.UI.Page
     {
         Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
+        public static string WebPathName = ConfigurationManager.ConnectionStrings["iiswebname"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -95,6 +100,25 @@ namespace CMSVersion2.Report.Operation.Manifest
             DataSet data = BLL.Report.SegregationReport.GetSegregation(getConstr.ConStrCMS, DateStr, DriverStr, CheckerStr, PlateNoStr, BCOStr, CityStr);
             DataTable dt = new DataTable();
             dt = data.Tables[0];
+
+
+            //PRINTING
+            GetColumnDataFromDataTable getColumn = new GetColumnDataFromDataTable();
+
+            DateStr = (DateStr == null) ? "All" : DateStr;
+            DriverStr = (DriverStr == null) ? "All" : DriverStr;
+            CheckerStr = (CheckerStr == null) ? "All" : CheckerStr;
+            PlateNoStr = (PlateNoStr == null) ? "All" : PlateNoStr;
+
+            ReportGlobalModel.Report = "Segregation";
+            ReportGlobalModel.table1 = dt;
+
+            ReportGlobalModel.Date = DateStr;
+            ReportGlobalModel.Driver = DriverStr;
+            ReportGlobalModel.Checker = CheckerStr;
+            ReportGlobalModel.PlateNo = PlateNoStr;
+
+
             return dt;
         }
 
@@ -125,6 +149,14 @@ namespace CMSVersion2.Report.Operation.Manifest
             Destination.DataTextField = "CityName";
             Destination.DataValueField = "CityName";
             Destination.DataBind();
+        }
+
+        protected void Print_Click(object sender, EventArgs e)
+        {
+            string host = HttpContext.Current.Request.Url.Authority;
+            RadWindow1.NavigateUrl = "http://" + host + "/" + WebPathName + "/Report/ReportViewerForm1.aspx";
+            string script = "function f(){$find(\"" + RadWindow1.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
+            RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
     }
 }

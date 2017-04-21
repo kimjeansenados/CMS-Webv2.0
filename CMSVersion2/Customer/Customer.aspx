@@ -47,8 +47,8 @@
                                     AllowFilteringByColumn="false"
                                     DataKeyNames="ClientId" CommandItemDisplay="Top" 
                                     InsertItemPageIndexAction="ShowItemOnFirstPage">
-                                   <CommandItemSettings  ShowExportToWordButton="true" ShowExportToExcelButton="true" 
-            ShowExportToCsvButton="true" ShowExportToPdfButton="true"></CommandItemSettings>
+                                   <CommandItemSettings  ShowExportToWordButton="false" ShowExportToExcelButton="true" 
+            ShowExportToCsvButton="false" ShowExportToPdfButton="true"></CommandItemSettings>
                                     <Columns>
 
                                         <telerik:GridNumericColumn DataField="Name" HeaderText="Client Name" SortExpression="Name" Exportable="true"

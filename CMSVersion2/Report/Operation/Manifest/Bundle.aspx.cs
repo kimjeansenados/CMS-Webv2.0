@@ -1,10 +1,14 @@
-﻿using System;
+﻿using CMSVersion2.Models;
+using CMSVersion2.Report.Operation.Manifest.Reports;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Telerik.Web.UI;
 using BLL = BusinessLogic;
 using Tools = utilities;
 
@@ -13,6 +17,7 @@ namespace CMSVersion2.Report.Operation.Manifest
     public partial class Bundle : System.Web.UI.Page
     {
         Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
+        public static string WebPathName = ConfigurationManager.ConnectionStrings["iiswebname"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -79,6 +84,21 @@ namespace CMSVersion2.Report.Operation.Manifest
             DataSet data = BLL.Report.BundleReport.GetBundle(getConstr.ConStrCMS, date, bundlenumber, destination, bco);
             DataTable dt = new DataTable();
             dt = data.Tables[0];
+
+            //PRINTING
+            GetColumnDataFromDataTable getColumn = new GetColumnDataFromDataTable();
+            date = (date == null) ? "All" : date;
+            bundlenumber = (bundlenumber == null) ? "All" : bundlenumber;
+            bco = (bco == null) ? "All" : bco;
+
+            ReportGlobalModel.Report = "Bundle";
+            ReportGlobalModel.table1 = dt;
+            ReportGlobalModel.Date = date;        
+            ReportGlobalModel.SackNo = bundlenumber;
+            ReportGlobalModel.Destination = bco;
+            ReportGlobalModel.Weight = "";
+            ReportGlobalModel.ScannedBy = getColumn.get_Column_DataView(dt, "SCANNEDBY");
+            
             return dt;
         }
 
@@ -109,6 +129,14 @@ namespace CMSVersion2.Report.Operation.Manifest
             Destination.DataTextField = "CityName";
             Destination.DataValueField = "CityName";
             Destination.DataBind();
+        }
+
+        protected void btnPrint_Click(object sender, EventArgs e)
+        {
+            string host = HttpContext.Current.Request.Url.Authority;
+            RadWindow1.NavigateUrl = "http://" + host + "/" + WebPathName + "/Report/ReportViewerForm1.aspx";
+            string script = "function f(){$find(\"" + RadWindow1.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
+            RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
     }
 }
