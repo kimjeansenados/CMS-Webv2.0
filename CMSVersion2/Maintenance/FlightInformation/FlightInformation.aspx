@@ -113,9 +113,9 @@
                             OnItemCreated="RadGrid2_ItemCreated"
                             ExportSettings-Excel-DefaultCellAlignment="Right"
                             PageSize="10" OnItemCommand="RadGrid2_ItemCommand1"
-                           
                             CommandItemDisplay="Top">
-                           <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true"></ExportSettings>     
+                           <ExportSettings HideStructureColumns="true" ExportOnlyData="true" 
+                               IgnorePaging="true" UseItemStyles="true"></ExportSettings>     
                             <GroupingSettings CaseSensitive="false"></GroupingSettings>
 
                             <MasterTableView AutoGenerateColumns="False" ClientDataKeyNames="FlightInfoId"
@@ -177,14 +177,14 @@
 
                                     <telerik:GridTemplateColumn UniqueName="TemplateEditColumn" AllowFiltering="false">
                                         <ItemTemplate>
-                                            <asp:HyperLink ID="EditLink" runat="server" Text="Edit" CssClass="btn btn-primary"></asp:HyperLink> 
+                                            <asp:HyperLink ID="EditLink" runat="server" Text="Edit"></asp:HyperLink> 
                                         </ItemTemplate>
                                     </telerik:GridTemplateColumn>
                                     
 
                                     <telerik:GridButtonColumn ConfirmText="Are you sure you want to delete this?" ButtonType="LinkButton"
                                         ConfirmDialogType="RadWindow" ConfirmDialogHeight="150px" ConfirmTitle="Deactivate User"
-                                        CommandName="Delete" Text="Delete" UniqueName="DeleteColumn" HeaderText="" ButtonCssClass="btn btn-danger">
+                                        CommandName="Delete" Text="Delete" UniqueName="DeleteColumn" HeaderText="">
                                         <HeaderStyle />
                                     </telerik:GridButtonColumn>
                                 </Columns>
@@ -199,13 +199,13 @@
                                          </a>
                                     |    
                                         
-                                        <a href="#" onclick="return ShowExportForm();" class="alink">
+                                       <%-- <a href="#" onclick="return ShowExportForm();" class="alink">
                                             <img src="../../Images/emblem.png" alt="Print Preview" width="20">
                                             Print Preview
                                         </a>
                                     |
                    
-                                 
+                                 --%>
                                         <a href="#" onclick="location.reload();" class="alink">
                                             <img src="../../Images/emblem.png" alt="Export to Excel" width="20">
                                             Refresh Data

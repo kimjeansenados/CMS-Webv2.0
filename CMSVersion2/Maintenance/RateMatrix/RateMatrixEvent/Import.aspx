@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Import.aspx.cs" Inherits="CMSVersion2.Maintenance.RateMatrix.RateMatrix.Import" %>
-
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -29,18 +29,19 @@
         }
     </script>
 </head>
-<body>
-    <telerik:RadScriptManager runat="server" ID="ScriptManager"></telerik:RadScriptManager>
+<body runat="server">
+   
+    <%--<asp:Button ID="Button4" Text="open the RadWindow from the server" runat="server" OnClick="Button4_Click" />--%>
+    <form runat="server">
+         <telerik:RadScriptManager runat="server" ID="ScriptManager"></telerik:RadScriptManager>
    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" Height="300px" Width="350px">
     </telerik:RadWindow>
-    <%--<asp:Button ID="Button4" Text="open the RadWindow from the server" runat="server" OnClick="Button4_Click" />--%>
-    <form>
     <div id="wrapper">
         <div id="page-wrapper">
             <div class="container">
                 <div class="buttons">
                     <br />
-                    <telerik:RadAsyncUpload ID="RadAsyncUpload2" OnClientFilesUploaded="fileUploaded" OnFileUploaded="AsyncUpload1_FileUploaded"
+                    <telerik:RadAsyncUpload ID="RadAsyncUpload2" Skin="Glow" Visible="true" OnClientFilesUploaded="fileUploaded" OnFileUploaded="AsyncUpload1_FileUploaded"
                         HideFileInput="True" runat="server" Localization-Select="Import From Excel File" AllowedFileExtensions=".xlsx, .xls" Font-Size="14px"></telerik:RadAsyncUpload>
                     <br />
                     

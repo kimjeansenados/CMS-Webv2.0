@@ -150,12 +150,12 @@
                                          </a>
                                     |    
                                         
-                                        <a href="#" onclick="return ShowExportForm();">
+                                   <%--     <a href="#" onclick="return ShowExportForm();">
                                             <img src="../../Images/emblem.png" alt="Print Preview" width="20">
                                             Print Preview
                                         </a>
                                     |
-                   
+                   --%>
                                  
                                         <a href="" onclick="LoadRadGrid()" >
                                             <img src="../../Images/emblem.png" alt="Export to Excel" width="20">

@@ -7,14 +7,17 @@
     <div id="wrapper">
        <div id="page-wrapper">
            <div class="container">
+               <!-- Page Heading -->
                <div class="row">
-                <h3><i class="glyphicon glyphicon-search"></i> AWB SERIES MONITORING</h3>
-                <ol class="breadcrumb">
-                    <li>Maintenance</li>
-                    <li>AWB Series</li>
-                    <li>Monitoring</li>
-                </ol>
-            </div>
+                   <div class="col-lg-12">
+                       <h3>AWB Series Monitoring</h3>
+                       <ol class="breadcrumb">
+                           <li>AWB Series</li>
+                            <li class="active">AWB Series Monitoring</li>
+                       </ol><!--breadcrumb-->
+                       <hr />
+                   </div>
+               </div><!--row-->
                <div class="row">
                    <div class="col-md-12">
                        <telerik:RadLabel ID="lblBco" runat="server" Text="BCO:"></telerik:RadLabel>
@@ -40,7 +43,7 @@
                     ID="radGridAwbSeriesMonitoring"
                     AllowPaging="True" 
                     PageSize="10"  
-                    AllowFilteringByColumn="false" 
+                    AllowFilteringByColumn="True" 
                     AutoGenerateColumns="false"
                     AllowSorting="true"
                     OnNeedDataSource="radGridAwbSeriesMonitoring_NeedDataSource">
@@ -106,6 +109,6 @@
                </div><!--row-->
            </div><!--container-->
        </div><!--page-wrapper-->
-   </div><!--wrapper-->   
+   </div><!--wrapper-->        
 
 </asp:Content>

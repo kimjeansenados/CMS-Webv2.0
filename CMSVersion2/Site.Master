@@ -42,7 +42,7 @@
                                 <li><a runat="server" href="~/Maintenance/FlightInformation/FlightInformation.aspx">Flight Information</a></li>
                                 <li><a runat="server" href="~/Maintenance/RateMatrix/RateMatrixMain.aspx">Rate Matrix</a></li>
                                 <li><a runat="server" href="~/Maintenance/TrackNTrace/TrackNTrace.aspx">TrackNTrace</a></li>
-                                <li><a runat="server" href="~/Error/UnderMaintenance.aspx">Truck Area Assignment</a></li>
+                                <li><a runat="server" href="#">Truck Area Assignment</a></li>
                                 <li class="dropdown dropdown-submenu"">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">AWB Series</a>
                                     <ul class="dropdown-menu">
@@ -117,7 +117,7 @@
                                                 <li><a runat="server" href="~/Report/Finance/Sales/SalesPerUserLevel.aspx">Sales Per User Level</a></li>
                                             </ul>
                                          </li>
-                                        <li><a runat="server" href="~/Report/Finance/Collection.aspx">Collection</a></li>                                  
+                                        <li><a runat="server" href="~/Report/Finance/Collections/Collections.aspx">Collection</a></li>                                  
                                     </ul>
                                 </li>
                                  <li><a runat="server" href="~/Report/AWBTracking/AWBTracking.aspx">AWB Tracking</a></li>

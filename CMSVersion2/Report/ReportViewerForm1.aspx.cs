@@ -22,7 +22,7 @@
                     clientReportSource.Identifier = typeof(PickupReport).AssemblyQualifiedName;
                     break;
                 case "BranchAcceptance":
-                    clientReportSource.Identifier = typeof(SOAReport).AssemblyQualifiedName;
+                    clientReportSource.Identifier = typeof(BranchAcceptance).AssemblyQualifiedName;
                     break;
                 case "Bundle":
                     clientReportSource.Identifier = typeof(BundleReport).AssemblyQualifiedName;

@@ -140,11 +140,11 @@
                                             </a>
                                         |    
                                         
-                                        <a href="#"  onclick="return ShowExportForm();" class="alink">
+                         <%--               <a href="#"  onclick="return ShowExportForm();" class="alink">
                                             <img src="../images/emblem.png" alt="Print Preview" width="20">
                                            Print Preview
                                             </a>
-       |
+       |--%>
                    
                                  
                                         <a href="" onclick="LoadRadGrid()" class="alink">
@@ -173,8 +173,8 @@
                                         Modal="true" Behaviors="Close,Move">
                                     </telerik:RadWindow>
 
-                                     <telerik:RadWindow RenderMode="Auto" ID="AddUser" runat="server" Title="Adding record" Height="600px" Skin="Glow"
-                                        Width="800px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
+                                     <telerik:RadWindow RenderMode="Auto" ID="AddUser" runat="server" Title="Adding record" Height="400px" Skin="Glow"
+                                        Width="500px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
                                         Modal="true" Behaviors="Close,Move"  >
                                     </telerik:RadWindow>
 

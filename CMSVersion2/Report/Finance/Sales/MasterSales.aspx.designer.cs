@@ -112,6 +112,15 @@ namespace CMSVersion2.Report.Finance.Sales {
         protected global::Telerik.Web.UI.RadButton Search;
         
         /// <summary>
+        /// btnPrint control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadButton btnPrint;
+        
+        /// <summary>
         /// grid_MasterSales control.
         /// </summary>
         /// <remarks>

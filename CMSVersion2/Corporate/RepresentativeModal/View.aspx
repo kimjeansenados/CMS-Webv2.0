@@ -156,11 +156,11 @@
                                         </button>
                             |--%>
                                         
-                                        <a href="#"  onclick="return ShowExportForm();">
+                                       <%-- <a href="#"  onclick="return ShowExportForm();">
                                             <img src="../../images/emblem.png" alt="Print Preview" width="20px">
                                            Print Preview
                                             </a>
-       |
+       |--%>
                    
                                  
                                         <a href="#"  onclick="location.reload();">

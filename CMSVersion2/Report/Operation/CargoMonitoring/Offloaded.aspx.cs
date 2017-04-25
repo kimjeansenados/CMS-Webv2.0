@@ -1,5 +1,9 @@
-﻿using System;
+﻿using CMSVersion2.Models;
+using System;
+using System.Configuration;
 using System.Data;
+using System.Web;
+using Telerik.Web.UI;
 using BLL = BusinessLogic;
 using Tools = utilities;
 
@@ -8,6 +12,7 @@ namespace CMSVersion2.Report.Operation.CargoMonitoring
     public partial class Offloaded : System.Web.UI.Page
     {
         Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
+        public static string WebPathName = ConfigurationManager.ConnectionStrings["iiswebname"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -29,6 +34,10 @@ namespace CMSVersion2.Report.Operation.CargoMonitoring
             DataSet data = BLL.Report.CargoMonitoring.GetCargoMonitoringOffloaded(getConstr.ConStrCMS, date1, date2);
             DataTable dt = new DataTable();
             dt = data.Tables[0];
+            ReportGlobalModel.Report = "Offloaded";
+            ReportGlobalModel.table1 = dt;
+            ReportGlobalModel.Date = date1.ToShortDateString();
+            ReportGlobalModel.Remarks = date2.ToShortDateString();
             return dt;
         }
 
@@ -42,6 +51,14 @@ namespace CMSVersion2.Report.Operation.CargoMonitoring
         {
             grid_Delivered.DataSource = getDelivered();
             grid_Delivered.Rebind();
+        }
+
+        protected void btnPrint_Click(object sender, EventArgs e)
+        {
+            string host = HttpContext.Current.Request.Url.Authority;
+            RadWindow1.NavigateUrl = "http://" + host + "/" + WebPathName + "/Report/ReportViewerForm1.aspx";
+            string script = "function f(){$find(\"" + RadWindow1.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
+            RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
     }
 }

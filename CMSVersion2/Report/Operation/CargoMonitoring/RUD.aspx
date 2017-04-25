@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RUD.aspx.cs" Inherits="CMSVersion2.Report.Operation.CargoMonitoring.RUD" %>
+﻿<%@ Page Title="RUD" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RUD.aspx.cs" Inherits="CMSVersion2.Report.Operation.CargoMonitoring.RUD" %>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
@@ -14,6 +14,8 @@
                     <li>RUD</li>
                 </ol>
             </div>
+            <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" AutoSize="true" AutoSizeBehaviors="HeightProportional" Width="1300px" Skin="Glow" VisibleStatusbar="false"></telerik:RadWindow>
+
             <div class="row">
                 <telerik:RadLabel ID="RadLabel1" runat="server" Text="Date:"></telerik:RadLabel>
                 <telerik:RadDatePicker ID="Date1" runat="server" Skin="Glow" AutoPostBack="true"></telerik:RadDatePicker>
@@ -22,6 +24,8 @@
                
                  &nbsp;&nbsp;
                 <telerik:RadButton ID="Search" Text="Search" runat="server" Skin="Glow" AutoPostBack="true"></telerik:RadButton>   
+                 <telerik:RadButton ID="btnPrint" Skin="Glow" OnClick="btnPrint_Click"
+                    runat="server" Text="PRINT" AutoPostBack="true"></telerik:RadButton>
             </div>
             <br />
             <div class="row">

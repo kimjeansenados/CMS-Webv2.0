@@ -33,11 +33,11 @@
         </script>
 </head>
 <body>
-    <form id="form2" runat="server">
+   <form id="form2" runat="server">
         <telerik:RadScriptManager ID="RadScriptManager2" runat="server"></telerik:RadScriptManager>
        <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator2" runat="server" Skin="Default" DecoratedControls="All" />
         <div class="center">
-            <div class="form-horizontal">
+            <form class="form-horizontal" method="post" action="#">
                
                  <div class="page">
                     <div class="col-xs-12">
@@ -95,7 +95,7 @@
                  <telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" OnClientClicked=""></telerik:RadButton>
                  <telerik:RadButton ID="btnCancel" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click"></telerik:RadButton>
                  </div>
-            </div>
+            </form>
 
 
         </div>

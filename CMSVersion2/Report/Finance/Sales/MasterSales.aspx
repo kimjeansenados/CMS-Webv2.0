@@ -84,8 +84,8 @@
                 </telerik:RadComboBox>
                  &nbsp;&nbsp;
                 <telerik:RadButton ID="Search" Text="Search" runat="server" Skin="Glow" AutoPostBack="true" OnClick="Search_Click"></telerik:RadButton>   
-                <teleri6k:RadButton ID="btnPrint" Skin="Glow" OnClick="btnPrint_Click"
-                    runat="server" Text="PRINT" AutoPostBack="true"></teleri6k:RadButton>
+                <telerik:RadButton ID="btnPrint" Skin="Glow" OnClick="btnPrint_Click"
+                    runat="server" Text="PRINT" AutoPostBack="true"></telerik:RadButton>
             </div>
             <br />
             <!--- PAGE BODY--->

@@ -59,7 +59,7 @@
                 <div id="page-wrapper">
                     <div class="container">
                         <br />
-                        <div class="col-lg-12">
+                        <%--<div class="col-lg-12">
                             <div class="form-horizontal">
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Employee Name:</label>
@@ -95,7 +95,7 @@
                                     </div>
                                 </div>                        
                             </div>
-                        </div>
+                        </div>--%>
                     </div>
                 </div>
             </div>
@@ -106,27 +106,29 @@
                     <div class="col-xs-12">
                         
                         <div class="col-xs-4">
-                            <asp:Label ID="Label3" runat="server" Text="Employee Name"></asp:Label>
+                            
+                           <%-- <br />
                             <br />
-                            <br />
-                              <asp:Label ID="Label4" runat="server" Text="Username"></asp:Label>
+                              
                             <br />
                             <br />
                              <br />
-                             <asp:Label ID="Label5" runat="server" Text="Password"></asp:Label>
+                            
                             <br />
                              <br />
-                             <br />
-                             <asp:Label ID="Label8" runat="server" Text="Confirm Password"></asp:Label>
+                             <br />--%>
+                             
                         </div>
 
                         <div class="col-xs-4">
-                             <asp:DropDownList Width="230px" Height="200px" ID="ddLEmployee" runat="server" Style="font-size: 12px;">
+                            <asp:Label ID="Label3" runat="server" Text="Employee Name"></asp:Label>
+                             <asp:DropDownList Width="230px" Height="20px"  ID="ddLEmployee" runat="server" Style="font-size: 12px;">
                                     <asp:ListItem>--Select Employee--</asp:ListItem>
 
                                 </asp:DropDownList>
                             <br />
                             <br />
+                            <asp:Label ID="Label4" runat="server" Text="Username"></asp:Label>
                             <telerik:RadTextBox  Width="230px" RenderMode="Mobile" ID="txtUsername" runat="server"></telerik:RadTextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
                                     ControlToValidate="txtUsername"
@@ -134,6 +136,7 @@
                                     ForeColor="Red">
                                 </asp:RequiredFieldValidator><br />
                             <br />
+                             <asp:Label ID="Label5" runat="server" Text="Password"></asp:Label>
                            <telerik:RadTextBox  Width="230px" TextMode="Password" RenderMode="Mobile" ID="txtPassword" runat="server"></telerik:RadTextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
                                     ControlToValidate="txtPassword"
@@ -141,6 +144,7 @@
                                     ForeColor="Red">
                                 </asp:RequiredFieldValidator>  <br />
                             <br />
+                            <asp:Label ID="Label8" runat="server" Text="Confirm Password"></asp:Label>
                               <telerik:RadTextBox  Width="230px" RenderMode="Mobile" TextMode="Password" ID="txtConfirmPassword" runat="server"></telerik:RadTextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
                                     ControlToValidate="txtConfirmPassword"

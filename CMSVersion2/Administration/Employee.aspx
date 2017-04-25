@@ -179,11 +179,11 @@
                                             </a>
                                         &nbsp;|    
                                         
-                                        <a href="#"  onclick="return ShowExportForm();" class="alink">
+                                       <%-- <a href="#"  onclick="return ShowExportForm();" class="alink">
                                             <img src="../images/emblem.png" alt="Print Preview" width="20">
                                            Print Preview
                                             </a>
-       &nbsp;|
+       &nbsp;|--%>
                    
                                  
                                         <a href="" onclick="LoadRadGrid()" class="alink">
@@ -242,11 +242,11 @@
                                     var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
                                     grid.get_masterTableView().selectItem(rowControl, true);
 
-                                    window.radopen("UserModal/Employee/EditEmployee.aspx?EmployeeId=" + id, "UserListDialog");
+                                    window.radopen("EmployeeModal/Edit.aspx?EmployeeId=" + id, "UserListDialog");
                                     return false;
                                 }
                                 function ShowInsertForm() {
-                                    window.radopen("UserModal/Employee/AddEmployee.aspx", "AddUser");
+                                    window.radopen("EmployeeModal/Add.aspx", "AddUser");
                                     return false;
                                 }
 

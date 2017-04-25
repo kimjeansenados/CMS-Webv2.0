@@ -37,33 +37,17 @@
             <asp:ScriptManager ID="ScriptManager2" runat="server" />
             <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" Skin="Default" DecoratedControls="All" />
 
-                 <div class="">
+                 <div class="" style="margin-left:100px">
             <div class="form-horizontal" >
                <div class="page">
-                    <div class="col-xs-8">
-                        <div class="col-xs-4">
-                            <asp:Label ID="Label3" runat="server" Text="Employee Name"></asp:Label>
-                            <br />
-                            <br />
-                              <asp:Label ID="Label4" runat="server" Text="Username"></asp:Label>
-                            <br />
-                            <br />
-                             <br />
-                             <asp:Label ID="Label5" runat="server" Text="Old Password"></asp:Label>
-                            
-                             <br />
-                             <br />
-                             <asp:Label ID="Label8" runat="server" Text="Password"></asp:Label>
-                           
-                             <br />
-                             <br />
-                             <asp:Label ID="Label1" runat="server" Text="Confirm Password"></asp:Label>
-                        </div>
+                    <div class="row">
 
                         <div class="col-xs-4">
+                            <asp:Label ID="Label3" runat="server" Text="Employee Name"></asp:Label>
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtEmployeeName" Enabled="false" runat="server"></telerik:RadTextBox>
                             <br />
                             <br />
+                            <asp:Label ID="Label4" runat="server" Text="Username"></asp:Label>
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtUsername" runat="server"></telerik:RadTextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
                                     ControlToValidate="txtUsername"
@@ -71,6 +55,7 @@
                                     ForeColor="Red">
                                 </asp:RequiredFieldValidator>
                             <br />
+                            <asp:Label ID="Label5" runat="server" Text="Old Password"></asp:Label>
                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" textmode="Password" ID="txtOldPassword" runat="server"></telerik:RadTextBox>
                                
                                  <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"
@@ -80,6 +65,7 @@
                                 </asp:RequiredFieldValidator>
                             <telerik:RadTextBox Width="190px"  RenderMode="Mobile" ID="txtDbPassword" runat ="server" Skin="Default"></telerik:RadTextBox>
                             <br />
+                            <asp:Label ID="Label8" runat="server" Text="Password"></asp:Label>
                                <telerik:RadTextBox Width="190px" TextMode="Password" RenderMode="Mobile" ID="txtNewPassword" runat="server"></telerik:RadTextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
                                     ControlToValidate="txtNewPassword"
@@ -88,6 +74,7 @@
                                 </asp:RequiredFieldValidator>
                              <br />
                             <br />
+                            <asp:Label ID="Label1" runat="server" Text="Confirm Password"></asp:Label>
                              <telerik:RadTextBox Width="190px" RenderMode="Mobile" TextMode="Password" ID="txtConfirmPassword" runat="server"></telerik:RadTextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
                                     ControlToValidate="txtConfirmPassword"
@@ -119,9 +106,11 @@
                                 </asp:CompareValidator>
 
                      </div>
-                    
+                    <div class="row">
                   <telerik:RadButton ID="RadButton1" runat="server" Text="Save" OnClick="Save_Click"></telerik:RadButton>
                   <telerik:RadButton ID="RadButton2" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click" OnClientClicked="redirect"></telerik:RadButton>
+
+                    </div>
                 </div>
                
             </div>
