@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CMSVersion2.Models;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
@@ -19,18 +20,11 @@ namespace CMSVersion2.Maintenance.CMSMaintenance
         public static string WebPathName = ConfigurationManager.ConnectionStrings["iiswebname"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            //if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
-            //{
-            //    string usersession = Session["UsernameSession"].ToString();
-            //}
-            if (!IsPostBack)
-            {
-
-                //host = getConstr.IISWebName;
-
-                InitLoad();
-            }
+                if (!IsPostBack)
+                {
+                    InitLoad();
+                }
+            
         }
 
         private DataTable ReadExcelFile(string sheetName, string path)

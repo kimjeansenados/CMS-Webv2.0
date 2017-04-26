@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Edit.aspx.cs" Inherits="CMSVersion2.Maintenance.AWBSeries.InssuanceModal.Edit" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Add.aspx.cs" Inherits="CMSVersion2.Maintenance.AWBSeries.InssuanceModal.Add" %>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
 <!DOCTYPE html>
@@ -6,6 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+
     <link href="../../../Content/bootstrap.css" rel="stylesheet" />
     <script type="text/javascript">
 
@@ -27,17 +28,17 @@
             var oWnd = GetRadWindow();
             oWnd.close();
             top.location.href = top.location.href;
-
+        
         }
-    </script>
+        </script>
 </head>
 <body>
-     <form id="form2" runat="server">
+    <form id="form2" runat="server">
         <telerik:RadScriptManager ID="RadScriptManager2" runat="server"></telerik:RadScriptManager>
        <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator2" runat="server" Skin="Default" DecoratedControls="All" />
         <div class="center">
             <div class="form-horizontal">
-               <asp:Label ID="lblAwbIssuanceID" runat="server" Text="" Visible="false"></asp:Label>
+               
                  <div class="page">
                     <div class="col-xs-12">
                         <div>

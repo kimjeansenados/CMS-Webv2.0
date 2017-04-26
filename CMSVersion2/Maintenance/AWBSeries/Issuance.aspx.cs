@@ -11,7 +11,7 @@ using DAL = DataAccess;
 
 namespace CMSVersion2.Maintenance.AWBSeries
 {
-    public partial class AWBInssuance : System.Web.UI.Page
+    public partial class AWBIssuance : System.Web.UI.Page
     {
         Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
         protected void Page_Load(object sender, EventArgs e)

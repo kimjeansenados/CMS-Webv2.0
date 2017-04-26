@@ -1,4 +1,4 @@
-﻿<%@ Page Title="AWB Inssuance" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Inssuance.aspx.cs" Inherits="CMSVersion2.Maintenance.AWBSeries.AWBInssuance" %>
+﻿<%@ Page Title="AWB Inssuance" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Issuance.aspx.cs" Inherits="CMSVersion2.Maintenance.AWBSeries.AWBIssuance" %>
 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
@@ -11,7 +11,7 @@
 
                 <!--- PAGE HEADER--->
             <div class="row">
-                <h3><i class="glyphicon glyphicon-credit-card"></i> AWB SERIES INSSUANCE</h3>
+                <h3><i class="glyphicon glyphicon-credit-card"></i> AWB SERIES ISSUANCE</h3>
                 <ol class="breadcrumb">
                     <li>Maintenance</li>
                     <li>AWB Series</li>

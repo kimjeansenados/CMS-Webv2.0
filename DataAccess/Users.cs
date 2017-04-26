@@ -128,7 +128,7 @@ namespace DataAccess
         /// <param name="conStr"></param>
         public static void AddUsers(string username, byte[] password, byte[] salt, Guid employeeId,  Guid createdby, string conStr)
         {
-            int countRowsAffected = 0;
+            //int countRowsAffected = 0;
             using (SqlConnection con = new SqlConnection(conStr))
             {
                 using (SqlCommand cmd = new SqlCommand("sp_Insert_User", con))

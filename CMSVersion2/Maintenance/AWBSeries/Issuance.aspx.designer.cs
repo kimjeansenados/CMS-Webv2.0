@@ -10,7 +10,7 @@
 namespace CMSVersion2.Maintenance.AWBSeries {
     
     
-    public partial class AWBInssuance {
+    public partial class AWBIssuance {
         
         /// <summary>
         /// lblBco control.

@@ -147,5 +147,21 @@ namespace DataAccess
                 }
             }
         }
+
+        public static DataSet GetEmployeeNames(string conStr)
+        {
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_get_employeenames", con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter("sp_get_employeenames", con);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    return ds;
+                }
+            }
+        }
+
     }
 }

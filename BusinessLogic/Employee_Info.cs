@@ -14,7 +14,11 @@ namespace BusinessLogic
 {
     public class Employee_Info
     {
-
+        //UserRole
+        public static DataSet GetEmployeeNames(string conStr)
+        {
+            return DAL.EmployeeInfo.GetEmployeeNames(conStr);
+        }
 
         public static DataSet GetEmployeeName(string conStr)
         {

@@ -14,128 +14,174 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    
+    <style type="text/css">
+        .removeClass {
+           pointer-events: none;
+           cursor: default;
+           display: none !important;
+        }
 
+        .imageLogo
+        {
+            float:left;
+        }
+
+    </style>
 </head>
 <body>
-    <form runat="server">
+     <form runat="server">
         <telerik:RadScriptManager runat="server"></telerik:RadScriptManager>
        
-
+         <div class="container">
+ <div runat="server">
         <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
+            
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <img runat="server" src="~/Images/logo1.png"/>
+                    <img runat="server" src="~/Images/logo1.png" class="imageLogo"/>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Dashboard</a></li>
+                    <ul class="nav navbar-nav imageLogo">
+                        <li  runat="server"><a href="#" class="removeClass" id="Dashboard" onserverclick="clickDashboard" runat="server">Dashboard</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Maintenance<b class="caret"></b></a>
+                            <a id="Maintenance" runat="server" href="#" class="dropdown-toggle removeClass" data-toggle="dropdown">Maintenance<b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a runat="server" href="~/Maintenance/CMSMaintenance/CMSMaintenance.aspx">CMS Maintenance</a></li>
-                                <li><a runat="server" href="~/Maintenance/FlightInformation/FlightInformation.aspx">Flight Information</a></li>
-                                <li><a runat="server" href="~/Maintenance/RateMatrix/RateMatrix.aspx">Rate Matrix</a></li>
-                                <li><a runat="server" href="~/Maintenance/TrackNTrace/TrackNTrace.aspx">TrackNTrace</a></li>
-                                <li><a runat="server" href="~/Error/UnderMaintenance.aspx">Truck Area Assignment</a></li>
+                                <li><a runat="server" class="removeClass" href="#" id="CMSMaintenance" onserverclick="clickmainMaintenance">CMS Maintenance</a></li>
+                                <li><a runat="server" class="removeClass" id="FlightInformation" onserverclick="clickFlightInformation">Flight Information</a></li>
+                                <li><a runat="server" class="removeClass" id="RateMatrix" onserverclick="clickRateMatrix">Rate Matrix</a></li>
+                                <li><a runat="server" class="removeClass" id="TrackNTrace" onserverclick="clickTrackNTrace">TrackNTrace</a></li>
+                                <li><a runat="server" class="removeClass" id="TruckAreaAssignment" onserverclick="clickTruckAreaAssignment">Truck Area Assignment</a></li>
                                 <li class="dropdown dropdown-submenu"">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">AWB Series</a>
+                                    <a runat="server" href="#" class="dropdown-toggle removeClass" id="AWBSeries" data-toggle="dropdown">AWB Series</a>
                                     <ul class="dropdown-menu">
-                                        <li><a runat="server" href="~/Maintenance/AWBSeries/Inssuance.aspx">AWB Issuance</a></li>
-                                        <li><a runat="server" href="~/Maintenance/AWBSeries/Summary.aspx">AWB Issued Summary</a></li>
-                                        <li><a runat="server" href="~/Maintenance/AWBSeries/Monitoring.aspx">Series Monitoring</a></li>
+                                        <li><a runat="server" id="AWBIssuance" onserverclick="clickAwbIssuance">AWB Issuance</a></li>
+                                        <li><a runat="server" id="AWBIssuedSummary" onserverclick="clickAwbIssuedSummary">AWB Issued Summary</a></li>
+                                        <li><a runat="server" id="SeriesMonitoring" onserverclick="clickAwbSeriesMonitoring">Series Monitoring</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
-                        <li><a runat="server" href="~/Customer/Customer.aspx">Customers</a></li>
+                        <li><a id="Customers" runat="server" href="#" class="removeClass" onserverclick="clickCustomers">Customers</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Corporate<b class="caret"></b></a>
+                            <a id="Corporate" href="#" class="dropdown-toggle removeClass" data-toggle="dropdown" runat="server">Corporate<b class="caret"></b></a>
                             <ul class="dropdown-menu message-dropdown">
-                                <li><a runat="server" href="~/Corporate/Company.aspx">Company</a></li>
-                                <li><a runat="server" href="~/Corporate/Representative.aspx">Representatives</a></li>
-                                <li><a runat="server" href="~/Corporate/ApprovingAuthority.aspx">Approving Authority</a></li>
-                                <li><a runat="server" href="~/Corporate/StatementOfAccount.aspx">Statement of Account</a></li>
+                                <li><a runat="server" id="Company" class="removeClass" onserverclick="clickCompany">Company</a></li>
+                                <li><a runat="server" id="Representatives" class="removeClass" onserverclick="clickRepresentatives">Representatives</a></li>
+                                <li><a runat="server" id="ApprovingAuthority" class="removeClass" onserverclick="clickApprovingAuth">Approving Authority</a></li>
+                                <li><a runat="server" id="StatementofAccount" class="removeClass" onserverclick="clickStatementOfAccount">Statement of Account</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shipment<b class="caret"></b></a>
+                            <a runat="server" id="Shipment" href="#" class="dropdown-toggle removeClass" data-toggle="dropdown">Shipment<b class="caret"></b></a>
                             <ul class="dropdown-menu message-dropdown">
-                                <li><a runat="server" href="~/Shipment/AWBTracking.aspx">AWB Tracking</a></li>
-                                <li><a runat="server" href="~/Error/UnderMaintenance.aspx">AWB Detailed Tracking</a></li>
-                                <li><a runat="server" href="~/Error/UnderMaintenance.aspx">View Shipments</a></li>
-                                <li><a runat="server" href="~/Error/UnderMaintenance.aspx">View Tracking Entry</a></li>
-                                <li><a runat="server" href="~/Error/UnderMaintenance.aspx">View Delivery</a></li>
+                                <li><a runat="server" id="AWBTracking" class="removeClass" href="~/Shipment/AWBTracking.aspx">AWB Tracking</a></li>
+                                <li><a runat="server" id="AWBDetailedTracking" class="removeClass" href="~/Error/UnderMaintenance.aspx">AWB Detailed Tracking</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Report<b class="caret"></b></a>
+                            <a id="Report" runat="server" href="#" class="dropdown-toggle removeClass" data-toggle="dropdown">Report<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li class="dropdown dropdown-submenu">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Operation</a>
+                                    <a href="#" class="dropdown-toggle removeClass" id="Operation" runat="server" data-toggle="dropdown">Operation</a>
                                     <ul class="dropdown-menu">
                                         <li class="dropdown dropdown-submenu">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manifest</a>
                                             <ul class="dropdown-menu">
-                                                <li><a runat="server" href="~/Report/Operation/Manifest/Pickup.aspx">Pickup Cargo</a></li>
-                                                <li><a runat="server" href="~/Report/Operation/Manifest/BranchAcceptance.aspx">Branch Acceptance</a></li>
-                                                <li><a runat="server" href="~/Report/Operation/Manifest/Bundle.aspx">Bundle</a></li>
-                                                <li><a runat="server" href="~/Report/Operation/Manifest/Unbundle.aspx">Unbundle</a></li>
-                                                <li><a runat="server" href="~/Report/Operation/Manifest/Segregation.aspx">Segregation</a></li>
-                                                <li><a runat="server" href="~/Report/Operation/Manifest/DailyTrip.aspx">Daily Trip</a></li>                                                
+                                                <li><a runat="server" id="PickupCargo" onserverclick="clickPickUpCargo">Pickup Cargo</a></li>
+                                                <li><a runat="server" id="BranchAcceptance" onserverclick="clickBranchAcceptance">Branch Acceptance</a></li>
+                                                <li><a runat="server" id="Bundle" onserverclick="clickBundle">Bundle</a></li>
+                                                <li><a runat="server" id="Unbundle" onserverclick="clickUnbundle">Unbundle</a></li>
+                                                <li><a runat="server" id="Segregation" onserverclick="clickSegregation">Segregation</a></li>
+                                                <li><a runat="server" id="DailyTrip" onserverclick="clickDailyTrip">Daily Trip</a></li>                                                
                                             </ul>
                                         </li>                               
                                         <li class="dropdown dropdown-submenu">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cargo Monitoring</a>
                                             <ul class="dropdown-menu">
-                                                <li><a runat="server" href="~/Report/Operation/CargoMonitoring/Delivered.aspx">Delivered</a></li>
-                                                <li><a runat="server" href="~/Report/Operation/CargoMonitoring/Hold.aspx">Hold</a></li>
-                                                <li><a runat="server" href="~/Report/Operation/CargoMonitoring/Misrouted.aspx">Misrouted</a></li>
-                                                <li><a runat="server" href="~/Report/Operation/CargoMonitoring/Offloaded.aspx">Offloaded</a></li>
-                                                <li><a runat="server" href="~/Report/Operation/CargoMonitoring/Pending.aspx">Pending</a></li>
-                                                <li><a runat="server" href="~/Report/Operation/CargoMonitoring/RUD.aspx">RUD</a></li>
+                                                <li><a runat="server" id="Delivered" onserverclick="clickDelivered">Delivered</a></li>
+                                                <li><a runat="server" id="Hold" onserverclick="clickHold">Hold</a></li>
+                                                <li><a runat="server" id="Misrouted" onserverclick="clickMisrouted">Misrouted</a></li>
+                                                <li><a runat="server" id="Offloaded" onserverclick="clickOffloaded">Offloaded</a></li>
+                                                <li><a runat="server" id="Pending" onserverclick="clickPending">Pending</a></li>
+                                                <li><a runat="server" id="RUD" onserverclick="clickRUD">RUD</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="dropdown dropdown-submenu">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Finance</a>
+                                    <a href="#" class="dropdown-toggle removeClass" id="Finance" runat="server" data-toggle="dropdown">Finance</a>
                                     <ul class="dropdown-menu">
                                         <li class="dropdown dropdown-submenu">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sales</a>
                                             <ul class="dropdown-menu">
-                                                <li><a runat="server" href="~/Report/Finance/Sales/MasterSales.aspx">Master Sales</a></li>
-                                                <li><a runat="server" href="~/Report/Finance/Sales/SalesPerBCO.aspx">Sales Per BCO</a></li>
-                                                <li><a runat="server" href="~/Report/Finance/Sales/SalesPerShipMode.aspx">Sales Per ShipMode</a></li>
-                                                <li><a runat="server" href="~/Report/Finance/Sales/SalesPerClient.aspx">Sales Per Client</a></li>
-                                                <li><a runat="server" href="~/Report/Finance/Sales/SalesPerRevenueUnit.aspx">Sales Per Revenue Unit</a></li>
-                                                <li><a runat="server" href="~/Report/Finance/Sales/SalesPerUserLevel.aspx">Sales Per User Level</a></li>
+                                                <li><a runat="server" id="MasterSales" onserverclick="clickMasterSales">Master Sales</a></li>
+                                                <li><a runat="server" id="SalesPerBCO" onserverclick="clickSalesPerBCO">Sales Per BCO</a></li>
+                                                <li><a runat="server" id="SalesPerShipMode" onserverclick="clickSalesperShipMode">Sales Per ShipMode</a></li>
+                                                <li><a runat="server" id="SalesPerClient" onserverclick="clickSalesperClient">Sales Per Client</a></li>
+                                                <li><a runat="server" id="SalesperRevenueUnit" onserverclick="clickSalesperRevenueUnit">Sales Per Revenue Unit</a></li>
+                                                <li><a runat="server" id="SalesperUserLevel" onserverclick="clickSalesperUserLevel">Sales Per User Level</a></li>
                                             </ul>
                                          </li>
-                                        <li><a runat="server" href="~/Report/Finance/Collection.aspx">Collection</a></li>                                  
+                                        <li><a runat="server" id="Collection" onserverclick="clickCollection">Collection</a></li>                                  
                                     </ul>
                                 </li>
+                                <li><a runat="server" class="removeClass" id="Marketing" onserverclick="clickMarketing">Marketing</a></li>
+                                <li><a runat="server" class="removeClass" id="Courier" onserverclick="clickCourier">Courier</a></li>
+                                <li><a runat="server" class="removeClass" id="ORSeries" onserverclick="clickORSeries">OR Series</a></li>
+                                <li><a runat="server" class="removeClass" id="Booking" onserverclick="clickBooking">Booking</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administration<b class="caret"></b></a>
+                            <a runat="server" id="Administration" href="#" class="dropdown-toggle removeClass" data-toggle="dropdown">Administration<b class="caret"></b></a>
                             <ul class="dropdown-menu message-dropdown">
-                                <li class="message-footer"><a runat="server" href="~/Administration/Users.aspx">Manager Users</a></li>
-                                <li class="message-footer"><a runat="server" href="~/Administration/Employee.aspx">Manage Employee</a></li>
+                                <li class="message-footer"><a runat="server" class="removeClass" id="ManageUsers" onserverclick="clickManageUsers">Manage Users</a></li>
+                                <li class="message-footer"><a runat="server" class="removeClass" id="ManageEmployee" onserverclick="clickManageEmployee">Manage Employee</a></li>
                             </ul>
                         </li>
+                         <li runat="server" class="dropdown">
+                            <a href="#" id="UserAccess" class="dropdown-toggle removeClass" data-toggle="dropdown" runat="server">User Access<b class="caret"></b></a>
+                            <ul class="dropdown-menu message-dropdown">
+                                <li class="message-footer"><a runat="server" class="removeClass" id="Roles" onserverclick="clickManageRole">Roles</a></li>
+                                <li class="message-footer"><a runat="server" class="removeClass" id="UserRoles" onserverclick="clickManageUserRole">User Roles</a></li>
+                            </ul>
+                        </li>
+
+                        <%--<li class="dropdown">
+                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-user"></i>
+                                <asp:Label ID="lblUserName" runat="server" Text="Label"></asp:Label>
+                                <b class="caret"></b>
+                            </a>
+                             <ul class="dropdown-menu">
+                                <li><a href="#" id="Settings" onserverclick="clickSettings" runat="server"><i class="fa fa-fw fa-gear"></i>Settings</a></li>
+                                <li><a href="#" onserverclick="clickLogout" id="Logout" runat="server"><i class="fa fa-fw fa-powef-off"></i>Logout</a></li>
+                            </ul>
+                         </li>--%>
+                    </ul>
+                     <!--- NAVBAR RIGHT -->
+                    <ul class="nav navbar-right navbar-nav">
+                         <li class="dropdown">
+                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-user"></i>
+                                <asp:Label ID="lblUserName" runat="server" Text="Label"></asp:Label>
+                                <b class="caret"></b>
+                            </a>
+                             <ul class="dropdown-menu">
+                                <li><a href="#" id="Settings" onserverclick="clickSettings" runat="server"><i class="fa fa-fw fa-gear"></i>Settings</a></li>
+                                <li><a href="#" onserverclick="clickLogout" id="Logout" runat="server"><i class="fa fa-fw fa-powef-off"></i>Logout</a></li>
+                            </ul>
+                         </li>
                     </ul>
 
-
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                   <%-- <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <%--<li><a runat="server" href="~/Account/Register">Register</a></li>--%>
+                                <li><a runat="server" href="~/Account/Register">Register</a></li>
                                 <li><a runat="server" href="~/Account/Login">Log in</a></li>
                             </ul>
                         </AnonymousTemplate>
@@ -147,10 +193,11 @@
                                 </li>
                             </ul>
                         </LoggedInTemplate>
-                    </asp:LoginView>
+                    </asp:LoginView>--%>
                 </div>
             </div>
-        </div>
+            </div><!--wrapper-->
+        </div><!--container-->
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>

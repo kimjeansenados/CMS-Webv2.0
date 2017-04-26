@@ -12,5 +12,9 @@ namespace CMSVersion2.Models
     {
         public static string globalCode { get; set; }
         public static string userName { get; set; }
+
+        public static int resultValue { get; set; }
+        public static Guid userId { get; set; }
+        public static string menuName { get; set; }
     }
 }

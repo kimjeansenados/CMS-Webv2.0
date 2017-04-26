@@ -103,10 +103,10 @@
     <Reference Include="Telerik.Reporting.XpsRendering, Version=11.0.17.201, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
     <Reference Include="Telerik.ReportViewer.Html5.WebForms, Version=11.0.17.201, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
     <Reference Include="Telerik.Web.UI">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX R1 2017\Bin45\Telerik.Web.UI.dll</HintPath>
+      <HintPath>C:\Users\Dev - Kim\Desktop\CMS Web Version\Webv2.0\CMS-Webv2.0\CMSVersion2\bin\Telerik.Web.UI.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Web.UI.Skins">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX R1 2017\Bin45\Telerik.Web.UI.Skins.dll</HintPath>
+      <HintPath>C:\Users\Dev - Kim\Desktop\CMS Web Version\Webv2.0\CMS-Webv2.0\CMSVersion2\bin\Telerik.Web.UI.Skins.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Documents.Core, Version=2017.1.109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -220,6 +220,7 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\full-slider.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Corporate\ApprovingAuthority.aspx" />
     <Content Include="Corporate\Company.aspx" />
@@ -238,9 +239,10 @@
     <Content Include="Images\APCARGO-Logo.jpg" />
     <Content Include="Images\emblem.png" />
     <Content Include="Images\logo1.png" />
-    <Content Include="Maintenance\AWBSeries\Inssuance.aspx" />
-    <Content Include="Maintenance\AWBSeries\InssuanceModal\Add.aspx" />
-    <Content Include="Maintenance\AWBSeries\InssuanceModal\Edit.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Maintenance\AWBSeries\Issuance.aspx" />
+    <Content Include="Maintenance\AWBSeries\IssuanceModal\Add.aspx" />
+    <Content Include="Maintenance\AWBSeries\IssuanceModal\Edit.aspx" />
     <Content Include="Maintenance\AWBSeries\Monitoring.aspx" />
     <Content Include="Maintenance\AWBSeries\Summary.aspx" />
     <Content Include="Maintenance\CMSMaintenance\CMSMaintenance.aspx" />
@@ -311,8 +313,17 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Settings\ManagePassword.aspx" />
     <Content Include="Shipment\AWBTracking.aspx" />
     <Content Include="Site.Master" />
+    <Content Include="UserAccess\Roles\ManageRoles.aspx" />
+    <Content Include="UserAccess\Roles\RolesModal\AddRoles.aspx" />
+    <Content Include="UserAccess\Roles\RolesModal\EditRoles.aspx" />
+    <Content Include="UserAccess\Roles\RolesModal\ViewRoles.aspx" />
+    <Content Include="UserAccess\UserRole\ManageUserRole.aspx" />
+    <Content Include="UserAccess\UserRole\UserRoleModal\AddAccesstoModule.aspx" />
+    <Content Include="UserAccess\UserRole\UserRoleModal\AddUserRole.aspx" />
+    <Content Include="UserAccess\UserRole\UserRoleModal\EditUserRole.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -532,25 +543,32 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Maintenance\AWBSeries\Inssuance.aspx.cs">
-      <DependentUpon>Inssuance.aspx</DependentUpon>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Maintenance\AWBSeries\Inssuance.aspx.designer.cs">
-      <DependentUpon>Inssuance.aspx</DependentUpon>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Maintenance\AWBSeries\InssuanceModal\Add.aspx.cs">
+    <Compile Include="Maintenance\AWBSeries\Issuance.aspx.cs">
+      <DependentUpon>Issuance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\AWBSeries\Issuance.aspx.designer.cs">
+      <DependentUpon>Issuance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\AWBSeries\IssuanceModal\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Maintenance\AWBSeries\InssuanceModal\Add.aspx.designer.cs">
+    <Compile Include="Maintenance\AWBSeries\IssuanceModal\Add.aspx.designer.cs">
       <DependentUpon>Add.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Maintenance\AWBSeries\InssuanceModal\Edit.aspx.cs">
+    <Compile Include="Maintenance\AWBSeries\IssuanceModal\Edit.aspx.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Maintenance\AWBSeries\InssuanceModal\Edit.aspx.designer.cs">
+    <Compile Include="Maintenance\AWBSeries\IssuanceModal\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Maintenance\AWBSeries\Monitoring.aspx.cs">
@@ -672,8 +690,10 @@
     <Compile Include="Maintenance\TrackNTrace\TrackNTrace.aspx.designer.cs">
       <DependentUpon>TrackNTrace.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\AppService.cs" />
     <Compile Include="Models\GlobalCode.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\UserAccessMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Report\Finance\Collection.aspx.cs">
       <DependentUpon>Collection.aspx</DependentUpon>
@@ -821,6 +841,13 @@
     <Compile Include="Report\Operation\Manifest\Unbundle.aspx.designer.cs">
       <DependentUpon>Unbundle.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Settings\ManagePassword.aspx.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Settings\ManagePassword.aspx.designer.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Shipment\AWBTracking.aspx.cs">
       <DependentUpon>AWBTracking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -843,6 +870,62 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="UserAccess\Roles\ManageRoles.aspx.cs">
+      <DependentUpon>ManageRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAccess\Roles\ManageRoles.aspx.designer.cs">
+      <DependentUpon>ManageRoles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccess\Roles\RolesModal\AddRoles.aspx.cs">
+      <DependentUpon>AddRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAccess\Roles\RolesModal\AddRoles.aspx.designer.cs">
+      <DependentUpon>AddRoles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccess\Roles\RolesModal\EditRoles.aspx.cs">
+      <DependentUpon>EditRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAccess\Roles\RolesModal\EditRoles.aspx.designer.cs">
+      <DependentUpon>EditRoles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccess\Roles\RolesModal\ViewRoles.aspx.cs">
+      <DependentUpon>ViewRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAccess\Roles\RolesModal\ViewRoles.aspx.designer.cs">
+      <DependentUpon>ViewRoles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccess\UserRole\ManageUserRole.aspx.cs">
+      <DependentUpon>ManageUserRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAccess\UserRole\ManageUserRole.aspx.designer.cs">
+      <DependentUpon>ManageUserRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccess\UserRole\UserRoleModal\AddAccesstoModule.aspx.cs">
+      <DependentUpon>AddAccesstoModule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAccess\UserRole\UserRoleModal\AddAccesstoModule.aspx.designer.cs">
+      <DependentUpon>AddAccesstoModule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccess\UserRole\UserRoleModal\AddUserRole.aspx.cs">
+      <DependentUpon>AddUserRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAccess\UserRole\UserRoleModal\AddUserRole.aspx.designer.cs">
+      <DependentUpon>AddUserRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccess\UserRole\UserRoleModal\EditUserRole.aspx.cs">
+      <DependentUpon>EditUserRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAccess\UserRole\UserRoleModal\EditUserRole.aspx.designer.cs">
+      <DependentUpon>EditUserRole.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
