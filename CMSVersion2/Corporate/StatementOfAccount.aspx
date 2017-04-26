@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StatementOfAccount.aspx.cs" Inherits="CMSVersion2.Corporate.StatementOfAccount" %>
+﻿<%@ Page Title="Statement Of Account" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StatementOfAccount.aspx.cs" Inherits="CMSVersion2.Corporate.StatementOfAccount" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="wrapper">
@@ -20,211 +20,232 @@
                         </ol>
                     </div>
                 </div>
-                <!-- /.row -->
 
                 <div class="size-wide">
-                    <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="radSearchUser" EmptyMessage="Search "
+                    <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="radSearchUser" EmptyMessage="Search SOA Number"
                         OnSearch="radSearchUser_Search" Width="300"
                         DataKeyNames="StatementOfAccountId"
                         DataTextField="StatementOfAccountNo"
                         DataValueField="StatementOfAccountId"
                         EnableAutoComplete="true"
-                        ShowSearchButton="false" Skin="Glow">
+                        ShowSearchButton="false" Skin="Office2010Black"
+                        DataSourceID="StatementOfAccountDataSource">
+
                         <DropDownSettings Width="300" />
                     </telerik:RadSearchBox>
 
                 </div>
                 <br />
-                <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
-                    <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
+                <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
 
+                    <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server" OnAjaxRequest="RadAjaxManager1_AjaxRequest">
+                        <AjaxSettings>
+                            <telerik:AjaxSetting AjaxControlID="RadAjaxManager1">
+                                <UpdatedControls>
+                                    <telerik:AjaxUpdatedControl ControlID="RadGrid2" LoadingPanelID="gridLoadingPanel"></telerik:AjaxUpdatedControl>
+                                </UpdatedControls>
+                            </telerik:AjaxSetting>
+                        </AjaxSettings>
+                    </telerik:RadAjaxManager>
+                    <telerik:RadAjaxLoadingPanel runat="server" ID="gridLoadingPanel"></telerik:RadAjaxLoadingPanel>
+                    <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" DecorationZoneID="Grid" DecoratedControls="All" EnableRoundedCorners="false" />
+                    <div id="Grid">
+                        <telerik:RadGrid ID="RadGrid2"
+                            runat="server" AllowPaging="True" Skin="Office2010Black" AllowSorting="True"
+                            AllowFilteringByColumn="True"
+                            DataKeyNames="CompanyId" CommandItemDisplay="Top"
+                            DataSourceID="CompanyDataSource" ShowStatusBar="True"
+                            OnInsertCommand="RadGrid2_InsertCommand"
+                            OnItemCreated="RadGrid2_ItemCreated"
+                            OnItemCommand="RadGrid2_ItemCommand">
+                            <PagerStyle Mode="NextPrevAndNumeric"></PagerStyle>
 
-                        <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server" OnAjaxRequest="RadAjaxManager1_AjaxRequest">
-                            <AjaxSettings>
-                                <telerik:AjaxSetting AjaxControlID="RadAjaxManager1">
-                                    <UpdatedControls>
-                                        <telerik:AjaxUpdatedControl ControlID="RadGrid2" LoadingPanelID="gridLoadingPanel"></telerik:AjaxUpdatedControl>
-                                    </UpdatedControls>
-                                </telerik:AjaxSetting>
-                            </AjaxSettings>
-                        </telerik:RadAjaxManager>
-                        <telerik:RadAjaxLoadingPanel runat="server" ID="gridLoadingPanel"></telerik:RadAjaxLoadingPanel>
-
-                        <telerik:RadGrid ID="RadGrid2" OnItemCreated="RadGrid2_ItemCreated"
-                            runat="server" AllowPaging="True" ExportSettings-Excel-DefaultCellAlignment="Right"
-                            PageSize="10" Skin="Glow" AllowSorting="true" OnItemCommand="RadGrid2_ItemCommand1"
-                            AllowFilteringByColumn="true"
-                            DataKeyNames="StatementOfAccountId" CommandItemDisplay="Top"
-                            OnNeedDataSource="RadGrid2_NeedDataSource">
-                            <ExportSettings ExportOnlyData="true" IgnorePaging="true"></ExportSettings>
-
-                            <MasterTableView AutoGenerateColumns="False" ClientDataKeyNames="StatementOfAccountId"
-                                AllowFilteringByColumn="false"
-                                DataKeyNames="StatementOfAccountId" CommandItemDisplay="Top"
-                                InsertItemPageIndexAction="ShowItemOnFirstPage">
-
-                                <CommandItemSettings ShowExportToWordButton="true" ShowExportToExcelButton="true"
-                                    ShowExportToCsvButton="true" ShowExportToPdfButton="true"></CommandItemSettings>
-                                <Columns>
-
-                                    <telerik:GridBoundColumn DataField="AccountNo" HeaderText="Account #" SortExpression="AccountnNo"
-                                        UniqueName="AccountNo" FilterDelay="2000" ShowFilterIcon="false" FilterControlWidth="120px"
-                                        CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
-                                        <HeaderStyle />
-                                    </telerik:GridBoundColumn>
-
-                                    <telerik:GridBoundColumn DataField="CompanyName" HeaderText="Company" SortExpression="CompanyName"
-                                        UniqueName="CompanyName" FilterDelay="2000" ShowFilterIcon="false" FilterControlWidth="120px"
-                                        CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
-                                        <HeaderStyle />
-                                    </telerik:GridBoundColumn>
-
-                                    <telerik:GridBoundColumn DataField="BillingPeriodName" HeaderText="Billing Period" SortExpression="BillingPeriodName"
-                                        UniqueName="BillingPeriod" FilterDelay="2000" ShowFilterIcon="false" FilterControlWidth="120px"
-                                        CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
-                                        <HeaderStyle />
-                                    </telerik:GridBoundColumn>
-
-                                    <telerik:GridBoundColumn DataField="StatementOfAccountNo" HeaderText="SOA #" SortExpression="StatementOfAccountNor"
-                                        UniqueName="SOANo" FilterDelay="2000" ShowFilterIcon="false" FilterControlWidth="120px"
-                                        CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
-                                        <HeaderStyle />
-                                    </telerik:GridBoundColumn>
-
-                                    <telerik:GridDateTimeColumn DataField="StatementOfAccountDate" HeaderText="SOA Date" SortExpression="StatementOfAccountDate"
-                                        UniqueName="StatementOfAccountDate" FilterControlWidth="120px"
-                                        PickerType="DatePicker" DataFormatString="{0:MM/dd/yyyy}" FilterDelay="2000" DataType="System.DateTime"
-                                        HeaderStyle-Font-Bold="true" AllowFiltering="true" FilterListOptions="VaryByDataType">
-                                    </telerik:GridDateTimeColumn>
-
-                                    <telerik:GridTemplateColumn UniqueName="Details" AllowFiltering="false">
-                                        <ItemTemplate>
-                                            <asp:HyperLink ID="DetailsLink" runat="server" NavigateUrl='<%# Eval("StatementOfAccountId", "~/portal/UserModal/StatementOfAccount/StatementOfAccountDetails.aspx?StatementOfAccountId={0}") %>' Text="Details"></asp:HyperLink>
-                                        </ItemTemplate>
-                                    </telerik:GridTemplateColumn>
-
-                                    <telerik:GridTemplateColumn UniqueName="Adjustment" AllowFiltering="false">
-                                        <ItemTemplate>
-                                            <asp:HyperLink ID="AdjustmentLink" runat="server" Text="Make Adjustment"></asp:HyperLink>
-                                        </ItemTemplate>
-                                    </telerik:GridTemplateColumn>
-
-                                </Columns>
-
+                            <MasterTableView AutoGenerateColumns="False" AllowFilteringByColumn="false"
+                                CommandItemDisplay="Top" InsertItemPageIndexAction="ShowItemOnFirstPage"
+                                DataSourceID="CompanyDataSource" DataKeyNames="CompanyId" AllowPaging="true"
+                                PageSize="5" CommandItemSettings-ShowAddNewRecordButton="false" EditMode="InPlace"
+                                RetainExpandStateOnRebind="true">
                                 <CommandItemTemplate>
-                                    <div class="center" style="align-content: center; text-align: center">
-                                        |
-
-                                         <a href="#" onclick="return ShowInsertForm();" class="alink">
-                                             <img src="../images/emblem.png" alt="Add New User" width="20">
-                                             Generate New SOA
-                                         </a>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|    
-                                        
-                                        <a href="#" onclick="return ShowExportForm();" class="alink">
-                                            <img src="../images/emblem.png" alt="Print Preview" width="20">
-                                            Print Preview
-                                        </a>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-                   
-                                 
-                                        <a href="" onclick="LoadRadGrid()" class="alink">
-                                            <img src="../images/emblem.png" alt="Export to Excel" width="20">
-                                            Refresh Data
-                                        </a>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:button id="btnSubmit" runat="server" text="Submit" xmlns:asp="#unknown"
-                                            onclick="btnSubmit_Click" style="display: none" />
-
-                                        |
+                                    <div class="center" style="align-content: center; text-align: left">
+                                        <asp:Label runat="server">
+                                            <img src="../Images/emblem.png" alt="" width="20" />
+                                            Company Accounts
+                                        </asp:Label>
                                     </div>
                                 </CommandItemTemplate>
+                                <DetailTables>
+                                    <telerik:GridTableView Name="StatementOfAccounts" AutoGenerateColumns="false"
+                                        DataKeyNames="StatementOfAccountId" DataSourceID="StatementOfAccountDataSource"
+                                        Width="100%" runat="server" CommandItemDisplay="Top" AllowFilteringByColumn="false"
+                                        CommandItemSettings-ShowAddNewRecordButton="false" RetainExpandStateOnRebind="true"
+                                        EditMode="InPlace">
+                                        <CommandItemTemplate>
+                                            <div class="center" style="align-content: center; text-align: left">
+                                                <asp:Label runat="server">
+                                                            <img src="../Images/emblem.png" alt="" width="20" />
+                                                            Statement Of Accounts
+                                                </asp:Label>
+                                            </div>
+                                        </CommandItemTemplate>
+                                        <ParentTableRelation>
+                                            <telerik:GridRelationFields DetailKeyField="CompanyId" MasterKeyField="CompanyId" />
+                                        </ParentTableRelation>
+
+                                        <DetailTables>
+                                            <telerik:GridTableView Name="Shipments" DataKeyNames="ShipmentId"
+                                                DataSourceID="ShipmentDataSource" Width="100%" runat="server"
+                                                CommandItemDisplay="Top" AllowPaging="true" PageSize="5"
+                                                AllowFilteringByColumn="false" AutoGenerateColumns="false"
+                                                CommandItemSettings-ShowAddNewRecordButton="false" EditMode="InPlace"
+                                                EditFormSettings-EditColumn-UpdateText="Adjust" EditFormSettings-EditColumn-CancelText="Cancel"
+                                                RetainExpandStateOnRebind="true">
+                                                <CommandItemTemplate>
+                                                    <div class="center" style="align-content: center; text-align: left">
+                                                        <asp:Label runat="server">
+                                                            <img src="../Images/emblem.png" alt="" width="20" />
+                                                            Shipments
+                                                        </asp:Label>
+                                                    </div>
+                                                </CommandItemTemplate>
+                                                <ParentTableRelation>
+                                                    <telerik:GridRelationFields DetailKeyField="StatementOfAccountId" MasterKeyField="StatementOfAccountId" />
+                                                </ParentTableRelation>
+
+                                                <Columns>
+                                                    <telerik:GridBoundColumn DataField="ShipmentId" UniqueName="ShipmentId" Visible="false"></telerik:GridBoundColumn>
+                                                    <telerik:GridDateTimeColumn DataField="DateAccepted" UniqueName="DateAccepted" HeaderText="Date Accepted"></telerik:GridDateTimeColumn>
+                                                    <telerik:GridBoundColumn DataField="AirwayBillNo" UniqueName="AirwayBillNo" HeaderText="AirwayBill"></telerik:GridBoundColumn>
+                                                    <telerik:GridBoundColumn DataField="Origin" UniqueName="Origin" HeaderText="Origin"></telerik:GridBoundColumn>
+                                                    <telerik:GridBoundColumn DataField="Destination" UniqueName="Destination" HeaderText="Destination"></telerik:GridBoundColumn>
+                                                    <telerik:GridBoundColumn DataField="FreightCharge" DataType="System.Decimal" UniqueName="FreightCharge" HeaderText="Freight Charge"></telerik:GridBoundColumn>
+                                                    <telerik:GridBoundColumn DataField="VatAmount" DataType="System.Decimal" UniqueName="VatAmount" HeaderText="Vat"></telerik:GridBoundColumn>
+                                                    <telerik:GridBoundColumn DataField="TotalAmount" DataType="System.Decimal" UniqueName="TotalAmount" HeaderText="Amount"></telerik:GridBoundColumn>
+                                                    <telerik:GridNumericColumn DataField="Adjustment" UniqueName="Adjustment" HeaderText="Adjsustment" DataType="System.Decimal" ReadOnly="true"></telerik:GridNumericColumn>
+                                                    <telerik:GridEditCommandColumn EditText="Make Adjustment" ButtonType="ImageButton"></telerik:GridEditCommandColumn>
+
+                                                </Columns>
+
+
+                                            </telerik:GridTableView>
+                                        </DetailTables>
+
+                                        <Columns>
+                                            <telerik:GridBoundColumn DataField="StatementOfAccountId" UniqueName="StatementOfAccountId" Visible="false"></telerik:GridBoundColumn>
+                                            <telerik:GridDateTimeColumn DataField="StatementOfAccountDate" UniqueName="StatementOfAccountDate" HeaderText="SOA Date"></telerik:GridDateTimeColumn>
+                                            <telerik:GridBoundColumn DataField="StatementOfAccountNo" HeaderText="SOA No" UniqueName="SOANo" HeaderStyle-Font-Bold="true"></telerik:GridBoundColumn>
+                                            <telerik:GridBoundColumn DataField="BillingPeriodName" HeaderText="Billing Period" SortExpression="BillingPeriodName" UniqueName="BillingPeriod"></telerik:GridBoundColumn>
+                                            <telerik:GridDateTimeColumn DataField="SOADueDate" UniqueName="SOADueDate" HeaderText="Due Date"></telerik:GridDateTimeColumn>
+                                            <telerik:GridBoundColumn DataField="AmountDue" UniqueName="AmountDue" HeaderText="Amount Due"></telerik:GridBoundColumn>
+                                            <telerik:GridBoundColumn DataField="Adjustment" DataType="System.Decimal" HeaderText="Adjustment"></telerik:GridBoundColumn>
+                                            <telerik:GridEditCommandColumn EditText="Make Adjustment" ButtonType="ImageButton"></telerik:GridEditCommandColumn>
+                                            <telerik:GridTemplateColumn UniqueName="Details" AllowFiltering="false">
+                                                <ItemTemplate>
+                                                    <asp:HyperLink ID="DetailsLink" runat="server" NavigateUrl='<%# Eval("StatementOfAccountId", "~/Corporate/StatementOfAccountPrint/StatementOfAccountPrint.aspx?StatementOfAccountId={0}") %>' Text="Print"></asp:HyperLink>
+                                                </ItemTemplate>
+                                            </telerik:GridTemplateColumn>
+
+                                        </Columns>
+
+                                    </telerik:GridTableView>
+                                </DetailTables>
+                                <Columns>
+                                   
+                                    <telerik:GridBoundColumn DataField="CompanyId" UniqueName="CompanyId" Visible="false"></telerik:GridBoundColumn>
+                                    <telerik:GridBoundColumn DataField="AccountNo" UniqueName="AccountNo" HeaderText="Account No"></telerik:GridBoundColumn>
+                                    <telerik:GridBoundColumn DataField="CompanyName" UniqueName="CompanyName" HeaderText="Company Name"></telerik:GridBoundColumn>
+                                    <telerik:GridBoundColumn DataField="ContactNo" UniqueName="ContactNo" HeaderText="Telephone No"></telerik:GridBoundColumn>
+                                    <telerik:GridBoundColumn DataField="Email" UniqueName="Email" HeaderText="Email"></telerik:GridBoundColumn>
+                                    <telerik:GridBoundColumn DataField="Address" UniqueName="Address" HeaderText="Address"></telerik:GridBoundColumn>
+                                </Columns>
 
                             </MasterTableView>
                             <ClientSettings>
                                 <Selecting AllowRowSelect="true"></Selecting>
                                 <ClientEvents OnRowDblClick="RowDblClick"></ClientEvents>
+                                <ClientEvents OnRowClick="test" />
                             </ClientSettings>
                         </telerik:RadGrid>
-                        <br />
-                        <br />
-                        <telerik:RadWindowManager RenderMode="Mobile" ID="RadWindowManager1" runat="server" EnableShadow="true">
-                            <Windows>
-                                <telerik:RadWindow RenderMode="Mobile" ID="UserListDialog" runat="server" Title="Editing record" Height="450px"
-                                    Width="500px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false"
-                                    Modal="true" Behaviors="Close,Move">
-                                </telerik:RadWindow>
+                    </div>
 
-                                <telerik:RadWindow RenderMode="Mobile" ID="AddUser" runat="server" Title="Adding record" Height="400px"
-                                    Width="500px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar="false" AutoSize="false"
-                                    Modal="true" Behaviors="Close,Move">
-                                </telerik:RadWindow>
+                    <asp:SqlDataSource ID="CompanyDataSource" runat="server"
+                        SelectCommand="sp_view_company" SelectCommandType="StoredProcedure"
+                        ConnectionString="<%$ ConnectionStrings:Cms %>"></asp:SqlDataSource>
+
+                    <asp:SqlDataSource ID="StatementOfAccountDataSource" runat="server"
+                        SelectCommand="sp_view_StatementOfAccountByCompanyId" SelectCommandType="StoredProcedure"
+                        ConnectionString="<%$ ConnectionStrings:Cms %>">
+                        <SelectParameters>
+                            <asp:Parameter Name="CompanyId" DbType="Guid" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+
+                    <asp:SqlDataSource ID="ShipmentDataSource" runat="server"
+                        SelectCommand="sp_view_ShipmentBySoaId" SelectCommandType="StoredProcedure"
+                        ConnectionString="<%$ ConnectionStrings:Cms %>">
+                        <SelectParameters>
+                            <asp:Parameter Name="StatementOfAccountId" DbType="Guid" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+
+                </telerik:RadAjaxPanel>
+
+                <telerik:RadCodeBlock runat="server">
+                    <script type="text/javascript">
+
+                        function onRequestStart(sender, args) {
+                            if (args.get_eventTarget().indexOf("Button") >= 0) {
+                                args.set_enableAjax(false);
+                            }
+                        }
+
+                        function test(sender, args) {
 
 
-                                <telerik:RadWindow RenderMode="Mobile" ID="ShowExport" runat="server" Title="Export Report Preview" Height="590px"
-                                    Width="900px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar="false" AutoSize="false"
-                                    Modal="true" Behaviors="Close,Move">
-                                </telerik:RadWindow>
-                            </Windows>
-                        </telerik:RadWindowManager>
-                    </telerik:RadAjaxPanel>
-                    <telerik:RadCodeBlock runat="server">
-                        <script type="text/javascript">
-                            function onRequestStart(sender, args) {
-                                if (args.get_eventTarget().indexOf("Button") >= 0) {
-                                    args.set_enableAjax(false);
+                            var item = args.get_item();
+                            var name = item.get_owner().get_name();
+                            alert("dfhdj " + name + " is in edit mode = " + item.get_isInEditMode());
+                            if (name == "Shipments") {
+
+                                alert("Record " + item.get_itemIndex() + " is in edit mode. and name is " + name);
+
+                            }
+                        }
+                        function Rebind(sender, args, tableViewId) {
+                            var tableView = $find(tableViewId);
+                            var columns = tableview.get_colums();
+
+                            for (var i = 0; i < columns.length; i++) {
+
+                                var uniqueName = colums[i].get_uniqueName();
+                                if (uniqueName == "Adjustment") {
+                                    columns[i].ReadOnly = false;
+                                } else {
+                                    columns[i].ReadOnly = true;
                                 }
                             }
-                        </script>
+                            tableView.Rebind();
+                        };
 
+                        function ShowAdjustmentForm(id, rowIndex) {
+                            window.radopen("StatementOfAccountAdjustment/AddStatementOfAccountAdjustment.aspx?StatementOfAccountId=" + id, "AdjustmentListDialog");
+                            return false;
+                        }
 
-                        <script type="text/javascript">
-                            function ShowAdjustmentForm(id, rowIndex) {
-                                <%--var grid = $find("<%= RadGrid2.ClientID %>");
-                                var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
-                                grid.get_masterTableView().selectItem(rowControl, true);--%>
-                                window.radopen("UserModal/StatementOfAccount/AddApprovingAuthority.aspx?StatementOfAccountId=" + id, "AdjustmentForm");
-                                //window.radopen("UserModal/ApprovingAuthority/AddApprovingAuthority.aspx", "AddUser");
-                                return false;
+                        function refreshGrid(arg) {
+                            if (!arg) {
+                                $find("<%= RadAjaxManager1.ClientID %>").ajaxRequest("Rebind");
                             }
-                            function ShowInsertForm() {
-                                window.radopen("UserModal/ApprovingAuthority/AddApprovingAuthority.aspx", "AddUser");
-                                return false;
+                            else {
+                                $find("<%= RadAjaxManager1.ClientID %>").ajaxRequest("RebindAndNavigate");
                             }
+                        }
+                        function RowDblClick(sender, eventArgs) {
+                            window.radopen("UserModal/EditForm_csharp.aspx?StatementOfAccountId=" + eventArgs.getDataKeyValue("StatementOfAccountId"), "UserListDialog");
+                        }
 
-                            function ShowExportForm() {
-                                window.radopen("/StatementOfAccount.aspx/#", "ShowExport");
-                                return false;
-                            }
+                    </script>
+                </telerik:RadCodeBlock>
 
-
-                            function refreshGrid(arg) {
-                                if (!arg) {
-                                    $find("<%= RadAjaxManager1.ClientID %>").ajaxRequest("Rebind");
-                                }
-                                else {
-                                    $find("<%= RadAjaxManager1.ClientID %>").ajaxRequest("RebindAndNavigate");
-                                }
-                            }
-                            function RowDblClick(sender, eventArgs) {
-
-                                    <%--<%--    //changed code here 
-                                    var grid = $find("<%= RadGrid2.ClientID %>");
-                                    var MasterTable = grid.get_masterTableView();
-                                    var row = MasterTable.get_dataItems()[eventArgs.get_itemIndexHierarchical()];
-                                    var key = MasterTable.getCellByColumnUniqueName(row, "UserId");  // get the value by uniquecolumnname
-                                    var ID = key.innerHTML;        
-                                    MasterTable.fireCommand("MyClick2",ID);        
-                                --%>
-                                //ShowEditForm();
-                                window.radopen("UserModal/EditForm_csharp.aspx?StatementOfAccountId=" + eventArgs.getDataKeyValue("StatementOfAccountId"), "UserListDialog");
-                            }
-
-                            function LoadRadGrid() {
-                                document.getElementById("btnSubmit").click();
-                            }
-                        </script>
-                    </telerik:RadCodeBlock>
-                </telerik:LayoutColumn>
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,7 +17,12 @@ namespace CMSVersion2
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            
+                       
+        }
+
+        void Application_Error(object sender, EventArgs e)
+        {
+            Response.Write("Error found");
         }
     }
 }

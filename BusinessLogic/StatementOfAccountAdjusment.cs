@@ -9,6 +9,9 @@ namespace BusinessLogic
 {
     public class StatementOfAccountAdjusment
     {
-       
+       public static void AddStatementOfAccountAdjustment(Guid SoaID, Guid ReasonID, string AirwayBillNo, decimal Amount, Guid AdjustedBy, string conSTR)
+        {
+            DAL.StatementOfAccountAdjustment.AddStatementOfAccountAdjustment(SoaID, ReasonID, AirwayBillNo, Amount, AdjustedBy, conSTR);
+        }
     }
 }

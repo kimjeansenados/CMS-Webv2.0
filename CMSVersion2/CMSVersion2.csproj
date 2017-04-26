@@ -238,9 +238,9 @@
     <Content Include="Corporate\RepresentativeModal\View.aspx" />
     <Content Include="Corporate\StatementOfAccount.aspx" />
     <Content Include="Corporate\StatementOfAccountAdjustment\AddStatementOfAccountAdjustment.aspx" />
-    <Content Include="Corporate\StatementOfAccountDetails\StatementOfAccountDetail.aspx" />
+    <Content Include="Corporate\StatementOfAccountPrint\StatementOfAccountPrint.aspx" />
     <Content Include="Customer\Customer.aspx" />
-    <Content Include="Error\UnderMaintenance.aspx" />
+    <Content Include="Corporate\Error\UnderMaintenance.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -558,7 +558,7 @@
     <Compile Include="Administration\Users.aspx.designer.cs">
       <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Content\App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -566,9 +566,9 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Start\IdentityConfig.cs" />
-    <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Content\App_Start\IdentityConfig.cs" />
+    <Compile Include="Content\App_Start\RouteConfig.cs" />
+    <Compile Include="Content\App_Start\Startup.Auth.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -668,12 +668,12 @@
     <Compile Include="Corporate\StatementOfAccountAdjustment\AddStatementOfAccountAdjustment.aspx.designer.cs">
       <DependentUpon>AddStatementOfAccountAdjustment.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Corporate\StatementOfAccountDetails\StatementOfAccountDetail.aspx.cs">
-      <DependentUpon>StatementOfAccountDetail.aspx</DependentUpon>
+    <Compile Include="Corporate\StatementOfAccountPrint\StatementOfAccountPrint.aspx.cs">
+      <DependentUpon>StatementOfAccountPrint.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Corporate\StatementOfAccountDetails\StatementOfAccountDetail.aspx.designer.cs">
-      <DependentUpon>StatementOfAccountDetail.aspx</DependentUpon>
+    <Compile Include="Corporate\StatementOfAccountPrint\StatementOfAccountPrint.aspx.designer.cs">
+      <DependentUpon>StatementOfAccountPrint.aspx</DependentUpon>
     </Compile>
     <Compile Include="Corporate\StatementOfAccountReport\SOAReport.cs">
       <SubType>Component</SubType>
@@ -695,11 +695,11 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Error\UnderMaintenance.aspx.cs">
+    <Compile Include="Corporate\Error\UnderMaintenance.aspx.cs">
       <DependentUpon>UnderMaintenance.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Error\UnderMaintenance.aspx.designer.cs">
+    <Compile Include="Corporate\Error\UnderMaintenance.aspx.designer.cs">
       <DependentUpon>UnderMaintenance.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
