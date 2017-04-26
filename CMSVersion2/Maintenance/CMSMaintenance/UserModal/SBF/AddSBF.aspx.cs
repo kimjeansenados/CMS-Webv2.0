@@ -16,7 +16,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.SBF
             if (!IsPostBack)
             {
 
-
+                txtEffectivityDate1.SelectedDate = DateTime.Now;
                 //if (Request.QueryString["ID"] == null)
                 //{
 
@@ -110,12 +110,9 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.SBF
             {
                 chk = 1;
             }
+          
+            DateTime DT1 = txtEffectivityDate1.SelectedDate.Value;
 
-            DateTime dt = Convert.ToDateTime(txtEffectivityDate.SelectedDate);
-            string temp = dt.ToShortDateString();
-
-
-            DateTime DT1 = DateTime.Parse(temp, new CultureInfo("en-CA"));
             BLL.ShipmentBasicFee.InsertShipmentBasicFee(ID, Convert.ToDecimal(txtAmount.Text), txtShipmentFee.Text, txtDescription.Text, chk, DT1, getConstr.ConStrCMS);
 
             string script = "<script>CloseOnReload()</" + "script>";

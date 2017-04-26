@@ -41,10 +41,10 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.SBF
 
 
                             DateTime dt = Convert.ToDateTime(EffectivityDate);
-                            string temp = dt.ToShortDateString();
+                            //string temp = dt.ToShortDateString();
 
 
-                            DateTime DT1 = DateTime.Parse(temp, new CultureInfo("en-CA"));
+                            txtEffectivityDate1.SelectedDate = dt;
 
 
                             txtShipmentFee.Text = shipmentBasicFeeName;
@@ -52,7 +52,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.SBF
 
 
 
-                            txtEffectivityDate.SelectedDate = DT1;
+                            
                             txtDescription.Text = desc;
                             //if (isvatable == 1)
                             //{
@@ -133,11 +133,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.SBF
                 chk = 1;
             }
 
-            DateTime dt = Convert.ToDateTime(txtEffectivityDate.SelectedDate);
-            string temp = dt.ToShortDateString();
-
-
-            DateTime DT1 = DateTime.Parse(temp, new CultureInfo("en-CA"));
+            DateTime DT1 = txtEffectivityDate1.SelectedDate.Value;
             BLL.ShipmentBasicFee.UpdateShipmentBasicFee(new Guid(lblSBFid.Text), ID, Convert.ToDecimal(txtAmount.Text), txtShipmentFee.Text, txtDescription.Text, chk, DT1, getConstr.ConStrCMS);
 
             string script = "<script>CloseOnReload()</" + "script>";

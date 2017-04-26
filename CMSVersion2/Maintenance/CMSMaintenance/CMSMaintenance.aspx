@@ -27,92 +27,92 @@
     </style>
 
 
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="RadWindow1" VisibleStatusbar="false" Height="300px" Width="350px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="RadWindow1" VisibleStatusbar="false" Title="Update Group Island" Height="300px" Width="350px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="RadWindowRegion" VisibleStatusbar="false" Height="300px" Width="350px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="RadWindowRegion" Title="Update Region" VisibleStatusbar="false" Height="300px" Width="350px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwAddGroupIsland" VisibleStatusbar="false"  Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwAddGroupIsland" VisibleStatusbar="false" Title="New Group Island"  Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwAddregion" VisibleStatusbar="false" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwAddregion" Title="New Region" VisibleStatusbar="false" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwProvinceEdit" VisibleStatusbar="false" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwProvinceEdit" Title="Update Province" VisibleStatusbar="false" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwProvinceAdd" VisibleStatusbar="false" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwProvinceAdd" VisibleStatusbar="false" Title="New Province" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwBranchCodeEdit" Height="550px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwBranchCodeEdit" VisibleStatusbar="false" Title="Update Branch Corp Office" Height="380px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwBranchCodeAdd" Height="550px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwBranchCodeAdd" VisibleStatusbar="false" Title="New Branch Corp Office" Height="380px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwClusterAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwClusterAdd" VisibleStatusbar="false" Title="New Cluster" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwClusterEdit" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwClusterEdit" VisibleStatusbar="false" Title="Update Cluster" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwCityAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwCityAdd" Title="New City" Height="550px" Width="380px" VisibleStatusbar="false">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwCityEdit" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwCityEdit" Title="Update City" Height="550px" Width="380px" VisibleStatusbar="false">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwAreaAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwAreaAdd" Title="New Area" Height="450px" Width="380px" VisibleStatusbar="false">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwAreaEdit" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwAreaEdit" Title="Update Area" Height="450px" Width="380px" VisibleStatusbar="false">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwBranchSatOfficeAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwBranchSatOfficeAdd" Title="New BSO" VisibleStatusbar="false" Height="380px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwBranchSatOfficeEdit" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwBranchSatOfficeEdit" Title="Update BSO" VisibleStatusbar="false" Height="380px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwGatewaySayOfficeAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwGatewaySayOfficeAdd" VisibleStatusbar="false" Title="New GSO" Height="380px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwGatewaySayOfficeEdit" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwGatewaySayOfficeEdit" VisibleStatusbar="false"  Title="Update GSO" Height="380px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwRUTAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwRUTAdd" Title="New Revenue Unit Type" VisibleStatusbar="false" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwRUTEdit" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwRUTEdit" Title="Update Revenue Unit Type" VisibleStatusbar="false"  Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwApplicablerateAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwApplicablerateAdd" Title="New Applicable Rate" VisibleStatusbar="false" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwApplicablerateEdit" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwApplicablerateEdit" Title="Udpate Applicable Rate" VisibleStatusbar="false" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwCommodityTypeEdit" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwCommodityTypeEdit" Title="Update Commodity Type" VisibleStatusbar="false" Height="430px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwCommodityTypeAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwCommodityTypeAdd" Title="New Commodity Type" VisibleStatusbar="false" Height="430px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwCommodityAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwCommodityAdd" Title="New Commidity" VisibleStatusbar="false" Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwCommodityEdit" Height="350px" Width="380px">
-    </telerik:RadWindow>
-
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwGoodsDescAdd" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwCommodityEdit" Title="Update Commodity" VisibleStatusbar="false"  Height="350px" Width="380px">
     </telerik:RadWindow>
 
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwGoodsDescEdit" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" VisibleStatusbar="false" Behaviors="Close" runat="server" ID="rwGoodsDescAdd" Title="New Description" Height="300px" Width="380px">
     </telerik:RadWindow>
 
-    
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwSBFAdd" Height="550px" Width="380px">
-    </telerik:RadWindow>
-
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwSBFEdit" Height="550px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" VisibleStatusbar="false" Behaviors="Close" runat="server" ID="rwGoodsDescEdit" Title="Update Description" Height="300px" Width="380px">
     </telerik:RadWindow>
 
     
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwCratingAdd" Height="550px" Width="380px">
-    </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwCratingEdit" Height="550px" Width="380px">
-    </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwPackagingAdd" Height="550px" Width="380px">
-    </telerik:RadWindow>
-      <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwPackagingEdit" Height="550px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" VisibleStatusbar="false" Behaviors="Close" runat="server" ID="rwSBFAdd" Title="New SBF" Height="550px" Width="380px">
     </telerik:RadWindow>
 
-     <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwServiceTypeAdd" Height="550px" Width="380px">
-    </telerik:RadWindow>
-     <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwServiceTypeEdit" Height="550px" Width="380px">
-    </telerik:RadWindow>
-
-      <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwServiceModeAdd" Height="550px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" VisibleStatusbar="false" Behaviors="Close" runat="server" ID="rwSBFEdit" Title="Update SBF" Height="550px" Width="380px">
     </telerik:RadWindow>
 
     
-      <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwServiceModeEdit" Height="550px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" VisibleStatusbar="false" Behaviors="Close" runat="server" ID="rwCratingAdd" Title="New Crating" Height="550px" Width="380px">
+    </telerik:RadWindow>
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" VisibleStatusbar="false" Behaviors="Close" runat="server" ID="rwCratingEdit" Title="Update Crating" Height="550px" Width="380px">
+    </telerik:RadWindow>
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" VisibleStatusbar="false" Behaviors="Close" runat="server" ID="rwPackagingAdd" Title="New Packaging" Height="550px" Width="380px">
+    </telerik:RadWindow>
+      <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" VisibleStatusbar="false" Behaviors="Close" runat="server" ID="rwPackagingEdit" Title="Update Packaging" Height="550px" Width="380px">
+    </telerik:RadWindow>
+
+     <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" VisibleStatusbar="false" Behaviors="Close" runat="server" ID="rwServiceTypeAdd" Title="New Service Type" Height="350px" Width="380px">
+    </telerik:RadWindow>
+     <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" VisibleStatusbar="false" Behaviors="Close" runat="server" ID="rwServiceTypeEdit" Title="Update Service Type" Height="350px" Width="380px">
+    </telerik:RadWindow>
+
+      <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" VisibleStatusbar="false" Behaviors="Close" runat="server" ID="rwServiceModeAdd" Title="New Service Mode" Height="550px" Width="380px">
+    </telerik:RadWindow>
+
+    
+      <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" VisibleStatusbar="false" Behaviors="Close" runat="server" ID="rwServiceModeEdit" Title="Update Service Mode" Height="550px" Width="380px">
     </telerik:RadWindow>
     <%--<asp:Button ID="Button4" Text="open the RadWindow from the server" runat="server" OnClick="Button4_Click" />--%>
     <div id="wrapper">

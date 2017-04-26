@@ -85,13 +85,13 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.SBF {
         protected global::System.Web.UI.WebControls.CheckBox chkVatable;
         
         /// <summary>
-        /// txtEffectivityDate control.
+        /// txtEffectivityDate1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadDateInput txtEffectivityDate;
+        protected global::Telerik.Web.UI.RadDatePicker txtEffectivityDate1;
         
         /// <summary>
         /// btnSave control.

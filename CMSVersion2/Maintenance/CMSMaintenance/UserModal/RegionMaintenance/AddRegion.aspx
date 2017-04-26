@@ -6,7 +6,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="../../../../Content/bootstrap.css" rel="stylesheet" />
     <script type="text/javascript">
 
         function GetRadWindow() {
@@ -48,9 +47,9 @@
                 <div class="form-group">
 
                         <label for="email" class="cols-sm-2 control-label">Group Island</label>
+
                         <div class="input-group" style="font-size: 12px">
-                            
-                            <telerik:RadComboBox ID="rcbGroup" runat="server"></telerik:RadComboBox>
+                            <telerik:RadComboBox ID="rcbGroup" runat="server" Width="190px"></telerik:RadComboBox>
                         </div>
                         <br />
                         <label for="email" class="cols-sm-2 control-label" style="font-style: normal">Region</label>

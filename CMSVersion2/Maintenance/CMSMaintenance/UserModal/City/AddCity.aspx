@@ -40,8 +40,8 @@
         <%--<asp:ScriptManager ID="ScriptManager2" runat="server" />--%>
         <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" Skin="Default" DecoratedControls="All" />
         <%--<asp:Button runat="server" Text="Close" ID="CloseButton"     OnClick="CloseButton_Click1"/>--%>
-        <div class="main-login main-center">
-            <form class="form-horizontal" method="post" action="#">
+        <div class="main-login main-center" style="margin-left:80px;margin-top:40px;">
+            <div class="form-horizontal">
 
 
                 <div class="form-group">
@@ -118,12 +118,12 @@
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtzipcode" Enabled="True" runat="server"></telerik:RadTextBox>
                         </div>
                      <br />
-                        <telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" ></telerik:RadButton>
-                        <telerik:RadButton ID="btnCancel" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click" OnClientClicked="redirect"></telerik:RadButton>
+                        <telerik:RadButton Skin="Glow" ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" ></telerik:RadButton>
+                        <telerik:RadButton Skin="Glow" ID="btnCancel" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click" OnClientClicked="redirect"></telerik:RadButton>
                     </div>
                 </div>
 
-            </form>
+            </div>
 
 
         </div>

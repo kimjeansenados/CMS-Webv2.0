@@ -114,7 +114,8 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.Packaging
         {
             string host = HttpContext.Current.Request.Url.Authority;
             Guid ID = new Guid("11111111-1111-1111-1111-111111111111");
-            BLL.Packaging.InsertPacking(txtPackagingName.Text, Convert.ToDecimal(txtFactor.Text), Convert.ToInt32(txtMin.Text), Convert.ToInt32(txtMax.Text), Convert.ToDecimal(txtMinimumCost.Text), Convert.ToDecimal(txtExcessCost.Text), ID, getConstr.ConStrCMS);
+            Guid cratingid = new Guid(lblPackagingId.Text);
+            BLL.Packaging.UpdatePacking(cratingid ,txtPackagingName.Text, Convert.ToDecimal(txtFactor.Text), Convert.ToInt32(txtMin.Text), Convert.ToInt32(txtMax.Text), Convert.ToDecimal(txtMinimumCost.Text), Convert.ToDecimal(txtExcessCost.Text), ID, getConstr.ConStrCMS);
             string script = "<script>CloseOnReload()</" + "script>";
             ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
 

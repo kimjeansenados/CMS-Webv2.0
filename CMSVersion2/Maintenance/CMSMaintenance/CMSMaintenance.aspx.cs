@@ -1105,7 +1105,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance
             string RUTid = this.rcbServiceType.SelectedItem.Value.ToString();
             if (RUTid != "")
             {
-                rwServiceTypeEdit.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/ServiceType/EditServicesType.aspx?ID=" + RUTid;
+                rwServiceTypeEdit.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/ServiceType/EditServiceType.aspx?ID=" + RUTid;
                 string script = "function f(){$find(\"" + rwServiceTypeEdit.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
             }

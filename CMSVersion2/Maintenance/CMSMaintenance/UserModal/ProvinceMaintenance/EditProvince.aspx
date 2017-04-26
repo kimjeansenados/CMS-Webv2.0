@@ -41,8 +41,8 @@
         <%--<asp:ScriptManager ID="ScriptManager2" runat="server" />--%>
         <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" Skin="Default" DecoratedControls="All" />
         <%--<asp:Button runat="server" Text="Close" ID="CloseButton"     OnClick="CloseButton_Click1"/>--%>
-        <div class="main-login main-center">
-            <form class="form-horizontal" method="post" action="#">
+        <div class="main-login main-center" style="margin-left:80px;margin-top:40px;">
+            <div class="form-horizontal">
 
 
                 <div class="form-group">
@@ -51,7 +51,7 @@
                          <label for="email" class="cols-sm-2 control-label">Region</label>
                         <div class="input-group" style="font-size: 12px">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                            <telerik:RadComboBox ID="rcbRegion" runat="server"></telerik:RadComboBox>
+                            <telerik:RadComboBox ID="rcbRegion" runat="server" Width="190px"></telerik:RadComboBox>
                         </div>
                         <br />
                          <label for="email" class="cols-sm-2 control-label" style="font-style:normal">Province</label>
@@ -69,12 +69,12 @@
                             </asp:RequiredFieldValidator>
                         </div>
                      <br />
-                        <telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" ></telerik:RadButton>
-                        <telerik:RadButton ID="btnCancel" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click" OnClientClicked="redirect"></telerik:RadButton>
+                        <telerik:RadButton ID="btnSave" Skin="Glow" runat="server" Text="Save" AutoPostBack="true" OnClick="btnSave_Click" OnClientClicked=""></telerik:RadButton>
+                        <telerik:RadButton ID="btnCancel" Skin="Glow" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click" OnClientClicked="redirect"></telerik:RadButton>
                     </div>
                 </div>
 
-            </form>
+            </div>
 
 
         </div>

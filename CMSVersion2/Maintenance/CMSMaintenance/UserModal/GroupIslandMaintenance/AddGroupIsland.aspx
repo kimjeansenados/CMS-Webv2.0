@@ -6,7 +6,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="../../../css/bootstrap.css" rel="stylesheet" />
     <script type="text/javascript">
 
         function GetRadWindow() {
@@ -46,11 +45,7 @@
                     <label for="email" class="cols-sm-2 control-label">Group Island</label>
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
-
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                            <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
                             <asp:Label ID="lblGroupID" runat="server" Text="" Visible="false"></asp:Label>
-
                             <telerik:RadTextBox  Width="190px" RenderMode="Mobile" ID="txtIslandGroup" Enabled="True" runat="server"></telerik:RadTextBox>
 
                         </div>

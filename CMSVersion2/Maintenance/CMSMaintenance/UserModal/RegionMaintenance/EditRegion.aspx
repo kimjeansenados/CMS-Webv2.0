@@ -6,7 +6,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="../../../../Content/bootstrap.css" rel="stylesheet" />
     <script type="text/javascript">
 
         function GetRadWindow() {
@@ -50,7 +49,7 @@
                          <label for="email" class="cols-sm-2 control-label">Group Island</label>
                         <div class="input-group" style="font-size: 12px">
                            
-                            <telerik:RadComboBox ID="rcbGroup" runat="server"></telerik:RadComboBox>
+                            <telerik:RadComboBox ID="rcbGroup" runat="server" Width="190px"></telerik:RadComboBox>
                         </div>
                         <br />
                          <label for="email" class="cols-sm-2 control-label" style="font-style:normal">Region</label>
@@ -66,7 +65,7 @@
                             </asp:RequiredFieldValidator>
                         </div>
                      <br />
-                        <telerik:RadButton ID="btnSave" Skin="Glow" runat="server" Text="Save" OnClick="btnSave_Click" ></telerik:RadButton>
+                        <telerik:RadButton ID="btnSave" Skin="Glow" runat="server" Text="Uodate" OnClick="btnSave_Click" ></telerik:RadButton>
                         <telerik:RadButton ID="btnCancel" Skin="Glow" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click" OnClientClicked="redirect"></telerik:RadButton>
                  
                 </div>
