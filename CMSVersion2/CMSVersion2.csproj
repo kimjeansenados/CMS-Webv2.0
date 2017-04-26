@@ -227,9 +227,7 @@
     <Content Include="Corporate\Representative.aspx" />
     <Content Include="Corporate\StatementOfAccount.aspx" />
     <Content Include="Corporate\StatementOfAccountAdjustment\AddStatementOfAccountAdjustment.aspx" />
-    <Content Include="Corporate\StatementOfAccountDetails\StatementOfAccountDetail.aspx" />
     <Content Include="Customer\Customer.aspx" />
-    <Content Include="Corporate\Error\UnderMaintenance.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -512,13 +510,6 @@
     <Compile Include="Corporate\StatementOfAccountAdjustment\AddStatementOfAccountAdjustment.aspx.designer.cs">
       <DependentUpon>AddStatementOfAccountAdjustment.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Corporate\StatementOfAccountDetails\StatementOfAccountDetail.aspx.cs">
-      <DependentUpon>StatementOfAccountDetail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Corporate\StatementOfAccountDetails\StatementOfAccountDetail.aspx.designer.cs">
-      <DependentUpon>StatementOfAccountDetail.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Customer\Customer.aspx.cs">
       <DependentUpon>Customer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -532,13 +523,6 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Corporate\Error\UnderMaintenance.aspx.cs">
-      <DependentUpon>UnderMaintenance.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Corporate\Error\UnderMaintenance.aspx.designer.cs">
-      <DependentUpon>UnderMaintenance.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -693,6 +677,7 @@
     <Compile Include="Models\AppService.cs" />
     <Compile Include="Models\GlobalCode.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ReportGlobalModel.cs" />
     <Compile Include="Models\UserAccessMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Report\Finance\Collection.aspx.cs">
@@ -744,6 +729,7 @@
     <Compile Include="Report\Finance\Sales\SalesPerUserLevel.aspx.designer.cs">
       <DependentUpon>SalesPerUserLevel.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Report\GetColumnDataFromDataTable.cs" />
     <Compile Include="Report\Operation\CargoMonitoring\Delivered.aspx.cs">
       <DependentUpon>Delivered.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -936,6 +922,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Corporate\StatementOfAccountDetails\" />
     <Folder Include="Maintenance\CMSMaintenance\UserModal\AccountStatus\" />
     <Folder Include="Maintenance\CMSMaintenance\UserModal\AccountType\" />
     <Folder Include="Maintenance\CMSMaintenance\UserModal\Airlines\" />
