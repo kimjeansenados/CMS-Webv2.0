@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="CMSVersion2.Administration.Users" %>
+﻿<%@ Page Title="Users" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="CMSVersion2.Administration.Users" %>
 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
@@ -140,11 +140,11 @@
                                             </a>
                                         |    
                                         
-                                        <a href="#"  onclick="return ShowExportForm();" class="alink">
+                         <%--               <a href="#"  onclick="return ShowExportForm();" class="alink">
                                             <img src="../images/emblem.png" alt="Print Preview" width="20">
                                            Print Preview
                                             </a>
-       |
+       |--%>
                    
                                  
                                         <a href="" onclick="LoadRadGrid()" class="alink">
@@ -173,8 +173,8 @@
                                         Modal="true" Behaviors="Close,Move">
                                     </telerik:RadWindow>
 
-                                     <telerik:RadWindow RenderMode="Auto" ID="AddUser" runat="server" Title="Adding record" Height="600px" Skin="Glow"
-                                        Width="800px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
+                                     <telerik:RadWindow RenderMode="Auto" ID="AddUser" runat="server" Title="Adding record" Height="400px" Skin="Glow"
+                                        Width="500px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
                                         Modal="true" Behaviors="Close,Move"  >
                                     </telerik:RadWindow>
 
@@ -203,11 +203,11 @@
                                     var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
                                     grid.get_masterTableView().selectItem(rowControl, true);
 
-                                    window.radopen("UserModal/EditForm_csharp.aspx?UserId=" + id, "UserListDialog");
+                                    window.radopen("UserModal/Edit.aspx?UserId=" + id, "UserListDialog");
                                     return false;
                                 }
                                 function ShowInsertForm() {
-                                    window.radopen("UserModal/AddNewUser.aspx", "AddUser");
+                                    window.radopen("UserModal/Add.aspx", "AddUser");
                                     return false;
                                 }
 
@@ -236,7 +236,7 @@
                                     MasterTable.fireCommand("MyClick2",ID);        
                                 --%>
                                     //ShowEditForm();
-                                    window.radopen("UserModal/EditForm_csharp.aspx?UserID=" + eventArgs.getDataKeyValue("UserId"), "UserListDialog");
+                                    window.radopen("UserModal/Edit.aspx?UserID=" + eventArgs.getDataKeyValue("UserId"), "UserListDialog");
                                 }
 
                                 function LoadRadGrid(){ 

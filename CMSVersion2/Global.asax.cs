@@ -1,5 +1,4 @@
-﻿using CMSVersion2.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -196,6 +195,11 @@ namespace CMSVersion2
             Response.Cache.SetExpires(DateTime.UtcNow.AddMinutes(-1));
             Response.Cache.SetCacheability(HttpCacheability.NoCache);
             Response.Cache.SetNoStore();
+        }
+
+        void Application_Error(object sender, EventArgs e)
+        {
+            Response.Write("Error found");
         }
     }
 }

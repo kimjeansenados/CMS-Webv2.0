@@ -15,10 +15,10 @@ namespace CMSVersion2.Maintenance.AWBSeries
         Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
-            //{
-            //    string usersession = Session["UsernameSession"].ToString();
-            //}
+            if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
+            {
+                string usersession = Session["UsernameSession"].ToString();
+            }
 
             if (!IsPostBack)
             {

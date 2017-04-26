@@ -13,6 +13,15 @@ namespace CMSVersion2.Report.Operation.Manifest {
     public partial class DailyTrip {
         
         /// <summary>
+        /// RadWindow1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadWindow RadWindow1;
+        
+        /// <summary>
         /// Date control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace CMSVersion2.Report.Operation.Manifest {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadButton Search;
+        
+        /// <summary>
+        /// btnPrint control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadButton btnPrint;
         
         /// <summary>
         /// grid_DailyTripReport control.

@@ -53,8 +53,8 @@ namespace DataAccess
                     cmd.Parameters.Add("@Multiplier", SqlDbType.Decimal).Value = Multiplier;
                     cmd.Parameters.Add("@BaseMinimum", SqlDbType.Int).Value = BaseMinimum;
                     cmd.Parameters.Add("@BaseMaximum", SqlDbType.Int).Value = BaseMaximum;
-                    cmd.Parameters.Add("@basefee", SqlDbType.Decimal).Value = basefee;
-                    cmd.Parameters.Add("@excesscoast", SqlDbType.Decimal).Value = excesscoast;
+                    cmd.Parameters.Add("@BaseFee", SqlDbType.Decimal).Value = basefee;
+                    cmd.Parameters.Add("@ExcessCost", SqlDbType.Decimal).Value = excesscoast;
                     cmd.Parameters.Add("@CreatedBy", SqlDbType.UniqueIdentifier).Value = CreatedBy;
                     con.Open();
                     cmd.ExecuteNonQuery();

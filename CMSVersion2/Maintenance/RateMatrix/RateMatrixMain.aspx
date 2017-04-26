@@ -9,9 +9,9 @@
 <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwRateMatrixedit" Height="350px" Width="50px"></telerik:RadWindow>
 
    <div id="wrapper">
-   <div id="page-wrapper"  >
+   <div id="page-wrapper">
 
-            <div class="container" >
+            <div class="container-fluid" >  
 
                  <!--- PAGE HEADER--->
             <div class="row">
@@ -196,11 +196,11 @@
 
                             
                                              
-                                        |
+                                      <%--  |
                                         <a href="#"  onclick="return ShowExportForm();">
                                             <img src="../../Images/emblem.png" alt="Print Preview" width="20px">
                                            Print Preview
-                                            </a>
+                                            </a>--%>
        |
                    
                                  

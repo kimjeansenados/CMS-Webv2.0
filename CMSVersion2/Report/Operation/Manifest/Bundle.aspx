@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Bundle.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.Bundle" %>
+﻿<%@ Page Title="Bundle" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Bundle.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.Bundle" %>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
     
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
@@ -15,6 +15,8 @@
                 </ol>
             </div>
             <!--- PAGE BODY--->
+            <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" AutoSize="true" AutoSizeBehaviors="HeightProportional" Width="1300px" Skin="Glow" VisibleStatusbar="false"></telerik:RadWindow>
+
             <div class="row">
                 <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
                 <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow" AutoPostBack="true"></telerik:RadDatePicker>
@@ -30,7 +32,7 @@
                 &nbsp;&nbsp;
 
                 <telerik:RadLabel runat="server" Text="BCO:"></telerik:RadLabel>
-                <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="250px" 
+                <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="200px" 
                     AppendDataBoundItems="true" EnableTextSelection="true" 
                     AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" 
                     AutoPostBack="true" OnSelectedIndexChanged="BCO_SelectedIndexChanged">
@@ -50,6 +52,8 @@
                 &nbsp;&nbsp;
 
                 <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" AutoPostBack="true" OnClick="Search_Click"> </telerik:RadButton>
+                <telerik:RadButton ID="btnPrint" Skin="Glow" OnClick="btnPrint_Click" 
+                    runat="server" Text="PRINT" AutoPostBack="true"></telerik:RadButton>
             </div>
             <br />
             <div class="row">
@@ -75,7 +79,7 @@
                     <MasterTableView CommandItemDisplay="Top" Width="100%" Font-Size="Smaller">
                         <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ShowExportToWordButton="false" ShowExportToCsvButton="false" ShowAddNewRecordButton="false" ShowRefreshButton="false" />
                         <Columns>
-                            <telerik:GridBoundColumn DataField="AWB #" HeaderText="AWB #" FooterText="TOTAL: "></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="AWBNO" HeaderText="AWB #" FooterText="TOTAL: "></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="SHIPPER" HeaderText="SHIPPER"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="CONSIGNEE" HeaderText="CONSIGNEE"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="CONSIGNEE ADDRESS" HeaderText="CONSIGNEE ADDRESS"></telerik:GridBoundColumn>

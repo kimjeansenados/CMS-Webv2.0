@@ -135,11 +135,11 @@
                                         
                                         |
                                         
-                                        <a href="#"  onclick="return ShowExportForm();" class="alink">
+                           <%--             <a href="#"  onclick="return ShowExportForm();" class="alink">
                                             <img src="../images/emblem.png" alt="Print Preview" width="20">
                                            Print Preview
                                             </a>
-       |
+       |--%>
                    
                                  
                                          <a href="" onclick="LoadRadGrid()" class="alink">
@@ -198,11 +198,11 @@
                                     var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
                                     grid.get_masterTableView().selectItem(rowControl, true);
 
-                                    window.radopen("UserModal/Representatives/EditRepresentatives.aspx?ClientId=" + id, "RepresentativeListDialog");
+                                    window.radopen("RepresentativeModal/Edit.aspx?ClientId=" + id, "RepresentativeListDialog");
                                     return false;
                                 }
                                 function ShowInsertForm() {
-                                    window.radopen("UserModal/Representatives/AddRepresentatives.aspx", "AddRepresentatives");
+                                    window.radopen("RepresentativeModal/Add.aspx", "AddRepresentatives");
                                     return false;
                                 }
 
@@ -231,7 +231,7 @@
                                     MasterTable.fireCommand("MyClick2",ID);        
                                 --%>
                                     //ShowEditForm();
-                                    window.radopen("UserModal/Representatives/EditRepresentatives.aspx?ClientId=" + eventArgs.getDataKeyValue("ClientId"), "RepresentativeListDialog");
+                                    window.radopen("RepresentativeModal/Edit.aspx?ClientId=" + eventArgs.getDataKeyValue("ClientId"), "RepresentativeListDialog");
                                 }
 
                                 function LoadRadGrid(){ 

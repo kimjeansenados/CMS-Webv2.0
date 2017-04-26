@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Segregation.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.Segregation" %>
+﻿<%@ Page Title="Segregation" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Segregation.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.Segregation" %>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
@@ -15,6 +15,9 @@
                 </ol>
             </div>
             <!--- PAGE BODY--->
+
+            <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" AutoSize="true" AutoSizeBehaviors="HeightProportional" Width="1300px" Skin="Glow" VisibleStatusbar="false"></telerik:RadWindow>
+
             <div class="row">
                 <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
                 <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow" AutoPostBack="true"></telerik:RadDatePicker>
@@ -70,6 +73,8 @@
                 &nbsp;
 
                 <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" AutoPostBack="true" OnClick="Search_Click"> </telerik:RadButton>
+                <telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click"> </telerik:RadButton>
+
             </div>
             <br />
             <div class="row">

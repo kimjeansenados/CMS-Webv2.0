@@ -136,12 +136,12 @@
                                             </a>
                                     
 
-                            |
+<%--                            |
                                         
                                         <a href="#"  onclick="return ShowExportForm();" class="alink">
                                             <img src="../images/emblem.png" alt="Print Preview" width="20"/>
                                            Print Preview
-                                            </a>
+                                            </a>--%>
        |
                    
                                  
@@ -202,11 +202,11 @@
                                     var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
                                     grid.get_masterTableView().selectItem(rowControl, true);
 
-                                    window.radopen("UserModal/ApprovingAuthority/EditApprovingAuthority.aspx?ID=" + id, "ApprovingAuthorityListDialog");
+                                    window.radopen("ApprovingAuthorityModal/Edit.aspx?ID=" + id, "ApprovingAuthorityListDialog");
                                     return false;
                                 }
                                 function ShowInsertForm() {
-                                    window.radopen("UserModal/ApprovingAuthority/AddApprovingAuthority.aspx", "AddUser");
+                                    window.radopen("ApprovingAuthorityModal/Add.aspx", "AddUser");
                                     
                                     return false;
                                 }
@@ -237,7 +237,7 @@
                                     MasterTable.fireCommand("MyClick2",ID);        
                                 --%>
                                     //ShowEditForm();
-                                    window.radopen("ApprovingAuthority/EditApprovingAuthority.aspx?ID=" + eventArgs.getDataKeyValue("ApprovingAuthorityId"), "ApprovingAuthorityListDialog");
+                                    window.radopen("ApprovingAuthorityModal/Edit.aspx?ID=" + eventArgs.getDataKeyValue("ApprovingAuthorityId"), "ApprovingAuthorityListDialog");
                                 }
 
                                 function LoadRadGrid(){ 

@@ -49,24 +49,6 @@ namespace CMSVersion2.Corporate.StatementOfAccountAdjustment {
         protected global::Telerik.Web.UI.RadTextBox txtAccountNo;
         
         /// <summary>
-        /// lbl_Company control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadLabel lbl_Company;
-        
-        /// <summary>
-        /// txtCompany control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadTextBox txtCompany;
-        
-        /// <summary>
         /// lbl_SoaNo control.
         /// </summary>
         /// <remarks>
@@ -85,6 +67,24 @@ namespace CMSVersion2.Corporate.StatementOfAccountAdjustment {
         protected global::Telerik.Web.UI.RadTextBox txtSoaNo;
         
         /// <summary>
+        /// lbl_Company control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel lbl_Company;
+        
+        /// <summary>
+        /// txtCompany control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadTextBox txtCompany;
+        
+        /// <summary>
         /// lbl_BillingPeriod control.
         /// </summary>
         /// <remarks>
@@ -101,6 +101,24 @@ namespace CMSVersion2.Corporate.StatementOfAccountAdjustment {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtBillingPeriod;
+        
+        /// <summary>
+        /// RadAjaxPanel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadAjaxPanel RadAjaxPanel2;
+        
+        /// <summary>
+        /// RadAjaxManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadAjaxManager RadAjaxManager1;
         
         /// <summary>
         /// gridLoadingPanel control.
@@ -128,6 +146,15 @@ namespace CMSVersion2.Corporate.StatementOfAccountAdjustment {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadGrid AdjustmentGrid;
+        
+        /// <summary>
+        /// AdjustmentDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource AdjustmentDataSource;
         
         /// <summary>
         /// btnSave control.

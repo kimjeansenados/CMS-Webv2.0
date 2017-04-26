@@ -13,6 +13,8 @@
                     <li>Hold</li>
                 </ol>
             </div>
+            <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" AutoSize="true" AutoSizeBehaviors="HeightProportional" Width="1300px" Skin="Glow" VisibleStatusbar="false"></telerik:RadWindow>
+
             <div class="row">
                 <telerik:RadLabel ID="RadLabel1" runat="server" Text="Date:"></telerik:RadLabel>
                 <telerik:RadDatePicker ID="Date1" runat="server" Skin="Glow" AutoPostBack="true"></telerik:RadDatePicker>
@@ -21,13 +23,15 @@
                
                  &nbsp;&nbsp;
                 <telerik:RadButton ID="Search" Text="Search" runat="server" Skin="Glow" AutoPostBack="true"></telerik:RadButton>   
+                <telerik:RadButton ID="btnPrint" Skin="Glow" OnClick="btnPrint_Click"
+                    runat="server" Text="PRINT" AutoPostBack="true"></telerik:RadButton>
             </div>
             <br />
             <div class="row">
                 <telerik:RadGrid ID="grid_Hold" runat="server"  Skin="Glow"
                     AllowPaging="True" ShowFooter="true"
                     PageSize="10" ClientSettings-Scrolling-AllowScroll="true"  
-                    AllowFilteringByColumn="false" OnPreRender="grid_Hold_PreRender"
+                    AllowFilteringByColumn="false"
                     AutoGenerateColumns="true" Height="500px" ItemStyle-Wrap="false"
                     AllowSorting="true" OnNeedDataSource="grid_Hold_NeedDataSource">
 

@@ -1,5 +1,6 @@
 namespace CMSVersion2.Report.Operation.Manifest.Reports
 {
+    using Models;
     using System;
     using System.ComponentModel;
     using System.Data;
@@ -20,10 +21,15 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             //
             InitializeComponent();
 
-            //var objectDataSource = new Telerik.Reporting.ObjectDataSource();
-            //DataTable dataTable = null; //TrackingReportGlobalModel.table;
-            //objectDataSource.DataSource = dataTable;
-            //table1.DataSource = objectDataSource;
+            var objectDataSource = new Telerik.Reporting.ObjectDataSource();
+            DataTable dataTable = ReportGlobalModel.table1;
+            objectDataSource.DataSource = dataTable;
+            table1.DataSource = objectDataSource;
+
+            txtArea.Value = ReportGlobalModel.Area;
+            txtDriver.Value = ReportGlobalModel.Driver;
+            txtChecker.Value = ReportGlobalModel.Checker;
+
 
         }
     }

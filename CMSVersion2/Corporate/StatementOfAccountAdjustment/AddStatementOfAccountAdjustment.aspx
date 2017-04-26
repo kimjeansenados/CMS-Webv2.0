@@ -11,56 +11,67 @@
         <telerik:RadScriptManager ID="RadScriptManager2" runat="server"></telerik:RadScriptManager>
         <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator2" runat="server" Skin="Default" DecoratedControls="All" />
 
-        <div class="page">
-            <br />
-            <br />
-            <div class="col-xs-6">
-                <div class="">
-                    <telerik:RadLabel ID="lbl_AccNo" runat="server" Text="Account #" Width="30%"></telerik:RadLabel>
-                    <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtAccountNo" Enabled="True" runat="server"></telerik:RadTextBox>
-                    <br />
-                    <br />
 
-                    <telerik:RadLabel ID="lbl_Company" runat="server" Text="Company" Width="30%"></telerik:RadLabel>
-                    <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtCompany" Enabled="True" runat="server"></telerik:RadTextBox>
+        <div class="row">
+            <div class="page" style="text-align: center">
+                <div class="col-md-12">
                     <br />
-                    <br />
+                    <div class="col-md-6">
+                        <telerik:RadLabel ID="lbl_AccNo" CssClass="col-md-3" runat="server" Text="Account #" Width="20%"></telerik:RadLabel>
+                        <telerik:RadTextBox Width="230px" CssClass="col-md-3" RenderMode="Mobile" ID="txtAccountNo" Enabled="True" runat="server"></telerik:RadTextBox>
 
+                        <telerik:RadLabel ID="lbl_SoaNo" CssClass="col-md-3" runat="server" Text="SOA #" Width="20%"></telerik:RadLabel>
+                        <telerik:RadTextBox Width="230px" CssClass="col-md-3" RenderMode="Mobile" ID="txtSoaNo" Enabled="True" runat="server"></telerik:RadTextBox>
+
+                    </div>
+                    <br />
+                    <div class="col-md-6">
+                        <telerik:RadLabel ID="lbl_Company" CssClass="col-md-3" runat="server" Text="Company" Width="20%"></telerik:RadLabel>
+                        <telerik:RadTextBox Width="230px" CssClass="col-md-3" RenderMode="Mobile" ID="txtCompany" Enabled="True" runat="server"></telerik:RadTextBox>
+
+                        <telerik:RadLabel ID="lbl_BillingPeriod" CssClass="col-md-3" runat="server" Text="Billing Period Covered" Width="20%"></telerik:RadLabel>
+                        <telerik:RadTextBox Width="230px" CssClass="col-md-3" RenderMode="Mobile" ID="txtBillingPeriod" Enabled="True" runat="server"></telerik:RadTextBox>
+                    </div>
                 </div>
             </div>
-
-            <div class="col-xs-6">
-                <div class="">
-                    <telerik:RadLabel ID="lbl_SoaNo" runat="server" Text="SOA #" Width="30%"></telerik:RadLabel>
-                    <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtSoaNo" Enabled="True" runat="server"></telerik:RadTextBox>
-                    <br />
-                    <br />
-
-                    <telerik:RadLabel ID="lbl_BillingPeriod" runat="server" Text="Billing Period Covered" Width="30%"></telerik:RadLabel>
-                    <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtBillingPeriod" Enabled="True" runat="server"></telerik:RadTextBox>
-                    <br />
-                    <br />
-                </div>
-            </div>
-
         </div>
-        <div class="">
+
+        <%--SHIPMENT--%>
+        <br />
+        <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
+
+            <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server" OnAjaxRequest="RadAjaxManager1_AjaxRequest">
+                <AjaxSettings>
+                    <telerik:AjaxSetting AjaxControlID="RadAjaxManager1">
+                        <UpdatedControls>
+                            <telerik:AjaxUpdatedControl ControlID="ShipmentGrid" LoadingPanelID="gridLoadingPanel"></telerik:AjaxUpdatedControl>
+                            <telerik:AjaxUpdatedControl ControlID="AdjustmentGrid" LoadingPanelID="gridLoadingPanel" />
+                        </UpdatedControls>
+                    </telerik:AjaxSetting>
+                </AjaxSettings>
+            </telerik:RadAjaxManager>
             <telerik:RadAjaxLoadingPanel runat="server" ID="gridLoadingPanel"></telerik:RadAjaxLoadingPanel>
-            <%--SHIPMENT--%>
-            <br />
-            <h5>SHIPMENTS</h5>
-            <telerik:RadGrid ID="ShipmentGrid"
+
+            <h5>Shipments</h5>
+            <telerik:RadGrid
+                ID="ShipmentGrid"
                 runat="server"
                 AllowPaging="True"
                 AllowFilteringByColumn="true"
                 PageSize="10" Skin="Glow" AllowSorting="true"
                 GroupingEnabled="true"
-                 MasterTableView-CommandItemDisplay="Top"
+                MasterTableView-CommandItemDisplay="Top"
+                MasterTableView-CommandItemSettings-ShowAddNewRecordButton="false"
                 OnItemCommand="ShipmentGrid_ItemCommand"
-                OnNeedDataSource="ShipmentGrid_NeedDataSource">
+                OnNeedDataSource="ShipmentGrid_NeedDataSource"
+                OnItemCreated="ShipmentGrid_ItemCreated"
+                OnItemUpdated="ShipmentGrid_ItemUpdated"
+                DataSourceID="AdjustmentDataSource">
 
-                <MasterTableView NoMasterRecordsText="No Shipment Records" AutoGenerateColumns="False"
-                    AllowFilteringByColumn="false">
+                <MasterTableView NoMasterRecordsText="No Shipment Records" ShowFooter="true"
+                    CommandItemDisplay="Top" DataSourceID="AdjustmentDataSource"
+                    CommandItemSettings-ShowAddNewRecordButton="false" EditMode="InPlace"
+                    AutoGenerateColumns="False" AllowFilteringByColumn="false">
 
                     <Columns>
 
@@ -68,6 +79,7 @@
                             UniqueName="DateAccepted" FilterControlWidth="120px"
                             PickerType="DatePicker" DataFormatString="{0:MM/dd/yyyy}" FilterDelay="2000" DataType="System.DateTime"
                             HeaderStyle-Font-Bold="true" AllowFiltering="true" FilterListOptions="VaryByDataType">
+                            <HeaderStyle Font-Bold="True"></HeaderStyle>
                         </telerik:GridDateTimeColumn>
 
                         <telerik:GridBoundColumn DataField="AirwayBillNo" HeaderText="AirwayBill" SortExpression="AirwayBillNo"
@@ -89,17 +101,17 @@
                             <HeaderStyle />
                         </telerik:GridBoundColumn>
 
-                        <telerik:GridBoundColumn DataField="FreightCharge" HeaderText="Freight Charge" SortExpression="FreightCharge"
-                            UniqueName="FreightCharge" FilterDelay="2000" ShowFilterIcon="false" FilterControlWidth="120px"
-                            CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
-                            <HeaderStyle />
-                        </telerik:GridBoundColumn>
+                        <%-- <telerik:GridBoundColumn DataField="FreightCharge" HeaderText="Freight Charge" SortExpression="FreightCharge"
+                                UniqueName="FreightCharge" FilterDelay="2000" ShowFilterIcon="false" FilterControlWidth="120px"
+                                CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
+                                <HeaderStyle />
+                            </telerik:GridBoundColumn>
 
-                        <telerik:GridBoundColumn DataField="VatAmount" HeaderText="Vat Amount" SortExpression="VatAmount"
-                            UniqueName="VatAmount" FilterDelay="2000" ShowFilterIcon="false" FilterControlWidth="120px"
-                            CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
-                            <HeaderStyle />
-                        </telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="VatAmount" HeaderText="Vat Amount" SortExpression="VatAmount"
+                                UniqueName="VatAmount" FilterDelay="2000" ShowFilterIcon="false" FilterControlWidth="120px"
+                                CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
+                                <HeaderStyle />
+                            </telerik:GridBoundColumn>--%>
 
                         <telerik:GridBoundColumn DataField="TotalAmount" HeaderText="Total" SortExpression="TotalAmount"
                             UniqueName="TotalAmount" FilterDelay="2000" ShowFilterIcon="false" FilterControlWidth="120px"
@@ -107,27 +119,37 @@
                             <HeaderStyle />
                         </telerik:GridBoundColumn>
 
+                        <telerik:GridBoundColumn DataField="AmountPaid" HeaderText="AmountPaid" SortExpression="AmountPaid"
+                            UniqueName="AmountPaid" FilterDelay="2000" ShowFilterIcon="false" FilterControlWidth="120px"
+                            CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
+                            <HeaderStyle />
+                        </telerik:GridBoundColumn>
+
+                        <telerik:GridBoundColumn DataField="Adjustment" HeaderText="Adjustment" SortExpression="Adjustment"
+                            UniqueName="Adjustment" FilterDelay="2000" ShowFilterIcon="false" FilterControlWidth="120px"
+                            CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
+                            <HeaderStyle />
+                        </telerik:GridBoundColumn>
+
+                        <telerik:GridEditCommandColumn HeaderText="Edit"></telerik:GridEditCommandColumn>
+
                     </Columns>
 
                 </MasterTableView>
-                <ClientSettings>
-                    <Selecting AllowRowSelect="true"></Selecting>
-                    <ClientEvents OnRowDblClick="RowDblClick"></ClientEvents>
-                </ClientSettings>
+
+
             </telerik:RadGrid>
             <%--PAYMENT--%>
             <br />
             <h5>PAYMENT</h5>
             <telerik:RadGrid ID="AdjustmentGrid"
-                runat="server"
-                AllowFilteringByColumn="true"
-                PageSize="10" Skin="Glow" AllowSorting="true"
-                 MasterTableView-CommandItemDisplay="Top"
+                runat="server" Skin="Glow" AllowSorting="True"
+                MasterTableView-CommandItemDisplay="Top"
                 OnItemCommand="AdjustmentGrid_ItemCommand"
-                OnNeedDataSource="AdjustmentGrid_NeedDataSource">
+                OnNeedDataSource="AdjustmentGrid_NeedDataSource" AllowPaging="True" AutoGenerateEditColumn="True">
 
-                <MasterTableView NoMasterRecordsText="No Records Found" AutoGenerateColumns="False"
-                    AllowFilteringByColumn="false">
+                <MasterTableView NoMasterRecordsText="No Records Found" CommandItemSettings-ShowAddNewRecordButton="false"
+                    AutoGenerateColumns="False">
 
                     <Columns>
 
@@ -135,6 +157,7 @@
                             UniqueName="PaymentDate" FilterControlWidth="120px"
                             PickerType="DatePicker" DataFormatString="{0:MM/dd/yyyy}" FilterDelay="2000" DataType="System.DateTime"
                             HeaderStyle-Font-Bold="true" AllowFiltering="true" FilterListOptions="VaryByDataType">
+                            <HeaderStyle Font-Bold="True"></HeaderStyle>
                         </telerik:GridDateTimeColumn>
 
                         <telerik:GridBoundColumn DataField="AirwayBillNo" HeaderText="AirwayBill" SortExpression="AirwayBillNo"
@@ -170,17 +193,31 @@
                     </Columns>
 
                 </MasterTableView>
-                <ClientSettings>
+                <GroupingSettings CollapseAllTooltip="Collapse all groups"></GroupingSettings>
+
+                <ClientSettings AllowColumnsReorder="True">
                     <Selecting AllowRowSelect="true"></Selecting>
                     <ClientEvents OnRowDblClick="RowDblClick"></ClientEvents>
+                    <Scrolling AllowScroll="True" UseStaticHeaders="True" />
                 </ClientSettings>
             </telerik:RadGrid>
-        </div>
+        </telerik:RadAjaxPanel>
+        <asp:SqlDataSource ID="AdjustmentDataSource" runat="server"
+            SelectCommand="sp_view_ShipmentBySoaId"
+            SelectCommandType="StoredProcedure"
+            ConnectionString="<%$ ConnectionStrings:Cms %>"
+            ProviderName="System.Data.SqlClient">
+
+            <SelectParameters>
+                <asp:QueryStringParameter Name="soaid" DbType="Guid"  QueryStringField="StatementOfAccountId"  />
+            </SelectParameters>
+
+        </asp:SqlDataSource>
         <div>
-        <div id="footer">
-            <telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click"></telerik:RadButton>
-            <telerik:RadButton ID="btmCancel" runat="server" Text="Cancel"></telerik:RadButton>
-        </div>
+            <div class="footer-bottom">
+                <telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click"></telerik:RadButton>
+                <telerik:RadButton ID="btmCancel" runat="server" Text="Cancel"></telerik:RadButton>
+            </div>
         </div>
     </form>
 </body>
