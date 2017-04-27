@@ -112,13 +112,13 @@ namespace CMSVersion2 {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor SeriesMonitoring;
         
         /// <summary>
-        /// Customers control.
+        /// Customer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor Customers;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor Customer;
         
         /// <summary>
         /// Corporate control.
@@ -164,33 +164,6 @@ namespace CMSVersion2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor StatementofAccount;
-        
-        /// <summary>
-        /// Shipment control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor Shipment;
-        
-        /// <summary>
-        /// AWBTracking control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor AWBTracking;
-        
-        /// <summary>
-        /// AWBDetailedTracking control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor AWBDetailedTracking;
         
         /// <summary>
         /// Report control.
@@ -391,40 +364,22 @@ namespace CMSVersion2 {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor Collection;
         
         /// <summary>
-        /// Marketing control.
+        /// AWBDetailedTracking control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor Marketing;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor AWBDetailedTracking;
         
         /// <summary>
-        /// Courier control.
+        /// AWBTracking control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor Courier;
-        
-        /// <summary>
-        /// ORSeries control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor ORSeries;
-        
-        /// <summary>
-        /// Booking control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor Booking;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor AWBTracking;
         
         /// <summary>
         /// Administration control.

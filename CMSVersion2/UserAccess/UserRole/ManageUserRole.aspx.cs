@@ -96,6 +96,7 @@ namespace CMSVersion2.UserAccess.UserRole
         {
             RadGrid2.DataSource = GetUserRole();
             RadGrid2.Rebind();
+            
         }
         #endregion
     }

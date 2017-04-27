@@ -70,7 +70,7 @@ namespace CMSVersion2
             bool executed = false;
             if (this.Context.Handler is System.Web.UI.Page)
             {
-                if(!executed)
+                if (!executed)
                 {
                     string username = Application["Username"].ToString();
                     int count = (int)Application["Count"];
@@ -85,7 +85,7 @@ namespace CMSVersion2
                             string name = GlobalCode.menuName;
                             if (name != "" && name != null)
                             {
-                                if (name.Equals("Settings")){ }
+                                if (name.Equals("Settings")) { }
                                 else
                                 {
                                     currentUrl = "";
@@ -159,7 +159,7 @@ namespace CMSVersion2
                                         }
                                     }
                                 }
-                                
+
                             }
                         }
                         //if not authenticated
@@ -180,7 +180,7 @@ namespace CMSVersion2
 
                     executed = true;
                 }
-                
+
             }
         }
 

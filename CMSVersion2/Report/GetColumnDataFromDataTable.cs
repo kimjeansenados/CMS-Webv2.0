@@ -30,6 +30,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             {
                 //MessageBox.Show("Error: " + ex.Message, "Column Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Column_Name = "N/A";
+                Console.WriteLine(ex);
             }
 
             Column_Name = (Column_Name != null || Column_Name != "") ? Column_Name : "N/A";

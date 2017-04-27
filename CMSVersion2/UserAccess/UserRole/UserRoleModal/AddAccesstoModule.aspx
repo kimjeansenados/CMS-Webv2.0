@@ -155,7 +155,7 @@ $(function () {
                         <div>
                            <fieldset class="fieldset-auto-width left-div" id="fsWeb" runat="server">
                                <legend>Web</legend>
-                               <asp:TreeView ID="treeViewWeb" runat="server" ShowCheckBoxes="All" OnTreeNodeCheckChanged="treeViewWeb_TreeNodeCheckChanged" CssClass="treeviewWebColor"></asp:TreeView>
+                               <asp:TreeView ID="treeViewWeb" runat="server" ShowCheckBoxes="All" OnTreeNodeCheckChanged="treeViewWeb_TreeNodeCheckChanged" CssClass="treeviewWebColor" NodeStyle-ForeColor="Black" NodeStyle-Font-Names="Arial"></asp:TreeView>
                                 <%--<telerik:RadCheckBoxList runat="server" ID="chklistWeb" AutoPostBack="false"></telerik:RadCheckBoxList>--%>
                            </fieldset>
                         </div>
@@ -189,7 +189,7 @@ $(function () {
                     
                   <div id="footer">
                  <%--<telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click"></telerik:RadButton>--%>
-                      <telerik:RadButton ID="RadButton1" runat="server" Text="Save11" OnClick="RadButton1_Click"></telerik:RadButton>
+                      <telerik:RadButton ID="RadButton1" runat="server" Text="Save" OnClick="RadButton1_Click"></telerik:RadButton>
                  <telerik:RadButton ID="btnCancel" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click"></telerik:RadButton>
                 </div>
                

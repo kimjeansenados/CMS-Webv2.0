@@ -244,12 +244,80 @@
     <Content Include="Maintenance\AWBSeries\Monitoring.aspx" />
     <Content Include="Maintenance\AWBSeries\Summary.aspx" />
     <Content Include="Maintenance\CMSMaintenance\CMSMaintenance.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\AccountStatus\AddAccountStatus.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\AccountStatus\EditAccountStatus.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\AccountType\AddAccountType.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\AccountType\EditAccountType.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Airlines\AddAirlines.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Airlines\EditAirlines.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\ApplicableRate\AddApplicableRate.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\ApplicableRate\EditApplicableRate.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Area\AddArea.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Area\EditArea.aspx" />
     <Content Include="Maintenance\CMSMaintenance\UserModal\Batch\Add.aspx" />
     <Content Include="Maintenance\CMSMaintenance\UserModal\Batch\Edit.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\BookingRemark\AddBookingRemark.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\BookingRemark\EditBookingRemark.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\BookingStatus\AddBookingStatus.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\BookingStatus\EditBookingStatus.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\BranchCorpOffice\AddBranchCorp.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\BranchCorpOffice\EditBranchCorp.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\BranchGateway\AddGateway.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\BranchGateway\EditGateway.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\BranchSatelliteOfficeMaintenance\AddBSO.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\BranchSatelliteOfficeMaintenance\EditBSO.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\BusinessType\AddBusinessType.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\BusinessType\EditBusinessType.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\City\AddCity.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\City\EditCity.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Cluster\AddCluster.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Cluster\EditCluster.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\CommodityType\AddCommodityType.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\CommodityType\EditCommodityType.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Commodity\AddCommodity.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Commodity\EditCommodity.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Crating\AddCrating.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Crating\EditCrating.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\DeliveryRemark\AddDeliveryRemark.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\DeliveryRemark\EditDeliveryRemark.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\DeliveryStatus\AddDeliveryStatus.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\DeliveryStatus\EditDeliveryStatus.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Flight\AddFlight.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Flight\EditFlight.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\GoodsDescription\AddGoodsDesc.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\GoodsDescription\EditGoodsDesc.aspx" />
     <Content Include="Maintenance\CMSMaintenance\UserModal\GroupIslandMaintenance\AddGroupIsland.aspx" />
     <Content Include="Maintenance\CMSMaintenance\UserModal\GroupIslandMaintenance\EditGroupIsland.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Industry\AddIndustry.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Industry\EditIndustry.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\OrganizationType\AddOrganizationType.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\OrganizationType\EditOrganizationType.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Packaging\AddPackaging.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Packaging\EditPackaging.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\PaymentMode\AddPaymentMode.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\PaymentMode\EditPaymentMode.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\PaymentTerm\AddPaymentTerm.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\PaymentTerm\EditPaymentTerm.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\ProvinceMaintenance\AddProvince.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\ProvinceMaintenance\EditProvince.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Reason\AddReason.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Reason\EditReason.aspx" />
     <Content Include="Maintenance\CMSMaintenance\UserModal\RegionMaintenance\AddRegion.aspx" />
     <Content Include="Maintenance\CMSMaintenance\UserModal\RegionMaintenance\EditRegion.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Remarks\AddRemarks.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Remarks\EditRemarks.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\RevenueTypeMaintenance\AddRUT.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\RevenueTypeMaintenance\EditRUT.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\SBF\AddSBF.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\SBF\EditSBF.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\ServiceMode\AddServiceMode.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\ServiceMode\EditServiceMode.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\ServiceType\AddServiceType.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\ServiceType\EditServiceType.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\ShipMode\AddShipMode.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\ShipMode\EditShipMode.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Status\AddStatus.aspx" />
+    <Content Include="Maintenance\CMSMaintenance\UserModal\Status\EditStatus.aspx" />
     <Content Include="Maintenance\FlightInformation\FlightInformation.aspx" />
     <Content Include="Maintenance\FlightInformation\Flight\Add.aspx" />
     <Content Include="Maintenance\FlightInformation\Flight\Edit.aspx" />
@@ -258,6 +326,8 @@
     <Content Include="Maintenance\RateMatrix\RateMatrixEvent\Edit.aspx" />
     <Content Include="Maintenance\RateMatrix\RateMatrixEvent\Import.aspx" />
     <Content Include="Maintenance\TrackNTrace\TrackNTrace.aspx" />
+    <Content Include="Report\AWBNoTracking.aspx" />
+    <Content Include="Report\AWBDetailedTracking.aspx" />
     <Content Include="Report\Finance\Collection.aspx" />
     <Content Include="Report\Finance\Sales\MasterSales.aspx" />
     <Content Include="Report\Finance\Sales\SalesPerBCO.aspx" />
@@ -312,7 +382,6 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Settings\ManagePassword.aspx" />
-    <Content Include="Shipment\AWBTracking.aspx" />
     <Content Include="Site.Master" />
     <Content Include="UserAccess\Roles\ManageRoles.aspx" />
     <Content Include="UserAccess\Roles\RolesModal\AddRoles.aspx" />
@@ -576,6 +645,76 @@
     <Compile Include="Maintenance\CMSMaintenance\CMSMaintenance.aspx.designer.cs">
       <DependentUpon>CMSMaintenance.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\AccountStatus\AddAccountStatus.aspx.cs">
+      <DependentUpon>AddAccountStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\AccountStatus\AddAccountStatus.aspx.designer.cs">
+      <DependentUpon>AddAccountStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\AccountStatus\EditAccountStatus.aspx.cs">
+      <DependentUpon>EditAccountStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\AccountStatus\EditAccountStatus.aspx.designer.cs">
+      <DependentUpon>EditAccountStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\AccountType\AddAccountType.aspx.cs">
+      <DependentUpon>AddAccountType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\AccountType\AddAccountType.aspx.designer.cs">
+      <DependentUpon>AddAccountType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\AccountType\EditAccountType.aspx.cs">
+      <DependentUpon>EditAccountType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\AccountType\EditAccountType.aspx.designer.cs">
+      <DependentUpon>EditAccountType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Airlines\AddAirlines.aspx.cs">
+      <DependentUpon>AddAirlines.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Airlines\AddAirlines.aspx.designer.cs">
+      <DependentUpon>AddAirlines.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Airlines\EditAirlines.aspx.cs">
+      <DependentUpon>EditAirlines.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Airlines\EditAirlines.aspx.designer.cs">
+      <DependentUpon>EditAirlines.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ApplicableRate\AddApplicableRate.aspx.cs">
+      <DependentUpon>AddApplicableRate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ApplicableRate\AddApplicableRate.aspx.designer.cs">
+      <DependentUpon>AddApplicableRate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ApplicableRate\EditApplicableRate.aspx.cs">
+      <DependentUpon>EditApplicableRate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ApplicableRate\EditApplicableRate.aspx.designer.cs">
+      <DependentUpon>EditApplicableRate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Area\AddArea.aspx.cs">
+      <DependentUpon>AddArea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Area\AddArea.aspx.designer.cs">
+      <DependentUpon>AddArea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Area\EditArea.aspx.cs">
+      <DependentUpon>EditArea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Area\EditArea.aspx.designer.cs">
+      <DependentUpon>EditArea.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Maintenance\CMSMaintenance\UserModal\Batch\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -589,6 +728,216 @@
     </Compile>
     <Compile Include="Maintenance\CMSMaintenance\UserModal\Batch\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BookingRemark\AddBookingRemark.aspx.cs">
+      <DependentUpon>AddBookingRemark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BookingRemark\AddBookingRemark.aspx.designer.cs">
+      <DependentUpon>AddBookingRemark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BookingRemark\EditBookingRemark.aspx.cs">
+      <DependentUpon>EditBookingRemark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BookingRemark\EditBookingRemark.aspx.designer.cs">
+      <DependentUpon>EditBookingRemark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BookingStatus\AddBookingStatus.aspx.cs">
+      <DependentUpon>AddBookingStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BookingStatus\AddBookingStatus.aspx.designer.cs">
+      <DependentUpon>AddBookingStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BookingStatus\EditBookingStatus.aspx.cs">
+      <DependentUpon>EditBookingStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BookingStatus\EditBookingStatus.aspx.designer.cs">
+      <DependentUpon>EditBookingStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BranchCorpOffice\AddBranchCorp.aspx.cs">
+      <DependentUpon>AddBranchCorp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BranchCorpOffice\AddBranchCorp.aspx.designer.cs">
+      <DependentUpon>AddBranchCorp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BranchCorpOffice\EditBranchCorp.aspx.cs">
+      <DependentUpon>EditBranchCorp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BranchCorpOffice\EditBranchCorp.aspx.designer.cs">
+      <DependentUpon>EditBranchCorp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BranchGateway\AddGateway.aspx.cs">
+      <DependentUpon>AddGateway.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BranchGateway\AddGateway.aspx.designer.cs">
+      <DependentUpon>AddGateway.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BranchGateway\EditGateway.aspx.cs">
+      <DependentUpon>EditGateway.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BranchGateway\EditGateway.aspx.designer.cs">
+      <DependentUpon>EditGateway.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BranchSatelliteOfficeMaintenance\AddBSO.aspx.cs">
+      <DependentUpon>AddBSO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BranchSatelliteOfficeMaintenance\AddBSO.aspx.designer.cs">
+      <DependentUpon>AddBSO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BranchSatelliteOfficeMaintenance\EditBSO.aspx.cs">
+      <DependentUpon>EditBSO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BranchSatelliteOfficeMaintenance\EditBSO.aspx.designer.cs">
+      <DependentUpon>EditBSO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BusinessType\AddBusinessType.aspx.cs">
+      <DependentUpon>AddBusinessType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BusinessType\AddBusinessType.aspx.designer.cs">
+      <DependentUpon>AddBusinessType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BusinessType\EditBusinessType.aspx.cs">
+      <DependentUpon>EditBusinessType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\BusinessType\EditBusinessType.aspx.designer.cs">
+      <DependentUpon>EditBusinessType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\City\AddCity.aspx.cs">
+      <DependentUpon>AddCity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\City\AddCity.aspx.designer.cs">
+      <DependentUpon>AddCity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\City\EditCity.aspx.cs">
+      <DependentUpon>EditCity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\City\EditCity.aspx.designer.cs">
+      <DependentUpon>EditCity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Cluster\AddCluster.aspx.cs">
+      <DependentUpon>AddCluster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Cluster\AddCluster.aspx.designer.cs">
+      <DependentUpon>AddCluster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Cluster\EditCluster.aspx.cs">
+      <DependentUpon>EditCluster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Cluster\EditCluster.aspx.designer.cs">
+      <DependentUpon>EditCluster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\CommodityType\AddCommodityType.aspx.cs">
+      <DependentUpon>AddCommodityType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\CommodityType\AddCommodityType.aspx.designer.cs">
+      <DependentUpon>AddCommodityType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\CommodityType\EditCommodityType.aspx.cs">
+      <DependentUpon>EditCommodityType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\CommodityType\EditCommodityType.aspx.designer.cs">
+      <DependentUpon>EditCommodityType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Commodity\AddCommodity.aspx.cs">
+      <DependentUpon>AddCommodity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Commodity\AddCommodity.aspx.designer.cs">
+      <DependentUpon>AddCommodity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Commodity\EditCommodity.aspx.cs">
+      <DependentUpon>EditCommodity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Commodity\EditCommodity.aspx.designer.cs">
+      <DependentUpon>EditCommodity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Crating\AddCrating.aspx.cs">
+      <DependentUpon>AddCrating.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Crating\AddCrating.aspx.designer.cs">
+      <DependentUpon>AddCrating.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Crating\EditCrating.aspx.cs">
+      <DependentUpon>EditCrating.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Crating\EditCrating.aspx.designer.cs">
+      <DependentUpon>EditCrating.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\DeliveryRemark\AddDeliveryRemark.aspx.cs">
+      <DependentUpon>AddDeliveryRemark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\DeliveryRemark\AddDeliveryRemark.aspx.designer.cs">
+      <DependentUpon>AddDeliveryRemark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\DeliveryRemark\EditDeliveryRemark.aspx.cs">
+      <DependentUpon>EditDeliveryRemark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\DeliveryRemark\EditDeliveryRemark.aspx.designer.cs">
+      <DependentUpon>EditDeliveryRemark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\DeliveryStatus\AddDeliveryStatus.aspx.cs">
+      <DependentUpon>AddDeliveryStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\DeliveryStatus\AddDeliveryStatus.aspx.designer.cs">
+      <DependentUpon>AddDeliveryStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\DeliveryStatus\EditDeliveryStatus.aspx.cs">
+      <DependentUpon>EditDeliveryStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\DeliveryStatus\EditDeliveryStatus.aspx.designer.cs">
+      <DependentUpon>EditDeliveryStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Flight\AddFlight.aspx.cs">
+      <DependentUpon>AddFlight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Flight\AddFlight.aspx.designer.cs">
+      <DependentUpon>AddFlight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Flight\EditFlight.aspx.cs">
+      <DependentUpon>EditFlight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Flight\EditFlight.aspx.designer.cs">
+      <DependentUpon>EditFlight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\GoodsDescription\AddGoodsDesc.aspx.cs">
+      <DependentUpon>AddGoodsDesc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\GoodsDescription\AddGoodsDesc.aspx.designer.cs">
+      <DependentUpon>AddGoodsDesc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\GoodsDescription\EditGoodsDesc.aspx.cs">
+      <DependentUpon>EditGoodsDesc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\GoodsDescription\EditGoodsDesc.aspx.designer.cs">
+      <DependentUpon>EditGoodsDesc.aspx</DependentUpon>
     </Compile>
     <Compile Include="Maintenance\CMSMaintenance\UserModal\GroupIslandMaintenance\AddGroupIsland.aspx.cs">
       <DependentUpon>AddGroupIsland.aspx</DependentUpon>
@@ -604,6 +953,104 @@
     <Compile Include="Maintenance\CMSMaintenance\UserModal\GroupIslandMaintenance\EditGroupIsland.aspx.designer.cs">
       <DependentUpon>EditGroupIsland.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Industry\AddIndustry.aspx.cs">
+      <DependentUpon>AddIndustry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Industry\AddIndustry.aspx.designer.cs">
+      <DependentUpon>AddIndustry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Industry\EditIndustry.aspx.cs">
+      <DependentUpon>EditIndustry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Industry\EditIndustry.aspx.designer.cs">
+      <DependentUpon>EditIndustry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\OrganizationType\AddOrganizationType.aspx.cs">
+      <DependentUpon>AddOrganizationType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\OrganizationType\AddOrganizationType.aspx.designer.cs">
+      <DependentUpon>AddOrganizationType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\OrganizationType\EditOrganizationType.aspx.cs">
+      <DependentUpon>EditOrganizationType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\OrganizationType\EditOrganizationType.aspx.designer.cs">
+      <DependentUpon>EditOrganizationType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Packaging\AddPackaging.aspx.cs">
+      <DependentUpon>AddPackaging.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Packaging\AddPackaging.aspx.designer.cs">
+      <DependentUpon>AddPackaging.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Packaging\EditPackaging.aspx.cs">
+      <DependentUpon>EditPackaging.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Packaging\EditPackaging.aspx.designer.cs">
+      <DependentUpon>EditPackaging.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\PaymentMode\AddPaymentMode.aspx.cs">
+      <DependentUpon>AddPaymentMode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\PaymentMode\AddPaymentMode.aspx.designer.cs">
+      <DependentUpon>AddPaymentMode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\PaymentMode\EditPaymentMode.aspx.cs">
+      <DependentUpon>EditPaymentMode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\PaymentMode\EditPaymentMode.aspx.designer.cs">
+      <DependentUpon>EditPaymentMode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\PaymentTerm\AddPaymentTerm.aspx.cs">
+      <DependentUpon>AddPaymentTerm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\PaymentTerm\AddPaymentTerm.aspx.designer.cs">
+      <DependentUpon>AddPaymentTerm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\PaymentTerm\EditPaymentTerm.aspx.cs">
+      <DependentUpon>EditPaymentTerm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\PaymentTerm\EditPaymentTerm.aspx.designer.cs">
+      <DependentUpon>EditPaymentTerm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ProvinceMaintenance\AddProvince.aspx.cs">
+      <DependentUpon>AddProvince.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ProvinceMaintenance\AddProvince.aspx.designer.cs">
+      <DependentUpon>AddProvince.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ProvinceMaintenance\EditProvince.aspx.cs">
+      <DependentUpon>EditProvince.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ProvinceMaintenance\EditProvince.aspx.designer.cs">
+      <DependentUpon>EditProvince.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Reason\AddReason.aspx.cs">
+      <DependentUpon>AddReason.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Reason\AddReason.aspx.designer.cs">
+      <DependentUpon>AddReason.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Reason\EditReason.aspx.cs">
+      <DependentUpon>EditReason.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Reason\EditReason.aspx.designer.cs">
+      <DependentUpon>EditReason.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Maintenance\CMSMaintenance\UserModal\RegionMaintenance\AddRegion.aspx.cs">
       <DependentUpon>AddRegion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -617,6 +1064,104 @@
     </Compile>
     <Compile Include="Maintenance\CMSMaintenance\UserModal\RegionMaintenance\EditRegion.aspx.designer.cs">
       <DependentUpon>EditRegion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Remarks\AddRemarks.aspx.cs">
+      <DependentUpon>AddRemarks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Remarks\AddRemarks.aspx.designer.cs">
+      <DependentUpon>AddRemarks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Remarks\EditRemarks.aspx.cs">
+      <DependentUpon>EditRemarks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Remarks\EditRemarks.aspx.designer.cs">
+      <DependentUpon>EditRemarks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\RevenueTypeMaintenance\AddRUT.aspx.cs">
+      <DependentUpon>AddRUT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\RevenueTypeMaintenance\AddRUT.aspx.designer.cs">
+      <DependentUpon>AddRUT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\RevenueTypeMaintenance\EditRUT.aspx.cs">
+      <DependentUpon>EditRUT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\RevenueTypeMaintenance\EditRUT.aspx.designer.cs">
+      <DependentUpon>EditRUT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\SBF\AddSBF.aspx.cs">
+      <DependentUpon>AddSBF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\SBF\AddSBF.aspx.designer.cs">
+      <DependentUpon>AddSBF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\SBF\EditSBF.aspx.cs">
+      <DependentUpon>EditSBF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\SBF\EditSBF.aspx.designer.cs">
+      <DependentUpon>EditSBF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ServiceMode\AddServiceMode.aspx.cs">
+      <DependentUpon>AddServiceMode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ServiceMode\AddServiceMode.aspx.designer.cs">
+      <DependentUpon>AddServiceMode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ServiceMode\EditServiceMode.aspx.cs">
+      <DependentUpon>EditServiceMode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ServiceMode\EditServiceMode.aspx.designer.cs">
+      <DependentUpon>EditServiceMode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ServiceType\AddServiceType.aspx.cs">
+      <DependentUpon>AddServiceType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ServiceType\AddServiceType.aspx.designer.cs">
+      <DependentUpon>AddServiceType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ServiceType\EditServiceType.aspx.cs">
+      <DependentUpon>EditServiceType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ServiceType\EditServiceType.aspx.designer.cs">
+      <DependentUpon>EditServiceType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ShipMode\AddShipMode.aspx.cs">
+      <DependentUpon>AddShipMode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ShipMode\AddShipMode.aspx.designer.cs">
+      <DependentUpon>AddShipMode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ShipMode\EditShipMode.aspx.cs">
+      <DependentUpon>EditShipMode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\ShipMode\EditShipMode.aspx.designer.cs">
+      <DependentUpon>EditShipMode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Status\AddStatus.aspx.cs">
+      <DependentUpon>AddStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Status\AddStatus.aspx.designer.cs">
+      <DependentUpon>AddStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Status\EditStatus.aspx.cs">
+      <DependentUpon>EditStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMSMaintenance\UserModal\Status\EditStatus.aspx.designer.cs">
+      <DependentUpon>EditStatus.aspx</DependentUpon>
     </Compile>
     <Compile Include="Maintenance\FlightInformation\FlightInformation.aspx.cs">
       <DependentUpon>FlightInformation.aspx</DependentUpon>
@@ -680,6 +1225,20 @@
     <Compile Include="Models\ReportGlobalModel.cs" />
     <Compile Include="Models\UserAccessMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\AWBNoTracking.aspx.cs">
+      <DependentUpon>AWBNoTracking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\AWBNoTracking.aspx.designer.cs">
+      <DependentUpon>AWBNoTracking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\AWBDetailedTracking.aspx.cs">
+      <DependentUpon>AWBDetailedTracking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\AWBDetailedTracking.aspx.designer.cs">
+      <DependentUpon>AWBDetailedTracking.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Report\Finance\Collection.aspx.cs">
       <DependentUpon>Collection.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -834,13 +1393,6 @@
     <Compile Include="Settings\ManagePassword.aspx.designer.cs">
       <DependentUpon>ManagePassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Shipment\AWBTracking.aspx.cs">
-      <DependentUpon>AWBTracking.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Shipment\AWBTracking.aspx.designer.cs">
-      <DependentUpon>AWBTracking.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -923,46 +1475,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Corporate\StatementOfAccountDetails\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\AccountStatus\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\AccountType\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\Airlines\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\ApplicableRate\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\ApprovingAuthority\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\Area\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\AwbIssuance\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\BookingRemark\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\BookingStatus\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\BranchCorpOffice\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\BranchGateway\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\BranchSatelliteOfficeMaintenance\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\BusinessType\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\City\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\Cluster\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\CommodityType\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\Commodity\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\Company\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\Crating\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\DeliveryRemark\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\DeliveryStatus\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\Employee\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\Flight\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\GoodsDescription\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\Industry\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\OrganizationType\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\Packaging\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\PaymentMode\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\PaymentTerm\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\ProvinceMaintenance\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\Reason\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\Remarks\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\Representatives\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\RevenueTypeMaintenance\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\SBF\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\ServiceMode\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\ServiceType\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\ShipMode\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\Status\" />
-    <Folder Include="Maintenance\CMSMaintenance\UserModal\WeightBreak\" />
     <Folder Include="Maintenance\TruckAreaManagement\" />
   </ItemGroup>
   <ItemGroup>

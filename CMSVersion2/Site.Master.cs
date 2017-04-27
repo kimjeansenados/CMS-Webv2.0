@@ -337,9 +337,9 @@ namespace CMSVersion2
             {
                 string usersession = Session["UsernameSession"].ToString();
                 byte[] EncryptedUsername = Tools.Encryption.EncryptPassword(usersession);
-                HtmlAnchor anchor = (HtmlAnchor)Page.Master.FindControl("SeriesMonitoring");
-                string text = anchor.InnerText;
-                GlobalCode.menuName = text;
+                //HtmlAnchor anchor = (HtmlAnchor)Page.Master.FindControl("SeriesMonitoring");
+                //string text = anchor.InnerText;
+                GlobalCode.menuName = "Customer";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Customer/Customer.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
                
@@ -725,6 +725,40 @@ namespace CMSVersion2
 
         }
         #endregion
+
+        protected void clickawbDetailedTracking(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
+            {
+                string usersession = Session["UsernameSession"].ToString();
+                byte[] EncryptedUsername = Tools.Encryption.EncryptPassword(usersession);
+                HtmlAnchor anchor = (HtmlAnchor)Page.Master.FindControl("AWBDetailedTracking");
+                string text = anchor.InnerText;
+                GlobalCode.menuName = text;
+                Session["UserNameSession"] = usersession;
+                Response.Redirect("~/Report/AWBDetailedTracking.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+
+            }
+
+        }
+
+        protected void clickawbTracking(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
+            {
+                string usersession = Session["UsernameSession"].ToString();
+                byte[] EncryptedUsername = Tools.Encryption.EncryptPassword(usersession);
+                HtmlAnchor anchor = (HtmlAnchor)Page.Master.FindControl("AWBTracking");
+                string text = anchor.InnerText;
+                GlobalCode.menuName = text;
+                Session["UserNameSession"] = usersession;
+                Response.Redirect("~/Report/AWBNoTracking.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+
+            }
+
+        }
+
+
 
         //Marketing
         protected void clickMarketing(object sender, EventArgs e)

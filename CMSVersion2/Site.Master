@@ -66,7 +66,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a id="Customers" runat="server" href="#" class="removeClass" onserverclick="clickCustomers">Customers</a></li>
+                        <li><a id="Customer" runat="server" href="#" class="removeClass" onserverclick="clickCustomers">Customers</a></li>
                         <li class="dropdown">
                             <a id="Corporate" href="#" class="dropdown-toggle removeClass" data-toggle="dropdown" runat="server">Corporate<b class="caret"></b></a>
                             <ul class="dropdown-menu message-dropdown">
@@ -76,11 +76,11 @@
                                 <li><a runat="server" id="StatementofAccount" class="removeClass" onserverclick="clickStatementOfAccount">Statement of Account</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
+                       <%-- <li class="dropdown">
                             <a runat="server" id="Shipment" href="#" class="dropdown-toggle removeClass" data-toggle="dropdown">Shipment<b class="caret"></b></a>
                             <ul class="dropdown-menu message-dropdown">
-                                <li><a runat="server" id="AWBTracking" class="removeClass" href="~/Shipment/AWBTracking.aspx">AWB Tracking</a></li>
-                                <li><a runat="server" id="AWBDetailedTracking" class="removeClass" href="~/Error/UnderMaintenance.aspx">AWB Detailed Tracking</a></li>
+                                <li><a runat="server" id="AWBTracking1" class="removeClass" href="~/Shipment/AWBTracking.aspx">AWB Tracking</a></li>
+                                <li><a runat="server" id="AWBDetailedTracking1" class="removeClass" href="~/Error/UnderMaintenance.aspx">AWB Detailed Tracking</a></li>
                             </ul>
                         </li>--%>
                         <li class="dropdown">
@@ -130,10 +130,12 @@
                                         <li><a runat="server" id="Collection" onserverclick="clickCollection">Collection</a></li>                                  
                                     </ul>
                                 </li>
-                                <li><a runat="server" class="removeClass" id="Marketing" onserverclick="clickMarketing">Marketing</a></li>
+                               <%-- <li><a runat="server" class="removeClass" id="Marketing" onserverclick="clickMarketing">Marketing</a></li>
                                 <li><a runat="server" class="removeClass" id="Courier" onserverclick="clickCourier">Courier</a></li>
                                 <li><a runat="server" class="removeClass" id="ORSeries" onserverclick="clickORSeries">OR Series</a></li>
-                                <li><a runat="server" class="removeClass" id="Booking" onserverclick="clickBooking">Booking</a></li>
+                                <li><a runat="server" class="removeClass" id="Booking" onserverclick="clickBooking">Booking</a></li>--%>
+                                <li><a runat="server" class="removeClass" id="AWBDetailedTracking" onserverclick="clickawbDetailedTracking">AWB Detailed Tracking</a></li>
+                                <li><a runat="server" class="removeClass" id="AWBTracking" onserverclick="clickawbTracking">AWB Tracking</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">

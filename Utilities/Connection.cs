@@ -33,6 +33,7 @@ namespace utilities
             catch (Exception er)
             {
                 returnvalue = 2;
+                Console.WriteLine(er);
             }
             finally
             {

@@ -165,7 +165,7 @@
                                     </telerik:RadWindow>
 
                                      <telerik:RadWindow RenderMode="Mobile" ID="ManageModule" runat="server" Title="Roles" Height="500px"
-                                    Width="900px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar="false" AutoSize="false"
+                                    Width="950px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar="false" AutoSize="false"
                                     Modal="true" Behaviors="Close,Move">
                                     </telerik:RadWindow>
 

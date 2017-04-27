@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Web;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 using Telerik.Web.UI;
 using BLL = BusinessLogic;
@@ -25,7 +26,7 @@ namespace CMSVersion2.UserAccess.UserRole.UserRoleModal
         protected void Page_Load(object sender, EventArgs e)
         {
             PopulateRadTreeViewWeb();
-            treeViewWeb.SelectedNodeStyle.ForeColor = Color.Blue;
+            treeViewWeb.SelectedNodeStyle.ForeColor = Color.Black;
 
 
             if (!IsPostBack)
@@ -40,6 +41,8 @@ namespace CMSVersion2.UserAccess.UserRole.UserRoleModal
                 {
                     string userid = Request.QueryString["UserId"].ToString();
                     lblUserID.Value = userid;
+                    //int countChild = 0;
+                    //int checkCountChild = 0;
 
                     int result = BLL.UserRole.checkIfUserIdExists(new Guid(userid), getConstr.ConStrCMS);
                     if (result > 0) // UserId exists in MenuAccess
@@ -204,10 +207,13 @@ namespace CMSVersion2.UserAccess.UserRole.UserRoleModal
                                                         checkChildNode(node);
                                                 }
 
+                                                //checkCountChild += 1;
+
                                             }
                                             else
                                             {
                                                 node.Checked = true;
+                                                
                                             }
     
                                         }
@@ -220,6 +226,7 @@ namespace CMSVersion2.UserAccess.UserRole.UserRoleModal
                                                     if(chNode.Value == menuId)
                                                     {
                                                         chNode.Checked = true;
+                                                        //checkCountChild += 1;
                                                     }
                                                     
                                                 }
@@ -232,11 +239,30 @@ namespace CMSVersion2.UserAccess.UserRole.UserRoleModal
                                     #endregion
 
 
-                        }
+                                    //foreach (TreeNode treenode in treeViewWeb.Nodes)
+                                    //{
+                                    //    if (treenode.ChildNodes.Count > 0)
+                                    //    {
+                                    //        countChild += 1;
+                                    //    }
+                                    //}
+
+                                    //if(countChild == checkCountChild)
+                                    //{
+                                    //   foreach (TreeNode treenode in treeViewWeb.Nodes)
+                                    //    {
+                                    //        treenode.Checked = true;
+                                    //    }
+                                    //}
+
+
+                                }
                         catch (Exception ex)
                         {
+                            //string error = ex.ToString();
                             Console.WriteLine(ex);
-                        }
+                           // ClientScript.RegisterStartupScript(typeof(Page), "SymbolError", "<script type='text/javascript'>alert(error);</script>", false);
+                         }
 
                                 //counter++;
                         }
@@ -626,11 +652,55 @@ namespace CMSVersion2.UserAccess.UserRole.UserRoleModal
                 try
                 {
                     userId = Guid.Parse(lblUserID.Value);
+                    #region
                     foreach (string access in result)
                     {
                         menuId = Guid.Parse(access);
                         BLL.UserRole.InsertMenuAccess(menuId, userId, createdBy, getConstr.ConStrCMS);
                     }
+
+                    //Client
+                    if (chklistClient.Enabled == true)
+                    {
+                        foreach (ButtonListItem item in chklistClient.Items)
+                        {
+                            if (item.Selected)
+                            {
+                                menuId = Guid.Parse(item.Value);
+                                BLL.UserRole.InsertMenuAccess(menuId, userId, createdBy, getConstr.ConStrCMS);
+                            }
+                        }
+                    }
+                    //TNT
+                    if (chklistTnt.Enabled == true)
+                    {
+                        foreach (ButtonListItem item in chklistTnt.Items)
+                        {
+                            if (item.Selected)
+                            {
+                                menuId = Guid.Parse(item.Value);
+                                BLL.UserRole.InsertMenuAccess(menuId, userId, createdBy, getConstr.ConStrCMS);
+                            }
+                        }
+                    }
+
+                    //Mobile
+                    if (chklistMobile.Enabled == true)
+                    {
+                        foreach (ButtonListItem item in chklistMobile.Items)
+                        {
+                            if (item.Selected)
+                            {
+                                menuId = Guid.Parse(item.Value);
+                                BLL.UserRole.InsertMenuAccess(menuId, userId, createdBy, getConstr.ConStrCMS);
+                            }
+                        }
+                    }
+
+                    #endregion
+
+
+
 
                 }
                 catch (Exception ex)
@@ -692,6 +762,121 @@ namespace CMSVersion2.UserAccess.UserRole.UserRoleModal
 
                         countTreeWeb++;
 
+                    }
+                    #endregion
+
+                    #region Client
+                    if (chklistClient.Enabled == true)
+                    {
+                        foreach (ButtonListItem item in chklistClient.Items)
+                        {
+                            if (item.Selected)
+                            {
+                                menuId = Guid.Parse(item.Value);
+                                var check = BLL.UserRole.checkIfMenuIdExists(menuId, userId, getConstr.ConStrCMS);
+                                int countExists = check.Item1;
+                                int checkStatus = check.Item2;
+                                if (countExists == 0)
+                                {
+                                    BLL.UserRole.InsertMenuAccess(menuId, userId, createdBy, getConstr.ConStrCMS);
+                                }
+                                if (countExists > 0 && checkStatus == 3)
+                                {
+                                    BLL.UserRole.UpdateMenuAccess(menuId, userId, createdBy, status, getConstr.ConStrCMS);
+                                }
+
+                            }
+                            else
+                            {
+
+                                menuId = Guid.Parse(item.Value);
+                                var checkExist = BLL.UserRole.checkIfMenuIdExists(menuId, userId, getConstr.ConStrCMS);
+                                int count = checkExist.Item1;
+                                int recordStatus = checkExist.Item2;
+                                if (count > 0 && recordStatus == 1)
+                                {
+                                    BLL.UserRole.UpdateMenuAccess(menuId, userId, createdBy, 3, getConstr.ConStrCMS);
+                                }
+
+                            }
+                        }
+                    }
+                    #endregion
+
+                    #region TNT
+                    if (chklistTnt.Enabled == true)
+                    {
+                        foreach (ButtonListItem item in chklistTnt.Items)
+                        {
+                            if (item.Selected)
+                            {
+                                menuId = Guid.Parse(item.Value);
+                                var check = BLL.UserRole.checkIfMenuIdExists(menuId, userId, getConstr.ConStrCMS);
+                                int countExists = check.Item1;
+                                int checkStatus = check.Item2;
+                                if (countExists == 0)
+                                {
+                                    BLL.UserRole.InsertMenuAccess(menuId, userId, createdBy, getConstr.ConStrCMS);
+                                }
+                                if (countExists > 0 && checkStatus == 3)
+                                {
+                                    BLL.UserRole.UpdateMenuAccess(menuId, userId, createdBy, status, getConstr.ConStrCMS);
+                                }
+
+                            }
+                            else
+                            {
+
+                                menuId = Guid.Parse(item.Value);
+                                var checkExist = BLL.UserRole.checkIfMenuIdExists(menuId, userId, getConstr.ConStrCMS);
+                                int count = checkExist.Item1;
+                                int recordStatus = checkExist.Item2;
+                                if (count > 0 && recordStatus == 1)
+                                {
+                                    BLL.UserRole.UpdateMenuAccess(menuId, userId, createdBy, 3, getConstr.ConStrCMS);
+                                }
+
+                            }
+                        }
+                    }
+
+                    #endregion
+
+                    #region Mobile
+                    if (chklistMobile.Enabled == true)
+                    {
+                        foreach (ButtonListItem item in chklistMobile.Items)
+                        {
+                            if (item.Selected)
+                            {
+                                menuId = Guid.Parse(item.Value);
+                                var check = BLL.UserRole.checkIfMenuIdExists(menuId, userId, getConstr.ConStrCMS);
+                                int countExists = check.Item1;
+                                int checkStatus = check.Item2;
+                                if (countExists == 0)
+                                {
+                                    BLL.UserRole.InsertMenuAccess(menuId, userId, createdBy, getConstr.ConStrCMS);
+                                }
+                                if (countExists > 0 && checkStatus == 3)
+                                {
+                                    BLL.UserRole.UpdateMenuAccess(menuId, userId, createdBy, status, getConstr.ConStrCMS);
+                                }
+
+                            }
+                            else
+                            {
+
+                                menuId = Guid.Parse(item.Value);
+                                var checkExist = BLL.UserRole.checkIfMenuIdExists(menuId, userId, getConstr.ConStrCMS);
+                                int count = checkExist.Item1;
+                                int recordStatus = checkExist.Item2;
+                                if (count > 0 && recordStatus == 1)
+                                {
+                                    BLL.UserRole.UpdateMenuAccess(menuId, userId, createdBy, 3, getConstr.ConStrCMS);
+                                }
+
+                            }
+                        }
                     }
                     #endregion
 

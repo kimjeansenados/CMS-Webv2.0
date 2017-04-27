@@ -217,12 +217,12 @@
                                     var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
                                     grid.get_masterTableView().selectItem(rowControl, true);
 
-                                    window.radopen("InssuanceModal/Edit.aspx?AwbIssuanceId=" + id, "ViewRepresentative");
+                                    window.radopen("IssuanceModal/Edit.aspx?AwbIssuanceId=" + id, "ViewRepresentative");
                                     return false;
                                 }
 
                                function ShowInsertForm() {
-                                   window.radopen("InssuanceModal/Add.aspx", "AddUser");
+                                   window.radopen("IssuanceModal/Add.aspx", "AddUser");
                                    return false;
                                }
 
