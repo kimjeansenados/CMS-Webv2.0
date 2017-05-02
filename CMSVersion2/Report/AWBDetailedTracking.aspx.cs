@@ -33,6 +33,7 @@ namespace CMSVersion2.Report
                     radGridAwbNo.DataSource = GetDetailsAwbNoInformation(awbNo);
                     radGridAwbNo.Rebind();
                     radGridAwbNo.DataBind();
+                    LoadSignature(awbNo);
                 }
                 else
                 {
@@ -49,6 +50,8 @@ namespace CMSVersion2.Report
                     radGridAwbNo.DataSource = null;
                     radGridAwbNo.Rebind();
                     radGridAwbNo.DataBind();
+                    lblReceivedBy.Visible = false;
+                    Image1.Visible = false;
                 }
 
 
@@ -58,6 +61,23 @@ namespace CMSVersion2.Report
         #endregion
 
         #region Methods
+
+        public void LoadSignature(string awbNo)
+        {
+            int count = 0;
+            DataTable Data = GetSignatureforPOD(awbNo);
+            count = Data.Rows.Count;
+            if (count > 0)
+            {
+                lblReceivedBy.Visible = true;
+                Image1.Visible = true;
+                byte[] bytes = (byte[])GetSignatureforPOD(awbNo).Rows[0]["Signature"];
+                string base64String = Convert.ToBase64String(bytes, 0, bytes.Length);
+                Image1.ImageUrl = "data:image/png;base64," + base64String;
+                
+            }
+        }
+
         public DataTable GetAwbNoInformation(string awbNo)
         {
             DataSet data = BLL.AirwayBill.GetAwbInfoByAwbNo(awbNo, getConstr.ConStrCMS);
@@ -69,6 +89,14 @@ namespace CMSVersion2.Report
         public DataTable GetDetailsAwbNoInformation(string awbNo)
         {
             DataSet data = BLL.AirwayBill.GetDetailsAwbNo(awbNo, getConstr.ConStrCMS);
+            DataTable convertdata = new DataTable();
+            convertdata = data.Tables[0];
+            return convertdata;
+        }
+
+        public DataTable GetSignatureforPOD(string awbNo)
+        {
+            DataSet data = BLL.AirwayBill.SignaturePOD(awbNo, getConstr.ConStrCMS);
             DataTable convertdata = new DataTable();
             convertdata = data.Tables[0];
             return convertdata;

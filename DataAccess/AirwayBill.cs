@@ -32,7 +32,21 @@ namespace DataAccess
             }
         }
 
-        
-       
+        public static DataSet SignaturePOD(string awbNo, string constr)
+        {
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("sp_AwbNo_POD", con);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.Add("@AwbNo", SqlDbType.NVarChar).Value = awbNo;
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+
+                return ds;
+            }
+
+        }
+
+
     }
 }

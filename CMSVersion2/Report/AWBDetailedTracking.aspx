@@ -1,8 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AWBDetailedTracking.aspx.cs" Inherits="CMSVersion2.Report.AWBDetailedTracking" %>
+﻿<%@ Page Title="AWB Detailed Tracking" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AWBDetailedTracking.aspx.cs" Inherits="CMSVersion2.Report.AWBDetailedTracking" %>
 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<style type="text/css">
+    .center {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    }
+</style>
 <div id="wrapper">
     <div id="page-wrapper">
         <div class="container">
@@ -59,7 +66,7 @@
             <br />
             <div class="row">
                       <telerik:RadGrid ID="radGridAwbNo" runat="server" Skin="Glow"
-                        AllowPaging="True" ShowFooter="true"
+                        AllowPaging="True"
                         PageSize="20"
                         AllowFilteringByColumn="false" 
                         AutoGenerateColumns="false">
@@ -102,6 +109,11 @@
 
                        </telerik:RadGrid>
                  </div><!--row4-->
+            <div class="center">
+                <telerik:RadLabel ID="lblReceivedBy" runat="server" Text="POD:" Font-Bold="true" Visible="false"></telerik:RadLabel>
+                <asp:Image ID="Image1" runat="server" ImageAlign="Middle" Visible="false" Height="70"/>
+            
+            </div>
         </div><!--container-->
     </div><!--"page-wrapper-->
 </div><!--wrapper-->

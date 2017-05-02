@@ -335,6 +335,7 @@
     <Content Include="Report\Finance\Sales\SalesPerRevenueUnit.aspx" />
     <Content Include="Report\Finance\Sales\SalesPerShipmode.aspx" />
     <Content Include="Report\Finance\Sales\SalesPerUserLevel.aspx" />
+    <Content Include="Report\Operation\AWBNoModal\AWBTrackingModal.aspx" />
     <Content Include="Report\Operation\CargoMonitoring\Delivered.aspx" />
     <Content Include="Report\Operation\CargoMonitoring\Hold.aspx" />
     <Content Include="Report\Operation\CargoMonitoring\Misrouted.aspx" />
@@ -1289,6 +1290,13 @@
       <DependentUpon>SalesPerUserLevel.aspx</DependentUpon>
     </Compile>
     <Compile Include="Report\GetColumnDataFromDataTable.cs" />
+    <Compile Include="Report\Operation\AWBNoModal\AWBTrackingModal.aspx.cs">
+      <DependentUpon>AWBTrackingModal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\AWBNoModal\AWBTrackingModal.aspx.designer.cs">
+      <DependentUpon>AWBTrackingModal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Report\Operation\CargoMonitoring\Delivered.aspx.cs">
       <DependentUpon>Delivered.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

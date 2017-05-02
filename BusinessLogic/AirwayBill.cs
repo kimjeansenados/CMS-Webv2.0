@@ -19,6 +19,11 @@ namespace BusinessLogic
             return DAL.AirwayBill.GetDetailsAwbNo(awbNo, conSTR);
         }
 
+        public static DataSet SignaturePOD(string awbNo, string constr)
+        {
+            return DAL.AirwayBill.SignaturePOD(awbNo, constr);
+        }
+
         //public static DataTable awbDatatable(DataTable datatable)
         //{
         //    return DAL.AirwayBill.awbDatatable(datatable);

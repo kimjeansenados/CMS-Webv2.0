@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AWBNoTracking.aspx.cs" Inherits="CMSVersion2.Report.AWBNoTracking" %>
+﻿<%@ Page Title="AWB Tracking" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AWBNoTracking.aspx.cs" Inherits="CMSVersion2.Report.AWBNoTracking" %>
 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
@@ -9,7 +9,7 @@
             <!-- Page Heading -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h3>AWB Detailed Tracking</h3>
+                    <h3>AWB Tracking</h3>
                     <hr />
                 </div><!--col-lg-12-->
             </div><!--row1-->
@@ -68,6 +68,35 @@
 
                        </telerik:RadGrid>
                  </div><!--row4-->
+            <br />
+                 <div class="row">
+                        <telerik:RadLabel ID="lblReceivedBy" runat="server" Text="Received By:" Font-Bold="true" Visible="false"></telerik:RadLabel>
+                       <a href="#" runat="server" onClick="handleHyperLinkClick();" visible="false" id="signLink"> View POD </a>
+                           
+                  </div><!--row4-->
+
+            <telerik:RadWindowManager RenderMode="Mobile" ID="RadWindowManager1" runat="server" EnableShadow="true">
+                            <Windows>
+                               <telerik:RadWindow RenderMode="Mobile" ID="ViewSignature" runat="server" Title="POD" Height="300px"
+                                    Width="400px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar="false" AutoSize="false"
+                                    Modal="true" Behaviors="Close,Move">
+                                </telerik:RadWindow>
+                          </Windows>
+                   </telerik:RadWindowManager>
+
+            <telerik:RadCodeBlock runat="server">
+            <script type="text/javascript">
+                function handleHyperLinkClick() {
+                var text, newValue;
+
+                text = document.getElementById('<%= txtAwbNo.ClientID %>')
+                newValue = text.value;
+                
+                window.radopen("Operation/AWBNoModal/AWBTrackingModal.aspx?Id=" + newValue, "ViewSignature");
+                return false;
+                }
+            </script>
+            </telerik:RadCodeBlock>
         </div><!--container-->
     </div><!--"page-wrapper-->
 </div><!--wrapper-->

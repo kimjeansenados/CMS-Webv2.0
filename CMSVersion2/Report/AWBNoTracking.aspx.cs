@@ -20,17 +20,36 @@ namespace CMSVersion2.Report
         protected void btnSearchAwbNo_Click(object sender, EventArgs e)
         {
             string awbNo = "";
+            int numberOfRecords = 0;
             if (!String.IsNullOrEmpty(txtAwbNo.Text))
             {
                 awbNo = txtAwbNo.Text;
                 DataTable Data = GetAwbNoInformation(awbNo);
-                #region Fill Value
-                FillValue(Data);
-                radGridAwbNoTracking.DataSource = GetDetailsAwbNoInformation(awbNo);
-                radGridAwbNoTracking.Rebind();
-                radGridAwbNoTracking.DataBind();
+                numberOfRecords = Data.Rows.Count;
 
-                #endregion
+                if (numberOfRecords > 0)
+                {
+                    #region Fill Value
+                    FillValue(Data);
+                    radGridAwbNoTracking.DataSource = GetDetailsAwbNoInformation(awbNo);
+                    radGridAwbNoTracking.Rebind();
+                    radGridAwbNoTracking.DataBind();
+                    lblReceivedBy.Visible = true;
+                    //podLink.Visible = true;
+                    //podLink.Attributes.Add("onclick", "return handleHyperLinkClick(awbNo)");
+                    signLink.Visible = true;
+                    #endregion
+                }
+                else
+                {
+                    txtAwb.Text = "";
+                    radGridAwbNoTracking.DataSource = null;
+                    radGridAwbNoTracking.Rebind();
+                    radGridAwbNoTracking.DataBind();
+                    lblReceivedBy.Visible = false;
+                    signLink.Visible = false;
+                }
+
 
             }
         }

@@ -132,5 +132,7 @@ namespace BusinessLogic
         {
             return DAL.UserRole.MenuAccessByUserId(userId, constr);
         }
+
+      
     }
 }
