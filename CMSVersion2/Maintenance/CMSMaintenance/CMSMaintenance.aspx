@@ -5,7 +5,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <script type="text/javascript">
         function StandardConfirm(sender, args) {
-            args.set_cancel(!window.confirm("Are you sure you want to submit the page?"));
+            args.set_cancel(!window.confirm("Are you sure you want to delete this?"));
         }
 
         function RefreshParentPage()//function in parent page
@@ -231,7 +231,7 @@
 
                         <telerik:RadButton ID="btnBranchSatOfficeADD" Skin="Glow" runat="server" Text="ADD" OnClick="btnBranchSatOfficeADD_Click"></telerik:RadButton>
                         <telerik:RadButton ID="btnBranchSatOfficeEDIT" Skin="Glow" runat="server" Text="EDIT" OnClick="btnBranchSatOfficeEDIT_Click"></telerik:RadButton>
-                        <telerik:RadButton ID="btnBranchSatOfficeDelete" Skin="Glow" runat="server" Text="DELETE" OnClick="btnBranchSatOfficeDelete_Click"></telerik:RadButton>
+                        <telerik:RadButton ID="btnBranchSatOfficeDelete" Skin="Glow" runat="server" Text="DELETE" OnClientClicking="StandardConfirm" OnClick="btnBranchSatOfficeDelete_Click"></telerik:RadButton>
                     </div>
                     <br />
                     <br />
@@ -244,7 +244,7 @@
 
                         <telerik:RadButton ID="btnGatewayOfficeADD" Skin="Glow" runat="server" Text="ADD" OnClick="btnGatewayOfficeADD_Click"></telerik:RadButton>
                         <telerik:RadButton ID="btnGatewayOfficeEDIT" Skin="Glow" runat="server" Text="EDIT" OnClick="btnGatewayOfficeEDIT_Click"></telerik:RadButton>
-                        <telerik:RadButton ID="btnGatewayOfficeDELETE" Skin="Glow" runat="server" Text="DELETE" OnClick="btnGatewayOfficeDELETE_Click"></telerik:RadButton>
+                        <telerik:RadButton ID="btnGatewayOfficeDELETE" Skin="Glow" runat="server" Text="DELETE" OnClientClicking="StandardConfirm" OnClick="btnGatewayOfficeDELETE_Click"></telerik:RadButton>
                     </div>
                     <br />
                     <br />
@@ -257,7 +257,7 @@
 
                         <telerik:RadButton ID="btnRevenueAdd" Skin="Glow" runat="server" Text="ADD" OnClick="btnRevenueAdd_Click"></telerik:RadButton>
                         <telerik:RadButton ID="btnRevenueEdit" Skin="Glow" runat="server" Text="EDIT" OnClick="btnRevenueEdit_Click"></telerik:RadButton>
-                        <telerik:RadButton ID="btnRevenueDelete" Skin="Glow" runat="server" Text="DELETE" OnClick="btnRevenueDelete_Click"></telerik:RadButton>
+                        <telerik:RadButton ID="btnRevenueDelete" Skin="Glow" runat="server" Text="DELETE" OnClientClicking="StandardConfirm" OnClick="btnRevenueDelete_Click"></telerik:RadButton>
                     </div>
                     <br />
                     <br />
@@ -269,7 +269,7 @@
 
                         <telerik:RadButton ID="btnApplicableRateADD" Skin="Glow" runat="server" Text="ADD" OnClick="btnApplicableRateADD_Click"></telerik:RadButton>
                         <telerik:RadButton ID="btnApplicableRateEdit" Skin="Glow" runat="server" Text="EDIT" OnClick="btnApplicableRateEdit_Click"></telerik:RadButton>
-                        <telerik:RadButton ID="btnApplicableRateDelete" Skin="Glow" runat="server" Text="DELETE" OnClick="btnApplicableRateDelete_Click"></telerik:RadButton>
+                        <telerik:RadButton ID="btnApplicableRateDelete" Skin="Glow" runat="server" Text="DELETE" OnClientClicking="StandardConfirm" OnClick="btnApplicableRateDelete_Click"></telerik:RadButton>
                     </div>
                     <br />
                     <br />
@@ -281,7 +281,7 @@
 
                         <telerik:RadButton ID="btnCommodityTypeAdd" Skin="Glow" runat="server" Text="ADD" OnClick="btnCommodityTypeAdd_Click"></telerik:RadButton>
                         <telerik:RadButton ID="btnCommodityTypeEdit" Skin="Glow" runat="server" Text="EDIT" OnClick="btnCommodityTypeEdit_Click"></telerik:RadButton>
-                        <telerik:RadButton ID="btnCommodityTypeDelete" Skin="Glow" runat="server" Text="DELETE" OnClick="btnCommodityTypeDelete_Click"></telerik:RadButton>
+                        <telerik:RadButton ID="btnCommodityTypeDelete" Skin="Glow" runat="server" Text="DELETE" OnClientClicking="StandardConfirm" OnClick="btnCommodityTypeDelete_Click"></telerik:RadButton>
                     </div>
                     <br />
                     <br />
@@ -293,7 +293,7 @@
 
                         <telerik:RadButton ID="btnCommodityAdd" Skin="Glow" runat="server" Text="ADD" OnClick="btnCommodityAdd_Click"></telerik:RadButton>
                         <telerik:RadButton ID="btnCommodityEdit" Skin="Glow" runat="server" Text="EDIT" OnClick="btnCommodityEdit_Click"></telerik:RadButton>
-                        <telerik:RadButton ID="btnCommodityDelete" Skin="Glow" runat="server" Text="DELETE" OnClick="btnCommodityDelete_Click"></telerik:RadButton>
+                        <telerik:RadButton ID="btnCommodityDelete" Skin="Glow" runat="server" Text="DELETE" OnClientClicking="StandardConfirm" OnClick="btnCommodityDelete_Click"></telerik:RadButton>
                     </div>
                     <br />
                     <br />
@@ -305,7 +305,7 @@
 
                         <telerik:RadButton ID="btnGoodsDescAdd" Skin="Glow" runat="server" Text="ADD" OnClick="btnGoodsDescAdd_Click"></telerik:RadButton>
                         <telerik:RadButton ID="btnGoodsDescEdit" Skin="Glow" runat="server" Text="EDIT" OnClick="btnGoodsDescEdit_Click"></telerik:RadButton>
-                        <telerik:RadButton ID="btnGoodsDescDelete" Skin="Glow" runat="server" Text="DELETE" OnClick="btnGoodsDescDelete_Click"></telerik:RadButton>
+                        <telerik:RadButton ID="btnGoodsDescDelete" Skin="Glow" runat="server" Text="DELETE" OnClientClicking="StandardConfirm" OnClick="btnGoodsDescDelete_Click"></telerik:RadButton>
                     </div>
                     <br />
                     <br />
@@ -317,7 +317,7 @@
 
                         <telerik:RadButton ID="btnSBFAdd" Skin="Glow" runat="server" Text="ADD" onclick="btnSBFAdd_Click"></telerik:RadButton>
                         <telerik:RadButton ID="btnSBFEdit" Skin="Glow" runat="server" Text="EDIT" OnClick="btnSBFEdit_Click"></telerik:RadButton>
-                        <telerik:RadButton ID="btnSBFDelete" Skin="Glow" runat="server" Text="DELETE" onclick="btnSBFDelete_Click"></telerik:RadButton>
+                        <telerik:RadButton ID="btnSBFDelete" Skin="Glow" runat="server" Text="DELETE" OnClientClicking="StandardConfirm" Onclick="btnSBFDelete_Click"></telerik:RadButton>
                     </div>
                     <br />
                     <br />
@@ -329,7 +329,7 @@
 
                         <telerik:RadButton ID="btnCratingAdd" Skin="Glow" runat="server" Text="ADD" onclick="btnCratingAdd_Click"></telerik:RadButton>
                         <telerik:RadButton ID="btnCratingEdit" Skin="Glow" runat="server" Text="EDIT" OnClick="btnCratingEdit_Click"></telerik:RadButton>
-                        <telerik:RadButton ID="btnCratingDelete" Skin="Glow" runat="server" Text="DELETE" OnClick="btnCratingDelete_Click"></telerik:RadButton>
+                        <telerik:RadButton ID="btnCratingDelete" Skin="Glow" runat="server" Text="DELETE" OnClientClicking="StandardConfirm" OnClick="btnCratingDelete_Click"></telerik:RadButton>
                     </div>
                     <br />
                     <br />
@@ -341,7 +341,7 @@
 
                         <telerik:RadButton ID="btnPackagingAdd" Skin="Glow" runat="server" Text="ADD" OnClick="btnPackagingAdd_Click"></telerik:RadButton>
                         <telerik:RadButton ID="btnPackagingEdit" Skin="Glow" runat="server" Text="EDIT" Onclick="btnPackagingEdit_Click"></telerik:RadButton>
-                        <telerik:RadButton ID="btnPackagingDelete" Skin="Glow" runat="server" Text="DELETE" OnClick="btnPackagingDelete_Click"></telerik:RadButton>
+                        <telerik:RadButton ID="btnPackagingDelete" Skin="Glow" runat="server" Text="DELETE" OnClientClicking="StandardConfirm" OnClick="btnPackagingDelete_Click"></telerik:RadButton>
                     </div>
                     <br />
                     <br />
@@ -365,7 +365,7 @@
 
                         <telerik:RadButton ID="btnServiceTypeAdd" Skin="Glow" runat="server" Text="ADD" OnClick="btnServiceTypeAdd_Click"></telerik:RadButton>
                         <telerik:RadButton ID="btnServiceTypeEdit" Skin="Glow" runat="server" Text="EDIT" OnClick="btnServiceTypeEdit_Click"></telerik:RadButton>
-                        <telerik:RadButton ID="btnServiceTypeDelete" Skin="Glow" runat="server" Text="DELETE" OnClick="btnServiceTypeDelete_Click"></telerik:RadButton>
+                        <telerik:RadButton ID="btnServiceTypeDelete" Skin="Glow" runat="server" Text="DELETE" OnClientClicking="StandardConfirm" OnClick="btnServiceTypeDelete_Click"></telerik:RadButton>
                     </div>
                     <br />
                     <br />
@@ -377,7 +377,7 @@
 
                         <telerik:RadButton ID="btnServiceModeAdd" Skin="Glow" runat="server" Text="ADD" OnClick="btnServiceModeAdd_Click"></telerik:RadButton>
                         <telerik:RadButton ID="btnServiceModeEdit" Skin="Glow" runat="server" Text="EDIT" OnClick="btnServiceModeEdit_Click"></telerik:RadButton>
-                        <telerik:RadButton ID="btnServiceModeDelete" Skin="Glow" runat="server" Text="DELETE" OnClick="btnServiceModeDelete_Click"></telerik:RadButton>
+                        <telerik:RadButton ID="btnServiceModeDelete" Skin="Glow" runat="server" Text="DELETE" OnClientClicking="StandardConfirm" OnClick="btnServiceModeDelete_Click"></telerik:RadButton>
                     </div>
                     <br />
                     <br />
@@ -389,7 +389,7 @@
 
                         <telerik:RadButton ID="RadButton25" Skin="Glow" OnClick="PaymentModeAdd_Click" runat="server" Text="ADD"></telerik:RadButton>
                         <telerik:RadButton ID="RadButton26" Skin="Glow" OnClick="PaymentModeEdit_Click" runat="server" Text="EDIT"></telerik:RadButton>
-                        <telerik:RadButton ID="RadButton27" Skin="Glow" runat="server" Text="DELETE"></telerik:RadButton>
+                        <telerik:RadButton ID="RadButton27" Skin="Glow" runat="server" OnClientClicking="StandardConfirm" Text="DELETE" OnClick="PaymentModeDelete_Click"></telerik:RadButton>
                     </div>
                     <br />
                     <br />
@@ -401,7 +401,7 @@
 
                         <telerik:RadButton ID="RadButton28" Skin="Glow" OnClick="PaymentTermAdd_Click" runat="server" Text="ADD"></telerik:RadButton>
                         <telerik:RadButton ID="RadButton29" Skin="Glow" OnClick="PaymentTermEdit_Click" runat="server" Text="EDIT"></telerik:RadButton>
-                        <telerik:RadButton ID="RadButton30" Skin="Glow" runat="server" Text="DELETE"></telerik:RadButton>
+                        <telerik:RadButton ID="RadButton30" Skin="Glow" runat="server" Text="DELETE" OnClientClicking="StandardConfirm" OnClick="PaymentTermDelete_Click"></telerik:RadButton>
                     </div>
                     <br />
                     <br />

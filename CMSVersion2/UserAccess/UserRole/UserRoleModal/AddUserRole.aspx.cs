@@ -34,7 +34,7 @@ namespace CMSVersion2.UserAccess.UserRole.UserRoleModal
         private void PopulateEmployeeDDL()
         {
             //DataTable EmployeeNameList = BLL.Employee_Info.GetEmployeeNames(getConstr.ConStrCMS).Tables[0];
-            rcbEmployee.DataSource = BLL.Employee_Info.GetEmployeeNames(getConstr.ConStrCMS);
+            rcbEmployee.DataSource = BLL.Employee_Info.EmployeeNameinRoleUser(getConstr.ConStrCMS);
             rcbEmployee.DataTextField = "EmployeeName";
             rcbEmployee.DataValueField = "UserId";
             rcbEmployee.DataBind();

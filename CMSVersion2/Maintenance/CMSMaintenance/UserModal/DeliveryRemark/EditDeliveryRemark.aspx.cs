@@ -57,7 +57,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.DeliveryRemark
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Edit Booking Remark";
+            this.Page.Title = "Edit Delivery Remark";
         }
 
 

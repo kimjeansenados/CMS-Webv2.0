@@ -289,15 +289,15 @@ namespace CMSVersion2.UserAccess.UserRole.UserRoleModal
                                     string canLogin = "";
                                     // txtLoginLabel.Enabled = false;
                                     txtFullName.Text = empName;
-                                    //if (CanLogintoWeb == "False" || (CanLogintoWeb == "0"))
-                                    //{
-                                    //    chklistWeb.Enabled = false;
-                                    //}
-                                    //else
-                                    //{
-                                    //    canLogin += "CMS Web\n".Replace("\n", Environment.NewLine);
-                                    //    txtLoginLabel.Text = canLogin;
-                                    //}
+                                    if (CanLogintoWeb == "False" || (CanLogintoWeb == "0"))
+                                    {
+                                        treeViewWeb.Enabled = false;
+                                    }
+                                    else
+                                    {
+                                        canLogin += "CMS Web\n".Replace("\n", Environment.NewLine);
+                                        txtLoginLabel.Text = canLogin;
+                                    }
                                     if (CanLogintoClient == "False" || (CanLogintoClient == "0"))
                                     {
                                         chklistClient.Enabled = false;

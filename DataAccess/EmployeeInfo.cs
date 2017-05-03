@@ -27,6 +27,36 @@ namespace DataAccess
             }
         }
 
+        public static DataSet EmployeeNameinUser(string conStr)
+        {
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_view_EmployeeNameinUser", con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter("sp_view_EmployeeNameinUser", con);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    return ds;
+                }
+            }
+        }
+
+        public static DataSet EmployeeNameinRoleUser(string conStr)
+        {
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_view_EmployeeNameinRoleUser", con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter("sp_view_EmployeeNameinRoleUser", con);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    return ds;
+                }
+            }
+        }
+
         public static DataSet GetEmployeeNameById(Guid EmployeeId, string conStr)
         {
             using (SqlConnection con = new SqlConnection(conStr))

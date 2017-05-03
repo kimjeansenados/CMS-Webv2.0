@@ -25,6 +25,16 @@ namespace BusinessLogic
             return DAL.EmployeeInfo.GetEmployeeName(conStr);
         }
 
+        public static DataSet EmployeeNameinUser(string conStr)
+        {
+            return DAL.EmployeeInfo.EmployeeNameinUser(conStr);
+        }
+
+        public static DataSet EmployeeNameinRoleUser(string conStr)
+        {
+            return DAL.EmployeeInfo.EmployeeNameinRoleUser(conStr);
+        }
+
         public static DataSet GetEmployeeById(Guid EmployeeId, string conStr)
         {
             return DAL.EmployeeInfo.GetEmployeeNameById(EmployeeId,conStr);

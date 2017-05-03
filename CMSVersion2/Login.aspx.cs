@@ -122,7 +122,7 @@ namespace CMSVersion2
                         if (firstLogin == true)
                         {
                             BLL.UserRole.UpdateLoginDateandCheckLogin(Login1.UserName, getConstr.ConStrCMS);
-                            Response.Redirect("~/Maintenance/RateMatrix/RateMatrix.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+                            Response.Redirect("~/Settings/ManagePassword.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
                         }
                         else
                         {
@@ -163,7 +163,7 @@ namespace CMSVersion2
                                 if (firstLogin == true)
                                 {
                                     BLL.UserRole.UpdateLoginDateandCheckLogin(Login1.UserName, getConstr.ConStrCMS);
-                                    Response.Redirect("~/Maintenance/CMSMaintenance/CMSMaintenance.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+                                    Response.Redirect("~/Settings/ManagePassword.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
                                 }
                                 else
                                 {

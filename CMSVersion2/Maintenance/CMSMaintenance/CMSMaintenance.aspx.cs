@@ -1500,7 +1500,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance
 
             if (ID != "")
             {
-                rwProvinceEdit.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/BusinessType/AddBusinessType.aspx?ID=" + ID;
+                rwProvinceEdit.NavigateUrl = "http://" + host + "/" + WebPathName + "/Maintenance/CMSMaintenance/UserModal/BusinessType/EditBusinessType.aspx?ID=" + ID;
                 string script = "function f(){$find(\"" + rwProvinceEdit.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
                 RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
@@ -1570,7 +1570,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance
         protected void IndustryEdit_Click(object sender, EventArgs e)
         {
             string host = HttpContext.Current.Request.Url.Authority;
-            string ID = this.rcbOrganizationType.SelectedItem.Value.ToString();
+            string ID = this.rcbIndustry.SelectedItem.Value.ToString();
 
             if (ID != "")
             {

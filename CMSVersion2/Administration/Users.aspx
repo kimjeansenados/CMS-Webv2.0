@@ -95,8 +95,8 @@
                                             <HeaderStyle />
                                         </telerik:GridNumericColumn>--%>
 
-                                        <telerik:GridBoundColumn DataField="RevenueArea" HeaderText="Revenue Area" SortExpression="RevenueArea"
-                                            UniqueName="RevenueArea" FilterDelay="2000" ShowFilterIcon="false" FilterControlWidth="120px"
+                                        <telerik:GridBoundColumn DataField="RevenueUnitName" HeaderText="Revenue Area" SortExpression="RevenueUnitName"
+                                            UniqueName="RevenueUnitName" FilterDelay="2000" ShowFilterIcon="false" FilterControlWidth="120px"
                                   CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
                                             <HeaderStyle />
                                         </telerik:GridBoundColumn>

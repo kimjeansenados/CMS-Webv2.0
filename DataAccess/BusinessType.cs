@@ -46,7 +46,7 @@ namespace DataAccess
             {
                 SqlDataAdapter da = new SqlDataAdapter("sp_view_BusinessTypeById", con);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                da.SelectCommand.Parameters.Add("@businessTypeID", SqlDbType.UniqueIdentifier).Value = ID;
+                da.SelectCommand.Parameters.Add("@BusinessTypeByID", SqlDbType.UniqueIdentifier).Value = ID;
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 return ds;

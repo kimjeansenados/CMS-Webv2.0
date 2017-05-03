@@ -42,7 +42,7 @@
         <%--<asp:ScriptManager ID="ScriptManager2" runat="server" />--%>
         <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" Skin="Default" DecoratedControls="All" />
         <%--<asp:Button runat="server" Text="Close" ID="CloseButton"     OnClick="CloseButton_Click1"/>--%>
-        <div class="main-login main-center">
+        <div class="main-login main-center" style="margin-left:80px;margin-top:40px;">
             <div class="form-horizontal">
 
                 <div class="form-group">
@@ -50,8 +50,6 @@
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
 
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                            <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
                             <asp:Label ID="lblGroupID" runat="server" Text="" Visible="false"></asp:Label>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtBox" Enabled="True" runat="server"></telerik:RadTextBox>
@@ -61,9 +59,7 @@
                         <label for="email" class="cols-sm-2 control-label">Number of Days</label>
                         <div class="input-group" style="font-size: 12px">
 
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                            <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
-                            <asp:Label ID="Label1" runat="server" Text="" Visible="false"></asp:Label>
+                           <asp:Label ID="Label1" runat="server" Text="" Visible="false"></asp:Label>
 
                              <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtNoOfDays" Enabled="True" runat="server"></telerik:RadTextBox>
 

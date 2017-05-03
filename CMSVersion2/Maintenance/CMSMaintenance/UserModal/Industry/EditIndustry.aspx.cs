@@ -104,7 +104,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.Industry
         {
             string host = HttpContext.Current.Request.Url.Authority;
             Guid ID = new Guid("11111111-1111-1111-1111-111111111111");
-            BLL.OrganizationType.UpdateOrganizationType(new Guid(lblGroupID.Text), ID, txtBox.Text, getConstr.ConStrCMS);
+            BLL.Industry.UpdateIndsutry(new Guid(lblGroupID.Text), ID, txtBox.Text, getConstr.ConStrCMS);
 
             string script = "<script>CloseOnReload()</" + "script>";
             ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);

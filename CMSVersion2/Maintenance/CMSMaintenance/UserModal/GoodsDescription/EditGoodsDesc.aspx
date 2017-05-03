@@ -58,7 +58,7 @@
 
                         </div>
                         <br />
-                        <telerik:RadButton Skin="Glow" ID="btnSave" runat="server" Text="Udpate" OnClick="btnSave_Click" OnClientClicked=""></telerik:RadButton>
+                        <telerik:RadButton Skin="Glow" ID="btnSave" runat="server" Text="Update" OnClick="btnSave_Click" OnClientClicked=""></telerik:RadButton>
                         <telerik:RadButton Skin="Glow" ID="btnCancel" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click" OnClientClicked="redirect"></telerik:RadButton>
 
                     </div>

@@ -65,7 +65,7 @@
                             </asp:RequiredFieldValidator>
                         </div>
                      <br />
-                        <telerik:RadButton ID="btnSave" Skin="Glow" runat="server" Text="Uodate" OnClick="btnSave_Click" ></telerik:RadButton>
+                        <telerik:RadButton ID="btnSave" Skin="Glow" runat="server" Text="Update" OnClick="btnSave_Click" ></telerik:RadButton>
                         <telerik:RadButton ID="btnCancel" Skin="Glow" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click" OnClientClicked="redirect"></telerik:RadButton>
                  
                 </div>

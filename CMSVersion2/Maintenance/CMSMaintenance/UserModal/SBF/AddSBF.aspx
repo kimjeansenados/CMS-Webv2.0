@@ -119,8 +119,10 @@
 
         </div>
         <%--<script src="../js/bootstrap.js"></script>--%>
-        <script type="text/javascript" src="../../../../Scripts/bootstrap.js"></script>
+      <%--  <script type="text/javascript" src="../../../../Scripts/bootstrap.js"></script>--%>
         <script type="text/javascript" src="../../../../Scripts/jquery.js"></script>
+      <script type="text/javascript" src="../../Scripts/bootstrap.js"></script>
+    <%-- <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>--%>
         <br />
     </form>
 </body>

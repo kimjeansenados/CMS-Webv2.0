@@ -76,7 +76,7 @@
                      </div>
                           
                <%-- <telerik:RadButton ID="btnChangePassword" Skin="Glow" runat="server" Text="Change Password"  OnClick="btnChangePassword_Click" CausesValidation="false"></telerik:RadButton>--%>
-                    <asp:Button ID="btnChangePassword" runat="server" Text="Change Password" CausesValidation="False" UseSubmitBehavior="false"  ValidationGroup="vg1" />
+                    <asp:Button ID="btnChangePassword" runat="server" Text="Change Password" CausesValidation="False" UseSubmitBehavior="false"  ValidationGroup="vg1" OnClick="btnChangePassword_Click" />
                      </div>
                
 
