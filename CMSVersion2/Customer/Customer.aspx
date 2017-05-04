@@ -62,10 +62,10 @@
                                             <HeaderStyle />
                                         </telerik:GridNumericColumn>
 
-                                        <telerik:GridNumericColumn DataField="CompanyName" HeaderText="Company Name" SortExpression="CompanyName" Exportable="true"
+                                      <%--  <telerik:GridNumericColumn DataField="CompanyName" HeaderText="Company Name" SortExpression="CompanyName" Exportable="true"
                                             UniqueName="CompanyName">
                                             <HeaderStyle />
-                                        </telerik:GridNumericColumn>
+                                        </telerik:GridNumericColumn>--%>
 
                                         <telerik:GridNumericColumn DataField="CityName" HeaderText="City Name" SortExpression="CityName" Exportable="true"
                                             UniqueName="CityName">

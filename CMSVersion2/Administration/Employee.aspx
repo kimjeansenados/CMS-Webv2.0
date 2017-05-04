@@ -3,6 +3,21 @@
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <style type="text/css">
+        .alink{
+            text-decoration:none !important;
+            color:#c1c7ca !important;
+        }
+
+        .alink:hover{
+            text-decoration:none !important;
+            color:#c1c7ca !important;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
      <div id="wrapper">
    <div id="page-wrapper"  >
 

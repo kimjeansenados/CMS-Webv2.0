@@ -61,7 +61,7 @@
                     </button>
 
                      <a class="navbar-brand" href="#"> 
-                         <img src="../Images/logo1.png" height="50" width="157" />
+                         <img src="Images/logo1.png" runat="server" height="50" width="157" />
                      </a>
 
                 </div><!--navbar-header-->

@@ -6828,3 +6828,10 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+/*Added styles*/
+.main-center {
+    margin-top: 40px;
+    margin-left: 80px;
+   
+}

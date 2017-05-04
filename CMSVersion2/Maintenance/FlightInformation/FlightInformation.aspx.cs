@@ -8,6 +8,7 @@ using DAL = DataAccess;
 using System.IO;
 using System.Data.OleDb;
 using System.Collections;
+using Microsoft.VisualBasic.FileIO;
 
 namespace CMSVersion2.Maintenance.FlightInformation
 {
@@ -178,100 +179,100 @@ namespace CMSVersion2.Maintenance.FlightInformation
         #region Upload File
         protected void btnUpload_Click(object sender, EventArgs e)
         {
-            //////DataTable data;
-            //////DataTable dataSheets = new DataTable();
-            //////DataTable filterTable;
-            //////DataTable ftable = new DataTable();
-            //////int count;
-            //////object missing = System.Reflection.Missing.Value;
+            DataTable data;
+            DataTable dataSheets = new DataTable();
+            DataTable filterTable;
+            DataTable ftable = new DataTable();
+            int count;
+            object missing = System.Reflection.Missing.Value;
 
-            //////Microsoft.Office.Interop.Excel.Application excelObj = null;
-            //////Microsoft.Office.Interop.Excel.Workbook workbook = null;
+            Microsoft.Office.Interop.Excel.Application excelObj = null;
+            Microsoft.Office.Interop.Excel.Workbook workbook = null;
 
 
-            //////if (fileName != null && path != null)
-            //////{
-            //////    if (fileExtension.Equals(".xlsx") || fileExtension.Equals(".xls"))
-            //////    {
-            //////        try
-            //////        {
-            //////            excelObj = new Microsoft.Office.Interop.Excel.Application();
-            //////            workbook = excelObj.Workbooks.Open(path + fileName, missing, missing, missing, missing, missing, missing, missing, missing, missing, missing, missing, missing, missing, missing);
-            //////            ArrayList sheetname = new ArrayList();
+            if (fileName != null && path != null)
+            {
+                if (fileExtension.Equals(".xlsx") || fileExtension.Equals(".xls"))
+                {
+                    try
+                    {
+                        excelObj = new Microsoft.Office.Interop.Excel.Application();
+                        workbook = excelObj.Workbooks.Open(path + fileName, missing, missing, missing, missing, missing, missing, missing, missing, missing, missing, missing, missing, missing, missing);
+                        ArrayList sheetname = new ArrayList();
 
-            //////            foreach (Microsoft.Office.Interop.Excel.Worksheet sheet in workbook.Sheets)
-            //////            {
-            //////                //sheetname.Add(sheet.Name);
-            //////                data = ReadExcelFile(sheet.Name, path + fileName);
-            //////                dataSheets.Merge(data);
-            //////            }
+                        foreach (Microsoft.Office.Interop.Excel.Worksheet sheet in workbook.Sheets)
+                        {
+                            //sheetname.Add(sheet.Name);
+                            data = ReadExcelFile(sheet.Name, path + fileName);
+                            dataSheets.Merge(data);
+                        }
 
-            //////            //data = ReadExcelFile("Sheet1", path + fileName);
-            //////            filterTable = FilterFlightInfoData(dataSheets);
-            //////            ftable = filterTable;
-            //////            //count = ftable.Rows.Count;
+                        //data = ReadExcelFile("Sheet1", path + fileName);
+                        filterTable = FilterFlightInfoData(dataSheets);
+                        ftable = filterTable;
+                        //count = ftable.Rows.Count;
 
-            //////        }
-            //////        catch (Exception ex)
-            //////        {
-            //////            Console.WriteLine(ex);
-            //////        }
-            //////    }
-            //////    else if (fileExtension.Equals(".csv"))
-            //////    {
-            //////        try
-            //////        {
-            //////            string SaveLocation = path + fileName;
-            //////            DataTable csvData = GetDataTableFromCSVFile(SaveLocation);
-            //////            filterTable = FilterFlightInfoData(csvData);
-            //////            ftable = filterTable;
-            //////            //count = filterTable.Rows.Count;
-            //////        }
-            //////        catch (Exception ex)
-            //////        {
-            //////            Console.WriteLine(ex);
-            //////        }
-            //////    }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
+                }
+                else if (fileExtension.Equals(".csv"))
+                {
+                    try
+                    {
+                        string SaveLocation = path + fileName;
+                        DataTable csvData = GetDataTableFromCSVFile(SaveLocation);
+                        filterTable = FilterFlightInfoData(csvData);
+                        ftable = filterTable;
+                        //count = filterTable.Rows.Count;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
+                }
 
-            //////}
+            }
 
-            //////try
-            //////{
-            //////    count = ftable.Rows.Count;
-            //////    if (count > 0)
-            //////    {
-            //////        BLL.Flight.BulkInsertFlightInfo(ftable, getConstr.ConStrCMS);
+            try
+            {
+                count = ftable.Rows.Count;
+                if (count > 0)
+                {
+                    BLL.Flight.BulkInsertFlightInfo(ftable, getConstr.ConStrCMS);
 
-            //////        if (workbook != null)
-            //////        {
-            //////            workbook.Close(false);
-            //////            excelObj.Quit();
+                    if (workbook != null)
+                    {
+                        workbook.Close(false);
+                        excelObj.Quit();
 
-            //////            GC.Collect();
-            //////            GC.WaitForPendingFinalizers();
+                        GC.Collect();
+                        GC.WaitForPendingFinalizers();
 
-            //////            System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);
-            //////            System.Runtime.InteropServices.Marshal.ReleaseComObject(excelObj);
-            //////        }
+                        System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);
+                        System.Runtime.InteropServices.Marshal.ReleaseComObject(excelObj);
+                    }
 
-            //////        if (Directory.Exists(path))
-            //////        {
-            //////            // Directory.Delete(SaveLocation);
-            //////            File.Delete(path + "\\" + fileName);
-            //////        }
+                    if (Directory.Exists(path))
+                    {
+                        // Directory.Delete(SaveLocation);
+                        File.Delete(path + "\\" + fileName);
+                    }
 
-            //////        string script = "<script>alert('File successfully imported!.')</" + "script>";
-            //////        ClientScript.RegisterStartupScript(GetType(), "Alert", script);
+                    string script = "<script>alert('File successfully imported!.')</" + "script>";
+                    ClientScript.RegisterStartupScript(GetType(), "Alert", script);
 
-            //////        RadGrid2.DataSource = GetFlightDetails();
-            //////        RadGrid2.Rebind();
+                    RadGrid2.DataSource = GetFlightDetails();
+                    RadGrid2.Rebind();
 
-            //////    }
-            //////}
-            //////catch (Exception ex)
-            //////{
-            //////    Console.WriteLine(ex);
-            //////}
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
 
 
             //if (FileUploadFlightInfo.HasFile)
@@ -285,33 +286,33 @@ namespace CMSVersion2.Maintenance.FlightInformation
 
             //            string folderPath = Server.MapPath("~/Upload");
 
-            //            //Check whether Directory (Folder) exists.
+            //            Check whether Directory(Folder) exists.
             //            if (!Directory.Exists(folderPath))
             //            {
-            //                //If Directory (Folder) does not exists. Create it.
+            //                If Directory (Folder)does not exists.Create it.
             //                Directory.CreateDirectory(folderPath);
             //            }
 
             //            string SaveLocation = folderPath + "\\" + FileUploadFlightInfo.FileName;
-            //            //string SaveLocation = folderPath + Path.GetFileName(FileUploadFlightInfo.FileName);
-            //            // FileUploadFlightInfo.SaveAs(SaveLocation);
+            //            string SaveLocation = folderPath + Path.GetFileName(FileUploadFlightInfo.FileName);
+            //            FileUploadFlightInfo.SaveAs(SaveLocation);
 
-            //            //Save the File to the Directory (Folder).
+            //            Save the File to the Directory (Folder).
             //            FileUploadFlightInfo.SaveAs(SaveLocation);
 
             //            DataTable csvData = GetDataTableFromCSVFile(SaveLocation);
             //            DataTable filterTable = FilterFlightInfoData(csvData);
             //            int count = filterTable.Rows.Count;
-            //            if(count > 0)
+            //            if (count > 0)
             //            {
             //                BLL.Flight.BulkInsertFlightInfo(filterTable, getConstr.ConStrCMS);
 
-            //                //string script = "<script>CloseOnReload()</" + "script>";
-            //                //ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
+            //                string script = "<script>CloseOnReload()</" + "script>";
+            //                ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
 
             //                if (Directory.Exists(folderPath))
             //                {
-            //                    // Directory.Delete(SaveLocation);
+            //                    Directory.Delete(SaveLocation);
             //                    File.Delete(SaveLocation);
             //                }
 
@@ -326,7 +327,7 @@ namespace CMSVersion2.Maintenance.FlightInformation
 
 
             //        }
-            //        catch(Exception ex)
+            //        catch (Exception ex)
             //        {
             //            Console.WriteLine(ex);
             //        }
@@ -348,40 +349,40 @@ namespace CMSVersion2.Maintenance.FlightInformation
         public DataTable GetDataTableFromCSVFile(string csvFilePath)
         {
             DataTable csvData = new DataTable();
-            ////////try
-            ////////{
-            ////////    using (TextFieldParser csvReader = new TextFieldParser(csvFilePath))
-            ////////    {
-            ////////        csvReader.SetDelimiters(new string[] { "," });
-            ////////        csvReader.HasFieldsEnclosedInQuotes = true;
+            try
+            {
+                using (TextFieldParser csvReader = new TextFieldParser(csvFilePath))
+                {
+                    csvReader.SetDelimiters(new string[] { "," });
+                    csvReader.HasFieldsEnclosedInQuotes = true;
 
-            ////////        //read column names  
-            ////////        string[] colFields = csvReader.ReadFields();
-            ////////        foreach (string column in colFields)
-            ////////        {
-            ////////            DataColumn datacolumn = new DataColumn(column);
-            ////////            datacolumn.AllowDBNull = true;
-            ////////            csvData.Columns.Add(datacolumn);
-            ////////        }
+                    //read column names  
+                    string[] colFields = csvReader.ReadFields();
+                    foreach (string column in colFields)
+                    {
+                        DataColumn datacolumn = new DataColumn(column);
+                        datacolumn.AllowDBNull = true;
+                        csvData.Columns.Add(datacolumn);
+                    }
 
-            ////////        while (!csvReader.EndOfData)
-            ////////        {
-            ////////            string[] fieldData = csvReader.ReadFields();
-            ////////            string flightNo = fieldData[0];
-            ////////            string airlineName = fieldData[3];
-            ////////            string originCityName = fieldData[4];
-            ////////            string destinationCityName = fieldData[5];
-            ////////            DateTime ETD = Convert.ToDateTime(fieldData[1]);
-            ////////            DateTime ETA = Convert.ToDateTime(fieldData[2]);
+                    while (!csvReader.EndOfData)
+                    {
+                        string[] fieldData = csvReader.ReadFields();
+                        string flightNo = fieldData[0];
+                        string airlineName = fieldData[3];
+                        string originCityName = fieldData[4];
+                        string destinationCityName = fieldData[5];
+                        DateTime ETD = Convert.ToDateTime(fieldData[1]);
+                        DateTime ETA = Convert.ToDateTime(fieldData[2]);
 
-            ////////            csvData.Rows.Add(fieldData);
-            ////////        }
-            ////////    }
-            ////////}
-            ////////catch (Exception ex)
-            ////////{
-            ////////    Console.WriteLine(ex);
-            ////////}
+                        csvData.Rows.Add(fieldData);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
 
             return csvData;
         }

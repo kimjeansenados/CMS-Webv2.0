@@ -3,7 +3,21 @@
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+     <style type="text/css">
+        .alink{
+            text-decoration:none !important;
+            color:#c1c7ca !important;
+        }
 
+        .alink:hover{
+            text-decoration:none !important;
+            color:#c1c7ca !important;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
      <div id="wrapper">
         <div id="page-wrapper">
 
@@ -143,26 +157,29 @@
                                 </Columns>
 
                                 <CommandItemTemplate>    
+                                    <div class="center">
 
-                                         <a href="#" onclick="return ShowInsertForm();" >
+                                         <a href="#" onclick="return ShowInsertForm();" class="alink">
                                              <img src="../../Images/emblem.png" alt="Add Company" width="20">
                                              Add Series
                                          </a>
                                     |    
                                         
-                                        <a href="#" onclick="return ShowExportForm();">
+                                        <a href="#" onclick="return ShowExportForm();" class="alink">
                                             <img src="../../Images/emblem.png" alt="Print Preview" width="20">
                                             Print Preview
                                         </a>
                                     |
                    
                                  
-                                        <a href="" onclick="LoadRadGrid()" >
+                                        <a href="" onclick="LoadRadGrid()" class="alink">
                                             <img src="../../Images/emblem.png" alt="Export to Excel" width="20">
                                             Refresh Data
                                         </a>
                                         <asp:button id="btnSubmit" runat="server" text="Submit" xmlns:asp="#unknown"
                                             onclick="btnSubmit_Click" style="display:none" /> 
+                                    </div>
+                                        
 
                                     
                                        

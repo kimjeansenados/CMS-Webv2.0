@@ -33,6 +33,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -48,6 +49,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -227,16 +229,27 @@
     <Content Include="Content\full-slider.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Corporate\ApprovingAuthority.aspx" />
+    <Content Include="Corporate\ApprovingAuthorityModal\Edit.aspx" />
+    <Content Include="Corporate\ApprovingAuthorityModal\View.aspx" />
     <Content Include="Corporate\Company.aspx" />
+    <Content Include="Corporate\CompanyModal\Add.aspx" />
+    <Content Include="Corporate\CompanyModal\Edit.aspx" />
     <Content Include="Corporate\Representative.aspx" />
+    <Content Include="Corporate\RepresentativeModal\Add.aspx" />
+    <Content Include="Corporate\RepresentativeModal\Edit.aspx" />
+    <Content Include="Corporate\RepresentativeModal\View.aspx" />
     <Content Include="Corporate\StatementOfAccount.aspx" />
     <Content Include="Corporate\StatementOfAccountAdjustment\AddStatementOfAccountAdjustment.aspx" />
+    <Content Include="Corporate\StatementOfAccountPrint\StatementOfAccountPrint.aspx" />
     <Content Include="Customer\Customer.aspx" />
+    <Content Include="Error\UnderMaintenancePage.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <None Include="Properties\PublishProfiles\ApCargo.pubxml" />
+    <None Include="Properties\PublishProfiles\cms.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Images\APCARGO-Logo.jpg" />
     <Content Include="Images\emblem.png" />
@@ -330,9 +343,12 @@
     <Content Include="Maintenance\RateMatrix\RateMatrixEvent\Edit.aspx" />
     <Content Include="Maintenance\RateMatrix\RateMatrixEvent\Import.aspx" />
     <Content Include="Maintenance\TrackNTrace\TrackNTrace.aspx" />
+    <Content Include="Maintenance\TruckAreaManagement\TruckAreaManagement.aspx" />
     <Content Include="Report\AWBNoTracking.aspx" />
     <Content Include="Report\AWBDetailedTracking.aspx" />
-    <Content Include="Report\Finance\Collection.aspx" />
+    <Content Include="Report\AWBTracking\AWBTracking.aspx" />
+    <Content Include="Report\AWBTracking\AWBTrackingModal\ViewCargo.aspx" />
+    <Content Include="Report\Finance\Collections1.aspx" />
     <Content Include="Report\Finance\Sales\MasterSales.aspx" />
     <Content Include="Report\Finance\Sales\SalesPerBCO.aspx" />
     <Content Include="Report\Finance\Sales\SalesPerClient.aspx" />
@@ -353,6 +369,7 @@
     <Content Include="Report\Operation\Manifest\Reports\ReportViewer.aspx" />
     <Content Include="Report\Operation\Manifest\Segregation.aspx" />
     <Content Include="Report\Operation\Manifest\Unbundle.aspx" />
+    <Content Include="Report\ReportViewerForm1.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -397,7 +414,9 @@
     <Content Include="UserAccess\UserRole\UserRoleModal\AddUserRole.aspx" />
     <Content Include="UserAccess\UserRole\UserRoleModal\EditUserRole.aspx" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
@@ -584,6 +603,13 @@
     <Compile Include="Corporate\ApprovingAuthority.aspx.designer.cs">
       <DependentUpon>ApprovingAuthority.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Corporate\ApprovingAuthorityModal\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corporate\ApprovingAuthorityModal\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Corporate\Company.aspx.cs">
       <DependentUpon>Company.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -591,12 +617,40 @@
     <Compile Include="Corporate\Company.aspx.designer.cs">
       <DependentUpon>Company.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Corporate\CompanyModal\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corporate\CompanyModal\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corporate\CompanyModal\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corporate\CompanyModal\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Corporate\Representative.aspx.cs">
       <DependentUpon>Representative.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Corporate\Representative.aspx.designer.cs">
       <DependentUpon>Representative.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corporate\RepresentativeModal\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corporate\RepresentativeModal\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corporate\RepresentativeModal\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corporate\RepresentativeModal\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Corporate\StatementOfAccount.aspx.cs">
       <DependentUpon>StatementOfAccount.aspx</DependentUpon>
@@ -612,6 +666,13 @@
     <Compile Include="Corporate\StatementOfAccountAdjustment\AddStatementOfAccountAdjustment.aspx.designer.cs">
       <DependentUpon>AddStatementOfAccountAdjustment.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Corporate\StatementOfAccountPrint\StatementOfAccountPrint.aspx.cs">
+      <DependentUpon>StatementOfAccountPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corporate\StatementOfAccountPrint\StatementOfAccountPrint.aspx.designer.cs">
+      <DependentUpon>StatementOfAccountPrint.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Customer\Customer.aspx.cs">
       <DependentUpon>Customer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -625,6 +686,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error\UnderMaintenancePage.aspx.cs">
+      <DependentUpon>UnderMaintenancePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error\UnderMaintenancePage.aspx.designer.cs">
+      <DependentUpon>UnderMaintenancePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1252,7 +1320,16 @@
     <Compile Include="Maintenance\TrackNTrace\TrackNTrace.aspx.designer.cs">
       <DependentUpon>TrackNTrace.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Maintenance\TruckAreaManagement\TruckAreaManagement.aspx.cs">
+      <DependentUpon>TruckAreaManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\TruckAreaManagement\TruckAreaManagement.aspx.designer.cs">
+      <DependentUpon>TruckAreaManagement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\AppService.cs" />
+    <Compile Include="Models\AwbDetailsModel.cs" />
+    <Compile Include="Models\CompanyInformation.cs" />
     <Compile Include="Models\GlobalCode.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ReportGlobalModel.cs" />
@@ -1272,12 +1349,32 @@
     <Compile Include="Report\AWBDetailedTracking.aspx.designer.cs">
       <DependentUpon>AWBDetailedTracking.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Report\Finance\Collection.aspx.cs">
-      <DependentUpon>Collection.aspx</DependentUpon>
+    <Compile Include="Report\AWBTracking\AWBTracking.aspx.cs">
+      <DependentUpon>AWBTracking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Report\Finance\Collection.aspx.designer.cs">
-      <DependentUpon>Collection.aspx</DependentUpon>
+    <Compile Include="Report\AWBTracking\AWBTracking.aspx.designer.cs">
+      <DependentUpon>AWBTracking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\AWBTracking\AWBTrackingModal\ViewCargo.aspx.cs">
+      <DependentUpon>ViewCargo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\AWBTracking\AWBTrackingModal\ViewCargo.aspx.designer.cs">
+      <DependentUpon>ViewCargo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\Collections1.aspx.cs">
+      <DependentUpon>Collections1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\Collections1.aspx.designer.cs">
+      <DependentUpon>Collections1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\Collect\ReportCollection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\Collect\ReportCollection.Designer.cs">
+      <DependentUpon>ReportCollection.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\Finance\Sales\MasterSales.aspx.cs">
       <DependentUpon>MasterSales.aspx</DependentUpon>
@@ -1285,6 +1382,42 @@
     </Compile>
     <Compile Include="Report\Finance\Sales\MasterSales.aspx.designer.cs">
       <DependentUpon>MasterSales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\Sales\Reports\MasterSalesReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\Sales\Reports\MasterSalesReport.Designer.cs">
+      <DependentUpon>MasterSalesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\Sales\Reports\SalesPerBCOReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\Sales\Reports\SalesPerBCOReport.Designer.cs">
+      <DependentUpon>SalesPerBCOReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\Sales\Reports\SalesPerClientReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\Sales\Reports\SalesPerClientReport.Designer.cs">
+      <DependentUpon>SalesPerClientReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\Sales\Reports\SalesPerRevenueUnitReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\Sales\Reports\SalesPerRevenueUnitReport.Designer.cs">
+      <DependentUpon>SalesPerRevenueUnitReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\Sales\Reports\SalesPerShipmodeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\Sales\Reports\SalesPerShipmodeReport.Designer.cs">
+      <DependentUpon>SalesPerShipmodeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Finance\Sales\Reports\SalesPerUserLevelReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Finance\Sales\Reports\SalesPerUserLevelReport.Designer.cs">
+      <DependentUpon>SalesPerUserLevelReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\Finance\Sales\SalesPerBCO.aspx.cs">
       <DependentUpon>SalesPerBCO.aspx</DependentUpon>
@@ -1350,6 +1483,30 @@
     <Compile Include="Report\Operation\CargoMonitoring\Misrouted.aspx.designer.cs">
       <DependentUpon>Misrouted.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\DeliveredReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\DeliveredReport.Designer.cs" />
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\HoldReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\HoldReport.Designer.cs" />
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\MisroutedReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\MisroutedReport.Designer.cs" />
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\OffloadedReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\OffloadedReport.Designer.cs" />
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\PendingReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\PendingReport.Designer.cs" />
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\RUDReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\RUDReport.Designer.cs" />
     <Compile Include="Report\Operation\CargoMonitoring\Offloaded.aspx.cs">
       <DependentUpon>Offloaded.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1399,6 +1556,18 @@
     <Compile Include="Report\Operation\Manifest\Pickup.aspx.designer.cs">
       <DependentUpon>Pickup.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Report\Operation\Manifest\Reports\BranchAcceptance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\Reports\BranchAcceptance.Designer.cs" />
+    <Compile Include="Report\Operation\Manifest\Reports\BundleReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\Reports\BundleReport.Designer.cs" />
+    <Compile Include="Report\Operation\Manifest\Reports\DailyTripReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\Reports\DailyTripReport.Designer.cs" />
     <Compile Include="Report\Operation\Manifest\Reports\PickupReport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1412,6 +1581,14 @@
     <Compile Include="Report\Operation\Manifest\Reports\ReportViewer.aspx.designer.cs">
       <DependentUpon>ReportViewer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Report\Operation\Manifest\Reports\SegregationReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\Reports\SegregationReport.Designer.cs" />
+    <Compile Include="Report\Operation\Manifest\Reports\UnbundleReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\Reports\UnbundleReport.Designer.cs" />
     <Compile Include="Report\Operation\Manifest\Segregation.aspx.cs">
       <DependentUpon>Segregation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1425,6 +1602,19 @@
     </Compile>
     <Compile Include="Report\Operation\Manifest\Unbundle.aspx.designer.cs">
       <DependentUpon>Unbundle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Report1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Report1.Designer.cs">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportViewerForm1.aspx.cs">
+      <DependentUpon>ReportViewerForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportViewerForm1.aspx.designer.cs">
+      <DependentUpon>ReportViewerForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Settings\ManagePassword.aspx.cs">
       <DependentUpon>ManagePassword.aspx</DependentUpon>
@@ -1514,14 +1704,46 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Corporate\StatementOfAccountDetails\" />
-    <Folder Include="Maintenance\TruckAreaManagement\" />
+    <Folder Include="Upload\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Corporate\StatementOfAccountReport\SOAReport.resx" />
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Report\Finance\Collect\ReportCollection.resx">
+      <DependentUpon>ReportCollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\Sales\Reports\MasterSalesReport.resx">
+      <DependentUpon>MasterSalesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\Sales\Reports\SalesPerBCOReport.resx">
+      <DependentUpon>SalesPerBCOReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\Sales\Reports\SalesPerClientReport.resx">
+      <DependentUpon>SalesPerClientReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\Sales\Reports\SalesPerRevenueUnitReport.resx">
+      <DependentUpon>SalesPerRevenueUnitReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\Sales\Reports\SalesPerShipmodeReport.resx">
+      <DependentUpon>SalesPerShipmodeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Finance\Sales\Reports\SalesPerUserLevelReport.resx">
+      <DependentUpon>SalesPerUserLevelReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\DeliveredReport.resx" />
+    <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\HoldReport.resx" />
+    <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\MisroutedReport.resx" />
+    <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\OffloadedReport.resx" />
+    <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\PendingReport.resx" />
+    <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\RUDReport.resx" />
+    <EmbeddedResource Include="Report\Operation\Manifest\Reports\BranchAcceptance.resx" />
+    <EmbeddedResource Include="Report\Operation\Manifest\Reports\BundleReport.resx" />
+    <EmbeddedResource Include="Report\Operation\Manifest\Reports\DailyTripReport.resx" />
     <EmbeddedResource Include="Report\Operation\Manifest\Reports\PickupReport.resx">
       <DependentUpon>PickupReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\Operation\Manifest\Reports\SegregationReport.resx" />
+    <EmbeddedResource Include="Report\Operation\Manifest\Reports\UnbundleReport.resx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
@@ -1536,6 +1758,35 @@
       <Project>{1ea9e4c1-0c5f-4114-a917-7fae6c35ff15}</Project>
       <Name>Utilities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

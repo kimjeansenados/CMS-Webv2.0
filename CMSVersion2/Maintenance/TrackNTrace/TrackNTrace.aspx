@@ -35,7 +35,7 @@
     </div>
 
     <%-- BranchAcceptance - BATCH--%>
-    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwAdd_BA_Batch" Height="300px" Width="350px">
+    <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwAdd_BA_Batch" Height="300px" Width="400px">
     </telerik:RadWindow>
     <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwEdit_BA_Batch" Height="350px" Width="380px">
     </telerik:RadWindow>

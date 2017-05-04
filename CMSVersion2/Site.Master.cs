@@ -183,7 +183,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = text;
                 //anchor.Attributes.Add("onclick", "~/Portal/ManageUsers.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
                 Session["UserNameSession"] = usersession;
-                Response.Redirect("/Default.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+                Response.Redirect("~/Default.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
                 
             }
 
@@ -272,7 +272,7 @@ namespace CMSVersion2
                 string text = anchor.InnerText;
                 GlobalCode.menuName = text;
                 Session["UserNameSession"] = usersession;
-                Response.Redirect("~/Error/UnderMaintenance.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+                Response.Redirect("~/Error/UnderMaintenancePage.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
                 
             }
 
@@ -407,7 +407,7 @@ namespace CMSVersion2
                 string text = anchor.InnerText;
                 GlobalCode.menuName = text;
                 Session["UserNameSession"] = usersession;
-                Response.Redirect("~~/Error/UnderMaintenance.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+                Response.Redirect("~/Error/UnderMaintenancePage.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
                 
             }
 
@@ -490,8 +490,9 @@ namespace CMSVersion2
                 HtmlAnchor anchor = (HtmlAnchor)Page.Master.FindControl("Segregation");
                 string text = anchor.InnerText;
                 GlobalCode.menuName = text;
-                Response.Redirect("~/Report/Operation/Manifest/Segregation.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
                 Session["UserNameSession"] = EncryptedUsername;
+                Response.Redirect("~/Report/Operation/Manifest/Segregation.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+                
             }
 
         }
@@ -719,7 +720,7 @@ namespace CMSVersion2
                 //string text = anchor.InnerText;
                 GlobalCode.menuName = "Finance";
                 Session["UserNameSession"] = usersession;
-                Response.Redirect("~/Report/Finance/Collection.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+                Response.Redirect("~/Report/Finance/Collections1.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
                 
             }
 

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace CMSVersion2.Error
 {
-    public partial class UnderMaintenance : System.Web.UI.Page
+    public partial class UnderMaintenancePage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

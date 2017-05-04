@@ -40,7 +40,7 @@
         <%--<asp:ScriptManager ID="ScriptManager2" runat="server" />--%>
         <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" Skin="Default" DecoratedControls="All" />
         <%--<asp:Button runat="server" Text="Close" ID="CloseButton"     OnClick="CloseButton_Click1"/>--%>
-        <div class="main-login main-center">
+        <div class="main-login main-center" style="margin-left:80px;">
             <div class="form-horizontal">
 
 

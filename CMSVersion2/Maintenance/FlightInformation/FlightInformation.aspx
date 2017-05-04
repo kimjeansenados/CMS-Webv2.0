@@ -72,7 +72,7 @@
                                             Localization-Select="Import File"/>
                         
                         <telerik:RadButton ID="btnUpload" runat="server" Text="Upload" 
-                            Visible="false" OnClick="btnUpload_Click"></telerik:RadButton>
+                            style="display: none" OnClick="btnUpload_Click"></telerik:RadButton>
                          <%--<a href="#" onclick="return ShowInsertForm();" class="alink">
                                              <img src="../../Images/emblem.png" alt="Add Company" width="20">
                                              Add FlightInfo

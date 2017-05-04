@@ -35,7 +35,7 @@
 <form id="form1" runat="server">
         <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
         <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" Skin="Default" DecoratedControls="All" />
-      <div class="main-login main-center">
+      <div class="main-login main-center" style="margin-left:80px;margin-top:40px;">
             <div class="form-horizontal">
 
 
@@ -44,7 +44,6 @@
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
 
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
                             <asp:Label ID="lblStatusID" runat="server" Text="" Visible="false"></asp:Label>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtStatusName" Enabled="True" runat="server"></telerik:RadTextBox>

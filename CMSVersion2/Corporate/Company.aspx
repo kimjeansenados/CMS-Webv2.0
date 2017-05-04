@@ -3,7 +3,21 @@
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+     <style type="text/css">
+        .alink{
+            text-decoration:none !important;
+            color:#c1c7ca !important;
+        }
 
+        .alink:hover{
+            text-decoration:none !important;
+            color:#c1c7ca !important;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
     <div id="wrapper">
         <div id="page-wrapper">
 
@@ -133,8 +147,8 @@
                                 </Columns>
 
                                 <CommandItemTemplate>
-                                 
-                                         <a href="#" onclick="return ShowInsertForm();" class="alink">
+                                 <div class="center">
+                                     <a href="#" onclick="return ShowInsertForm();" class="alink">
                                              <img src="../images/emblem.png" alt="Add Company" width="20">
                                              Add Company
                                          </a>
@@ -154,6 +168,8 @@
                                         <asp:button id="btnSubmit" runat="server" text="Submit" xmlns:asp="#unknown"
                                             onclick="btnSubmit_Click" style="display:none" /> 
 
+                                 </div>
+                                         
                               
                                 </CommandItemTemplate>
 

@@ -5,8 +5,7 @@
     using CMSVersion2.Models;
     using CargoMonitoring.Reports;
     using Finance.Sales.Reports;
-    using Finance.Collection;
-    using Corporate.StatementOfAccountReport;
+    using Finance.Collect;
 
     public partial class ReportViewerForm1 : System.Web.UI.Page
     {
@@ -77,9 +76,9 @@
                     clientReportSource.Identifier = typeof(SalesPerUserLevelReport).AssemblyQualifiedName;
                     break;
 
-                //FINANCE -> COLLECTION
+                    //FINANCE->COLLECTION
                 case "Collection":
-                    clientReportSource.Identifier = typeof(CollectionReport).AssemblyQualifiedName;
+                    clientReportSource.Identifier = typeof(ReportCollection).AssemblyQualifiedName;
                     break;
 
 

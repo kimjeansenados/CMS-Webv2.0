@@ -121,11 +121,11 @@
                                             </a>
                                         |    
                                         
-                                        <a href="#"  onclick="return ShowExportForm();" class="alink">
+                                    <%--    <a href="#"  onclick="return ShowExportForm();" class="alink">
                                             <img src="../../Images/emblem.png" alt="Print Preview" width="20">
                                            Print Preview
                                             </a>
-       |
+       |--%>
                    
                                  
                                         <a href="" onclick="LoadRadGrid()" class="alink">
