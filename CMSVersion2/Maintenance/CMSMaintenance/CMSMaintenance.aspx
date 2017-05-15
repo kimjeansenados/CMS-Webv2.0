@@ -531,9 +531,9 @@
                     </div>
                     <div class="col-md-4">
 
-                        <telerik:RadButton ID="RadButton61" Skin="Glow" runat="server" Text="ADD"></telerik:RadButton>
-                        <telerik:RadButton ID="RadButton62" Skin="Glow" runat="server" Text="EDIT"></telerik:RadButton>
-                        <telerik:RadButton ID="RadButton63" Skin="Glow" runat="server" Text="DELETE"></telerik:RadButton>
+                        <telerik:RadButton ID="RadButton61" Skin="Glow" runat="server" Text="ADD" Enabled="false"></telerik:RadButton>
+                        <telerik:RadButton ID="RadButton62" Skin="Glow" runat="server" Text="EDIT" Enabled="false"></telerik:RadButton>
+                        <telerik:RadButton ID="RadButton63" Skin="Glow" runat="server" Text="DELETE" Enabled="false"></telerik:RadButton>
                     </div>
                     <br />
                     <br />

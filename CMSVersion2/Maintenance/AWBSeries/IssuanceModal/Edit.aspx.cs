@@ -30,7 +30,7 @@ namespace CMSVersion2.Maintenance.AWBSeries.InssuanceModal
                 else
                 {
                     string issueId = Request.QueryString["AwbIssuanceId"].ToString();
-                    System.Data.DataTable Data = GetAwbIssuanceInfor(new Guid(issueId));
+                    DataTable Data = GetAwbIssuanceInfor(new Guid(issueId));
                     int counter = 0;
                     foreach (DataRow row in Data.Rows)
                     {
@@ -38,9 +38,11 @@ namespace CMSVersion2.Maintenance.AWBSeries.InssuanceModal
                         {
                             try
                             {
-
-                                RadComboBoxItem bco = rdcBCO.FindItemByValue(row["BCOid"].ToString());
+                                string bcoid = row["BCOid"].ToString();
+                                RadComboBoxItem bco = rdcBCO.FindItemByValue(bcoid);
                                 bco.Selected = true;
+                                //RadComboBoxItem item = rdcBCO.FindItemByText(row["BCOid"].ToString());
+                                //item.Selected = true;
 
                                 string employee = row["IssuedToId"].ToString();
                                 if (employee == "")
@@ -49,8 +51,10 @@ namespace CMSVersion2.Maintenance.AWBSeries.InssuanceModal
                                 }
                                 else
                                 {
-                                    RadComboBoxItem emp = rcbName.FindItemByValue(row["IssuedToId"].ToString());
+                                    RadComboBoxItem emp = rcbName.FindItemByValue(employee);
                                     emp.Selected = true;
+                                    //RadComboBoxItem emp = rcbName.FindItemByText(row["IssuedToId"].ToString());
+                                    //emp.Selected = true;
                                 }
 
                                 string revUnit = row["RevenueUnitId"].ToString();
@@ -60,8 +64,10 @@ namespace CMSVersion2.Maintenance.AWBSeries.InssuanceModal
                                 }
                                 else
                                 {
-                                    RadComboBoxItem area = rdcArea.FindItemByValue(row["RevenueUnitId"].ToString());
+                                    RadComboBoxItem area = rdcArea.FindItemByValue(revUnit);
                                     area.Selected = true;
+                                    //RadComboBoxItem area = rdcArea.FindItemByText(row["RevenueUnitId"].ToString());
+                                    //area.Selected = true;
                                 }
 
                                 string issuedDate = row["IssueDate"].ToString();

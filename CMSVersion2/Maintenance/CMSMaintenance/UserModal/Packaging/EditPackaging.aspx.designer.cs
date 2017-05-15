@@ -58,6 +58,15 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.Packaging {
         protected global::Telerik.Web.UI.RadTextBox txtPackagingName;
         
         /// <summary>
+        /// RequiredFieldValidator_txtPackagingName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_txtPackagingName;
+        
+        /// <summary>
         /// txtMin control.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,15 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.Packaging {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtMin;
+        
+        /// <summary>
+        /// RequiredFieldValidator_txtMin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_txtMin;
         
         /// <summary>
         /// txtMax control.
@@ -76,6 +94,15 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.Packaging {
         protected global::Telerik.Web.UI.RadTextBox txtMax;
         
         /// <summary>
+        /// RequiredFieldValidator_ control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_;
+        
+        /// <summary>
         /// txtMinimumCost control.
         /// </summary>
         /// <remarks>
@@ -83,6 +110,15 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.Packaging {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtMinimumCost;
+        
+        /// <summary>
+        /// RequiredFieldValidator_txtMinimumCost control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_txtMinimumCost;
         
         /// <summary>
         /// txtExcessCost control.
@@ -94,6 +130,15 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.Packaging {
         protected global::Telerik.Web.UI.RadTextBox txtExcessCost;
         
         /// <summary>
+        /// RequiredFieldValidator_txtExcessCost control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_txtExcessCost;
+        
+        /// <summary>
         /// txtFactor control.
         /// </summary>
         /// <remarks>
@@ -101,6 +146,15 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.Packaging {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtFactor;
+        
+        /// <summary>
+        /// RequiredFieldValidator_txtFactor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_txtFactor;
         
         /// <summary>
         /// btnSave control.

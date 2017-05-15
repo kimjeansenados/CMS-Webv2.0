@@ -61,8 +61,9 @@ namespace CMSVersion2.Report.Operation.Manifest
                 AreaStr = Area.SelectedItem.Text.ToString();
                 DateStr = Date.SelectedDate.Value.ToString("dd MMM yyyy");
             }   
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex);
                 DateStr = "";
             }
             DataSet data = BLL.Report.DailyTripReport.GetDailyTrip(getConstr.ConStrCMS, DateStr, AreaStr, BCOStr);

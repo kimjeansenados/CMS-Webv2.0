@@ -104,10 +104,20 @@ namespace CMSVersion2
                         FormCookies(roleName);
                         foreach (string access in listofMenuAccess)
                         {
-                            // if (listofMenuAccess.IndexOf(access) == 0)
-                            if (access.Equals("Dashboard"))
+                            //if (listofMenuAccess.IndexOf(access) == 0)
+                            //if (access.Equals("Dashboard"))
+                            // {
+                            //     firstAccess = access;
+                            // }
+                            if (listofMenuAccess.Contains("Dashboard"))
+                            {
+                                firstAccess = "Dashboard";
+                                break;
+                            }
+                            else
                             {
                                 firstAccess = access;
+                                break;
                             }
                         }
 
@@ -128,7 +138,17 @@ namespace CMSVersion2
                         {
 
                             BLL.UserRole.UpdateLoginDate(Login1.UserName, getConstr.ConStrCMS);
-                            Response.Redirect("~/Default.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+                            string result = BLL.UserRole.MenuFirstAccess(firstAccess, getConstr.ConStrCMS);
+                            if (result.Equals("NONE"))
+                            {
+                                Response.Redirect("~/Settings/ManagePassword.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+                            }
+                            else
+                            {
+                                string port = result + "?PortalID=";
+                                Response.Redirect(port + Encoding.Unicode.GetString(EncryptedUsername));
+                            }
+                            //Response.Redirect("~/Default.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
 
                         }
                     }
@@ -177,7 +197,19 @@ namespace CMSVersion2
                             }
                             else
                             {
-                                Response.Redirect("~/Default.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+                                //Response.Redirect("~/Default.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+                                //Response.Redirect("~/Settings/ManagePassword.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+                                string result = BLL.UserRole.MenuFirstAccess(firstAccess, getConstr.ConStrCMS);
+                                if(result.Equals("NONE"))
+                                {
+                                    Response.Redirect("~/Settings/ManagePassword.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+                                }
+                                else
+                                {
+                                    string port = result + "?PortalID=";
+                                    Response.Redirect(port + Encoding.Unicode.GetString(EncryptedUsername));
+                                }
+                                
                             }
                         }
                     }

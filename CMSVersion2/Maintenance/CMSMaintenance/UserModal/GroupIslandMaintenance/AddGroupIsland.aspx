@@ -47,7 +47,11 @@
                         <div class="input-group" style="font-size: 12px">
                             <asp:Label ID="lblGroupID" runat="server" Text="" Visible="false"></asp:Label>
                             <telerik:RadTextBox  Width="190px" RenderMode="Mobile" ID="txtIslandGroup" Enabled="True" runat="server"></telerik:RadTextBox>
-
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator_Group" runat="server"
+                                    ControlToValidate="txtIslandGroup"
+                                    ErrorMessage="*"
+                                    ForeColor="Red">
+                                </asp:RequiredFieldValidator>
                         </div>
                         <br />
                         <telerik:RadButton ID="btnSave" runat="server" Skin="Glow" Text="Save" OnClick="btnSave_Click" OnClientClicked=""></telerik:RadButton>

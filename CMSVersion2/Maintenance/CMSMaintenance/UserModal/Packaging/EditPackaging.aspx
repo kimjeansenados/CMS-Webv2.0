@@ -54,7 +54,11 @@
                             <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
                             <asp:Label ID="lblPackagingId" runat="server" Text="" Visible="false"></asp:Label>
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtPackagingName" Enabled="True" runat="server"></telerik:RadTextBox>
-
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator_txtPackagingName" runat="server"
+                                    ControlToValidate="txtFactor"
+                                    ErrorMessage="*"
+                                    ForeColor="Red">
+                                </asp:RequiredFieldValidator>
                         </div>
                         <br />
 
@@ -67,7 +71,11 @@
                             <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtMin" Enabled="True" runat="server"></telerik:RadTextBox>
-
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator_txtMin" runat="server"
+                                    ControlToValidate="txtMin"
+                                    ErrorMessage="*"
+                                    ForeColor="Red">
+                                </asp:RequiredFieldValidator>
                         </div>
                         <br />
 
@@ -80,7 +88,11 @@
                             <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtMax" Enabled="True" runat="server"></telerik:RadTextBox>
-
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator_" runat="server"
+                                    ControlToValidate="txtMax"
+                                    ErrorMessage="*"
+                                    ForeColor="Red">
+                                </asp:RequiredFieldValidator>
                         </div>
                         <br />
 
@@ -93,7 +105,11 @@
                             <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtMinimumCost" Enabled="True" runat="server"></telerik:RadTextBox>
-
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator_txtMinimumCost" runat="server"
+                                    ControlToValidate="txtMinimumCost"
+                                    ErrorMessage="*"
+                                    ForeColor="Red">
+                                </asp:RequiredFieldValidator>
                         </div>
                         <br />
 
@@ -106,7 +122,11 @@
                             <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtExcessCost" Enabled="True" runat="server"></telerik:RadTextBox>
-
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator_txtExcessCost" runat="server"
+                                    ControlToValidate="txtExcessCost"
+                                    ErrorMessage="*"
+                                    ForeColor="Red">
+                                </asp:RequiredFieldValidator>
                         </div>
                         <br />
 
@@ -122,7 +142,11 @@
                             <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
                             
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtFactor" Enabled="True" runat="server"></telerik:RadTextBox>
-
+                              <asp:RequiredFieldValidator ID="RequiredFieldValidator_txtFactor" runat="server"
+                                    ControlToValidate="txtFactor"
+                                    ErrorMessage="*"
+                                    ForeColor="Red">
+                                </asp:RequiredFieldValidator>
 
                         </div>
 

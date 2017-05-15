@@ -229,11 +229,13 @@
     <Content Include="Content\full-slider.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Corporate\ApprovingAuthority.aspx" />
+    <Content Include="Corporate\ApprovingAuthorityModal\Add.aspx" />
     <Content Include="Corporate\ApprovingAuthorityModal\Edit.aspx" />
     <Content Include="Corporate\ApprovingAuthorityModal\View.aspx" />
     <Content Include="Corporate\Company.aspx" />
     <Content Include="Corporate\CompanyModal\Add.aspx" />
     <Content Include="Corporate\CompanyModal\Edit.aspx" />
+    <Content Include="Corporate\Reports\CompanyExportPreview.aspx" />
     <Content Include="Corporate\Representative.aspx" />
     <Content Include="Corporate\RepresentativeModal\Add.aspx" />
     <Content Include="Corporate\RepresentativeModal\Edit.aspx" />
@@ -603,12 +605,26 @@
     <Compile Include="Corporate\ApprovingAuthority.aspx.designer.cs">
       <DependentUpon>ApprovingAuthority.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Corporate\ApprovingAuthorityModal\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corporate\ApprovingAuthorityModal\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Corporate\ApprovingAuthorityModal\Edit.aspx.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Corporate\ApprovingAuthorityModal\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corporate\ApprovingAuthorityModal\View.aspx.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corporate\ApprovingAuthorityModal\View.aspx.designer.cs">
+      <DependentUpon>View.aspx</DependentUpon>
     </Compile>
     <Compile Include="Corporate\Company.aspx.cs">
       <DependentUpon>Company.aspx</DependentUpon>
@@ -631,6 +647,13 @@
     <Compile Include="Corporate\CompanyModal\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Corporate\Reports\CompanyExportPreview.aspx.cs">
+      <DependentUpon>CompanyExportPreview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corporate\Reports\CompanyExportPreview.aspx.designer.cs">
+      <DependentUpon>CompanyExportPreview.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Corporate\Representative.aspx.cs">
       <DependentUpon>Representative.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -651,6 +674,13 @@
     </Compile>
     <Compile Include="Corporate\RepresentativeModal\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corporate\RepresentativeModal\View.aspx.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corporate\RepresentativeModal\View.aspx.designer.cs">
+      <DependentUpon>View.aspx</DependentUpon>
     </Compile>
     <Compile Include="Corporate\StatementOfAccount.aspx.cs">
       <DependentUpon>StatementOfAccount.aspx</DependentUpon>

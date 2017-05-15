@@ -58,6 +58,15 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.PaymentTerm {
         protected global::Telerik.Web.UI.RadTextBox txtBox;
         
         /// <summary>
+        /// RequiredFieldValidator_txtBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_txtBox;
+        
+        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -74,6 +83,15 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.PaymentTerm {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtNoOfDays;
+        
+        /// <summary>
+        /// RequiredFieldValidator_txtNoOfDays control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_txtNoOfDays;
         
         /// <summary>
         /// btnSave control.

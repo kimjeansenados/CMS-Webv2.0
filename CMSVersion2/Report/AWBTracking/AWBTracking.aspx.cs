@@ -52,7 +52,7 @@ namespace CMSVersion2.Shipment
 
         public DataTable GetDetailsAwbNoInformation(string awbNo)
         {
-            DataSet data = BLL.AirwayBill.GetDetailsAwbNo(awbNo, getConstr.ConStrCMS);
+            DataSet data = BLL.AirwayBill.GetDetailsAwbNo(awbNo,2, getConstr.ConStrCMS);
             DataTable convertdata = new DataTable();
             convertdata = data.Tables[0];
             awbData = awbDatatable(convertdata);

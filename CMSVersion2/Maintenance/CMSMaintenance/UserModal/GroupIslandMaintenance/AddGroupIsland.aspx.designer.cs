@@ -58,6 +58,15 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.GroupIslandMaintenanc
         protected global::Telerik.Web.UI.RadTextBox txtIslandGroup;
         
         /// <summary>
+        /// RequiredFieldValidator_Group control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_Group;
+        
+        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>

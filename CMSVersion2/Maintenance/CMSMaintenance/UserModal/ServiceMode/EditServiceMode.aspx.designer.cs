@@ -58,6 +58,15 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.ServiceMode {
         protected global::Telerik.Web.UI.RadTextBox txtServiceModeName;
         
         /// <summary>
+        /// RequiredFieldValidator_txtServiceModeName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_txtServiceModeName;
+        
+        /// <summary>
         /// txtServiceModeCode control.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,15 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.ServiceMode {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtServiceModeCode;
+        
+        /// <summary>
+        /// RequiredFieldValidator_txtServiceModeCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_txtServiceModeCode;
         
         /// <summary>
         /// btnSave control.

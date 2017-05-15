@@ -61,11 +61,7 @@
                             <asp:Label ID="Label1" runat="server" Text="" Visible="false"></asp:Label>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtCityCode" Enabled="True" runat="server"></telerik:RadTextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
-                                ControlToValidate="txtCityCode"
-                                ErrorMessage="*"
-                                ForeColor="Red">
-                            </asp:RequiredFieldValidator>
+                            
                         </div>
                         <br />
                          <label for="email" class="cols-sm-2 control-label" style="font-style:normal">City Name</label>

@@ -101,143 +101,246 @@ namespace CMSVersion2.Maintenance.CMSMaintenance
 
         private void LoadGroupIslands()
         {
-            rcbIslandGroup.DataSource = BLL.IslandGroup.GetIslandGroup(getConstr.ConStrCMS);
+            DataTable data = BLL.IslandGroup.GetIslandGroup(getConstr.ConStrCMS).Tables[0];
+            rcbIslandGroup.DataSource = data;
             rcbIslandGroup.DataValueField = "GroupId";
             rcbIslandGroup.DataTextField = "GroupName";
             rcbIslandGroup.DataBind();
+
+            if(data.Rows.Count == 0)
+            {
+                btnIslandEdit.Enabled = false;
+                btnIslandDelete.Enabled = false;
+            }
         }
         private void LoadRegion()
         {
-            rcbRegion.DataSource = BLL.Region.GetRegion(getConstr.ConStrCMS);
+            DataTable data = BLL.Region.GetRegion(getConstr.ConStrCMS).Tables[0];
+            rcbRegion.DataSource = data;
             rcbRegion.DataValueField = "RegionId";
             rcbRegion.DataTextField = "RegionName";
             rcbRegion.DataBind();
+
+            if (data.Rows.Count == 0)
+            {
+                btnRegionEdit.Enabled = false;
+                btnRegionDelete.Enabled = false;
+            }
         }
 
         private void LoadProvince()
         {
-            rcbProvince.DataSource = BLL.Province.GetProvince(getConstr.ConStrCMS);
+            DataTable data = BLL.Province.GetProvince(getConstr.ConStrCMS).Tables[0];
+            rcbProvince.DataSource = data;
             rcbProvince.DataValueField = "ProvinceId";
             rcbProvince.DataTextField = "ProvinceName";
             rcbProvince.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                btnProvinceEdit.Enabled = false;
+                btnProvinceDelete.Enabled = false;
+            }
+
         }
 
         private void LoadBranchCorpOffice()
         {
-            rcbBranchCorpOffice.DataSource = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
+            DataTable data = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS).Tables[0];
+            rcbBranchCorpOffice.DataSource = data;
             rcbBranchCorpOffice.DataValueField = "BranchCorpOfficeId";
             rcbBranchCorpOffice.DataTextField = "BranchCorpOfficeName";
             rcbBranchCorpOffice.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                btnBranchCorpEdit.Enabled = false;
+                btnBranchCorpDelete.Enabled = false;
+            }
         }
 
         private void LoadCluster()
         {
-            rcbCluster.DataSource = BLL.Cluster.GetCluster(getConstr.ConStrCMS);
+            DataTable data = BLL.Cluster.GetCluster(getConstr.ConStrCMS).Tables[0];
+            rcbCluster.DataSource = data;
             rcbCluster.DataValueField = "ClusterId";
             rcbCluster.DataTextField = "ClusterName";
             rcbCluster.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                btnClusterEdit.Enabled = false;
+                btnClusterDelete.Enabled = false;
+            }
         }
 
         private void LoadCity()
         {
-            rcbCity.DataSource = BLL.City.GetCity(getConstr.ConStrCMS);
+            DataTable data = BLL.City.GetCity(getConstr.ConStrCMS).Tables[0];
+            rcbCity.DataSource = data;
             rcbCity.DataValueField = "CityId";
             rcbCity.DataTextField = "CityName";
             rcbCity.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                btnCityEdit.Enabled = false;
+                btnCityDelete.Enabled = false;
+            }
         }
 
         private void LoadArea()
         {
-            rcbArea.DataSource = BLL.Area.GetArea(getConstr.ConStrCMS);
+            DataTable data = BLL.Area.GetArea(getConstr.ConStrCMS).Tables[0];
+            rcbArea.DataSource = data;
             rcbArea.DataValueField = "RevenueUnitId";
             rcbArea.DataTextField = "RevenueUnitName";
             rcbArea.DataBind();
-        }
-
-        private void GetGateway()
-        {
-
-            rcbGatewayOffice.DataSource = BLL.Gateway.GetGateway(getConstr.ConStrCMS);
-            rcbGatewayOffice.DataValueField = "RevenueUnitId";
-            rcbGatewayOffice.DataTextField = "RevenueUnitName";
-            rcbGatewayOffice.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                btnAreaEdit.Enabled = false;
+                btnAreaDelete.Enabled = false;
+            }
         }
 
         private void GetBranch()
         {
-            rcbBranchSatOffice.DataSource = BLL.Branch.GetBranch(getConstr.ConStrCMS);
+            DataTable data = BLL.Branch.GetBranch(getConstr.ConStrCMS).Tables[0];
+            rcbBranchSatOffice.DataSource = data;
             rcbBranchSatOffice.DataValueField = "RevenueUnitId";
             rcbBranchSatOffice.DataTextField = "RevenueUnitName";
             rcbBranchSatOffice.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                btnBranchSatOfficeEDIT.Enabled = false;
+                btnBranchSatOfficeDelete.Enabled = false;
+            }
         }
+
+        private void GetGateway()
+        {
+            DataTable data = BLL.Gateway.GetGateway(getConstr.ConStrCMS).Tables[0];
+            rcbGatewayOffice.DataSource = data;
+            rcbGatewayOffice.DataValueField = "RevenueUnitId";
+            rcbGatewayOffice.DataTextField = "RevenueUnitName";
+            rcbGatewayOffice.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                btnGatewayOfficeEDIT.Enabled = false;
+                btnGatewayOfficeDELETE.Enabled = false;
+            }
+        }
+
+       
 
         private void LoadRevenueType()
         {
-            rcbRevenue.DataSource = BLL.Revenue_Info.getRevenueType(getConstr.ConStrCMS);
+            DataTable data = BLL.Revenue_Info.getRevenueType(getConstr.ConStrCMS).Tables[0];
+            rcbRevenue.DataSource = data;
             rcbRevenue.DataValueField = "RevenueUnitTypeId";
             rcbRevenue.DataTextField = "RevenueUnitTypeName";
             rcbRevenue.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                btnRevenueEdit.Enabled = false;
+                btnRevenueDelete.Enabled = false;
+            }
         }
 
 
         private void LoadApplicableRate()
         {
-
-
-            rcbApplicableRate.DataSource = BLL.ApplicableRate.GetApplicableRate(getConstr.ConStrCMS);
+            DataTable data = BLL.ApplicableRate.GetApplicableRate(getConstr.ConStrCMS).Tables[0];
+            rcbApplicableRate.DataSource = data;
             rcbApplicableRate.DataValueField = "ApplicableRateId";
             rcbApplicableRate.DataTextField = "ApplicableRateName";
             rcbApplicableRate.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                btnApplicableRateEdit.Enabled = false;
+                btnApplicableRateDelete.Enabled = false;
+            }
         }
         private void LoadCommodity()
         {
-            rcbCommodity.DataSource = BLL.Commodity.GetCommodity(getConstr.ConStrCMS);
+            DataTable data = BLL.Commodity.GetCommodity(getConstr.ConStrCMS).Tables[0];
+            rcbCommodity.DataSource = data;
             rcbCommodity.DataValueField = "CommodityId";
             rcbCommodity.DataTextField = "CommodityName";
             rcbCommodity.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                btnCommodityEdit.Enabled = false;
+                btnCommodityDelete.Enabled = false;
+            }
         }
 
         private void LoadCommodityType()
         {
-            rcbCommodityType.DataSource = BLL.CommodityType.GetCommodityType(getConstr.ConStrCMS);
+            DataTable data = BLL.CommodityType.GetCommodityType(getConstr.ConStrCMS).Tables[0];
+            rcbCommodityType.DataSource = data;
             rcbCommodityType.DataValueField = "CommodityTypeId";
             rcbCommodityType.DataTextField = "CommodityTypeName";
             rcbCommodityType.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                btnCommodityTypeEdit.Enabled = false;
+                btnCommodityTypeDelete.Enabled = false;
+            }
         }
 
 
         private void LoadGoodsDescription()
         {
-
-            rcbGoodsDescription.DataSource = BLL.GoodsDescription.GetGoodsDescription(getConstr.ConStrCMS);
+            DataTable data = BLL.GoodsDescription.GetGoodsDescription(getConstr.ConStrCMS).Tables[0];
+            rcbGoodsDescription.DataSource = data;
             rcbGoodsDescription.DataValueField = "GoodsDescriptionId";
             rcbGoodsDescription.DataTextField = "GoodsDescriptionName";
             rcbGoodsDescription.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                btnGoodsDescEdit.Enabled = false;
+                btnGoodsDescDelete.Enabled = false;
+            }
         }
 
         private void LoadShipmentBasicFee()
         {
-            rcbShipmentBasicFee.DataSource = BLL.ShipmentBasicFee.GetShipmentBasicFee(getConstr.ConStrCMS);
+            DataTable data = BLL.ShipmentBasicFee.GetShipmentBasicFee(getConstr.ConStrCMS).Tables[0];
+            rcbShipmentBasicFee.DataSource = data;
             rcbShipmentBasicFee.DataValueField = "ShipmentBasicFeeId";
             rcbShipmentBasicFee.DataTextField = "ShipmentFeeName";
             rcbShipmentBasicFee.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                btnSBFEdit.Enabled = false;
+                btnSBFDelete.Enabled = false;
+            }
         }
 
 
         private void LoadCrating()
         {
-            rcbCrating.DataSource = BLL.Crating.GetCrating(getConstr.ConStrCMS);
+            DataTable data = BLL.Crating.GetCrating(getConstr.ConStrCMS).Tables[0];
+            rcbCrating.DataSource = data;
             rcbCrating.DataValueField = "CratingId";
             rcbCrating.DataTextField = "CratingName";
             rcbCrating.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                btnCratingEdit.Enabled = false;
+                btnCratingDelete.Enabled = false;
+            }
         }
 
         private void LoadPackaging()
         {
-            rcbPackaging.DataSource = BLL.Packaging.GetPackaging(getConstr.ConStrCMS);
+            DataTable data = BLL.Packaging.GetPackaging(getConstr.ConStrCMS).Tables[0];
+            rcbPackaging.DataSource = data;
             rcbPackaging.DataValueField = "PackagingId";
             rcbPackaging.DataTextField = "PackagingName";
             rcbPackaging.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                btnPackagingEdit.Enabled = false;
+                btnPackagingDelete.Enabled = false;
+            }
         }
 
         private void TransShipmentRoutes()
@@ -250,135 +353,216 @@ namespace CMSVersion2.Maintenance.CMSMaintenance
 
         private void ServiceType()
         {
-            rcbServiceType.DataSource = BLL.ServiceType.GetServiceType(getConstr.ConStrCMS);
+            DataTable data = BLL.ServiceType.GetServiceType(getConstr.ConStrCMS).Tables[0];
+            rcbServiceType.DataSource = data;
             rcbServiceType.DataValueField = "ServiceTypeId";
             rcbServiceType.DataTextField = "ServiceTypeName";
             rcbServiceType.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                btnServiceTypeEdit.Enabled = false;
+                btnServiceTypeDelete.Enabled = false;
+            }
         }
 
         private void ServiceMode()
         {
-            rcbServiceMode.DataSource = BLL.ServiceMode.GetServiceMode(getConstr.ConStrCMS);
+            DataTable data = BLL.ServiceMode.GetServiceMode(getConstr.ConStrCMS).Tables[0];
+            rcbServiceMode.DataSource = data;
             rcbServiceMode.DataValueField = "ServiceModeId";
             rcbServiceMode.DataTextField = "ServiceModeName";
             rcbServiceMode.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                btnServiceModeEdit.Enabled = false;
+                btnServiceModeDelete.Enabled = false;
+            }
         }
 
         private void PaymentMode()
         {
-            rcbPaymentMode.DataSource = BLL.PaymentMode.GetPaymentMode(getConstr.ConStrCMS);
+            DataTable data = BLL.PaymentMode.GetPaymentMode(getConstr.ConStrCMS).Tables[0];
+            rcbPaymentMode.DataSource = data;
             rcbPaymentMode.DataValueField = "PaymentModeId";
             rcbPaymentMode.DataTextField = "PaymentModeName";
             rcbPaymentMode.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                RadButton26.Enabled = false;
+                RadButton27.Enabled = false;
+            }
         }
 
         private void PaymentTerm()
         {
-            rcbPaymentTerm.DataSource = BLL.PaymentTerm.GetPaymentTerm(getConstr.ConStrCMS);
+            DataTable data = BLL.PaymentTerm.GetPaymentTerm(getConstr.ConStrCMS).Tables[0];
+            rcbPaymentTerm.DataSource = data;
             rcbPaymentTerm.DataValueField = "PaymentTermId";
             rcbPaymentTerm.DataTextField = "PaymentTermName";
             rcbPaymentTerm.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                RadButton29.Enabled = false;
+                RadButton30.Enabled = false;
+            }
         }
 
         private void ShipMode()
         {
-
-            rcbShipMode.DataSource = BLL.ShipMode.GetShipMode(getConstr.ConStrCMS);
+            DataTable data = BLL.ShipMode.GetShipMode(getConstr.ConStrCMS).Tables[0];
+            rcbShipMode.DataSource = data;
             rcbShipMode.DataValueField = "ShipModeId";
             rcbShipMode.DataTextField = "ShipModeName";
             rcbShipMode.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                RadButton32.Enabled = false;
+                RadButton33.Enabled = false;
+            }
 
         }
 
         private void BookingStatus()
         {
-
-            rcbBookingStatus.DataSource = BLL.BookingStatus.GetBookingStatus(getConstr.ConStrCMS);
+            DataTable data = BLL.BookingStatus.GetBookingStatus(getConstr.ConStrCMS).Tables[0];
+            rcbBookingStatus.DataSource = data;
             rcbBookingStatus.DataValueField = "BookingStatusId";
             rcbBookingStatus.DataTextField = "BookingStatusName";
             rcbBookingStatus.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                RadButton35.Enabled = false;
+                RadButton36.Enabled = false;
+            }
         }
 
         private void BookingRemark()
         {
-
-            rcbBookingRemarks.DataSource = BLL.BookingRemark.GetBookingRemark(getConstr.ConStrCMS);
+            DataTable data = BLL.BookingRemark.GetBookingRemark(getConstr.ConStrCMS).Tables[0];
+            rcbBookingRemarks.DataSource = data;
             rcbBookingRemarks.DataValueField = "BookingRemarkId";
             rcbBookingRemarks.DataTextField = "BookingRemarkName";
             rcbBookingRemarks.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                RadButton38.Enabled = false;
+                RadButton39.Enabled = false;
+            }
         }
 
         private void DeliveryStatus()
         {
-
-            rcbDeliveryStatus.DataSource = BLL.DeliveryStatus.GetDeliveryStatus(getConstr.ConStrCMS);
+            DataTable data = BLL.DeliveryStatus.GetDeliveryStatus(getConstr.ConStrCMS).Tables[0];
+            rcbDeliveryStatus.DataSource = data;
             rcbDeliveryStatus.DataValueField = "DeliveryStatusId";
             rcbDeliveryStatus.DataTextField = "DeliveryStatusName";
             rcbDeliveryStatus.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                RadButton41.Enabled = false;
+                RadButton42.Enabled = false;
+            }
         }
 
         private void DeliveryRemarks()
         {
-
-            rcbDeliverRemark.DataSource = BLL.DeliveryRemarks.GetDeliveryRemarks(getConstr.ConStrCMS);
+            DataTable data = BLL.DeliveryRemarks.GetDeliveryRemarks(getConstr.ConStrCMS).Tables[0];
+            rcbDeliverRemark.DataSource = data;
             rcbDeliverRemark.DataValueField = "DeliveryRemarkId";
             rcbDeliverRemark.DataTextField = "DeliveryRemarkName";
             rcbDeliverRemark.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                RadButton44.Enabled = false;
+                RadButton45.Enabled = false;
+            }
         }
 
         private void LoadAccountType()
         {
-
-            rcbAccountType.DataSource = BLL.AccountType.GetAccountType(getConstr.ConStrCMS);
+            DataTable data = BLL.AccountType.GetAccountType(getConstr.ConStrCMS).Tables[0];
+            rcbAccountType.DataSource = data;
             rcbAccountType.DataValueField = "AccountTypeId";
             rcbAccountType.DataTextField = "AccountTypeName";
             rcbAccountType.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                RadButton47.Enabled = false;
+                RadButton48.Enabled = false;
+            }
         }
 
         private void LoadAccountStatus()
         {
-
-            rcbAccountStatus.DataSource = BLL.AccountStatus.GetAccountStatus(getConstr.ConStrCMS);
+            DataTable data = BLL.AccountStatus.GetAccountStatus(getConstr.ConStrCMS).Tables[0];
+            rcbAccountStatus.DataSource = data;
             rcbAccountStatus.DataValueField = "AccountStatusId";
             rcbAccountStatus.DataTextField = "AccountStatusName";
             rcbAccountStatus.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                RadButton50.Enabled = false;
+                RadButton51.Enabled = false;
+            }
         }
 
         private void LoadBusinessType()
         {
-
-            rcbBusinessType.DataSource = BLL.BusinessType.GetBusinessType(getConstr.ConStrCMS);
+            DataTable data = BLL.BusinessType.GetBusinessType(getConstr.ConStrCMS).Tables[0];
+            rcbBusinessType.DataSource = data;
             rcbBusinessType.DataValueField = "BusinessTypeId";
             rcbBusinessType.DataTextField = "BusinessTypeName";
             rcbBusinessType.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                RadButton53.Enabled = false;
+                RadButton54.Enabled = false;
+            }
         }
 
 
         private void LoadOrganizationType()
         {
-
-            rcbOrganizationType.DataSource = BLL.OrganizationType.GetOrganizationType(getConstr.ConStrCMS);
+            DataTable data = BLL.OrganizationType.GetOrganizationType(getConstr.ConStrCMS).Tables[0];
+            rcbOrganizationType.DataSource = data;
             rcbOrganizationType.DataValueField = "OrganizationTypeId";
             rcbOrganizationType.DataTextField = "OrganizationTypeName";
             rcbOrganizationType.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                RadButton56.Enabled = false;
+                RadButton57.Enabled = false;
+            }
         }
 
         private void LoadIndustry()
         {
-
-
-            rcbIndustry.DataSource = BLL.Industry.GetIndustry(getConstr.ConStrCMS);
+            DataTable data = BLL.Industry.GetIndustry(getConstr.ConStrCMS).Tables[0];
+            rcbIndustry.DataSource = data;
             rcbIndustry.DataValueField = "IndustryId";
             rcbIndustry.DataTextField = "IndustryName";
             rcbIndustry.DataBind();
+
+            if(data.Rows.Count == 0)
+            {
+                RadButton59.Enabled = false;
+                RadButton60.Enabled = false;
+            }
+           
         }
 
         private void LoadBillingPeriod()
         {
-            rcbBillingPeriod.DataSource = BLL.BillingPeriod.GetBillingPeriod(getConstr.ConStrCMS);
+            DataTable data = BLL.BillingPeriod.GetBillingPeriod(getConstr.ConStrCMS).Tables[0];
+            rcbBillingPeriod.DataSource = data;
             rcbBillingPeriod.DataValueField = "BillingPeriodId";
             rcbBillingPeriod.DataTextField = "BillingPeriodName";
             rcbBillingPeriod.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                RadButton62.Enabled = false;
+                RadButton63.Enabled = false;
+            }
         }
 
         #endregion

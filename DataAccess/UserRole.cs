@@ -444,6 +444,34 @@ namespace DataAccess
 
         }
 
-       
+        //First Access
+        public static string MenuFirstAccess(string access, string conStr)
+        {
+
+            string output = "";
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_view_FirstAccess", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@menu", SqlDbType.NVarChar, 500).Value = access;
+                    
+                    // rows output
+                    cmd.Parameters.Add("@result", SqlDbType.NVarChar, 500);
+                    cmd.Parameters["@result"].Direction = ParameterDirection.Output;
+
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+
+                    output = Convert.ToString(cmd.Parameters["@result"].Value);
+                   
+                }
+            }
+
+            return output;
+        }
+
+
+
     }
 }

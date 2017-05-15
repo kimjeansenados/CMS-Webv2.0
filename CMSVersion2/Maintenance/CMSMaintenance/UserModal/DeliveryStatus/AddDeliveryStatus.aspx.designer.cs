@@ -58,6 +58,15 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.DeliveryStatus {
         protected global::Telerik.Web.UI.RadTextBox txtBox;
         
         /// <summary>
+        /// RequiredFieldValidator_txtBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_txtBox;
+        
+        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>

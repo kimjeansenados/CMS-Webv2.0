@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UnderMaintenancePage.aspx.cs" Inherits="CMSVersion2.Error.UnderMaintenancePage" %>
+﻿<%@ Page Title="Under Maintenance" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UnderMaintenancePage.aspx.cs" Inherits="CMSVersion2.Error.UnderMaintenancePage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="wrapper">
     <div id="page-wrapper">

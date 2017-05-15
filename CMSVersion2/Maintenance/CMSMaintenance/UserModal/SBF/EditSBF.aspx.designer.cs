@@ -58,6 +58,15 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.SBF {
         protected global::Telerik.Web.UI.RadTextBox txtShipmentFee;
         
         /// <summary>
+        /// RequiredFieldValidator_txtShipmentFee control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_txtShipmentFee;
+        
+        /// <summary>
         /// txtDescription control.
         /// </summary>
         /// <remarks>

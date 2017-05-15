@@ -597,7 +597,7 @@ namespace CMSVersion2.UserAccess.UserRole.UserRoleModal
                         int childcheckStatus = checkNode.Item2;
                         if (childcountExist > 0 && childcheckStatus == 3)
                         {
-                            BLL.UserRole.UpdateMenuAccess(menuChildId, userId, createdBy, status, getConstr.ConStrCMS);
+                           // BLL.UserRole.UpdateMenuAccess(menuChildId, userId, createdBy, status, getConstr.ConStrCMS);
                         }
                         if (childcountExist > 0 && childcheckStatus == 1)
                         {
@@ -724,37 +724,72 @@ namespace CMSVersion2.UserAccess.UserRole.UserRoleModal
                     {
                         int countTreeViewweb = treeViewWeb.Nodes.Count;
                         countTreeViewweb = countTreeViewweb / 2;
-                        if(countTreeWeb <= countTreeViewweb)
+                        if(countTreeWeb < countTreeViewweb)
                         {
                             if (node.Checked == true)
                             {
                                 menuId = Guid.Parse(node.Value);
-                                var check = BLL.UserRole.checkIfMenuIdExists(menuId, userId, getConstr.ConStrCMS);
-                                int countExists = check.Item1;
-                                int checkStatus = check.Item2;
-                                //Save
-                                if (countExists == 0)
+                                //Added
+                                int countChild = 0;
+                                countChild = node.ChildNodes.Count;
+
+                                if (countChild == 0)
                                 {
-                                    BLL.UserRole.InsertMenuAccess(menuId, userId, createdBy, getConstr.ConStrCMS);
-                                    UpdateChildNode(node, userId, createdBy);
-                                   
+                                    var checkNode = BLL.UserRole.checkIfMenuIdExists(menuId, userId, getConstr.ConStrCMS);
+                                    int childcountExist = checkNode.Item1;
+                                    if (childcountExist == 1)
+                                    {
+                                        BLL.UserRole.UpdateMenuAccess(menuId, userId, createdBy, 1, getConstr.ConStrCMS);
+                                    }
                                 }
-                                //Update
-                                if (countExists > 0 && checkStatus == 3)
+
+                                //---------------
+                                if(countChild > 0)
                                 {
-                                    BLL.UserRole.UpdateMenuAccess(menuId, userId, createdBy, status, getConstr.ConStrCMS);
-                                    UpdateChildNode(node, userId, createdBy);
+                                    var check = BLL.UserRole.checkIfMenuIdExists(menuId, userId, getConstr.ConStrCMS);
+                                    int countExists = check.Item1;
+                                    int checkStatus = check.Item2;
+                                    //Save
+                                    if (countExists == 0)
+                                    {
+                                        BLL.UserRole.InsertMenuAccess(menuId, userId, createdBy, getConstr.ConStrCMS);
+                                        UpdateChildNode(node, userId, createdBy);
+
+                                    }
+                                    //Update
+                                    if (countExists > 0 && checkStatus == 3)
+                                    {
+                                        BLL.UserRole.UpdateMenuAccess(menuId, userId, createdBy, status, getConstr.ConStrCMS);
+                                        UpdateChildNode(node, userId, createdBy);
+                                    }
+                                    if (countExists > 0 && checkStatus == 1)
+                                    {
+                                        UpdateChildNode(node, userId, createdBy);
+                                    }
                                 }
-                                if (countExists > 0 && checkStatus == 1)
-                                {
-                                    UpdateChildNode(node, userId, createdBy);
-                                }
+                                
 
                             }
                             else
                             {
                                 menuId = Guid.Parse(node.Value);
-                                CheckChildNode(node, userId, createdBy, menuId);
+                                int countChild = 0;
+                                countChild = node.ChildNodes.Count;
+                                if(countChild == 0)
+                                {
+                                    var checkNode = BLL.UserRole.checkIfMenuIdExists(menuId, userId, getConstr.ConStrCMS);
+                                    int childcountExist = checkNode.Item1;
+                                    if (childcountExist == 1)
+                                    {
+                                        BLL.UserRole.UpdateMenuAccess(menuId, userId, createdBy, 3, getConstr.ConStrCMS);
+                                    }
+                                }
+
+                                if(countChild > 0)
+                                {
+                                    CheckChildNode(node, userId, createdBy, menuId);
+                                }
+                               
 
                             }
                         }

@@ -52,7 +52,11 @@
                             <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
                             <asp:Label ID="lblSBFid" runat="server" Text="" Visible="false"></asp:Label>
                              <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtShipmentFee" Enabled="True" runat="server"></telerik:RadTextBox>
-
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator_txtShipmentFee" runat="server"
+                                    ControlToValidate="txtShipmentFee"
+                                    ErrorMessage="*"
+                                    ForeColor="Red">
+                                </asp:RequiredFieldValidator>
                         </div>
                         <br />
 

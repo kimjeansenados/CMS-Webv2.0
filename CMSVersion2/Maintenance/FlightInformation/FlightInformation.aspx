@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Flight Info" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FlightInformation.aspx.cs" Inherits="CMSVersion2.Maintenance.FlightInformation.FlightInformation" %>
+﻿<%@ Page Title="Flight Information" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FlightInformation.aspx.cs" Inherits="CMSVersion2.Maintenance.FlightInformation.FlightInformation" %>
 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 

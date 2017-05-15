@@ -66,10 +66,12 @@
 
                             <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
                             
-                            
-
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtCommodityType" Enabled="True" runat="server"></telerik:RadTextBox>
-
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"
+                                    ControlToValidate="txtCommodityType"
+                                    ErrorMessage="*"
+                                    ForeColor="Red">
+                                </asp:RequiredFieldValidator>
                         </div>
                         <br />
 
@@ -98,7 +100,11 @@
                             <asp:Label ID="lblGroupID" runat="server" Text="" Visible="false"></asp:Label>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtEVMdivisor" Enabled="True" runat="server"></telerik:RadTextBox>
-
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator_txtEVMdivisor" runat="server"
+                                    ControlToValidate="txtEVMdivisor"
+                                    ErrorMessage="*"
+                                    ForeColor="Red">
+                                </asp:RequiredFieldValidator>
                         </div>
                         <br />
                         <telerik:RadButton Skin="Glow" ID="btnSave" runat="server" Text="Update" OnClick="btnSave_Click" OnClientClicked=""></telerik:RadButton>

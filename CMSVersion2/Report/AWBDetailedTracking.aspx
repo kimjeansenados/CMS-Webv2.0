@@ -97,8 +97,9 @@
                                <GroupByExpressions>
                                  <telerik:GridGroupByExpression>
                                      <GroupByFields>
-                                         <telerik:GridGroupByField FieldName="Date" HeaderText="Date" />
+                                         <telerik:GridGroupByField FieldName="Date" SortOrder="Descending" />
                                      </GroupByFields>
+                                   
                                      <SelectFields>
                                          <telerik:GridGroupByField FieldName="Date" HeaderText="Date" FormatString="{0:D}" />
                                      </SelectFields>
@@ -109,11 +110,38 @@
 
                        </telerik:RadGrid>
                  </div><!--row4-->
-            <div class="center">
-                <telerik:RadLabel ID="lblReceivedBy" runat="server" Text="POD:" Font-Bold="true" Visible="false"></telerik:RadLabel>
+           <%-- <div class="center">
+                <telerik:RadLabel ID="lblReceivedBy" runat="server" Text="Proof of Delivery:" Font-Bold="true" Visible="false"></telerik:RadLabel>
                 <asp:Image ID="Image1" runat="server" ImageAlign="Middle" Visible="false" Height="70"/>
             
-            </div>
+            </div>--%>
+            <div class="row">
+                        <telerik:RadLabel ID="lblReceivedBy" runat="server" Text="Received By:" Font-Bold="true" Visible="false"></telerik:RadLabel>
+                       <a href="#" runat="server" onClick="handleHyperLinkClick();" visible="false" id="signLink"> View POD </a>
+                           
+            </div><!--row4-->
+            <telerik:RadWindowManager RenderMode="Mobile" ID="RadWindowManager1" runat="server" EnableShadow="true">
+                            <Windows>
+                               <telerik:RadWindow RenderMode="Mobile" ID="ViewSignature" runat="server" Title="POD" Height="300px"
+                                    Width="400px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar="false" AutoSize="false"
+                                    Modal="true" Behaviors="Close,Move">
+                                </telerik:RadWindow>
+                          </Windows>
+                   </telerik:RadWindowManager>
+
+            <telerik:RadCodeBlock runat="server">
+            <script type="text/javascript">
+                function handleHyperLinkClick() {
+                var text, newValue;
+
+                text = document.getElementById('<%= txtAwbNo.ClientID %>')
+                newValue = text.value;
+                
+                window.radopen("Operation/AWBNoModal/AWBTrackingModal.aspx?Id=" + newValue, "ViewSignature");
+                return false;
+                }
+            </script>
+            </telerik:RadCodeBlock>
         </div><!--container-->
     </div><!--"page-wrapper-->
 </div><!--wrapper-->

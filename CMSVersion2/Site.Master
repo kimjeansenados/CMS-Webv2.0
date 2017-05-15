@@ -145,8 +145,9 @@
                         <li class="dropdown">
                             <a runat="server" id="Administration" href="#" class="dropdown-toggle removeClass" data-toggle="dropdown" onclick="return false;">Administration<b class="caret"></b></a>
                             <ul class="dropdown-menu message-dropdown">
-                                <li class="message-footer"><a runat="server" class="removeClass" id="ManageUsers" onserverclick="clickManageUsers">Manage Users</a></li>
-                                <li class="message-footer"><a runat="server" class="removeClass" id="ManageEmployee" onserverclick="clickManageEmployee">Manage Employee</a></li>
+                               <li class="message-footer"><a runat="server" class="removeClass" id="ManageEmployee" onserverclick="clickManageEmployee">Manage Employee</a></li>
+                               <li class="message-footer"><a runat="server" class="removeClass" id="ManageUsers" onserverclick="clickManageUsers">Manage Users</a></li>
+                                
                             </ul>
                         </li>
                          <li runat="server" class="dropdown">

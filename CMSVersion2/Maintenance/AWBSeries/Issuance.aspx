@@ -1,4 +1,4 @@
-﻿<%@ Page Title="AWB Inssuance" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Issuance.aspx.cs" Inherits="CMSVersion2.Maintenance.AWBSeries.AWBIssuance" %>
+﻿<%@ Page Title="AWB Issuance" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Issuance.aspx.cs" Inherits="CMSVersion2.Maintenance.AWBSeries.AWBIssuance" %>
 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 

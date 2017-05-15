@@ -55,7 +55,11 @@
                             <asp:Label ID="lblServiceTypeId" runat="server" Text="" Visible="false"></asp:Label>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtServiceTypeName" Enabled="True" runat="server"></telerik:RadTextBox>
-
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator_txtServiceTypeName" runat="server"
+                                    ControlToValidate="txtServiceTypeName"
+                                    ErrorMessage="*"
+                                    ForeColor="Red">
+                                </asp:RequiredFieldValidator>
                         </div>
                         <br />
                         <telerik:RadButton Skin="Glow" ID="btnSave" runat="server" Text="Update" OnClick="btnSave_Click" OnClientClicked=""></telerik:RadButton>

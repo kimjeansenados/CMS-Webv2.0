@@ -58,6 +58,15 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.ServiceType {
         protected global::Telerik.Web.UI.RadTextBox txtServiceTypeName;
         
         /// <summary>
+        /// RequiredFieldValidator_txtServiceTypeName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_txtServiceTypeName;
+        
+        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>

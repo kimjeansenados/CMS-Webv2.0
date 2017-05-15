@@ -54,10 +54,12 @@
                             <%--<span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>--%>
                               <asp:Label ID="lblServiceModeId" runat="server" Text="" Visible="false"></asp:Label>
 
-                            
-
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtServiceModeName" Enabled="True" runat="server"></telerik:RadTextBox>
-
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator_txtServiceModeName" runat="server"
+                                    ControlToValidate="txtServiceModeName"
+                                    ErrorMessage="*"
+                                    ForeColor="Red">
+                                </asp:RequiredFieldValidator>
                         </div>
                         <br />
 
@@ -70,7 +72,11 @@
                             <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
                           
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtServiceModeCode" Enabled="True" runat="server"></telerik:RadTextBox>
-
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator_txtServiceModeCode" runat="server"
+                                    ControlToValidate="txtServiceModeCode"
+                                    ErrorMessage="*"
+                                    ForeColor="Red">
+                                </asp:RequiredFieldValidator>
                         </div>
                         <br />
                         <telerik:RadButton Skin="Glow" ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" OnClientClicked=""></telerik:RadButton>

@@ -155,6 +155,7 @@ namespace CMSVersion2.UserAccess.UserRole.UserRoleModal
                 {
                     if (item.Selected)
                     {
+                        status = 1;
                         roleId = Guid.Parse(item.Value);
                         BLL.UserRole.UpdateUserRole(roleId, userId, canLogintoweb, canLogintoclient, canLogintoTnt, canLogintoMobile, modifiedBy, status, getConstr.ConStrCMS);
                     }

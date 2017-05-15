@@ -163,7 +163,8 @@ namespace DataAccess
                     cmd.Parameters.Add("@BillingContactEmail", SqlDbType.NVarChar).Value = billContactEmail;
                     cmd.Parameters.Add("@BillingContactFax", SqlDbType.NVarChar).Value = billContactFax;
                     cmd.Parameters.Add("@AccountTypeId", SqlDbType.UniqueIdentifier).Value = acctTypeId;
-                    cmd.Parameters.Add("@IndustryId", SqlDbType.UniqueIdentifier).Value = IndustryId;
+                    //cmd.Parameters.Add("@IndustryId", SqlDbType.UniqueIdentifier).Value = IndustryId;
+                    cmd.Parameters.Add("@IndustryId", SqlDbType.UniqueIdentifier).Value = (object)IndustryId ?? DBNull.Value;
                     cmd.Parameters.Add("@BusinessTypeId", SqlDbType.UniqueIdentifier).Value = BusinessTypeId;
                     cmd.Parameters.Add("@OrganizationTypeId", SqlDbType.UniqueIdentifier).Value = OrganizationTypeId;
                     cmd.Parameters.Add("@AccountStatusId", SqlDbType.UniqueIdentifier).Value = accStatusId;

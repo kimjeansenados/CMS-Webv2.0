@@ -46,7 +46,7 @@
                                <FilterItemStyle VerticalAlign="Top" />
 
                                <Columns>
-                                   <telerik:GridBoundColumn HeaderText="Date" DataField="Date" DataFormatString="{0:dd/MM/yyyy}"></telerik:GridBoundColumn>
+                                  <%-- <telerik:GridBoundColumn HeaderText="Date" DataField="Date" DataFormatString="{0:dd/MM/yyyy}"></telerik:GridBoundColumn>--%>
                                    <telerik:GridBoundColumn HeaderText="Time" DataField="Time" ></telerik:GridBoundColumn>
                                    <telerik:GridBoundColumn HeaderText="Status" DataField="Status" ></telerik:GridBoundColumn>
                                    <telerik:GridBoundColumn HeaderText="Location" DataField="Location" ></telerik:GridBoundColumn>
@@ -56,7 +56,7 @@
                                <GroupByExpressions>
                                  <telerik:GridGroupByExpression>
                                      <GroupByFields>
-                                         <telerik:GridGroupByField FieldName="Date" HeaderText="Date" />
+                                         <telerik:GridGroupByField FieldName="Date" SortOrder="Descending"/>
                                      </GroupByFields>
                                      <SelectFields>
                                          <telerik:GridGroupByField FieldName="Date" HeaderText="Date" FormatString="{0:D}" />

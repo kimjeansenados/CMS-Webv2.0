@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="View.aspx.cs" Inherits="CMSVersion2.Corporate.RepresentativeModal.Vieww" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="View.aspx.cs" Inherits="CMSVersion2.Corporate.RepresentativeModal.View" %>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 <!DOCTYPE html>
 
@@ -217,12 +217,12 @@
                                     var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
                                     grid.get_masterTableView().selectItem(rowControl, true);
 
-                                    window.radopen("Representatives/EditRepresentatives.aspx?ClientId=" + id, "RepresentativeListDialog");
+                                    window.radopen("Edit.aspx?ClientId=" + id, "RepresentativeListDialog");
                                     return false;
                                 }
 
                                 function ShowInsertForm(obj) {
-                                    window.radopen("Representatives/AddRepresentatives.aspx?CompanyId=" + obj.value, "AddRepresentatives");
+                                    window.radopen("Add.aspx?CompanyId=" + obj.value, "AddRepresentatives");
                                     return false;
                                 }
 

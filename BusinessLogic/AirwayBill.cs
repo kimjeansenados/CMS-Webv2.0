@@ -14,9 +14,9 @@ namespace BusinessLogic
             return DAL.AirwayBill.GetAwbInfoByAwbNo(awbNo, conSTR);
         }
 
-        public static DataSet GetDetailsAwbNo(string awbNo, string conSTR)
+        public static DataSet GetDetailsAwbNo(string awbNo, int status, string conSTR)
         {
-            return DAL.AirwayBill.GetDetailsAwbNo(awbNo, conSTR);
+            return DAL.AirwayBill.GetDetailsAwbNo(awbNo, status, conSTR);
         }
 
         public static DataSet SignaturePOD(string awbNo, string constr)

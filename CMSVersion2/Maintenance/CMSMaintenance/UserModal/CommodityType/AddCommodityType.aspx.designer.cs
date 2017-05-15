@@ -67,6 +67,15 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.CommodityType {
         protected global::Telerik.Web.UI.RadTextBox txtCommodityType;
         
         /// <summary>
+        /// RequiredFieldValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+        
+        /// <summary>
         /// txtDescription control.
         /// </summary>
         /// <remarks>
@@ -92,6 +101,15 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.CommodityType {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtEVMdivisor;
+        
+        /// <summary>
+        /// RequiredFieldValidator_txtEVMdivisor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_txtEVMdivisor;
         
         /// <summary>
         /// btnSave control.

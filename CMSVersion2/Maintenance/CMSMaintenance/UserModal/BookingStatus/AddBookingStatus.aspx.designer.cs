@@ -58,6 +58,15 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.BookingStatus {
         protected global::Telerik.Web.UI.RadTextBox txtBookingStatus;
         
         /// <summary>
+        /// RequiredFieldValidator_txtBookingStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_txtBookingStatus;
+        
+        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>

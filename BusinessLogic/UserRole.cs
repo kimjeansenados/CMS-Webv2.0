@@ -133,6 +133,11 @@ namespace BusinessLogic
             return DAL.UserRole.MenuAccessByUserId(userId, constr);
         }
 
-      
+        public static string MenuFirstAccess(string access, string conStr)
+        {
+            return DAL.UserRole.MenuFirstAccess(access, conStr);
+
+        }
+
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SalesPerShipmode.aspx.cs" Inherits="CMSVersion2.Report.Finance.Sales.SalesPerShipmode" %>
+﻿<%@ Page Title="Sales per Shipmode" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SalesPerShipmode.aspx.cs" Inherits="CMSVersion2.Report.Finance.Sales.SalesPerShipmode" %>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
@@ -66,7 +66,7 @@
                             <telerik:GridBoundColumn DataField="ORIGIN" HeaderText="ORIGIN" FooterText="Total: " Aggregate="Custom"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="DESTINATION" HeaderText="DESTINATION"></telerik:GridBoundColumn>
 
-                            <telerik:GridBoundColumn DataField="ShipModeName" HeaderText="SHIPMODE" Visible="false"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="ShipModeName" HeaderText="Ship Mode Name"></telerik:GridBoundColumn>
 
                             <telerik:GridBoundColumn DataField="PP" HeaderText="PP"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="FC" HeaderText="FC"></telerik:GridBoundColumn>
@@ -86,10 +86,10 @@
                          <GroupByExpressions>
                              <telerik:GridGroupByExpression>
                                  <GroupByFields>
-                                     <telerik:GridGroupByField FieldName="SHIPMODE" HeaderText="SHIP MODE" />
+                                     <telerik:GridGroupByField FieldName="ShipModeName" HeaderText="SHIP MODE" />
                                  </GroupByFields>
                                  <SelectFields>
-                                     <telerik:GridGroupByField FieldName="SHIPMODE" HeaderText="SHIP MODE" />
+                                     <telerik:GridGroupByField FieldName="ShipModeName" HeaderText="SHIP MODE" />
                                  </SelectFields>
                              </telerik:GridGroupByExpression>
                             

@@ -191,7 +191,7 @@
                             <telerik:RadWindowManager RenderMode="Mobile" ID="RadWindowManager1" runat="server" EnableShadow="true">
                                 <Windows>
                                     <telerik:RadWindow RenderMode="Mobile" ID="UserListDialog" runat="server" Title="Editing record" Height="520px"
-                                        Width="380px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false"
+                                        Width="600px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false"
                                         Modal="true" Behaviors="Close,Move">
                                     </telerik:RadWindow>
 
@@ -200,8 +200,8 @@
                                         Modal="true" Behaviors="Close,Move">
                                     </telerik:RadWindow>
 
-                                     <telerik:RadWindow RenderMode="Mobile" ID="AddAppAuthority" runat="server" Title="Adding record" Height="600px"
-                                        Width="380px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
+                                     <telerik:RadWindow RenderMode="Mobile" ID="AddAppAuthority" runat="server" Title="Adding record" Height="500px"
+                                        Width="600px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
                                         Modal="true" Behaviors="Close,Move"  >
                                     </telerik:RadWindow>
 
@@ -230,7 +230,7 @@
                                     var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
                                     grid.get_masterTableView().selectItem(rowControl, true);
 
-                                    window.radopen("UserModal/EditForm_csharp.aspx?UserId=" + id, "UserListDialog");
+                                    window.radopen("Edit.aspx?ID=" + id, "UserListDialog");
                                     return false;
                                 }
 
@@ -239,7 +239,7 @@
                                     // var start= document.getElementById('Label3').innerHTML;
 
                                     //window.radopen("AddNewUser.aspx", "AddUser");
-                                    window.radopen("ApprovingAuthority/AddApprovingAuthority.aspx?CompanyId=" + obj.value, "AddAppAuthority");
+                                    window.radopen("Add.aspx?CompanyId=" + obj.value, "AddAppAuthority");
                                     return false;
                                 }
 

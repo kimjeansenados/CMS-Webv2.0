@@ -45,12 +45,37 @@ namespace CMSVersion2.Report.Operation.AWBNoModal
             count = Data.Rows.Count;
             if(count > 0)
             {
-                byte[] bytes = (byte[])GetDetailsAwbNoInformation(awbNo).Rows[0]["Signature"];
-                string base64String = Convert.ToBase64String(bytes, 0, bytes.Length);
-                Image1.ImageUrl = "data:image/png;base64," + base64String;
+                int counter = 0;
+                foreach (DataRow row in Data.Rows)
+                {
+                    if (counter == 0)
+                    {
+                        try
+                        {
+                            string sign = row["Signature"].ToString();
+                            if(!String.IsNullOrEmpty(sign))
+                            {
+                                byte[] signature = (byte[])row["Signature"];
+                                if (signature != null && signature.Length > 0)
+                                {
+                                    //byte[] bytes = (byte[])GetDetailsAwbNoInformation(awbNo).Rows[0]["Signature"];
+                                    string base64String = Convert.ToBase64String(signature, 0, signature.Length);
+                                    Image1.ImageUrl = "data:image/png;base64," + base64String;
+                                }
+                            }
 
-                string empName = (string)GetDetailsAwbNoInformation(awbNo).Rows[0]["EmployeeName"];
-                lblName.Text = empName;
+                           
+                        }
+                        catch(Exception ex)
+                        {
+                            Console.WriteLine(ex);
+                        }
+                    }
+                }
+               
+
+                //string empName = (string)GetDetailsAwbNoInformation(awbNo).Rows[0]["EmployeeName"];
+                //lblName.Text = empName;
             }
         }
 

@@ -51,8 +51,8 @@
 
         <div class="center">
             <asp:Image ID="Image1" runat="server" ImageAlign="Middle"/>
-            <hr />
-            <telerik:RadLabel ID="lblName" runat="server"></telerik:RadLabel>
+            <%--<hr />
+            <telerik:RadLabel ID="lblName" runat="server"></telerik:RadLabel>--%>
         </div>
 
     </div>

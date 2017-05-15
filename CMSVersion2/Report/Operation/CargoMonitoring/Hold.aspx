@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Hold.aspx.cs" Inherits="CMSVersion2.Report.Operation.CargoMonitoring.Hold" %>
+﻿<%@ Page Title="Hold" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Hold.aspx.cs" Inherits="CMSVersion2.Report.Operation.CargoMonitoring.Hold" %>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 <div class="wrapper">
