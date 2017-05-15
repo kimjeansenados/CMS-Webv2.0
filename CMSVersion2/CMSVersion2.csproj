@@ -366,7 +366,12 @@
     <Content Include="Report\Operation\CargoMonitoring\RUD.aspx" />
     <Content Include="Report\Operation\Manifest\BranchAcceptance.aspx" />
     <Content Include="Report\Operation\Manifest\Bundle.aspx" />
+    <Content Include="Report\Operation\Manifest\CargoTransfer.aspx" />
     <Content Include="Report\Operation\Manifest\DailyTrip.aspx" />
+    <Content Include="Report\Operation\Manifest\GatewayInbound.aspx" />
+    <Content Include="Report\Operation\Manifest\GatewayOutbound.aspx" />
+    <Content Include="Report\Operation\Manifest\GatewayTransmittal.aspx" />
+    <Content Include="Report\Operation\Manifest\HoldCargo.aspx" />
     <Content Include="Report\Operation\Manifest\Pickup.aspx" />
     <Content Include="Report\Operation\Manifest\Reports\ReportViewer.aspx" />
     <Content Include="Report\Operation\Manifest\Segregation.aspx" />
@@ -1572,12 +1577,47 @@
     <Compile Include="Report\Operation\Manifest\Bundle.aspx.designer.cs">
       <DependentUpon>Bundle.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Report\Operation\Manifest\CargoTransfer.aspx.cs">
+      <DependentUpon>CargoTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\CargoTransfer.aspx.designer.cs">
+      <DependentUpon>CargoTransfer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Report\Operation\Manifest\DailyTrip.aspx.cs">
       <DependentUpon>DailyTrip.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Report\Operation\Manifest\DailyTrip.aspx.designer.cs">
       <DependentUpon>DailyTrip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\GatewayInbound.aspx.cs">
+      <DependentUpon>GatewayInbound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\GatewayInbound.aspx.designer.cs">
+      <DependentUpon>GatewayInbound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\GatewayOutbound.aspx.cs">
+      <DependentUpon>GatewayOutbound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\GatewayOutbound.aspx.designer.cs">
+      <DependentUpon>GatewayOutbound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\GatewayTransmittal.aspx.cs">
+      <DependentUpon>GatewayTransmittal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\GatewayTransmittal.aspx.designer.cs">
+      <DependentUpon>GatewayTransmittal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\HoldCargo.aspx.cs">
+      <DependentUpon>HoldCargo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\HoldCargo.aspx.designer.cs">
+      <DependentUpon>HoldCargo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Report\Operation\Manifest\Pickup.aspx.cs">
       <DependentUpon>Pickup.aspx</DependentUpon>

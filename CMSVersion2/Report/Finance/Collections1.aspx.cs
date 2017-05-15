@@ -65,8 +65,8 @@ namespace CMSVersion2.Report.Finance
             }
             catch (Exception)
             {
-                date1 = DateTime.Now.AddYears(-1000);
-                date2 = DateTime.Now.AddYears(1000);
+                date1 = DateTime.Now.AddYears(-100);
+                date2 = DateTime.Now.AddYears(100);
             }
             DataSet data = BLL.Report.CollectionReport.GetCollection(getConstr.ConStrCMS, bcostr, type, date1, date2);
             DataTable dt = new DataTable();

@@ -58,8 +58,13 @@
     <Compile Include="Reports\BranchAcceptance.cs" />
     <Compile Include="Reports\Bundle.cs" />
     <Compile Include="Reports\CargoMonitoring.cs" />
-    <Compile Include="Reports\Collection.cs" />
+    <Compile Include="Reports\CargoTransfer.cs" />
+    <Compile Include="Reports\CollectionReport.cs" />
     <Compile Include="Reports\DailyTrip.cs" />
+    <Compile Include="Reports\GatewayInbound.cs" />
+    <Compile Include="Reports\GatewayOutbound.cs" />
+    <Compile Include="Reports\GatewayTransmittal.cs" />
+    <Compile Include="Reports\HoldCargo.cs" />
     <Compile Include="Reports\MasterSales.cs" />
     <Compile Include="Reports\PickupCargoManifest.cs" />
     <Compile Include="Reports\SalesPerClient.cs" />
@@ -118,7 +123,12 @@
     <Compile Include="UserRole.cs" />
     <Compile Include="Users.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{1ea9e4c1-0c5f-4114-a917-7fae6c35ff15}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

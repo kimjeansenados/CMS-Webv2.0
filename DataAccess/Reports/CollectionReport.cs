@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess.Reports
 {
-    public class Collection
+    public class CollectionReport
     {
         public static DataSet GetCollection(string conSTR,string bcostr ,string type,DateTime? date1,DateTime? date2)
         {
