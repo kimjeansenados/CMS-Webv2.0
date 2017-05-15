@@ -94,5 +94,10 @@ namespace BusinessLogic
             DAL.Company.DeleteCompany(companyId, Flag, conStr);
         }
 
+        public static DataSet GetCompanyByBillingPeriodId(Guid BillingPeriodId, string conStr)
+        {
+            return DAL.Company.GetCompanyByBillingPeriodId(BillingPeriodId, conStr);
+        }
+
     }
 }

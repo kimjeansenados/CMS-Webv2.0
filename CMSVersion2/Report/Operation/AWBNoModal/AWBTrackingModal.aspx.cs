@@ -2,6 +2,8 @@
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
+using System.IO.Compression;
 using BLL = BusinessLogic;
 using Tools = utilities;
 
@@ -38,6 +40,29 @@ namespace CMSVersion2.Report.Operation.AWBNoModal
             return convertdata;
         }
 
+        private Byte[] DecompressImage(byte[] bytes)
+        {
+            MemoryStream stream = new MemoryStream();
+            DeflateStream zipStream = new DeflateStream(new MemoryStream(bytes), CompressionMode.Decompress, true);
+            Byte[] buffer = new byte[4095];
+            while (true)
+            {
+                int size = zipStream.Read(buffer, 0, buffer.Length);
+                if (size > 0)
+                {
+                    stream.Write(buffer, 0, size);
+                }
+                else
+                {
+                    break;
+                }
+            }
+            zipStream.Close();
+            return stream.ToArray();
+        }
+
+
+
         public void LoadSignature(string awbNo)
         {
             int count = 0;
@@ -55,12 +80,15 @@ namespace CMSVersion2.Report.Operation.AWBNoModal
                             string sign = row["Signature"].ToString();
                             if(!String.IsNullOrEmpty(sign))
                             {
-                                byte[] signature = (byte[])row["Signature"];
+                                byte[] signature = DecompressImage((byte[])row["Signature"]);
                                 if (signature != null && signature.Length > 0)
                                 {
                                     //byte[] bytes = (byte[])GetDetailsAwbNoInformation(awbNo).Rows[0]["Signature"];
                                     string base64String = Convert.ToBase64String(signature, 0, signature.Length);
                                     Image1.ImageUrl = "data:image/png;base64," + base64String;
+                                    string receivedBy = row["ReceivedBy"].ToString();
+                                    lblName.Text = receivedBy;
+
                                 }
                             }
 

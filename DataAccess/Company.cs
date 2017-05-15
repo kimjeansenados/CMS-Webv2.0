@@ -264,5 +264,22 @@ namespace DataAccess
             }
         }
 
+        public static DataSet GetCompanyByBillingPeriodId(Guid billingPeriodId, string conStr)
+        {
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                using (SqlCommand command = new SqlCommand("sp_view_Company_By_BillingPeriodId", con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter("sp_view_Company_By_BillingPeriodId", con);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add("@billingperiodid", SqlDbType.UniqueIdentifier).Value = billingPeriodId;
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    return ds;
+                }
+            }
+
+        }
+
     }
 }

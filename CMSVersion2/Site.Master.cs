@@ -407,7 +407,7 @@ namespace CMSVersion2
                 string text = anchor.InnerText;
                 GlobalCode.menuName = text;
                 Session["UserNameSession"] = usersession;
-                Response.Redirect("~/Error/UnderMaintenancePage.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+                Response.Redirect("~/Corporate/StatementOfAccount.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
                 
             }
 

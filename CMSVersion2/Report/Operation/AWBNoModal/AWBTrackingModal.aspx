@@ -7,11 +7,16 @@
     <title></title>
     <style type="text/css">
         .center {
-    margin: auto;
+    /*margin: auto;
     width: 80%;
-    
-    padding: 10px;
+    padding: 10px;*/
+    text-align: center;
 }
+
+        #lblName, #RadLabel1
+        {
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body>
@@ -50,9 +55,14 @@
         </telerik:RadGrid>--%>
 
         <div class="center">
-            <asp:Image ID="Image1" runat="server" ImageAlign="Middle"/>
-            <%--<hr />
-            <telerik:RadLabel ID="lblName" runat="server"></telerik:RadLabel>--%>
+            <asp:Panel runat="server" ID="Panel2" HorizontalAlign="Center">
+                <asp:Image ID="Image1" runat="server" ImageAlign="Middle"/>
+                 
+            </asp:Panel>
+            
+            <hr />
+           <telerik:RadLabel ID="RadLabel1" runat="server" Font-Bold="true" Text="Received By:"></telerik:RadLabel>
+           <telerik:RadLabel ID="lblName" runat="server" Font-Bold="true"></telerik:RadLabel>
         </div>
 
     </div>

@@ -11,6 +11,7 @@ namespace utilities
     public class DataAccessProperties
     {
 
+
         private static string conStrCMS = ";";
 
         public string ConStrCMS
@@ -22,6 +23,14 @@ namespace utilities
 
         }
 
+        private string reportPath;
+        public string SoaReportsPath
+        {
+            get
+            {
+                return reportPath = ConfigurationManager.AppSettings["SoaReportPath"].ToString();
+            }
+        }
 
         private static string conStrTracking = ";";
         public string ConStrTracking
