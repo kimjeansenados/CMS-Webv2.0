@@ -51,6 +51,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox48 = new Telerik.Reporting.TextBox();
             this.textBox49 = new Telerik.Reporting.TextBox();
             this.textBox17 = new Telerik.Reporting.TextBox();
+            this.textBox27 = new Telerik.Reporting.TextBox();
             this.pageFooterSection1 = new Telerik.Reporting.PageFooterSection();
             this.textBox19 = new Telerik.Reporting.TextBox();
             this.txtScannedBy = new Telerik.Reporting.TextBox();
@@ -58,7 +59,6 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.txtRemarks = new Telerik.Reporting.TextBox();
             this.textBox26 = new Telerik.Reporting.TextBox();
             this.txtNotes = new Telerik.Reporting.TextBox();
-            this.textBox27 = new Telerik.Reporting.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // textBox15
@@ -69,7 +69,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox15.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox15.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox15.Style.Font.Bold = true;
-            this.textBox15.Style.Font.Name = "Century Gothic";
+            this.textBox15.Style.Font.Name = "Calibri";
             this.textBox15.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox15.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Bottom;
             this.textBox15.StyleName = "";
@@ -83,7 +83,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox25.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox25.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox25.Style.Font.Bold = true;
-            this.textBox25.Style.Font.Name = "Century Gothic";
+            this.textBox25.Style.Font.Name = "Calibri";
             this.textBox25.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox25.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Bottom;
             this.textBox25.TextWrap = true;
@@ -97,7 +97,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox52.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox52.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox52.Style.Font.Bold = true;
-            this.textBox52.Style.Font.Name = "Century Gothic";
+            this.textBox52.Style.Font.Name = "Calibri";
             this.textBox52.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox52.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Bottom;
             this.textBox52.StyleName = "";
@@ -111,7 +111,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox57.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox57.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox57.Style.Font.Bold = true;
-            this.textBox57.Style.Font.Name = "Century Gothic";
+            this.textBox57.Style.Font.Name = "Calibri";
             this.textBox57.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox57.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Bottom;
             this.textBox57.StyleName = "";
@@ -125,7 +125,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox58.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox58.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox58.Style.Font.Bold = true;
-            this.textBox58.Style.Font.Name = "Century Gothic";
+            this.textBox58.Style.Font.Name = "Calibri";
             this.textBox58.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox58.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Bottom;
             this.textBox58.StyleName = "";
@@ -203,7 +203,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox4.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox4.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox4.Style.Font.Bold = true;
-            this.textBox4.Style.Font.Name = "Century Gothic";
+            this.textBox4.Style.Font.Name = "Calibri";
             this.textBox4.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox4.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox4.TextWrap = false;
@@ -218,7 +218,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.txtDate.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.txtDate.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtDate.Style.Font.Bold = true;
-            this.txtDate.Style.Font.Name = "Century Gothic";
+            this.txtDate.Style.Font.Name = "Calibri";
             this.txtDate.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.txtDate.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.txtDate.TextWrap = false;
@@ -232,7 +232,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox6.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox6.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox6.Style.Font.Bold = true;
-            this.textBox6.Style.Font.Name = "Century Gothic";
+            this.textBox6.Style.Font.Name = "Calibri";
             this.textBox6.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox6.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox6.TextWrap = false;
@@ -247,7 +247,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.txtArea.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.txtArea.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtArea.Style.Font.Bold = true;
-            this.txtArea.Style.Font.Name = "Century Gothic";
+            this.txtArea.Style.Font.Name = "Calibri";
             this.txtArea.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.txtArea.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.txtArea.TextWrap = false;
@@ -261,7 +261,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox8.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox8.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox8.Style.Font.Bold = true;
-            this.textBox8.Style.Font.Name = "Century Gothic";
+            this.textBox8.Style.Font.Name = "Calibri";
             this.textBox8.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox8.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox8.TextWrap = false;
@@ -276,7 +276,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.txtBatch.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.txtBatch.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtBatch.Style.Font.Bold = true;
-            this.txtBatch.Style.Font.Name = "Century Gothic";
+            this.txtBatch.Style.Font.Name = "Calibri";
             this.txtBatch.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.txtBatch.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.txtBatch.TextWrap = false;
@@ -290,7 +290,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox14.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox14.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox14.Style.Font.Bold = true;
-            this.textBox14.Style.Font.Name = "Century Gothic";
+            this.textBox14.Style.Font.Name = "Calibri";
             this.textBox14.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox14.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox14.TextWrap = false;
@@ -305,7 +305,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.txtDriver.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.txtDriver.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtDriver.Style.Font.Bold = true;
-            this.txtDriver.Style.Font.Name = "Century Gothic";
+            this.txtDriver.Style.Font.Name = "Calibri";
             this.txtDriver.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.txtDriver.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.txtDriver.TextWrap = false;
@@ -319,7 +319,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox12.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox12.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox12.Style.Font.Bold = true;
-            this.textBox12.Style.Font.Name = "Century Gothic";
+            this.textBox12.Style.Font.Name = "Calibri";
             this.textBox12.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox12.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox12.TextWrap = false;
@@ -334,7 +334,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.txtChecker.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.txtChecker.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtChecker.Style.Font.Bold = true;
-            this.txtChecker.Style.Font.Name = "Century Gothic";
+            this.txtChecker.Style.Font.Name = "Calibri";
             this.txtChecker.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.txtChecker.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.txtChecker.TextWrap = false;
@@ -348,7 +348,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox10.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox10.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox10.Style.Font.Bold = true;
-            this.textBox10.Style.Font.Name = "Century Gothic";
+            this.textBox10.Style.Font.Name = "Calibri";
             this.textBox10.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox10.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox10.TextWrap = false;
@@ -363,7 +363,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.txtPlateNo.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.txtPlateNo.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtPlateNo.Style.Font.Bold = true;
-            this.txtPlateNo.Style.Font.Name = "Century Gothic";
+            this.txtPlateNo.Style.Font.Name = "Calibri";
             this.txtPlateNo.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.txtPlateNo.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.txtPlateNo.TextWrap = false;
@@ -378,12 +378,12 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             // 
             // table1
             // 
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.36458343267440796D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.36458340287208557D)));
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(2.460423469543457D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(1.4493075609207153D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(1.628104567527771D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(1.6934174299240112D)));
-            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.26041650772094727D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(1.4493074417114258D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(1.6281044483184815D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(1.6934173107147217D)));
+            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.26041653752326965D)));
             this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.40000021457672119D)));
             this.table1.Body.SetCellContent(0, 1, this.textBox22);
             this.table1.Body.SetCellContent(0, 2, this.textBox24);
@@ -412,6 +412,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.table1.ColumnGroups.Add(tableGroup5);
             this.table1.DataSource = null;
             this.table1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
+            this.textBox27,
             this.textBox22,
             this.textBox24,
             this.textBox33,
@@ -425,8 +426,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox25,
             this.textBox52,
             this.textBox57,
-            this.textBox58,
-            this.textBox27});
+            this.textBox58});
             this.table1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.1000000610947609D), Telerik.Reporting.Drawing.Unit.Inch(0.097995437681674957D));
             this.table1.Name = "table1";
             tableGroup6.Groupings.Add(new Telerik.Reporting.Grouping(null));
@@ -435,6 +435,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.table1.RowGroups.Add(tableGroup6);
             this.table1.RowGroups.Add(tableGroup7);
             this.table1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(7.5958361625671387D), Telerik.Reporting.Drawing.Unit.Inch(0.84062522649765015D));
+            this.table1.Style.Font.Name = "Calibri";
             // 
             // textBox22
             // 
@@ -442,7 +443,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox22.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.4604237079620361D), Telerik.Reporting.Drawing.Unit.Inch(0.26041653752326965D));
             this.textBox22.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox22.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
-            this.textBox22.Style.Font.Name = "Century Gothic";
+            this.textBox22.Style.Font.Name = "Calibri";
             this.textBox22.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
             this.textBox22.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.textBox22.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Bottom;
@@ -455,7 +456,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox24.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.4493075609207153D), Telerik.Reporting.Drawing.Unit.Inch(0.26041653752326965D));
             this.textBox24.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox24.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
-            this.textBox24.Style.Font.Name = "Century Gothic";
+            this.textBox24.Style.Font.Name = "Calibri";
             this.textBox24.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
             this.textBox24.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.textBox24.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Bottom;
@@ -470,7 +471,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox31.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox31.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox31.Style.Font.Bold = true;
-            this.textBox31.Style.Font.Name = "Century Gothic";
+            this.textBox31.Style.Font.Name = "Calibri";
             this.textBox31.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(0D);
             this.textBox31.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.textBox31.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
@@ -484,7 +485,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox44.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.449306845664978D), Telerik.Reporting.Drawing.Unit.Inch(0.40000021457672119D));
             this.textBox44.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox44.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
-            this.textBox44.Style.Font.Name = "Century Gothic";
+            this.textBox44.Style.Font.Name = "Calibri";
             this.textBox44.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(0D);
             this.textBox44.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.textBox44.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
@@ -497,7 +498,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox33.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.6281044483184815D), Telerik.Reporting.Drawing.Unit.Inch(0.26041653752326965D));
             this.textBox33.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox33.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
-            this.textBox33.Style.Font.Name = "Century Gothic";
+            this.textBox33.Style.Font.Name = "Calibri";
             this.textBox33.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
             this.textBox33.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Bottom;
             this.textBox33.StyleName = "";
@@ -508,7 +509,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox35.Name = "textBox35";
             this.textBox35.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.6281049251556397D), Telerik.Reporting.Drawing.Unit.Inch(0.40000021457672119D));
             this.textBox35.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
-            this.textBox35.Style.Font.Name = "Century Gothic";
+            this.textBox35.Style.Font.Name = "Calibri";
             this.textBox35.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(0D);
             this.textBox35.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox35.StyleName = "";
@@ -520,7 +521,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox48.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.6934173107147217D), Telerik.Reporting.Drawing.Unit.Inch(0.26041653752326965D));
             this.textBox48.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox48.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
-            this.textBox48.Style.Font.Name = "Century Gothic";
+            this.textBox48.Style.Font.Name = "Calibri";
             this.textBox48.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
             this.textBox48.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Bottom;
             this.textBox48.StyleName = "";
@@ -531,7 +532,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox49.Name = "textBox49";
             this.textBox49.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.6934179067611694D), Telerik.Reporting.Drawing.Unit.Inch(0.40000021457672119D));
             this.textBox49.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
-            this.textBox49.Style.Font.Name = "Century Gothic";
+            this.textBox49.Style.Font.Name = "Calibri";
             this.textBox49.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(0D);
             this.textBox49.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox49.StyleName = "";
@@ -542,10 +543,23 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.36458340287208557D), Telerik.Reporting.Drawing.Unit.Inch(0.40000021457672119D));
             this.textBox17.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
-            this.textBox17.Style.Font.Name = "Century Gothic";
+            this.textBox17.Style.Font.Name = "Calibri";
             this.textBox17.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(0D);
             this.textBox17.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox17.StyleName = "";
+            // 
+            // textBox27
+            // 
+            this.textBox27.Name = "textBox27";
+            this.textBox27.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.36458340287208557D), Telerik.Reporting.Drawing.Unit.Inch(0.26041650772094727D));
+            this.textBox27.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox27.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
+            this.textBox27.Style.Font.Name = "Calibri";
+            this.textBox27.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
+            this.textBox27.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
+            this.textBox27.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Bottom;
+            this.textBox27.TextWrap = true;
+            this.textBox27.Value = "= Fields.No";
             // 
             // pageFooterSection1
             // 
@@ -567,7 +581,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox19.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox19.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox19.Style.Font.Bold = true;
-            this.textBox19.Style.Font.Name = "Century Gothic";
+            this.textBox19.Style.Font.Name = "Calibri";
             this.textBox19.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox19.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox19.TextWrap = false;
@@ -582,7 +596,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.txtScannedBy.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.txtScannedBy.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtScannedBy.Style.Font.Bold = true;
-            this.txtScannedBy.Style.Font.Name = "Century Gothic";
+            this.txtScannedBy.Style.Font.Name = "Calibri";
             this.txtScannedBy.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.txtScannedBy.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.txtScannedBy.TextWrap = false;
@@ -596,7 +610,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox21.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox21.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox21.Style.Font.Bold = true;
-            this.textBox21.Style.Font.Name = "Century Gothic";
+            this.textBox21.Style.Font.Name = "Calibri";
             this.textBox21.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox21.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox21.TextWrap = false;
@@ -611,7 +625,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.txtRemarks.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.txtRemarks.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtRemarks.Style.Font.Bold = true;
-            this.txtRemarks.Style.Font.Name = "Century Gothic";
+            this.txtRemarks.Style.Font.Name = "Calibri";
             this.txtRemarks.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.txtRemarks.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.txtRemarks.TextWrap = false;
@@ -625,7 +639,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox26.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox26.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox26.Style.Font.Bold = true;
-            this.textBox26.Style.Font.Name = "Century Gothic";
+            this.textBox26.Style.Font.Name = "Calibri";
             this.textBox26.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox26.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox26.TextWrap = false;
@@ -640,24 +654,11 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.txtNotes.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.txtNotes.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtNotes.Style.Font.Bold = true;
-            this.txtNotes.Style.Font.Name = "Century Gothic";
+            this.txtNotes.Style.Font.Name = "Calibri";
             this.txtNotes.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.txtNotes.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.txtNotes.TextWrap = false;
             this.txtNotes.Value = "";
-            // 
-            // textBox27
-            // 
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.36458340287208557D), Telerik.Reporting.Drawing.Unit.Inch(0.26041650772094727D));
-            this.textBox27.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
-            this.textBox27.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
-            this.textBox27.Style.Font.Name = "Century Gothic";
-            this.textBox27.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
-            this.textBox27.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
-            this.textBox27.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Bottom;
-            this.textBox27.TextWrap = true;
-            this.textBox27.Value = "= Fields.No";
             // 
             // BranchAcceptance
             // 

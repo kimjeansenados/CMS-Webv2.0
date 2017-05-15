@@ -50,8 +50,8 @@
                 </telerik:RadDatePicker>                
                 &nbsp;&nbsp;
 
-                <telerik:RadLabel runat="server" Text="AWB #:"></telerik:RadLabel>
-                <telerik:RadComboBox ID="AWB" runat="server" Skin="Glow" AutoPostBack="true"
+                <telerik:RadLabel runat="server" Text="Gateway"></telerik:RadLabel>
+                <telerik:RadComboBox ID="Gateway" runat="server" Skin="Glow" AutoPostBack="true"
                     AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true"
                     AppendDataBoundItems="true">
                 </telerik:RadComboBox>
@@ -68,8 +68,8 @@
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
 
-                <telerik:RadLabel runat="server" Text="Area:"></telerik:RadLabel>
-                <telerik:RadComboBox ID="Area" runat="server" Skin="Glow" EnableTextSelection="true"
+                <telerik:RadLabel runat="server" Text="Batch:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="Batch" runat="server" Skin="Glow" EnableTextSelection="true"
                     AppendDataBoundItems="true" AutoPostBack="true" MarkFirstMatch="true"    
                     AutoCompleteSeparator="" AllowCustomText="true">
                     <Items>
@@ -77,7 +77,7 @@
                     </Items>
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
-                <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" OnClick="Search_Click" AutoPostBack="true"> </telerik:RadButton>
+                <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" AutoPostBack="true"> </telerik:RadButton>
                 <telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click"> </telerik:RadButton>
 
             </div>

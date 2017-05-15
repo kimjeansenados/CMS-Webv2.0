@@ -1629,15 +1629,45 @@
     <Compile Include="Report\Operation\Manifest\Reports\BranchAcceptance.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\Operation\Manifest\Reports\BranchAcceptance.Designer.cs" />
+    <Compile Include="Report\Operation\Manifest\Reports\BranchAcceptance.Designer.cs">
+      <DependentUpon>BranchAcceptance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\Operation\Manifest\Reports\BundleReport.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\Operation\Manifest\Reports\BundleReport.Designer.cs" />
+    <Compile Include="Report\Operation\Manifest\Reports\BundleReport.Designer.cs">
+      <DependentUpon>BundleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\Reports\CargoTransferReportView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\Reports\CargoTransferReportView.designer.cs">
+      <DependentUpon>CargoTransferReportView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\Operation\Manifest\Reports\DailyTripReport.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\Operation\Manifest\Reports\DailyTripReport.Designer.cs" />
+    <Compile Include="Report\Operation\Manifest\Reports\DailyTripReport.Designer.cs">
+      <DependentUpon>DailyTripReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\Reports\GatewayInboundReportView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\Reports\GatewayInboundReportView.designer.cs">
+      <DependentUpon>GatewayInboundReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\Reports\GatewayOutboundReportView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\Reports\GatewayOutboundReportView.designer.cs">
+      <DependentUpon>GatewayOutboundReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\Reports\GatewayTransmitalReportView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\Reports\GatewayTransmitalReportView.designer.cs">
+      <DependentUpon>GatewayTransmitalReportView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\Operation\Manifest\Reports\PickupReport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1654,11 +1684,15 @@
     <Compile Include="Report\Operation\Manifest\Reports\SegregationReport.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\Operation\Manifest\Reports\SegregationReport.Designer.cs" />
+    <Compile Include="Report\Operation\Manifest\Reports\SegregationReport.Designer.cs">
+      <DependentUpon>SegregationReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\Operation\Manifest\Reports\UnbundleReport.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\Operation\Manifest\Reports\UnbundleReport.Designer.cs" />
+    <Compile Include="Report\Operation\Manifest\Reports\UnbundleReport.Designer.cs">
+      <DependentUpon>UnbundleReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\Operation\Manifest\Segregation.aspx.cs">
       <DependentUpon>Segregation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1806,14 +1840,36 @@
     <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\OffloadedReport.resx" />
     <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\PendingReport.resx" />
     <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\RUDReport.resx" />
-    <EmbeddedResource Include="Report\Operation\Manifest\Reports\BranchAcceptance.resx" />
-    <EmbeddedResource Include="Report\Operation\Manifest\Reports\BundleReport.resx" />
-    <EmbeddedResource Include="Report\Operation\Manifest\Reports\DailyTripReport.resx" />
+    <EmbeddedResource Include="Report\Operation\Manifest\Reports\BranchAcceptance.resx">
+      <DependentUpon>BranchAcceptance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Operation\Manifest\Reports\BundleReport.resx">
+      <DependentUpon>BundleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Operation\Manifest\Reports\CargoTransferReportView.resx">
+      <DependentUpon>CargoTransferReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Operation\Manifest\Reports\DailyTripReport.resx">
+      <DependentUpon>DailyTripReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Operation\Manifest\Reports\GatewayInboundReportView.resx">
+      <DependentUpon>GatewayInboundReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Operation\Manifest\Reports\GatewayOutboundReportView.resx">
+      <DependentUpon>GatewayOutboundReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Operation\Manifest\Reports\GatewayTransmitalReportView.resx">
+      <DependentUpon>GatewayTransmitalReportView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\Operation\Manifest\Reports\PickupReport.resx">
       <DependentUpon>PickupReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\Operation\Manifest\Reports\SegregationReport.resx" />
-    <EmbeddedResource Include="Report\Operation\Manifest\Reports\UnbundleReport.resx" />
+    <EmbeddedResource Include="Report\Operation\Manifest\Reports\SegregationReport.resx">
+      <DependentUpon>SegregationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Operation\Manifest\Reports\UnbundleReport.resx">
+      <DependentUpon>UnbundleReport.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">

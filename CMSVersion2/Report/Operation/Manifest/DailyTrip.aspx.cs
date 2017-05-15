@@ -29,14 +29,15 @@ namespace CMSVersion2.Report.Operation.Manifest
                 BCO.DataValueField = "BranchCorpOfficeCode";
                 BCO.DataBind();
 
-                Area.DataSource = getCityBCO();
-                Area.DataTextField = "CityName";
-                Area.DataValueField = "CityName";
+                Area.DataSource = getArea();
+                Area.DataTextField = "RevenueUnitName";
+                Area.DataValueField = "RevenueUnitName";
                 Area.DataBind();
+
             }
         }
 
-        public DataTable getCityBCO()
+        public DataTable getArea()
         {
             string bco = "All";
             try
@@ -44,11 +45,25 @@ namespace CMSVersion2.Report.Operation.Manifest
                 bco = BCO.SelectedValue;
             }
             catch (Exception) { }
-            DataSet data = BLL.City.GetCityByBCO(getConstr.ConStrCMS, bco);
+            DataSet data = BLL.Revenue_Info.GetRevenueByBCOCode(getConstr.ConStrCMS, bco);
             DataTable dt = new DataTable();
             dt = data.Tables[0];
             return dt;
         }
+
+        //public DataTable getCityBCO()
+        //{
+        //    string bco = "All";
+        //    try
+        //    {
+        //        bco = BCO.SelectedValue;
+        //    }
+        //    catch (Exception) { }
+        //    DataSet data = BLL.City.GetCityByBCO(getConstr.ConStrCMS, bco);
+        //    DataTable dt = new DataTable();
+        //    dt = data.Tables[0];
+        //    return dt;
+        //}
 
         public DataTable getDailyTripData()
         {
@@ -130,9 +145,10 @@ namespace CMSVersion2.Report.Operation.Manifest
             Area.AppendDataBoundItems = true;
             Area.Items.Add("All");
             Area.SelectedIndex = 0;
-            Area.DataSource = getCityBCO();
-            Area.DataTextField = "CityName";
-            Area.DataValueField = "CityName";
+
+            Area.DataSource = getArea();
+            Area.DataTextField = "RevenueUnitName";
+            Area.DataValueField = "RevenueUnitName";
             Area.DataBind();
         }
 
