@@ -518,6 +518,95 @@ namespace CMSVersion2
 
         }
 
+        //Gateway Transmittal
+        protected void clickGatewayTransmittal(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
+            {
+                string usersession = Session["UsernameSession"].ToString();
+                byte[] EncryptedUsername = Tools.Encryption.EncryptPassword(usersession);
+                //HtmlAnchor anchor = (HtmlAnchor)Page.Master.FindControl("DailyTrip");
+                //string text = anchor.InnerText;
+                GlobalCode.menuName = "Operation";
+                Session["UserNameSession"] = usersession;
+                Response.Redirect("~/Report/Operation/Manifest/GatewayTransmittal.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+
+            }
+
+        }
+
+        //Gateway Outbound
+        protected void clickGatewayOutbound(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
+            {
+                string usersession = Session["UsernameSession"].ToString();
+                byte[] EncryptedUsername = Tools.Encryption.EncryptPassword(usersession);
+                //HtmlAnchor anchor = (HtmlAnchor)Page.Master.FindControl("DailyTrip");
+                //string text = anchor.InnerText;
+                GlobalCode.menuName = "Operation";
+                Session["UserNameSession"] = usersession;
+                Response.Redirect("~/Report/Operation/Manifest/GatewayOutbound.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+
+            }
+
+        }
+
+        //Gateway Inbound
+        protected void clickGatewayInbound(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
+            {
+                string usersession = Session["UsernameSession"].ToString();
+                byte[] EncryptedUsername = Tools.Encryption.EncryptPassword(usersession);
+                //HtmlAnchor anchor = (HtmlAnchor)Page.Master.FindControl("DailyTrip");
+                //string text = anchor.InnerText;
+                GlobalCode.menuName = "Operation";
+                Session["UserNameSession"] = usersession;
+                Response.Redirect("~/Report/Operation/Manifest/GatewayInbound.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+
+            }
+
+        }
+
+
+        //Cargo Transfer
+        protected void clickCargoTransfer(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
+            {
+                string usersession = Session["UsernameSession"].ToString();
+                byte[] EncryptedUsername = Tools.Encryption.EncryptPassword(usersession);
+                //HtmlAnchor anchor = (HtmlAnchor)Page.Master.FindControl("DailyTrip");
+                //string text = anchor.InnerText;
+                GlobalCode.menuName = "Operation";
+                Session["UserNameSession"] = usersession;
+                Response.Redirect("~/Report/Operation/Manifest/CargoTransfer.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+
+            }
+
+        }
+
+
+        //Hold Cargo
+        protected void clickHoldCargo(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
+            {
+                string usersession = Session["UsernameSession"].ToString();
+                byte[] EncryptedUsername = Tools.Encryption.EncryptPassword(usersession);
+                //HtmlAnchor anchor = (HtmlAnchor)Page.Master.FindControl("DailyTrip");
+                //string text = anchor.InnerText;
+                GlobalCode.menuName = "Operation";
+                Session["UserNameSession"] = usersession;
+                Response.Redirect("~/Report/Operation/Manifest/HoldCargo.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+
+            }
+
+        }
+
+
+
         #endregion
 
         #region Operation - Cargo Monitoring

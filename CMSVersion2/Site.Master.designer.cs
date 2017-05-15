@@ -220,6 +220,42 @@ namespace CMSVersion2 {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor Unbundle;
         
         /// <summary>
+        /// GatewayTransmittal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor GatewayTransmittal;
+        
+        /// <summary>
+        /// GatewayOutbound control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor GatewayOutbound;
+        
+        /// <summary>
+        /// GatewayInbound control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor GatewayInbound;
+        
+        /// <summary>
+        /// CargoTransfer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor CargoTransfer;
+        
+        /// <summary>
         /// Segregation control.
         /// </summary>
         /// <remarks>
@@ -236,42 +272,6 @@ namespace CMSVersion2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor DailyTrip;
-        
-        /// <summary>
-        /// GatewayTransmittal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor GatewayTransmittal;
-        
-        /// <summary>
-        /// GatewayInbound control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor GatewayInbound;
-        
-        /// <summary>
-        /// GatewayOutbound control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor GatewayOutbound;
-        
-        /// <summary>
-        /// CargoTransfer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor CargoTransfer;
         
         /// <summary>
         /// HoldCargo control.
