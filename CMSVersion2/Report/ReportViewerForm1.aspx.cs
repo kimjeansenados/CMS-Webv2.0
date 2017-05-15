@@ -35,6 +35,21 @@
                 case "DailyTrip":
                     clientReportSource.Identifier = typeof(DailyTripReport).AssemblyQualifiedName;
                     break;
+                case "GWTransmittal":
+                    clientReportSource.Identifier = typeof(GatewayTransmittal).AssemblyQualifiedName;
+                    break;
+                case "GWOutbound":
+                    clientReportSource.Identifier = typeof(GatewayOutbound).AssemblyQualifiedName;
+                    break;
+                case "GWInbound":
+                    clientReportSource.Identifier = typeof(GatewayInbound).AssemblyQualifiedName;
+                    break;
+                case "CargoTransfer":
+                    clientReportSource.Identifier = typeof(CargoTransfer).AssemblyQualifiedName;
+                    break;
+                case "HoldCargo":
+                    clientReportSource.Identifier = typeof(HoldCargo).AssemblyQualifiedName;
+                    break;
 
                 //OPERATION -> CARGO MONITORING
                 case "Delivered":

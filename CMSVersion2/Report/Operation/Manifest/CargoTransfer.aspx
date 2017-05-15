@@ -50,15 +50,18 @@
                 </telerik:RadDatePicker>                
                 &nbsp;&nbsp;
 
-                <telerik:RadLabel runat="server" Text="AWB #:"></telerik:RadLabel>
-                <telerik:RadComboBox ID="AWB" runat="server" Skin="Glow" AutoPostBack="true"
-                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true"
-                    AppendDataBoundItems="true">
+                <telerik:RadLabel runat="server" Text="Origin:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="Origin" runat="server" Skin="Glow" AutoPostBack="true"
+                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="Branch Corp Office" />
+                        <telerik:RadComboBoxItem Text="Branch Satellite Office" />
+                    </Items>
                 </telerik:RadComboBox>
 
                 &nbsp;&nbsp;
 
-                <telerik:RadLabel runat="server" Text="BCO:"></telerik:RadLabel>
+                <telerik:RadLabel runat="server" Text="BCO/City:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="250px" 
                     AppendDataBoundItems="true" EnableTextSelection="true" 
                     AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" AutoPostBack="true" OnSelectedIndexChanged="BCO_SelectedIndexChanged">
@@ -68,8 +71,8 @@
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
 
-                <telerik:RadLabel runat="server" Text="Area:"></telerik:RadLabel>
-                <telerik:RadComboBox ID="Area" runat="server" Skin="Glow" EnableTextSelection="true"
+                <telerik:RadLabel runat="server" Text="Destination:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="Destination" runat="server" Skin="Glow" EnableTextSelection="true"
                     AppendDataBoundItems="true" AutoPostBack="true" MarkFirstMatch="true"    
                     AutoCompleteSeparator="" AllowCustomText="true">
                     <Items>

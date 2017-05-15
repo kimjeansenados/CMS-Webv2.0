@@ -35,7 +35,7 @@
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
 
-                <telerik:RadLabel runat="server" Text="Area(City):"></telerik:RadLabel>
+                <telerik:RadLabel runat="server" Text="Area:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="Area" runat="server" Skin="Glow" AllowCustomText="true" MarkFirstMatch="true"
                     AppendDataBoundItems="true" AutoPostBack="true">
                     <Items>

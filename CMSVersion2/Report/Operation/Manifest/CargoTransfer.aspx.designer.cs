@@ -31,13 +31,13 @@ namespace CMSVersion2.Report.Operation.Manifest {
         protected global::Telerik.Web.UI.RadDatePicker Date;
         
         /// <summary>
-        /// AWB control.
+        /// Origin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox AWB;
+        protected global::Telerik.Web.UI.RadComboBox Origin;
         
         /// <summary>
         /// BCO control.
@@ -49,13 +49,13 @@ namespace CMSVersion2.Report.Operation.Manifest {
         protected global::Telerik.Web.UI.RadComboBox BCO;
         
         /// <summary>
-        /// Area control.
+        /// Destination control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox Area;
+        protected global::Telerik.Web.UI.RadComboBox Destination;
         
         /// <summary>
         /// Search control.

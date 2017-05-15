@@ -95,7 +95,6 @@ namespace CMSVersion2.Report.Operation.Manifest
             ReportGlobalModel.Driver = "All"; //getColumn.get_Column_DataView(dt, "DRIVER");
             ReportGlobalModel.Checker = "All"; //getColumn.get_Column_DataView(dt, "DRIVER");
 
-
             return dt;
         }
 

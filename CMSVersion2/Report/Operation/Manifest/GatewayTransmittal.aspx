@@ -43,33 +43,33 @@
             <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" AutoSize="true" AutoSizeBehaviors="HeightProportional" Width="1300px" Skin="Glow" VisibleStatusbar="false"></telerik:RadWindow>
 
 
-           <%-- <div class="row">
+            <div class="row">
 
                 <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
-                <telerik:RadDatePicker ID="Date" runat="server" AutoPostBack="true" Skin="Glow" DateInput-DateFormat="MM/dd/yyyy">
+                <telerik:RadDatePicker ID="Date" runat="server" AutoPostBack="true" Width="115px" Skin="Glow" DateInput-DateFormat="MM/dd/yyyy">
                 </telerik:RadDatePicker>                
                 &nbsp;&nbsp;
 
-                <telerik:RadLabel runat="server" Text="AWB #:"></telerik:RadLabel>
-                <telerik:RadComboBox ID="AWB" runat="server" Skin="Glow" AutoPostBack="true"
+                <telerik:RadLabel runat="server" Text="Gateway"></telerik:RadLabel>
+                <telerik:RadComboBox ID="Gateway" runat="server" Skin="Glow" AutoPostBack="true"
                     AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true"
                     AppendDataBoundItems="true">
                 </telerik:RadComboBox>
 
                 &nbsp;&nbsp;
 
-                <telerik:RadLabel runat="server" Text="BCO:"></telerik:RadLabel>
-                <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="250px" 
+                <telerik:RadLabel runat="server" Text="BCO Destination:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="210px" 
                     AppendDataBoundItems="true" EnableTextSelection="true" 
-                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" AutoPostBack="true" OnSelectedIndexChanged="BCO_SelectedIndexChanged">
+                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" AutoPostBack="true">
                     <Items>
                         <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
                     </Items>
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
 
-                <telerik:RadLabel runat="server" Text="Area:"></telerik:RadLabel>
-                <telerik:RadComboBox ID="Area" runat="server" Skin="Glow" EnableTextSelection="true"
+                <telerik:RadLabel runat="server" Text="Batch:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="Batch" runat="server" Skin="Glow" EnableTextSelection="true"
                     AppendDataBoundItems="true" AutoPostBack="true" MarkFirstMatch="true"    
                     AutoCompleteSeparator="" AllowCustomText="true">
                     <Items>
@@ -80,17 +80,18 @@
                 <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" OnClick="Search_Click" AutoPostBack="true"> </telerik:RadButton>
                 <telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click"> </telerik:RadButton>
 
-            </div>--%>
+            </div>
+
             <br />
             <div class="row">
                 <telerik:RadGrid ID="gridPickupCargo" runat="server"  Skin="Glow"
                     AllowPaging="True" OnNeedDataSource="gridPickupCargo_NeedDataSource"
-                    PageSize="10"  
+                    PageSize="10"  OnPreRender="gridPickupCargo_PreRender"
                     AllowFilteringByColumn="false"
-                    AutoGenerateColumns="true"
+                    AutoGenerateColumns="false"
                     AllowSorting="true" 
                     ExportSettings-Pdf-ForceTextWrap="false"                     
-                    ClientSettings-Scrolling-AllowScroll="true"                   
+                    ClientSettings-Scrolling-AllowScroll="true"                  
                     ItemStyle-Wrap="false" 
                     Height="400px">
 
@@ -98,7 +99,25 @@
                         <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="false" 
                             ShowExportToWordButton="false" ShowExportToCsvButton="false" 
                             ShowAddNewRecordButton="false"  ShowRefreshButton="false"/>
+                        <Columns>                           
+                            <telerik:GridBoundColumn DataField="No" HeaderText="#" HeaderStyle-Width="20px"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="AWBNO" HeaderText="AWB #" FooterText="TOTAL: "></telerik:GridBoundColumn>
 
+                            <telerik:GridBoundColumn DataField="SHIPPER" HeaderText="SHIPPER"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="CONSIGNEE" HeaderText="CONSIGNEE"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="CONSIGNEE ADDRESS" HeaderText="CONSIGNEE ADDRESS"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="COMMODITY TYPE" HeaderText="COMMODITY TYPE"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="COMMODITY" HeaderText="COMMODITY"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="QTY" HeaderText="QTY"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="AGW" HeaderText="AGW"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="SERVICE MODE" HeaderText="SERVICE MODE"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="PAY MODE" HeaderText="PAY MODE"></telerik:GridBoundColumn>
+                            
+                            <telerik:GridBoundColumn DataField="Gateway" HeaderText="Gateway"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="Destination" HeaderText="Destination"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="Batch" HeaderText="Batch"></telerik:GridBoundColumn>
+
+                        </Columns>
 
                     </MasterTableView>
                 </telerik:RadGrid>
