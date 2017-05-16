@@ -36,7 +36,7 @@
                     clientReportSource.Identifier = typeof(DailyTripReport).AssemblyQualifiedName;
                     break;
                 case "GWTransmittal":
-                    clientReportSource.Identifier = typeof(GatewayTransmittal).AssemblyQualifiedName;
+                    clientReportSource.Identifier = typeof(GatewayTransmitalReportView).AssemblyQualifiedName;
                     break;
                 case "GWOutbound":
                     clientReportSource.Identifier = typeof(GatewayOutbound).AssemblyQualifiedName;
