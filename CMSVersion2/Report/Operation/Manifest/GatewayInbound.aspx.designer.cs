@@ -40,22 +40,22 @@ namespace CMSVersion2.Report.Operation.Manifest {
         protected global::Telerik.Web.UI.RadComboBox Gateway;
         
         /// <summary>
-        /// Origin control.
+        /// BCO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox Origin;
+        protected global::Telerik.Web.UI.RadComboBox BCO;
         
         /// <summary>
-        /// CommodityType control.
+        /// ComType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox CommodityType;
+        protected global::Telerik.Web.UI.RadComboBox ComType;
         
         /// <summary>
         /// Search control.

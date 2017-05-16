@@ -39,17 +39,17 @@
                     clientReportSource.Identifier = typeof(GatewayTransmitalReportView).AssemblyQualifiedName;
                     break;
                 case "GWOutbound":
-                    clientReportSource.Identifier = typeof(GatewayOutbound).AssemblyQualifiedName;
+                    clientReportSource.Identifier = typeof(GatewayOutboundReportView).AssemblyQualifiedName;
                     break;
                 case "GWInbound":
-                    clientReportSource.Identifier = typeof(GatewayInbound).AssemblyQualifiedName;
+                    clientReportSource.Identifier = typeof(GatewayInboundReportView).AssemblyQualifiedName;
                     break;
                 case "CargoTransfer":
-                    clientReportSource.Identifier = typeof(CargoTransfer).AssemblyQualifiedName;
+                    clientReportSource.Identifier = typeof(CargoTransferReportView).AssemblyQualifiedName;
                     break;
-                case "HoldCargo":
-                    clientReportSource.Identifier = typeof(HoldCargo).AssemblyQualifiedName;
-                    break;
+                //case "HoldCargo":
+                //    clientReportSource.Identifier = typeof(HoldCargo).AssemblyQualifiedName;
+                //    break;
 
                 //OPERATION -> CARGO MONITORING
                 case "Delivered":

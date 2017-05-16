@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GatewayOutbound.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.GatewayOutbound" %>
+﻿<%@ Page Title="Gateway Outbound" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GatewayOutbound.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.GatewayOutbound" %>
 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
@@ -46,7 +46,7 @@
             <div class="row">
 
                 <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
-                <telerik:RadDatePicker ID="Date" runat="server" OnSelectedDateChanged="Date_SelectedDateChanged" 
+                <telerik:RadDatePicker ID="Date" runat="server" OnSelectedDateChanged="Date_SelectedDateChanged"
                     AutoPostBack="true" Width="115px" Skin="Glow" DateInput-DateFormat="MM/dd/yyyy">
                 </telerik:RadDatePicker>                
                 &nbsp;&nbsp;
@@ -79,15 +79,15 @@
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
                 <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" OnClick="Search_Click" AutoPostBack="true"> </telerik:RadButton>
-                <telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click"> </telerik:RadButton>
+                <telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click1"> </telerik:RadButton>
 
             </div>
 
             <br />
             <div class="row">
                 <telerik:RadGrid ID="gridPickupCargo" runat="server"  Skin="Glow"
-                    AllowPaging="True"
-                    PageSize="10"  
+                    AllowPaging="True" OnPreRender="gridPickupCargo_PreRender"
+                    PageSize="10" OnNeedDataSource="gridPickupCargo_NeedDataSource1"   
                     AllowFilteringByColumn="false"
                     AutoGenerateColumns="true"
                     AllowSorting="true" 

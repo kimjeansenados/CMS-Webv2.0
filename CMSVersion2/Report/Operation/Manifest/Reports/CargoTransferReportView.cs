@@ -1,5 +1,6 @@
 namespace CMSVersion2.Report.Operation.Manifest.Reports
 {
+    using Models;
     using System;
     using System.ComponentModel;
     using System.Data;
@@ -20,22 +21,26 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             //
             InitializeComponent();
 
-            //var objectDataSource = new Telerik.Reporting.ObjectDataSource();
-            //DataTable dataTable = TrackingReportGlobalModel.table;
-            //objectDataSource.DataSource = dataTable;
-            //table1.DataSource = objectDataSource;
+            var objectDataSource = new Telerik.Reporting.ObjectDataSource();
+            DataTable dataTable = ReportGlobalModel.table1;
+            objectDataSource.DataSource = dataTable;
+            table1.DataSource = objectDataSource;
 
-            //txtDate.Value = TrackingReportGlobalModel.Date;
-            //txtOrigin.Value = TrackingReportGlobalModel.Origin;
-            //txtDestination.Value = TrackingReportGlobalModel.Destination;
+            txtDate.Value = ReportGlobalModel.Date;
+            txtOrigin.Value = ReportGlobalModel.Origin;
+            txtDestination.Value = ReportGlobalModel.Destination;
 
-            //txtDriver.Value = TrackingReportGlobalModel.Driver;
-            //txtChecker.Value = TrackingReportGlobalModel.Checker;
-            //txtPlateNo.Value = TrackingReportGlobalModel.PlateNo;
+            //txtGateway.Value = ReportGlobalModel.Gateway;
+            //txtCommodityType.Value = ReportGlobalModel.CommodityType''
+            //txtBCO.Value = ReportGlobalModel.Branch;
+            //txtBatch.Value = ReportGlobalModel.Batch;
 
-            //txtScannedBy.Value = TrackingReportGlobalModel.ScannedBy;
-            // txtRemarks.Value = TrackingReportGlobalModel.Remarks;
-            // txtNotes.Value = TrackingReportGlobalModel.Notes;
+            txtRemarks.Value = ReportGlobalModel.Remarks;
+            txtScannedBy.Value = ReportGlobalModel.User;
+            txtNotes.Value = ReportGlobalModel.Notes;
+
+            txtPrintedDate.Value = DateTime.Now.ToString();
+            txtPrintedBy.Value = ReportGlobalModel.User;
         }
     }
 }

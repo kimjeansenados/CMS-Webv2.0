@@ -1,5 +1,6 @@
 namespace CMSVersion2.Report.Operation.Manifest.Reports
 {
+    using Models;
     using System;
     using System.ComponentModel;
     using System.Data;
@@ -20,20 +21,25 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             //
             InitializeComponent();
 
-            //var objectDataSource = new Telerik.Reporting.ObjectDataSource();
-            //DataTable dataTable = TrackingReportGlobalModel.table;
-            //objectDataSource.DataSource = dataTable;
-            //table1.DataSource = objectDataSource;
+            var objectDataSource = new Telerik.Reporting.ObjectDataSource();
+            DataTable dataTable = ReportGlobalModel.table1;
+            objectDataSource.DataSource = dataTable;
+            table1.DataSource = objectDataSource;
 
-            //txtDate.Value = TrackingReportGlobalModel.Date;
-            //txtGateway.Value = TrackingReportGlobalModel.Gateway;
-            //txtMAWB.Value = TrackingReportGlobalModel.AirwayBillNo;
-            //txtFlightNo.Value = TrackingReportGlobalModel.FlightNo;
-            //txtCommodityType.Value = TrackingReportGlobalModel.CommodityType;
+            txtDate.Value = ReportGlobalModel.Date;
+            txtGateway.Value = ReportGlobalModel.Gateway;
+            txtCommodityType.Value = ReportGlobalModel.CommodityType;
 
-            //txtScannedBy.Value = TrackingReportGlobalModel.ScannedBy;
-            // txtRemarks.Value = TrackingReportGlobalModel.Remarks;
-            // txtNotes.Value = TrackingReportGlobalModel.Notes;
+            //txtBCO.Value = ReportGlobalModel.Branch;
+            //txtBatch.Value = ReportGlobalModel.Batch;
+
+            txtRemarks.Value = ReportGlobalModel.Remarks;
+            txtScannedBy.Value = ReportGlobalModel.User;
+            txtNotes.Value = ReportGlobalModel.Notes;
+
+            txtPrintedDate.Value = DateTime.Now.ToString();
+            txtPrintedBy.Value = ReportGlobalModel.User;
+
         }
     }
 }

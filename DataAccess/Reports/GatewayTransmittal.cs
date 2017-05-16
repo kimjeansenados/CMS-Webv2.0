@@ -39,5 +39,31 @@ namespace DataAccess.Reports
                 return ds;
             }
         }
+
+        public static DataSet GetGatewayOutBoundList(string conSTR, string date)
+        {
+            using (SqlConnection con = new SqlConnection(conSTR))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("sp_view_Reports_GetGatewayOutBoundList", con);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.Add("@DATE1", SqlDbType.VarChar).Value = date;
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+        }
+
+        public static DataSet GetGatewayInBoundList(string conSTR, string date)
+        {
+            using (SqlConnection con = new SqlConnection(conSTR))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("sp_view_Reports_GetGatewayInBoundList", con);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.Add("@DATE1", SqlDbType.VarChar).Value = date;
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+        }
     }
 }

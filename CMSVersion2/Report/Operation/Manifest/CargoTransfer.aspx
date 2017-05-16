@@ -50,18 +50,7 @@
                 </telerik:RadDatePicker>                
                 &nbsp;&nbsp;
 
-                <telerik:RadLabel runat="server" Text="Origin:"></telerik:RadLabel>
-                <telerik:RadComboBox ID="Origin" runat="server" Skin="Glow" AutoPostBack="true"
-                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true">
-                    <Items>
-                        <telerik:RadComboBoxItem Text="Branch Corp Office" />
-                        <telerik:RadComboBoxItem Text="Branch Satellite Office" />
-                    </Items>
-                </telerik:RadComboBox>
-
-                &nbsp;&nbsp;
-
-                <telerik:RadLabel runat="server" Text="BCO/City:"></telerik:RadLabel>
+                <telerik:RadLabel runat="server" Text="BCO Origin:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="250px" 
                     AppendDataBoundItems="true" EnableTextSelection="true" 
                     AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" AutoPostBack="true" OnSelectedIndexChanged="BCO_SelectedIndexChanged">
@@ -71,7 +60,7 @@
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
 
-                <telerik:RadLabel runat="server" Text="Destination:"></telerik:RadLabel>
+                <telerik:RadLabel runat="server" Text="BCO Destination:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="Destination" runat="server" Skin="Glow" EnableTextSelection="true"
                     AppendDataBoundItems="true" AutoPostBack="true" MarkFirstMatch="true"    
                     AutoCompleteSeparator="" AllowCustomText="true">
@@ -80,15 +69,15 @@
                     </Items>
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
-                <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" OnClick="Search_Click" AutoPostBack="true"> </telerik:RadButton>
+                <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" AutoPostBack="true" OnClick="Search_Click"> </telerik:RadButton>
                 <telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click"> </telerik:RadButton>
 
             </div>
             <br />
             <div class="row">
                 <telerik:RadGrid ID="gridPickupCargo" runat="server"  Skin="Glow"
-                    AllowPaging="True"
-                    PageSize="10"  
+                    AllowPaging="True" OnNeedDataSource="gridPickupCargo_NeedDataSource"
+                    PageSize="10" OnPreRender="gridPickupCargo_PreRender"
                     AllowFilteringByColumn="false"
                     AutoGenerateColumns="true"
                     AllowSorting="true" 
