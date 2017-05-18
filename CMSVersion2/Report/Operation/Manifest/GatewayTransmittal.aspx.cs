@@ -1,4 +1,5 @@
-﻿using CMSVersion2.Report.Operation.Manifest.Reports;
+﻿using CMSVersion2.Models;
+using CMSVersion2.Report.Operation.Manifest.Reports;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -80,7 +81,7 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         protected void Print_Click(object sender, EventArgs e)
         {
-            
+            ReportGlobalModel.Report = "GWTransmittal";
             string host = HttpContext.Current.Request.Url.Authority;
             RadWindow1.NavigateUrl = "http://" + host + "/" + WebPathName + "/Report/ReportViewerForm1.aspx";
             string script = "function f(){$find(\"" + RadWindow1.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";

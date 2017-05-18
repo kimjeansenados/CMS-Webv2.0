@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GatewayTransmittal.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.GatewayTransmittal" %>
+﻿<%@ Page Title="Gateway Transmittal" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GatewayTransmittal.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.GatewayTransmittal" %>
 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
@@ -78,7 +78,7 @@
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
                 <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" OnClick="Search_Click" AutoPostBack="true"> </telerik:RadButton>
-                <telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click"> </telerik:RadButton>
+                <%--<telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click"> </telerik:RadButton>--%>
 
             </div>
 

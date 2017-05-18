@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GatewayOutbound.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.GatewayOutbound" %>
+﻿<%@ Page Title="Gateway Outbound" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GatewayOutbound.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.GatewayOutbound" %>
 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
@@ -61,7 +61,7 @@
                 <telerik:RadLabel runat="server" Text="BCO:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="250px" 
                     AppendDataBoundItems="true" EnableTextSelection="true" 
-                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" AutoPostBack="true" OnSelectedIndexChanged="BCO_SelectedIndexChanged">
+                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" AutoPostBack="true">
                     <Items>
                         <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
                     </Items>
@@ -78,12 +78,13 @@
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
                 <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" AutoPostBack="true"> </telerik:RadButton>
-                <telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click"> </telerik:RadButton>
+               <%-- <telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click"> </telerik:RadButton>--%>
 
             </div>
             <br />
             <div class="row">
-                <telerik:RadGrid ID="gridPickupCargo" runat="server"  Skin="Glow"
+                <telerik:RadGrid ID="gridGTOutbound" runat="server"  Skin="Glow"
+                    OnNeedDataSource="gridGTOutbound_NeedDataSource"
                     AllowPaging="True"
                     PageSize="10"  
                     AllowFilteringByColumn="false"
@@ -92,13 +93,26 @@
                     ExportSettings-Pdf-ForceTextWrap="false"                     
                     ClientSettings-Scrolling-AllowScroll="true"                   
                     ItemStyle-Wrap="false" 
-                    Height="400px">
+                    Height="400px"
+                    ShowFooter="true">
 
                     <MasterTableView CommandItemDisplay="Top" Font-Size="Smaller">
                         <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="false" 
                             ShowExportToWordButton="false" ShowExportToCsvButton="false" 
                             ShowAddNewRecordButton="false"  ShowRefreshButton="false"/>
-
+                         <Columns>
+                            <telerik:GridBoundColumn DataField="No" HeaderText="#" HeaderStyle-Width="20px"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="AWBNO" HeaderText="AWB #" FooterText="TOTAL: "></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="Gateway" HeaderText="GATEWAY"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="Driver" HeaderText="DRIVER"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="PlateNo" HeaderText="PLATE #"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="BatchName" HeaderText="BATCH"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="RECIEVED QTY" HeaderText="RECIEVED QTY"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="DISCREPENCY QTY" HeaderText="DISCREPENCY QTY"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="TOTAL QTY" HeaderText="TOTAL QTY" FooterText=" " Aggregate="Sum"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="CreatedDate" HeaderText="CREATED DATE"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="SCANNEDBY" HeaderText="SCANNED BY"></telerik:GridBoundColumn>
+                        </Columns>
 
                     </MasterTableView>
                 </telerik:RadGrid>

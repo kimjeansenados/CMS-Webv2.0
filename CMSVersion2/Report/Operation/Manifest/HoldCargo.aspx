@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="HoldCargo.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.HoldCargo" %>
+﻿<%@ Page Title="Hold Cargo" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="HoldCargo.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.HoldCargo" %>
 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
@@ -66,7 +66,7 @@
                 <telerik:RadLabel runat="server" Text="BCO / BSO:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="250px" 
                     AppendDataBoundItems="true" EnableTextSelection="true" 
-                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" AutoPostBack="true" OnSelectedIndexChanged="BCO_SelectedIndexChanged">
+                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" AutoPostBack="true">
                     <Items>
                         <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
                     </Items>
@@ -82,8 +82,8 @@
                     </Items>
                 </telerik:RadComboBox>--%>
                 &nbsp;&nbsp;
-                <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" OnClick="Search_Click" AutoPostBack="true"> </telerik:RadButton>
-                <telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click"> </telerik:RadButton>
+                <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" AutoPostBack="true"> </telerik:RadButton>
+               <%-- <telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true"> </telerik:RadButton>--%>
 
             </div>
             <br />
@@ -97,7 +97,8 @@
                     ExportSettings-Pdf-ForceTextWrap="false"                     
                     ClientSettings-Scrolling-AllowScroll="true"                   
                     ItemStyle-Wrap="false" 
-                    Height="400px">
+                    Height="400px"
+                    OnNeedDataSource="gridPickupCargo_NeedDataSource">
 
                     <MasterTableView CommandItemDisplay="Top" Font-Size="Smaller">
                         <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="false" 

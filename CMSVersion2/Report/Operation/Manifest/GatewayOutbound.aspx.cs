@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Telerik.Web.UI;
 using BLL = BusinessLogic;
 using Tools = utilities;
 namespace CMSVersion2.Report.Operation.Manifest
@@ -19,7 +20,7 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         }
 
-        public DataTable getGatewayTranmittal()
+        public DataTable getGatewayOutbound()
         {
             DataSet data = BLL.Report.GatewayTransmittal.GetGWOutbound(getConstr.ConStrCMS);
             DataTable dt = new DataTable();
@@ -28,9 +29,9 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         }
 
-        protected void gridPickupCargo_NeedDataSource(object sender, Telerik.Web.UI.GridNeedDataSourceEventArgs e)
+        protected void gridGTOutbound_NeedDataSource(object sender, Telerik.Web.UI.GridNeedDataSourceEventArgs e)
         {
-            gridPickupCargo.DataSource = getGatewayTranmittal();
+            gridGTOutbound.DataSource = getGatewayOutbound();
         }
 
         protected void Print_Click(object sender, EventArgs e)

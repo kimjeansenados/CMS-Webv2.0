@@ -21,7 +21,7 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         public DataTable getGatewayTranmittal()
         {
-            DataSet data = BLL.Report.GatewayTransmittal.GetHoldCargo(getConstr.ConStrCMS);
+            DataSet data = BLL.Report.GatewayTransmittal.GetCargoTransfer(getConstr.ConStrCMS);
             DataTable dt = new DataTable();
             dt = data.Tables[0];
             return dt;

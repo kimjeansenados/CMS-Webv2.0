@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GatewayInbound.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.GatewayInbound" %>
+﻿<%@ Page Title="Gateway Inbound" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GatewayInbound.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.GatewayInbound" %>
 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
@@ -61,7 +61,7 @@
                 <telerik:RadLabel runat="server" Text="Origin City:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="Origin" runat="server" Skin="Glow" Width="250px" 
                     AppendDataBoundItems="true" EnableTextSelection="true" 
-                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" AutoPostBack="true" OnSelectedIndexChanged="BCO_SelectedIndexChanged">
+                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" AutoPostBack="true">
                     <Items>
                         <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
                     </Items>
@@ -79,7 +79,7 @@
                 &nbsp;&nbsp;
 
                 <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow"  AutoPostBack="true"> </telerik:RadButton>
-                <telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click"> </telerik:RadButton>
+                <%--<telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click"> </telerik:RadButton>--%>
 
             </div>
             <br />

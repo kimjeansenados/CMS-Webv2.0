@@ -28,5 +28,7 @@ namespace BusinessLogic.Report
         {
             return DAL.Reports.HoldCargo.GetGatewayOutbound(conSTR);
         }
+
+        
     }
 }

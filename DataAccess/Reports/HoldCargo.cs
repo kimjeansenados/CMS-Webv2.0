@@ -14,7 +14,7 @@ namespace DataAccess.Reports
         {
             using (SqlConnection con = new SqlConnection(conSTR))
             {
-                SqlDataAdapter da = new SqlDataAdapter("sp_view_Reports_HolCargo", con);
+                SqlDataAdapter da = new SqlDataAdapter("sp_view_Reports_HoldCargo", con);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
                 //da.SelectCommand.Parameters.Add("@DATE1", SqlDbType.Date).Value = date1;
                 //da.SelectCommand.Parameters.Add("@DATE2", SqlDbType.Date).Value = date2;
