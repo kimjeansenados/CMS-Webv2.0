@@ -31,15 +31,6 @@ namespace CMSVersion2.Report.Operation.Manifest {
         protected global::Telerik.Web.UI.RadDatePicker Date;
         
         /// <summary>
-        /// Origin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox Origin;
-        
-        /// <summary>
         /// BCO control.
         /// </summary>
         /// <remarks>

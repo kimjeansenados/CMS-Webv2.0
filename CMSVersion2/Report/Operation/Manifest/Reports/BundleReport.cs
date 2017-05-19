@@ -29,11 +29,14 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             txtDate.Value = ReportGlobalModel.Date;
             txtBundleNumber.Value = ReportGlobalModel.SackNo;
             txtDestination.Value = ReportGlobalModel.Destination;
-            txtWeight.Value = "";
+            //txtWeight.Value = "";
             
             txtRemarks.Value = ReportGlobalModel.Remarks;
             txtScannedBy.Value = ReportGlobalModel.ScannedBy;
             txtNotes.Value = ReportGlobalModel.Notes;
+
+            txtPrintedDate.Value = DateTime.Now.ToString();
+            txtPrintedBy.Value = ReportGlobalModel.User;
 
         }
     }

@@ -10,14 +10,15 @@ namespace DataAccess.Reports
 {
     public class CargoTransfer
     {
-        public static DataSet GetGatewayOutbound(string conSTR)
+        public static DataSet GetCargoTransfer(string conSTR ,string date1 , string origin , string destination)
         {
             using (SqlConnection con = new SqlConnection(conSTR))
             {
                 SqlDataAdapter da = new SqlDataAdapter("sp_view_Reports_CargoTransfer", con);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                //da.SelectCommand.Parameters.Add("@DATE1", SqlDbType.Date).Value = date1;
-                //da.SelectCommand.Parameters.Add("@DATE2", SqlDbType.Date).Value = date2;
+                da.SelectCommand.Parameters.Add("@DATE1", SqlDbType.VarChar).Value = date1;
+                da.SelectCommand.Parameters.Add("@ORIGIN", SqlDbType.VarChar).Value = origin;
+                da.SelectCommand.Parameters.Add("@DESTINATION", SqlDbType.VarChar).Value = destination;
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 return ds;

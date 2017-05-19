@@ -31,7 +31,33 @@ namespace CMSVersion2.Report.Operation.Manifest
                 Batch.DataTextField = "BatchName";
                 Batch.DataValueField = "BatchName";
                 Batch.DataBind();
+
+                Gateway.DataSource = getGatewayList();
+                Gateway.DataTextField = "Gateway";
+                Gateway.DataValueField = "Gateway";
+                Gateway.SelectedIndex = 0;
+                Gateway.DataBind();
+
+                Date.SelectedDate = DateTime.Now;
+                
             }
+        }
+
+        public DataTable getGatewayList()
+        {
+            string DateStr = "";
+            try
+            {
+                DateStr = Date.SelectedDate.Value.ToString("dd MMM yyyy");
+            }
+            catch (Exception) {
+                DateStr = "";
+            }
+
+            DataSet data = BLL.Report.GatewayTransmittal.GetGatewayList(getConstr.ConStrCMS , DateStr);
+            DataTable dt = new DataTable();
+            dt = data.Tables[0];
+            return dt;
         }
 
         public DataTable getBatch()
@@ -54,16 +80,33 @@ namespace CMSVersion2.Report.Operation.Manifest
         public DataTable getGatewayTranmittal()
         {
             string DateStr = "";
-            string GateWay = "";
-            string BCO = "";
-            string Batch = "";
-            
+            string GatewayStr = "";
+            string BCOStr = "All";
+            string BatchStr = "All";
 
-            DataSet data = BLL.Report.GatewayTransmittal.GetGWTransmittal(getConstr.ConStrCMS);
+            try
+            {
+                GatewayStr = Gateway.SelectedItem.Text.ToString();
+                BCOStr = BCO.SelectedItem.Text.ToString();
+                BatchStr = Batch.SelectedItem.Text.ToString();
+                DateStr = Date.SelectedDate.Value.ToString("dd MMM yyyy");
+            }
+            catch (Exception)
+            {
+                DateStr = "";
+            }
+
+            DataSet data = BLL.Report.GatewayTransmittal.GetGWTransmittal(getConstr.ConStrCMS, DateStr , GatewayStr , BCOStr , BatchStr);
             DataTable dt = new DataTable();
             dt = data.Tables[0];
 
-            
+            ReportGlobalModel.Report = "GWTransmittal";
+            ReportGlobalModel.table1 = dt;
+            ReportGlobalModel.Date = DateStr;
+            ReportGlobalModel.Gateway = GatewayStr;
+            ReportGlobalModel.Branch = BCOStr;
+            ReportGlobalModel.Batch = BatchStr;
+
             return dt;
 
         }
@@ -81,7 +124,6 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         protected void Print_Click(object sender, EventArgs e)
         {
-            ReportGlobalModel.Report = "GWTransmittal";
             string host = HttpContext.Current.Request.Url.Authority;
             RadWindow1.NavigateUrl = "http://" + host + "/" + WebPathName + "/Report/ReportViewerForm1.aspx";
             string script = "function f(){$find(\"" + RadWindow1.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
@@ -91,6 +133,16 @@ namespace CMSVersion2.Report.Operation.Manifest
         protected void gridPickupCargo_PreRender(object sender, EventArgs e)
         {
             gridPickupCargo.Rebind();
+        }
+
+        protected void Date_SelectedDateChanged(object sender, Telerik.Web.UI.Calendar.SelectedDateChangedEventArgs e)
+        {
+            Gateway.Items.Clear();
+            Gateway.DataSource = getGatewayList();
+            Gateway.DataTextField = "Gateway";
+            Gateway.DataValueField = "Gateway";
+            Gateway.SelectedIndex = 0;
+            Gateway.DataBind();
         }
     }
 }

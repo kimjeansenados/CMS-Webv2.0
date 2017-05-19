@@ -34,6 +34,9 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             txtScannedBy.Value = ReportGlobalModel.ScannedBy;
             txtNotes.Value = ReportGlobalModel.Notes;
 
+            txtPrintedDate.Value = DateTime.Now.ToString();
+            txtPrintedBy.Value = ReportGlobalModel.User;
+
         }
     }
 }

@@ -46,7 +46,8 @@
             <div class="row">
 
                 <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
-                <telerik:RadDatePicker ID="Date" runat="server" AutoPostBack="true" Width="115px" Skin="Glow" DateInput-DateFormat="MM/dd/yyyy">
+                <telerik:RadDatePicker ID="Date" runat="server" OnSelectedDateChanged="Date_SelectedDateChanged" 
+                    AutoPostBack="true" Width="115px" Skin="Glow" DateInput-DateFormat="MM/dd/yyyy">
                 </telerik:RadDatePicker>                
                 &nbsp;&nbsp;
 
@@ -59,7 +60,7 @@
                 &nbsp;&nbsp;
 
                 <telerik:RadLabel runat="server" Text="BCO Destination:"></telerik:RadLabel>
-                <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="210px" 
+                <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="250px" 
                     AppendDataBoundItems="true" EnableTextSelection="true" 
                     AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" AutoPostBack="true">
                     <Items>
@@ -70,7 +71,7 @@
 
                 <telerik:RadLabel runat="server" Text="Batch:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="Batch" runat="server" Skin="Glow" EnableTextSelection="true"
-                    AppendDataBoundItems="true" AutoPostBack="true" MarkFirstMatch="true"    
+                    AppendDataBoundItems="true" Width="115px" AutoPostBack="true" MarkFirstMatch="true"    
                     AutoCompleteSeparator="" AllowCustomText="true">
                     <Items>
                         <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
@@ -89,7 +90,7 @@
                     PageSize="10"  OnPreRender="gridPickupCargo_PreRender"
                     AllowFilteringByColumn="false"
                     AutoGenerateColumns="false"
-                    AllowSorting="true" 
+                    AllowSorting="true" ShowFooter="true" 
                     ExportSettings-Pdf-ForceTextWrap="false"                     
                     ClientSettings-Scrolling-AllowScroll="true"                  
                     ItemStyle-Wrap="false" 
@@ -108,8 +109,8 @@
                             <telerik:GridBoundColumn DataField="CONSIGNEE ADDRESS" HeaderText="CONSIGNEE ADDRESS"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="COMMODITY TYPE" HeaderText="COMMODITY TYPE"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="COMMODITY" HeaderText="COMMODITY"></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="QTY" HeaderText="QTY"></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="AGW" HeaderText="AGW"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="QTY" HeaderText="QTY" Aggregate="Sum" FooterText=" "></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="AGW" HeaderText="AGW" Aggregate="Sum" FooterText=" "></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="SERVICE MODE" HeaderText="SERVICE MODE"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="PAY MODE" HeaderText="PAY MODE"></telerik:GridBoundColumn>
                             

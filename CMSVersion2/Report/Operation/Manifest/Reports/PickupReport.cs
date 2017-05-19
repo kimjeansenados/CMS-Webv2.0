@@ -27,8 +27,11 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             table1.DataSource = objectDataSource;
 
             txtArea.Value = ReportGlobalModel.Area;
-            txtDriver.Value = ReportGlobalModel.Driver;
+            txtBCO.Value = ReportGlobalModel.Driver;
             txtChecker.Value = ReportGlobalModel.Checker;
+
+            txtPrintedDate.Value = DateTime.Now.ToString();
+            txtPrintedBy.Value = ReportGlobalModel.User;
 
 
         }
