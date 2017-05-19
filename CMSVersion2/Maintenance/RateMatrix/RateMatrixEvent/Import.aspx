@@ -41,6 +41,7 @@
             <div class="container">
                 <div class="buttons">
                     <br />
+                  <%-- <label for="email" class="cols-sm-2 control-label">Commodity Type</label>--%>
                     <telerik:RadAsyncUpload ID="RadAsyncUpload2" Skin="Glow" Visible="true" OnClientFilesUploaded="fileUploaded" OnFileUploaded="AsyncUpload1_FileUploaded"
                         HideFileInput="True" runat="server" Localization-Select="Import From Excel File" AllowedFileExtensions=".xlsx, .xls" Font-Size="14px"></telerik:RadAsyncUpload>
                     <br />

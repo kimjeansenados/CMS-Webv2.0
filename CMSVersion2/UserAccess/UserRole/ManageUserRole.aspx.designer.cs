@@ -13,6 +13,15 @@ namespace CMSVersion2.UserAccess.UserRole {
     public partial class ManageUserRole {
         
         /// <summary>
+        /// radSearchUserEmployee control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadSearchBox radSearchUserEmployee;
+        
+        /// <summary>
         /// RadAjaxPanel2 control.
         /// </summary>
         /// <remarks>

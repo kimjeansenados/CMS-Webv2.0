@@ -26,14 +26,14 @@ namespace BusinessLogic
         }
 
 
-        public static void UpdateApplicableRate(Guid ApplicableRateId, Guid Createdby, string applicableratename, string description, string conStr)
+        public static void UpdateApplicableRate(Guid ApplicableRateId, string applicableratename, Guid commodityTypeId, Guid serviceModeId, Guid serviceTypeId, Guid Createdby, string description, string conStr)
         {
-            DAL.ApplicableRate.UpdateApplicableRate(ApplicableRateId, Createdby, applicableratename, description, conStr);
+            DAL.ApplicableRate.UpdateApplicableRate(ApplicableRateId, applicableratename, commodityTypeId, serviceModeId, serviceTypeId, Createdby, description, conStr);
 
         }
-        public static void InsertApplicableRate(Guid Createdby, string applicableratename, string description, int Flag, string conStr)
+        public static void InsertApplicableRate(Guid Createdby, string applicableratename, Guid commodityTypeId, Guid serviceModeId, Guid serviceTypeId, string description, int Flag, string conStr)
         {
-            DAL.ApplicableRate.InsertApplicableRate(Createdby, applicableratename, description, Flag, conStr);
+            DAL.ApplicableRate.InsertApplicableRate(Createdby, applicableratename, commodityTypeId, serviceModeId, serviceTypeId, description, Flag, conStr);
 
         }
 

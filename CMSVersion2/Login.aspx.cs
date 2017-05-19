@@ -128,6 +128,7 @@ namespace CMSVersion2
                         Session["UserIdSession"] = userId;
 
                         Application["Username"] = Login1.UserName;
+                        ReportGlobalModel.User = fullname;
 
                         if (firstLogin == true)
                         {
@@ -173,7 +174,7 @@ namespace CMSVersion2
                         Session["UserIdSession"] = userId;
                         Application["Username"] = Login1.UserName;
 
-
+                        ReportGlobalModel.User = fullname;
 
                         BLL.UserRole.UpdateLoginDate(Login1.UserName, getConstr.ConStrCMS);
                         foreach (string itemAccess in listofMenuAccess)

@@ -85,9 +85,9 @@
 
             <br />
             <div class="row">
-                <telerik:RadGrid ID="gridPickupCargo" runat="server"  Skin="Glow"
-                    AllowPaging="True" OnPreRender="gridPickupCargo_PreRender"
-                    PageSize="10" OnNeedDataSource="gridPickupCargo_NeedDataSource1"   
+                <telerik:RadGrid ID="gridGatewayOutbound" runat="server"  Skin="Glow"
+                    AllowPaging="True" OnPreRender="gridGatewayOutbound_PreRender"
+                    PageSize="10" OnNeedDataSource="gridGatewayOutbound_NeedDataSource1"   
                     AllowFilteringByColumn="false"
                     AutoGenerateColumns="true"
                     AllowSorting="true" 

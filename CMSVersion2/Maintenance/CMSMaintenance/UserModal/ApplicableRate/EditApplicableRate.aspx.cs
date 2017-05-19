@@ -1,7 +1,9 @@
-﻿using System;
+﻿using CMSVersion2.Models;
+using System;
 using System.Data;
 using System.Web;
 using System.Web.UI.WebControls;
+using Telerik.Web.UI;
 using BLL = BusinessLogic;
 using Tools = utilities;
 
@@ -14,7 +16,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.ApplicableRate
         {
             if (!IsPostBack)
             {
-
+                InitLoad();
 
                 if (Request.QueryString["ID"] == null)
                 {
@@ -31,12 +33,32 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.ApplicableRate
                     {
                         if (counter == 0)
                         {
-                            string RateId = row["ApplicableRateId"].ToString();
-                            string ApplicableRateName = row["ApplicableRateName"].ToString();
+                            try
+                            {
+                                string RateId = row["ApplicableRateId"].ToString();
+                                string ApplicableRateName = row["ApplicableRateName"].ToString();
+                                string commoditypeId = row["CommodityTypeId"].ToString();
+                                string servicemodeId = row["ServiceModeId"].ToString();
+                                string serviceTypeId = row["ServiceTypeId"].ToString();
 
-                            txtApplicableRateName.Text = ApplicableRateName;
-                            lblGroupID.Text = RateId;
-                            counter++;
+                                RadComboBoxItem commodityType = rcbCommodityType.FindItemByValue(commoditypeId);
+                                commodityType.Selected = true;
+
+                                RadComboBoxItem serviceMode = rcbServiceMode.FindItemByValue(servicemodeId);
+                                serviceMode.Selected = true;
+
+                                RadComboBoxItem serviceType = rcbServiceType.FindItemByValue(serviceTypeId);
+                                serviceType.Selected = true;
+
+                                txtApplicableRateName.Text = ApplicableRateName;
+                                lblGroupID.Text = RateId;
+                                counter++;
+                            }
+                            catch(Exception ex)
+                            {
+                                Console.WriteLine(ex);
+                            }
+                           
                         }
                     }
 
@@ -44,6 +66,42 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.ApplicableRate
             }
         }
 
+        private void InitLoad()
+        {
+            LoadCommodityType();
+            ServiceType();
+            ServiceMode();
+        }
+
+        private void LoadCommodityType()
+        {
+            DataTable data = BLL.CommodityType.GetCommodityType(getConstr.ConStrCMS).Tables[0];
+            rcbCommodityType.DataSource = data;
+            rcbCommodityType.DataValueField = "CommodityTypeId";
+            rcbCommodityType.DataTextField = "CommodityTypeName";
+            rcbCommodityType.DataBind();
+
+        }
+
+        private void ServiceType()
+        {
+            DataTable data = BLL.ServiceType.GetServiceType(getConstr.ConStrCMS).Tables[0];
+            rcbServiceType.DataSource = data;
+            rcbServiceType.DataValueField = "ServiceTypeId";
+            rcbServiceType.DataTextField = "ServiceTypeName";
+            rcbServiceType.DataBind();
+
+        }
+
+        private void ServiceMode()
+        {
+            DataTable data = BLL.ServiceMode.GetServiceMode(getConstr.ConStrCMS).Tables[0];
+            rcbServiceMode.DataSource = data;
+            rcbServiceMode.DataValueField = "ServiceModeId";
+            rcbServiceMode.DataTextField = "ServiceModeName";
+            rcbServiceMode.DataBind();
+
+        }
 
 
         protected override void OnInit(EventArgs e)
@@ -102,8 +160,28 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.ApplicableRate
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            Guid createdBy = new Guid();
+            Guid commodiTypeId = new Guid();
+            Guid serviceModeId = new Guid();
+            Guid serviceTypeId = new Guid();
+            string apprateName = "";
+
+            try
+            {
+                createdBy = GlobalCode.userId;
+                commodiTypeId = new Guid(rcbCommodityType.SelectedItem.Value.ToString());
+                serviceModeId = new Guid(rcbServiceMode.SelectedItem.Value.ToString());
+                serviceTypeId = new Guid(rcbServiceType.SelectedItem.Value.ToString());
+                apprateName = txtApplicableRateName.Text;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+
             string host = HttpContext.Current.Request.Url.Authority;
-            BLL.ApplicableRate.UpdateApplicableRate(new Guid(lblGroupID.Text), new Guid("11111111-1111-1111-1111-111111111111"), txtApplicableRateName.Text, "", getConstr.ConStrCMS);
+            BLL.ApplicableRate.UpdateApplicableRate(new Guid(lblGroupID.Text), apprateName, commodiTypeId, serviceModeId, serviceTypeId, createdBy, "",getConstr.ConStrCMS);
 
             string script = "<script>CloseOnReload()</" + "script>";
             ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);

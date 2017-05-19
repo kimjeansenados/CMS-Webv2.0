@@ -340,7 +340,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox19.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox19.StyleName = "";
             this.textBox19.TextWrap = false;
-            this.textBox19.Value = "= Fields.Pieces";
+            this.textBox19.Value = "= Fields.Qty";
             // 
             // textBox31
             // 
@@ -383,7 +383,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox43.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.textBox43.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox43.StyleName = "";
-            this.textBox43.Value = "= SUM(CDbl(Fields.Pieces))";
+            this.textBox43.Value = "= SUM(CDbl(Fields.Qty))";
             // 
             // pageFooterSection1
             // 

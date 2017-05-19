@@ -19,6 +19,11 @@ namespace BusinessLogic
             return DAL.RateMatrix.GetRateMatrix(conSTR);
         }
 
+        public static DataSet GetRateMatrixById(Guid ratematrixId, string conStr)
+        {
+            return DAL.RateMatrix.GetRateMatrixById(ratematrixId, conStr);
+        }
+
         //public static void UpdateClientProfile(Guid ClientID, int Flag, string conStr)
         //{
         //    DAL.Client.UpdateClientProfile(ClientID, Flag, conStr);

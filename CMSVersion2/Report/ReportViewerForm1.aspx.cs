@@ -47,9 +47,9 @@
                 case "CargoTransfer":
                     clientReportSource.Identifier = typeof(CargoTransferReportView).AssemblyQualifiedName;
                     break;
-                //case "HoldCargo":
-                //    clientReportSource.Identifier = typeof(HoldCargo).AssemblyQualifiedName;
-                //    break;
+                case "HoldCargo":
+                    clientReportSource.Identifier = typeof(HoldCargoReport).AssemblyQualifiedName;
+                    break;
 
                 //OPERATION -> CARGO MONITORING
                 case "Delivered":

@@ -67,7 +67,7 @@
     </telerik:RadWindow>
     <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwRUTEdit" Title="Update Revenue Unit Type" VisibleStatusbar="false"  Height="350px" Width="380px">
     </telerik:RadWindow>
-    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwApplicablerateAdd" Title="New Applicable Rate" VisibleStatusbar="false" Height="350px" Width="380px">
+    <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwApplicablerateAdd" Title="New Applicable Rate" VisibleStatusbar="false" Height="430px" Width="380px">
     </telerik:RadWindow>
     <telerik:RadWindow RenderMode="Lightweight" Skin="Glow" Behaviors="Close" runat="server" ID="rwApplicablerateEdit" Title="Udpate Applicable Rate" VisibleStatusbar="false" Height="350px" Width="380px">
     </telerik:RadWindow>

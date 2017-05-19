@@ -49,33 +49,6 @@ namespace CMSVersion2.Maintenance.RateMatrix.RateMatrix {
         protected global::Telerik.Web.UI.RadComboBox rdcApplicableRate;
         
         /// <summary>
-        /// rdcCommodityType control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox rdcCommodityType;
-        
-        /// <summary>
-        /// rdcServicteType control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox rdcServicteType;
-        
-        /// <summary>
-        /// rdcServiceMode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox rdcServiceMode;
-        
-        /// <summary>
         /// chkApplyEVM control.
         /// </summary>
         /// <remarks>

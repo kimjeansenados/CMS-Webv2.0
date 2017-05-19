@@ -67,6 +67,33 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.ApplicableRate {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_AppRate;
         
         /// <summary>
+        /// rcbCommodityType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadComboBox rcbCommodityType;
+        
+        /// <summary>
+        /// rcbServiceMode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadComboBox rcbServiceMode;
+        
+        /// <summary>
+        /// rcbServiceType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadComboBox rcbServiceType;
+        
+        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>
