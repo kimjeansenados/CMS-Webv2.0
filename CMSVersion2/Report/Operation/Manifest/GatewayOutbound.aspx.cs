@@ -135,8 +135,8 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         protected void Search_Click(object sender, EventArgs e)
         {
-            gridPickupCargo.DataSource = getGatewayTranmittal();
-            gridPickupCargo.Rebind();
+            gridGatewayOutbound.DataSource = getGatewayTranmittal();
+            gridGatewayOutbound.Rebind();
         }
 
         protected void Print_Click1(object sender, EventArgs e)
@@ -147,14 +147,14 @@ namespace CMSVersion2.Report.Operation.Manifest
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
 
-        protected void gridPickupCargo_PreRender(object sender, EventArgs e)
+        protected void gridGatewayOutbound_PreRender(object sender, EventArgs e)
         {
-            gridPickupCargo.Rebind();
+            gridGatewayOutbound.Rebind();
         }
 
-        protected void gridPickupCargo_NeedDataSource1(object sender, GridNeedDataSourceEventArgs e)
+        protected void gridGatewayOutbound_NeedDataSource1(object sender, GridNeedDataSourceEventArgs e)
         {
-            gridPickupCargo.DataSource = getGatewayTranmittal();
+            gridGatewayOutbound.DataSource = getGatewayTranmittal();
         }
     }
 }

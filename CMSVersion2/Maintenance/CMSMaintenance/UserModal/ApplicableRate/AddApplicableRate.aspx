@@ -59,8 +59,27 @@
                                 ErrorMessage="*"
                                 ForeColor="Red">
                             </asp:RequiredFieldValidator>
+
                         </div>
                         <br />
+
+                        <label for="email" class="cols-sm-2 control-label">Commodity Type</label>
+                         <div class="input-group" style="font-size: 12px">
+                            <telerik:RadComboBox ID="rcbCommodityType" runat="server" Width="190px"></telerik:RadComboBox>
+                        </div>
+                        <br />
+                         <label for="email" class="cols-sm-2 control-label">Service Mode</label>
+                         <div class="input-group" style="font-size: 12px">
+                            <telerik:RadComboBox ID="rcbServiceMode" runat="server" Width="190px"></telerik:RadComboBox>
+                        </div>
+                        <br />
+                        <label for="email" class="cols-sm-2 control-label">Service Type</label>
+                         <div class="input-group" style="font-size: 12px">
+                            <telerik:RadComboBox ID="rcbServiceType" runat="server" Width="190px"></telerik:RadComboBox>
+                        </div>
+                        <br />
+                       
+                        
                         <telerik:RadButton Skin="Glow" ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" OnClientClicked=""></telerik:RadButton>
                         <telerik:RadButton Skin="Glow" ID="btnCancel" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click" OnClientClicked="redirect"></telerik:RadButton>
 

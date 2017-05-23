@@ -100,8 +100,13 @@
                                                 <li><a runat="server" id="BranchAcceptance" onserverclick="clickBranchAcceptance">Branch Acceptance</a></li>
                                                 <li><a runat="server" id="Bundle" onserverclick="clickBundle">Bundle</a></li>
                                                 <li><a runat="server" id="Unbundle" onserverclick="clickUnbundle">Unbundle</a></li>
+                                                <li><a runat="server" id="GatewayTransmittal" onserverclick="clickGatewayTransmittal">Gateway Transmittal</a></li>    
+                                                <li><a runat="server" id="GatewayOutbound" onserverclick="clickGatewayOutbound">Gateway Outbound</a></li>  
+                                                <li><a runat="server" id="GatewayInbound" onserverclick="clickGatewayInbound">Gateway Inbound</a></li>  
+                                                <li><a runat="server" id="CargoTransfer" onserverclick="clickCargoTransfer">Cargo Transfer</a></li>
                                                 <li><a runat="server" id="Segregation" onserverclick="clickSegregation">Segregation</a></li>
-                                                <li><a runat="server" id="DailyTrip" onserverclick="clickDailyTrip">Daily Trip</a></li>                                                
+                                                <li><a runat="server" id="DailyTrip" onserverclick="clickDailyTrip">Daily Trip</a></li>   
+                                                <li><a runat="server" id="HoldCargo" onserverclick="clickHoldCargo">Hold Cargo</a></li>                                        
                                             </ul>
                                         </li>                               
                                         <li class="dropdown dropdown-submenu">

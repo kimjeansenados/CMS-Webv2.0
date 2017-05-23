@@ -55,7 +55,7 @@
                 <telerik:RadLabel runat="server" Text="BCO:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="250px" 
                     AppendDataBoundItems="true" EnableTextSelection="true" 
-                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" AutoPostBack="true" OnSelectedIndexChanged="BCO_SelectedIndexChanged">
+                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" AutoPostBack="true">
                     <Items>
                         <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
                     </Items>
@@ -77,7 +77,8 @@
                     ExportSettings-Pdf-ForceTextWrap="false"                     
                     ClientSettings-Scrolling-AllowScroll="true"                   
                     ItemStyle-Wrap="false" 
-                    Height="400px">
+                    Height="400px"
+                    OnNeedDataSource="gridPickupCargo_NeedDataSource">
 
                     <MasterTableView CommandItemDisplay="Top" Font-Size="Smaller">
                         <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="false" 

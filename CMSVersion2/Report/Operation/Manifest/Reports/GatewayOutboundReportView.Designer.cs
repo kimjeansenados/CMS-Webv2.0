@@ -108,7 +108,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox20.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(11D);
             this.textBox20.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Bottom;
             this.textBox20.StyleName = "";
-            this.textBox20.Value = "Discrepency (QTY)";
+            this.textBox20.Value = "Discrepancy (QTY)";
             // 
             // textBox13
             // 
@@ -373,7 +373,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.txtAwb.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.txtAwb.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.txtAwb.TextWrap = false;
-            this.txtAwb.Value = "= Fields.AWB";
+            this.txtAwb.Value = "= Fields.AWBNO";
             // 
             // textBox19
             // 
@@ -386,7 +386,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox19.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox19.StyleName = "";
             this.textBox19.TextWrap = false;
-            this.textBox19.Value = "= Fields.[Recieved(Qty)]";
+            this.textBox19.Value = "= Fields.[RECIEVED QTY]";
             // 
             // textBox24
             // 
@@ -399,7 +399,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox24.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox24.StyleName = "";
             this.textBox24.TextWrap = false;
-            this.textBox24.Value = "= Fields.[Discrepancy(Qty)]";
+            this.textBox24.Value = "= Fields.[DISCREPENCY QTY]";
             // 
             // textBox31
             // 
@@ -433,7 +433,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox43.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.textBox43.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox43.StyleName = "";
-            this.textBox43.Value = "= SUM(CDbl(Fields.[Recieved(Qty)]))";
+            this.textBox43.Value = "= SUM(CDbl(Fields.[RECIEVED QTY]))";
             // 
             // textBox44
             // 
@@ -444,7 +444,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox44.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.textBox44.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox44.StyleName = "";
-            this.textBox44.Value = "= SUM(CDbl(Fields.[Discrepancy(Qty)]))";
+            this.textBox44.Value = "= SUM(CDbl(Fields.[DISCREPENCY QTY]))";
             // 
             // textBox11
             // 
@@ -455,7 +455,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox11.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox11.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox11.StyleName = "";
-            this.textBox11.Value = "= Fields.[Total Qty]";
+            this.textBox11.Value = "= Fields.[TOTAL QTY]";
             // 
             // textBox12
             // 
@@ -465,7 +465,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox12.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(0D);
             this.textBox12.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox12.StyleName = "";
-            this.textBox12.Value = "= SUM(CDbl(Fields.[Total Qty]))";
+            this.textBox12.Value = "= SUM(CDbl(Fields.[TOTAL QTY]))";
             // 
             // pageFooterSection1
             // 

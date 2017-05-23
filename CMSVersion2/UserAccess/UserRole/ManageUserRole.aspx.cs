@@ -16,7 +16,9 @@ namespace CMSVersion2.UserAccess.UserRole
         Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            radSearchUserEmployee.DataSource = GetUserRole();
+            radSearchUserEmployee.DataTextField = "FullName";
+            radSearchUserEmployee.DataValueField = "UserId";
         }
 
         #region Datatable
@@ -76,6 +78,14 @@ namespace CMSVersion2.UserAccess.UserRole
             return convertdata;
         }
 
+        public DataTable GetUserRolebyUserId(Guid userId)
+        {
+            DataSet data = BLL.UserRole.GetUserRolebyUserId(userId, getConstr.ConStrCMS);
+            DataTable convertdata = new DataTable();
+            convertdata = data.Tables[0];
+            return convertdata;
+        }
+
         #region Events
         protected void RadGrid2_NeedDataSource(object sender, Telerik.Web.UI.GridNeedDataSourceEventArgs e)
         {
@@ -97,6 +107,37 @@ namespace CMSVersion2.UserAccess.UserRole
             RadGrid2.DataSource = GetUserRole();
             RadGrid2.Rebind();
             
+        }
+
+        protected void radSearchUserEmployee_Search(object sender, SearchBoxEventArgs e)
+        {
+            RadSearchBox searchBox = (RadSearchBox)sender;
+
+            string employeeId = string.Empty;
+            string likeCondition;
+            Guid empId = new Guid();
+
+            if (e.DataItem != null)
+            {
+                employeeId = ((Dictionary<string, object>)e.DataItem)["UserId"].ToString();
+                empId = Guid.Parse(employeeId);
+                if (!string.IsNullOrEmpty(employeeId))
+                {
+                    likeCondition = string.Format("'{0}{1}%'", searchBox.Filter == SearchBoxFilter.Contains ? "%" : "", ((Dictionary<string, object>)e.DataItem)["UserId"].ToString());
+                    //gridEmployeeDataSource.SelectCommand = "SELECT [EmployeeId], [FirstName] , [MiddleName], [LastName], [BirthDate], [ContactNo], [Email], [CreatedDate]" + " FROM[Employee] WHERE RecordStatus = 1 AND [" + searchBox.DataValueField + "] LIKE " + likeCondition;
+                    //RadGrid2.DataBind();
+                    RadGrid2.DataSource = GetUserRolebyUserId(empId);
+                    //RadGrid2.DataSource = "SELECT [EmployeeId], [FirstName] , [MiddleName], [LastName], [BirthDate], [ContactNo], [Email], [CreatedDate]" + " FROM [Employee] WHERE RecordStatus = 1 and FirstName = [" + searchBox.Text + "] OR LastName = [" + searchBox.Text + "] or BirthDate = [" + searchBox.Text + "] ";
+                    RadGrid2.DataBind();
+                    // string search = radSearchEmployee.Text;
+                }
+
+            }
+            else
+            {
+                RadGrid2.DataSource = GetUserRole();
+                RadGrid2.DataBind();
+            }
         }
         #endregion
     }

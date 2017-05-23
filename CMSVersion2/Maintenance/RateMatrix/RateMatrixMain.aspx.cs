@@ -16,6 +16,10 @@ namespace CMSVersion2.Maintenance.RateMatrix
         Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
         protected void Page_Load(object sender, EventArgs e)
         {
+            radSearchRatematrix.DataSource = GetRateMatrix();
+            radSearchRatematrix.DataTextField = "ApplicableRateName";
+            radSearchRatematrix.DataValueField = "RateMatrixId";
+
             RadGrid2.MasterTableView.CommandItemSettings.ShowAddNewRecordButton = false;
 
             if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
@@ -58,6 +62,7 @@ namespace CMSVersion2.Maintenance.RateMatrix
         }
 
 
+
         public DataTable GetRateMatrix()
         {
 
@@ -67,7 +72,46 @@ namespace CMSVersion2.Maintenance.RateMatrix
             return convertdata;
         }
 
+        public DataTable GetRateMatrixById(Guid ratematrixId)
+        {
+            DataSet data = BLL.RateMatrix.GetRateMatrixById(ratematrixId, getConstr.ConStrCMS);
+            DataTable convertdata = new DataTable();
+            convertdata = data.Tables[0];
+            return convertdata;
+        }
 
+        protected void radRateMatrix_Search(object sender, SearchBoxEventArgs e)
+        {
+            RadSearchBox searchBox = (RadSearchBox)sender;
+
+            string Id = string.Empty;
+            string likeCondition;
+            Guid ratematrixid = new Guid();
+
+            if (e.DataItem != null)
+            {
+                Id = ((Dictionary<string, object>)e.DataItem)["RateMatrixId"].ToString();
+                ratematrixid = Guid.Parse(Id);
+                if (!string.IsNullOrEmpty(Id))
+                {
+                    likeCondition = string.Format("'{0}{1}%'", searchBox.Filter == SearchBoxFilter.Contains ? "%" : "", ((Dictionary<string, object>)e.DataItem)["RateMatrixId"].ToString());
+                    RadGrid2.DataSource = GetRateMatrixById(ratematrixid);
+                    RadGrid2.DataBind();
+                }
+
+            }
+            else
+            {
+                RadGrid2.DataSource = GetRateMatrix();
+                RadGrid2.DataBind();
+            }
+        }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            RadGrid2.DataSource = GetRateMatrix();
+            RadGrid2.Rebind();
+        }
 
         protected void RadGrid2_NeedDataSource(object sender, Telerik.Web.UI.GridNeedDataSourceEventArgs e)
         {

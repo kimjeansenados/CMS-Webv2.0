@@ -40,6 +40,20 @@
                 </div>
                 <!-- /.row -->
 
+                 <div class="size-wide">
+                    <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="radSearchUserEmployee" 
+                        EmptyMessage="Search Employee Name "
+                         OnSearch="radSearchUserEmployee_Search" Width="300"
+                        DataKeyNames="UserId"
+                        DataTextField="FullName"
+                        DataValueField="UserId"
+                        ShowSearchButton="false" Skin="Glow">
+                        <DropDownSettings Width="300" />
+                    </telerik:RadSearchBox>
+                    
+                 </div>
+                <br />
+
                         <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
                         <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
 
@@ -110,6 +124,20 @@
                                             <HeaderStyle />
                                         </telerik:GridButtonColumn>
                                     </Columns>
+
+                                    <GroupByExpressions>
+                                 <telerik:GridGroupByExpression>
+                                     <GroupByFields>
+                                         <telerik:GridGroupByField FieldName="BranchCorpOfficeName" />
+                                     </GroupByFields>
+                                   
+                                     <SelectFields>
+                                         <telerik:GridGroupByField FieldName="BranchCorpOfficeName" HeaderText="BCO"/>
+                                     </SelectFields>
+                                 </telerik:GridGroupByExpression>
+                                </GroupByExpressions>
+
+
 
                                     <CommandItemTemplate>
                                         <div class="center">

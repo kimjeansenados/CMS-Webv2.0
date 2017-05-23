@@ -22,6 +22,24 @@ namespace CMSVersion2.Corporate {
         protected global::Telerik.Web.UI.RadSearchBox radSearchUser;
         
         /// <summary>
+        /// RadWindowManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadWindowManager RadWindowManager1;
+        
+        /// <summary>
+        /// RadWindow1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadWindow RadWindow1;
+        
+        /// <summary>
         /// RadAjaxPanel2 control.
         /// </summary>
         /// <remarks>
@@ -83,6 +101,15 @@ namespace CMSVersion2.Corporate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource StatementOfAccountDataSource;
+        
+        /// <summary>
+        /// AdjustmentReasonDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource AdjustmentReasonDataSource;
         
         /// <summary>
         /// ShipmentDataSource control.

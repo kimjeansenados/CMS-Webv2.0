@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CMSVersion2.Models;
+using CMSVersion2.Report.Operation.Manifest.Reports;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -56,9 +58,19 @@ namespace CMSVersion2.Report.Operation.Manifest
                 DateStr = "";
             }
 
-            DataSet data = BLL.Report.GatewayTransmittal.GetCargoTransfer(getConstr.ConStrCMS , DateStr , OriginStr , DestinationStr );
+            DataSet data = BLL.Report.GatewayTransmittal.GetCargoTransfer(getConstr.ConStrCMS , DateStr , OriginStr , DestinationStr);
             DataTable dt = new DataTable();
             dt = data.Tables[0];
+           
+
+            //PRINTING
+            GetColumnDataFromDataTable getColumn = new GetColumnDataFromDataTable();
+            ReportGlobalModel.Report = "CargoTransfer";
+            ReportGlobalModel.table1 = dt;
+            ReportGlobalModel.Date = DateStr;
+            ReportGlobalModel.Origin = OriginStr;
+            ReportGlobalModel.Destination = DestinationStr;
+
             return dt;
 
         }

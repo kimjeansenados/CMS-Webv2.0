@@ -19,9 +19,9 @@ namespace CMSVersion2.Maintenance.RateMatrix.RateMatrix
             if (!IsPostBack)
             {
 
-                ServiceType();
-                ServiceMode();
-                LoadCommodityType();
+                //ServiceType();
+               // ServiceMode();
+                //LoadCommodityType();
                 LoadApplicableRate();
 
                 txtAmount.Text = "0";
@@ -29,31 +29,31 @@ namespace CMSVersion2.Maintenance.RateMatrix.RateMatrix
             }
         }
 
-        private void ServiceType()
-        {
-            rdcServicteType.DataSource = BLL.ServiceType.GetServiceType(getConstr.ConStrCMS);
-            rdcServicteType.DataValueField = "ServiceTypeId";
-            rdcServicteType.DataTextField = "ServiceTypeName";
-            rdcServicteType.DataBind();
-        }
+        //private void ServiceType()
+        //{
+        //    rdcServicteType.DataSource = BLL.ServiceType.GetServiceType(getConstr.ConStrCMS);
+        //    rdcServicteType.DataValueField = "ServiceTypeId";
+        //    rdcServicteType.DataTextField = "ServiceTypeName";
+        //    rdcServicteType.DataBind();
+        //}
 
-        private void ServiceMode()
-        {
-            rdcServiceMode.DataSource = BLL.ServiceMode.GetServiceMode(getConstr.ConStrCMS);
-            rdcServiceMode.DataValueField = "ServiceModeId";
-            rdcServiceMode.DataTextField = "ServiceModeName";
-            rdcServiceMode.DataBind();
-        }
+        //private void ServiceMode()
+        //{
+        //    rdcServiceMode.DataSource = BLL.ServiceMode.GetServiceMode(getConstr.ConStrCMS);
+        //    rdcServiceMode.DataValueField = "ServiceModeId";
+        //    rdcServiceMode.DataTextField = "ServiceModeName";
+        //    rdcServiceMode.DataBind();
+        //}
 
 
 
-        private void LoadCommodityType()
-        {
-            rdcCommodityType.DataSource = BLL.CommodityType.GetCommodityType(getConstr.ConStrCMS);
-            rdcCommodityType.DataValueField = "CommodityTypeId";
-            rdcCommodityType.DataTextField = "CommodityTypeName";
-            rdcCommodityType.DataBind();
-        }
+        //private void LoadCommodityType()
+        //{
+        //    rdcCommodityType.DataSource = BLL.CommodityType.GetCommodityType(getConstr.ConStrCMS);
+        //    rdcCommodityType.DataValueField = "CommodityTypeId";
+        //    rdcCommodityType.DataTextField = "CommodityTypeName";
+        //    rdcCommodityType.DataBind();
+        //}
 
         private void LoadApplicableRate()
         {
@@ -124,9 +124,9 @@ namespace CMSVersion2.Maintenance.RateMatrix.RateMatrix
 
             Guid CreatedBy = new Guid("11111111-1111-1111-1111-111111111111");
             Guid ApplicabbleRateId = new Guid(rdcApplicableRate.SelectedItem.Value.ToString());
-            Guid CommodityType = new Guid(rdcCommodityType.SelectedItem.Value.ToString());
-            Guid ServiceType = new Guid(rdcServicteType.SelectedItem.Value.ToString());
-            Guid ServiceModel = new Guid(rdcServiceMode.SelectedItem.Value.ToString());
+           // Guid CommodityType = new Guid(rdcCommodityType.SelectedItem.Value.ToString());
+           // Guid ServiceType = new Guid(rdcServicteType.SelectedItem.Value.ToString());
+           // Guid ServiceModel = new Guid(rdcServiceMode.SelectedItem.Value.ToString());
 
             Boolean hasfuelcharge = false;
             Boolean hasinsurance = false;
@@ -206,7 +206,7 @@ namespace CMSVersion2.Maintenance.RateMatrix.RateMatrix
             {
                 amountno = Convert.ToDecimal(txtAmount.Text);
             }
-            DAL.RateMatrix.AddCombinationRateMatrix(ApplicabbleRateId, CommodityType, ServiceType, ServiceModel, hasfuelcharge,
+            DAL.RateMatrix.AddCombinationRateMatrix(ApplicabbleRateId, hasfuelcharge,
                 HasAWBFee, hasinsurance, CreatedBy, applyevm, applyweight, isvatable, hasdeliveryFee, hasperishable, hasdangerousfee,
                 valuationcharge, amountno, getConstr.ConStrCMS);
 

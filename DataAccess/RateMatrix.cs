@@ -25,7 +25,7 @@ namespace DataAccess
 
         }
 
-
+       
         public static DataSet GetWB(Guid ID, string conSTR)
         {
             using (SqlConnection con = new SqlConnection(conSTR))
@@ -105,7 +105,7 @@ namespace DataAccess
 
 
         public static void AddCombinationRateMatrix(Guid ApplicableRateId,
-            Guid CommodityType, Guid ServiceType, Guid ServiceModel, Boolean hasfuelCharge
+            Boolean hasfuelCharge
             , Boolean hasAWBFee, Boolean hasinsurance, Guid CreatedBy, Boolean applyevm,
             Boolean applyweight, Boolean isvatable, Boolean hasdeliveryfee, Boolean hasperishable,
             Boolean hasdangerousFee, Boolean hasValuationcharge, decimal amount,
@@ -117,9 +117,9 @@ namespace DataAccess
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("@ApplicabbleRateId", SqlDbType.UniqueIdentifier).Value = ApplicableRateId;
-                    cmd.Parameters.Add("@CommodityType", SqlDbType.UniqueIdentifier).Value = CommodityType;
-                    cmd.Parameters.Add("@ServiceType", SqlDbType.UniqueIdentifier).Value = ServiceType;
-                    cmd.Parameters.Add("@ServiceModel", SqlDbType.UniqueIdentifier).Value = ServiceModel;
+                    //cmd.Parameters.Add("@CommodityType", SqlDbType.UniqueIdentifier).Value = CommodityType;
+                    //cmd.Parameters.Add("@ServiceType", SqlDbType.UniqueIdentifier).Value = ServiceType;
+                    //cmd.Parameters.Add("@ServiceModel", SqlDbType.UniqueIdentifier).Value = ServiceModel;
                     cmd.Parameters.Add("@hasfuelcharge", SqlDbType.Bit).Value = hasfuelCharge;
                     cmd.Parameters.Add("@HasAWBFee", SqlDbType.Bit).Value = hasAWBFee;
                     cmd.Parameters.Add("@HasInsurance", SqlDbType.Bit).Value = hasinsurance;
@@ -140,7 +140,7 @@ namespace DataAccess
 
 
         public static void UpdateCombinationRateMatrix(Guid RateMatrixId, Guid ApplicableRateId,
-         Guid CommodityType, Guid ServiceType, Guid ServiceModel, Boolean hasfuelCharge
+          Boolean hasfuelCharge
          , Boolean hasAWBFee, Boolean hasinsurance, Guid CreatedBy, Boolean applyevm,
          Boolean applyweight, Boolean isvatable, Boolean hasdeliveryfee, Boolean hasperishable,
          Boolean hasdangerousFee, Boolean hasValuationcharge, decimal amount,
@@ -153,9 +153,9 @@ namespace DataAccess
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("@RateMatrixId", SqlDbType.UniqueIdentifier).Value = RateMatrixId;
                     cmd.Parameters.Add("@ApplicabbleRateId", SqlDbType.UniqueIdentifier).Value = ApplicableRateId;
-                    cmd.Parameters.Add("@CommodityType", SqlDbType.UniqueIdentifier).Value = CommodityType;
-                    cmd.Parameters.Add("@ServiceType", SqlDbType.UniqueIdentifier).Value = ServiceType;
-                    cmd.Parameters.Add("@ServiceModel", SqlDbType.UniqueIdentifier).Value = ServiceModel;
+                    //cmd.Parameters.Add("@CommodityType", SqlDbType.UniqueIdentifier).Value = CommodityType;
+                    //cmd.Parameters.Add("@ServiceType", SqlDbType.UniqueIdentifier).Value = ServiceType;
+                    //cmd.Parameters.Add("@ServiceModel", SqlDbType.UniqueIdentifier).Value = ServiceModel;
                     cmd.Parameters.Add("@hasfuelcharge", SqlDbType.Bit).Value = hasfuelCharge;
                     cmd.Parameters.Add("@HasAWBFee", SqlDbType.Bit).Value = hasAWBFee;
                     cmd.Parameters.Add("@HasInsurance", SqlDbType.Bit).Value = hasinsurance;

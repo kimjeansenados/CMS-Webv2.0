@@ -3,7 +3,21 @@
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <style type="text/css">
+        .alink{
+            text-decoration:none !important;
+            color:#c1c7ca !important;
+        }
 
+        .alink:hover{
+            text-decoration:none !important;
+            color:#c1c7ca !important;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
 <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwRUTEdit" Height="350px" Width="380px"></telerik:RadWindow>
 <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwRateMatrix" Height="350px" Width="50px"></telerik:RadWindow>
 <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="rwRateMatrixedit" Height="350px" Width="50px"></telerik:RadWindow>
@@ -22,6 +36,19 @@
                 </ol>
             </div>
                 <!-- /.row -->
+                 <div class="size-wide">
+                    <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="radSearchRatematrix" EmptyMessage="Search Applicable Rate "
+                         OnSearch="radRateMatrix_Search"  Width="300"
+                        DataKeyNames="RateMatrixId"
+                        DataTextField="ApplicableRateName"
+                        DataValueField="RateMatrixId"
+                        ShowSearchButton="false" Skin="Glow">
+                        <DropDownSettings Width="300" />
+                    </telerik:RadSearchBox>
+                    
+                 </div>
+                <br />
+
                           <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
 
                         <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
@@ -204,11 +231,12 @@
        |
                    
                                  
-                                        <a href="#"  onclick="location.reload();">
-                                            <img src="../../Images/emblem.png" alt="Export to Excel" width="20px">
+                                        <a href="" onclick="LoadRadGrid()" class="alink">
+                                            <img src="../../Images/emblem.png" alt="Export to Excel" width="20">
                                             Refresh Data
                                             </a>
-                        
+                        <asp:button id="btnSubmit" runat="server" text="Submit" xmlns:asp="#unknown"
+                                            onclick="btnSubmit_Click" style="display:none" /> 
                             |
                                        
                                     </CommandItemTemplate>
@@ -229,13 +257,13 @@
                                     </telerik:RadWindow>
 
                                      <telerik:RadWindow RenderMode="Mobile" ID="EditRate" runat="server" Title="Adding record" Height="600px"
-                                        Width="300px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
+                                        Width="350px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
                                         Modal="true" Behaviors="Close,Move"  >
                                     </telerik:RadWindow>
 
                                     
                                      <telerik:RadWindow RenderMode="Mobile" ID="AddRate" runat="server" Title="Export Report Preview" Height="590px"
-                                        Width="300px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
+                                        Width="350px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
                                         Modal="true" Behaviors="Close,Move"  >
                                     </telerik:RadWindow>
                                 </Windows>
@@ -303,7 +331,9 @@
                                     //ShowEditForm();
                                     window.radopen("RateMatrixEvent/Edit.aspx?RateMatrixId=" + eventArgs.getDataKeyValue("RateMatrixId"), "EditRate");
                                 }
-
+                                function LoadRadGrid(){ 
+                                            document.getElementById("btnSubmit").click(); 
+                                    }
                             </script>
                          
 

@@ -59,7 +59,7 @@
                                 <asp:Label ID="lblID" runat="server" Text="" Visible="false"></asp:Label>
                                 <%--<span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
                                 --%>
-                                <telerik:RadComboBox ID="rdcApplicableRate" runat="server"></telerik:RadComboBox>
+                                <telerik:RadComboBox ID="rdcApplicableRate" runat="server" Width="230"></telerik:RadComboBox>
                             </div>
                             <br />
 
@@ -67,7 +67,7 @@
 
 
 
-                        <label for="email" class="cols-sm-2 control-label">Commidty Type</label>
+                      <%--  <label for="email" class="cols-sm-2 control-label">Commidty Type</label>
                         <div class="cols-sm-10">
                             <div class="input-group" style="font-size: 12px">
 
@@ -88,13 +88,13 @@
 
                         </div>
 
-                        <label for="email" class="cols-sm-2 control-label">Service Type</label>
+                        <label for="email" class="cols-sm-2 control-label">Service Type</label>--%>
                         <div class="cols-sm-10">
-                            <div class="input-group" style="font-size: 12px">
+                            <%--<div class="input-group" style="font-size: 12px">
 
                                 <telerik:RadComboBox ID="rdcServiceMode" runat="server"></telerik:RadComboBox>
                             </div>
-                            <br />
+                            <br />--%>
 
 
 
@@ -129,7 +129,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group" style="font-size: 12px">
 
-                                    <telerik:RadTextBox ID="txtAmount" runat="server"></telerik:RadTextBox>
+                                    <telerik:RadTextBox ID="txtAmount" runat="server" Width="230"></telerik:RadTextBox>
                                 </div>
                                 <br />
                             </div>

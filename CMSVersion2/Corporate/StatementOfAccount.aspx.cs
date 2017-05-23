@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Data;
+using System.Data.Common;
 using System.Linq;
 using System.Web.UI.WebControls;
 using Telerik.Web.UI;
@@ -11,19 +13,26 @@ namespace CMSVersion2.Corporate
     public partial class StatementOfAccount : System.Web.UI.Page
     {
         Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
-        private DataTable DataSource;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //RadGrid2.MasterTableView.CommandItemSettings.ShowAddNewRecordButton = false;
-            //DataSource = GetStatementOfAccounts();
-            //radSearchUser.DataSource = DataSource;
-            //radSearchUser.DataTextField = "StatementOfAccountNo";
-            //radSearchUser.DataValueField = "StatementOfAccountId";
 
-            //if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
-            //{
-            //    string usersession = Session["UsernameSession"].ToString();
-            //}
+        }
+
+        private DataTable GetPayment()
+        {
+            return new DataTable();
+        }
+
+        public DataTable GetShipmentByStatementOfAccountId()
+        {
+
+            return new DataTable();
+        }
+
+        public DataTable GetPreviousBill()
+        {
+
+            return new DataTable();
         }
 
         public DataTable GetStatementOfAccounts()
@@ -48,16 +57,15 @@ namespace CMSVersion2.Corporate
         {
             //if (e.Item is GridDataItem)
             //{
-            //    HyperLink adjustLink = (HyperLink)e.Item.FindControl("AdjustmentLink");
-            //    adjustLink.Attributes["href"] = "javascript:void(0);";
-            //    adjustLink.Attributes["onclick"] = String.Format("return ShowAdjustmentForm('{0}','{1}');", e.Item.OwnerTableView.DataKeyValues[e.Item.ItemIndex]["StatementOfAccountId"], e.Item.ItemIndex);
+            //    HyperLink adjustLink = (HyperLink)e.Item.FindControl("PrintLink");
+            //    if (adjustLink != null)
+            //    {
+            //        adjustLink.Attributes["href"] = "javascript:void(0);";
+            //        adjustLink.Attributes["onclick"] = String.Format("return PrintPDF('{0}','{1}');", e.Item.OwnerTableView.DataKeyValues[e.Item.ItemIndex]["CompanyId"], e.Item.ItemIndex);
 
+            //    }
             //}
 
-            //if (e.Item is GridNestedViewItem)
-            //{
-            //    e.Item.FindControl("InnerContainer").Visible = true;
-            //}
         }
         protected void RadAjaxManager1_AjaxRequest(object sender, AjaxRequestEventArgs e)
         {
@@ -78,7 +86,6 @@ namespace CMSVersion2.Corporate
         }
         protected void RadGrid2_NeedDataSource(object sender, Telerik.Web.UI.GridNeedDataSourceEventArgs e)
         {
-            RadGrid2.DataSource = DataSource;
         }
         protected void radSearchUser_Search(object sender, SearchBoxEventArgs e)
         {
@@ -90,14 +97,17 @@ namespace CMSVersion2.Corporate
             {
                 SOAnumber = e.Text;
 
-                RadGrid2.DataSource = DataSource.AsEnumerable().Where(x => x.Field<String>("StatementOfAccountNo").Contains(SOAnumber));
-                RadGrid2.DataBind();
+
+
+
+                //RadGrid2.DataSource = DataSource.AsEnumerable().Where(x => x.Field<String>("StatementOfAccountNo").Contains(SOAnumber));
+                //RadGrid2.DataBind();
 
             }
             else
             {
-                RadGrid2.DataSource = DataSource;
-                RadGrid2.DataBind();
+                //RadGrid2.DataSource = DataSource;
+                //RadGrid2.DataBind();
             }
         }
         protected void RadGrid2_ItemDataBound(object sender, GridItemEventArgs e)
@@ -137,29 +147,32 @@ namespace CMSVersion2.Corporate
         }
         protected void RadGrid2_ItemUpdated(object sender, GridUpdatedEventArgs e)
         {
-
+            RadAjaxManager1.Alert("Hello");
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            RadGrid2.DataSource = DataSource;
-            RadGrid2.Rebind();
+            //RadGrid2.DataSource = DataSource;
+            //RadGrid2.Rebind();
         }
         #endregion        
         protected void RadGrid2_InsertCommand(object sender, GridCommandEventArgs e)
         {
-            switch (e.Item.OwnerTableView.Name)
+
+        }
+
+        protected void StatementOfAccountDataSource_Updating(object sender, SqlDataSourceCommandEventArgs e)
+        {
+            DbParameterCollection CmdParams = e.Command.Parameters;
+            ParameterCollection UpdParams = ((SqlDataSourceView)sender).UpdateParameters;
+            Hashtable ht = new Hashtable();
+            foreach (Parameter UpdParam in UpdParams)
+                ht.Add(UpdParam.Name, true);
+            for (int i = 0; i < CmdParams.Count; i++)
             {
-                case "StatementOfAccounts":
-                    GridDataItem company = (GridDataItem)e.Item.OwnerTableView.ParentItem;
-                    StatementOfAccountDataSource.SelectParameters["CompanyId"].DefaultValue = company.OwnerTableView.DataKeyValues[company.ItemIndex]["CompanyId"].ToString();
-                    break;
-                case "Shipments":
-                    GridDataItem statementOfAccount = (GridDataItem)e.Item.OwnerTableView.ParentItem;
-                    ShipmentDataSource.SelectParameters["StatementOfAccountId"].DefaultValue = statementOfAccount.OwnerTableView.DataKeyValues[statementOfAccount.ItemIndex]["StatementOfAccountId"].ToString();
-                    break;
-                default:
-                    break;
+                if (!ht.Contains(CmdParams[i].ParameterName.Substring(1)))
+                    CmdParams.Remove(CmdParams[i--]);
+
             }
         }
     }

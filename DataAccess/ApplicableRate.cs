@@ -66,15 +66,18 @@ namespace DataAccess
             }
         }
 
-        public static void InsertApplicableRate(Guid Createdby, string applicableratename, string description, int Flag, string conStr)
+        public static void InsertApplicableRate(Guid Createdby, string applicableratename, Guid commodityTypeId, Guid serviceModeId, Guid serviceTypeId, string description, int Flag, string conStr)
         {
             using (SqlConnection con = new SqlConnection(conStr))
             {
                 using (SqlCommand cmd = new SqlCommand("sp_Insert_applicablerateById", con))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@CreatedBy", SqlDbType.UniqueIdentifier).Value = Createdby;
                     cmd.Parameters.Add("@ApplicableRateName", SqlDbType.VarChar).Value = applicableratename;
+                    cmd.Parameters.Add("@CommodityTypeId", SqlDbType.UniqueIdentifier).Value = commodityTypeId;
+                    cmd.Parameters.Add("@ServiceModeId", SqlDbType.UniqueIdentifier).Value = serviceModeId;
+                    cmd.Parameters.Add("@ServiceTypeId", SqlDbType.UniqueIdentifier).Value = serviceTypeId;
+                    cmd.Parameters.Add("@CreatedBy", SqlDbType.UniqueIdentifier).Value = Createdby;
                     cmd.Parameters.Add("@description", SqlDbType.VarChar).Value = description;
                     con.Open();
                     cmd.ExecuteNonQuery();
@@ -83,7 +86,7 @@ namespace DataAccess
         }
 
       
-        public static void UpdateApplicableRate(Guid ApplicableRateId, Guid Createdby, string applicableratename, string description, string conStr)
+        public static void UpdateApplicableRate(Guid ApplicableRateId, string applicableratename, Guid commodityTypeId, Guid serviceModeId, Guid serviceTypeId, Guid Createdby, string description, string conStr)
         {
             using (SqlConnection con = new SqlConnection(conStr))
             {
@@ -91,8 +94,11 @@ namespace DataAccess
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("@ApplicableRateId", SqlDbType.UniqueIdentifier).Value = ApplicableRateId;
-                    cmd.Parameters.Add("@Createdby", SqlDbType.UniqueIdentifier).Value = Createdby;
                     cmd.Parameters.Add("@ApplicableRateName", SqlDbType.VarChar).Value = applicableratename;
+                    cmd.Parameters.Add("@CommodityTypeId", SqlDbType.UniqueIdentifier).Value = commodityTypeId;
+                    cmd.Parameters.Add("@ServiceModeId", SqlDbType.UniqueIdentifier).Value = serviceModeId;
+                    cmd.Parameters.Add("@ServiceTypeId", SqlDbType.UniqueIdentifier).Value = serviceTypeId;
+                    cmd.Parameters.Add("@Createdby", SqlDbType.UniqueIdentifier).Value = Createdby;
                     cmd.Parameters.Add("@description", SqlDbType.VarChar).Value = description;
                     con.Open();
                     cmd.ExecuteNonQuery();
