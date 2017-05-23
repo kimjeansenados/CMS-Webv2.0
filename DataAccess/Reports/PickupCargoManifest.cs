@@ -10,7 +10,7 @@ namespace DataAccess.Reports
 {
     public class PickupCargoManifest
     {
-        public static DataSet GetPickupCargoManifest(string conSTR , string Area, string AWB, string Date , string BCO)
+        public static DataSet GetPickupCargoManifest(string conSTR , string Area, string AWB, string Date , string BCO , string CheckerStr)
         {
             using (SqlConnection con = new SqlConnection(conSTR))
             {
@@ -20,6 +20,7 @@ namespace DataAccess.Reports
                 da.SelectCommand.Parameters.Add("@AWB", SqlDbType.VarChar).Value = AWB;
                 da.SelectCommand.Parameters.Add("@DATE", SqlDbType.VarChar).Value = Date;
                 da.SelectCommand.Parameters.Add("@BCO", SqlDbType.VarChar).Value = BCO;
+                da.SelectCommand.Parameters.Add("@CHECKER", SqlDbType.VarChar).Value = CheckerStr;
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 return ds;

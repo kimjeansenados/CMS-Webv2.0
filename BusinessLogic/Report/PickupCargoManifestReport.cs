@@ -10,9 +10,9 @@ namespace BusinessLogic.Report
 {
     public class PickupCargoManifestReport
     {
-        public static DataSet GetPickupCargoManifest(string conSTR , string Area , string AWB , string Date ,string BCOStr )
+        public static DataSet GetPickupCargoManifest(string conSTR , string Area , string AWB , string Date ,string BCOStr , string ChekerStr)
         {
-            return DAL.Reports.PickupCargoManifest.GetPickupCargoManifest(conSTR , Area, AWB , Date , BCOStr);
+            return DAL.Reports.PickupCargoManifest.GetPickupCargoManifest(conSTR , Area, AWB , Date , BCOStr , ChekerStr);
         }
     }
 }

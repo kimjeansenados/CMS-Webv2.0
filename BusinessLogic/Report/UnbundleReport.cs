@@ -10,9 +10,9 @@ namespace BusinessLogic.Report
 {
     public class UnbundleReport
     {
-        public static DataSet GetBundle(string conSTR , string DateStr , string SackNoStr , string OriginStr , string BCO)
+        public static DataSet GetBundle(string conSTR , string DateStr , string SackNoStr  , string BCO)
         {
-            return DAL.Reports.Unbundle.GetUnbundle(conSTR , DateStr, SackNoStr, OriginStr , BCO);
+            return DAL.Reports.Unbundle.GetUnbundle(conSTR , DateStr, SackNoStr , BCO);
         }
     }
 }

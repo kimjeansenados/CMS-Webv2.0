@@ -46,7 +46,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             txtDriver.Value = ReportGlobalModel.Driver;
             txtChecker.Value = ReportGlobalModel.Checker;
             txtPlateNo.Value = ReportGlobalModel.PlateNo;
-            txtDispatch.Value = "";
+            txtDispatch.Value = DateTime.Now.ToShortTimeString();
 
             txtRemarks.Value = ReportGlobalModel.Remarks;
             txtScannedBy.Value = ReportGlobalModel.ScannedBy;

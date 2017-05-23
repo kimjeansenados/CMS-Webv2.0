@@ -28,15 +28,28 @@ namespace CMSVersion2.Report.Operation.Manifest
                 Area.DataValueField = "RevenueUnitName";
                 Area.DataBind();
 
+                Checker.DataSource = getEmployee();
+                Checker.DataTextField = "EmployeeName";
+                Checker.DataValueField = "EmployeeName";
+                Checker.DataBind();
+                Checker.SelectedIndex = 0;
                 setAWB();
 
-                //Date.SelectedDate = DateTime.Now;
+                Date.SelectedDate = DateTime.Now;
             }
         }
 
         public DataTable getBranchCorpOffice()
         {
             DataSet data = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
+            DataTable dt = new DataTable();
+            dt = data.Tables[0];
+            return dt;
+        }
+
+        public DataTable getEmployee()
+        {
+            DataSet data = BLL.Employee_Info.GetEmployeeNames(getConstr.ConStrCMS);
             DataTable dt = new DataTable();
             dt = data.Tables[0];
             return dt;
@@ -72,28 +85,33 @@ namespace CMSVersion2.Report.Operation.Manifest
             string AWBStr = "";
             string DateStr = "";
             string BCOStr = "All";
+            string CheckerStr = "";
             try
             {
+
+                DateStr = Date.SelectedDate.Value.ToString("dd MMM yyyy");
                 BCOStr = BCO.SelectedItem.Text;
                 AreaStr = Area.SelectedItem.Text.ToString();
                 AWBStr = AWB.Text.ToString();
-                DateStr = Date.SelectedDate.Value.ToString("dd MMM yyyy");
+                CheckerStr = Checker.SelectedItem.Text.ToString();
             }
             catch (Exception)
             {
-                DateStr = "";
+                //DateStr = "";
             }
-            DataSet data = BLL.Report.PickupCargoManifestReport.GetPickupCargoManifest(getConstr.ConStrCMS, AreaStr, AWBStr, DateStr, BCOStr);
+            DataSet data = BLL.Report.PickupCargoManifestReport.GetPickupCargoManifest(getConstr.ConStrCMS, AreaStr, AWBStr, DateStr, BCOStr , CheckerStr);
             DataTable dt = new DataTable();
             dt = data.Tables[0];
             
             //PRINTING
             GetColumnDataFromDataTable getColumn = new GetColumnDataFromDataTable();
             ReportGlobalModel.Report = "PickUpCargo";
+            ReportGlobalModel.Date = DateStr;
             ReportGlobalModel.table1 = dt;
+            ReportGlobalModel.Branch = BCOStr;
             ReportGlobalModel.Area = AreaStr;
-            ReportGlobalModel.Driver = "All"; //getColumn.get_Column_DataView(dt, "DRIVER");
-            ReportGlobalModel.Checker = "All"; //getColumn.get_Column_DataView(dt, "DRIVER");
+            //ReportGlobalModel.Driver = "All"; //getColumn.get_Column_DataView(dt, "DRIVER");
+            ReportGlobalModel.Checker = CheckerStr;
 
             return dt;
         }
@@ -115,7 +133,7 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         protected void gridPickupCargo_PreRender(object sender, EventArgs e)
         {
-            gridPickupCargo.MasterTableView.GetColumn("CREATEDDATE").Visible = false;
+            //gridPickupCargo.MasterTableView.GetColumn("CREATEDDATE").Visible = false;
             gridPickupCargo.Rebind();
         }
 

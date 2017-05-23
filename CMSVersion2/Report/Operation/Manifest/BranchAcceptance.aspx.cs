@@ -23,7 +23,7 @@ namespace CMSVersion2.Report.Operation.Manifest
         {
             if (!IsPostBack)
             {
-
+                Date.SelectedDate = DateTime.Now;
                 Batch.DataSource = getBatch();
                 Batch.DataTextField = "BatchName";
                 Batch.DataValueField = "BatchName";
@@ -34,10 +34,12 @@ namespace CMSVersion2.Report.Operation.Manifest
                 BCO.DataValueField = "BranchCorpOfficeCode";
                 BCO.DataBind();
 
-                Area.DataSource = getArea();
-                Area.DataTextField = "RevenueUnitName";
-                Area.DataValueField = "RevenueUnitName";
-                Area.DataBind();
+                //Area.DataSource = getArea();
+                //Area.DataTextField = "RevenueUnitName";
+                //Area.DataValueField = "RevenueUnitName";
+                //Area.DataBind();
+
+               
             }
         }
 
@@ -74,35 +76,35 @@ namespace CMSVersion2.Report.Operation.Manifest
         public DataTable getBranchAcceptance()
         {
             string DateStr = "";
-            string AreaStr = "All";
             string BatchStr = "All";
             string BCOStr = "All";
             try
             {
-                BCOStr = BCO.SelectedItem.Text.ToString();
-                AreaStr = Area.SelectedItem.Text.ToString();
-                BatchStr = Batch.SelectedItem.Text.ToString();
+
                 DateStr = Date.SelectedDate.Value.ToString("dd MMM yyyy");
+                BCOStr = BCO.SelectedItem.Text.ToString();
+               // AreaStr = Area.SelectedItem.Text.ToString();
+                BatchStr = Batch.SelectedItem.Text.ToString();
             }
             catch (Exception)
             {
-                DateStr = "";
+                //DateStr = "";
             }
 
-            DataSet data = BLL.Report.BranchAcceptanceReport.GetBranchAcceptance(getConstr.ConStrCMS, DateStr, AreaStr, BatchStr, BCOStr);
+            DataSet data = BLL.Report.BranchAcceptanceReport.GetBranchAcceptance(getConstr.ConStrCMS, DateStr, BatchStr, BCOStr);
             DataTable dt = new DataTable();
             dt = data.Tables[0];
 
             
             //FOR PRINTING     
             GetColumnDataFromDataTable getColumn = new GetColumnDataFromDataTable();
-            DateStr = (DateStr == null) ? "All" : DateStr;
-            AreaStr = (AreaStr == null) ? "All" : AreaStr;
+           // DateStr = (DateStr == null) ? "All" : DateStr;
+           // AreaStr = (AreaStr == null) ? "All" : AreaStr;
 
             ReportGlobalModel.Report = "BranchAcceptance";
             ReportGlobalModel.table1 = dt;
             ReportGlobalModel.Date = DateStr;
-            ReportGlobalModel.Area = AreaStr;
+            ReportGlobalModel.Area = BCOStr;
             ReportGlobalModel.Batch = BatchStr;
             ReportGlobalModel.Driver = getColumn.get_Column_DataView(dt, "DRIVER");
             ReportGlobalModel.Checker = getColumn.get_Column_DataView(dt, "CHECKER");
@@ -126,15 +128,15 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         protected void BCO_SelectedIndexChanged(object sender, Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventArgs e)
         {
-            Area.Text = "";
-            Area.Items.Clear();
-            Area.AppendDataBoundItems = true;
-            Area.Items.Add("All");
-            Area.SelectedIndex = 0;
-            Area.DataSource = getArea();
-            Area.DataTextField = "RevenueUnitName";
-            Area.DataValueField = "RevenueUnitName";
-            Area.DataBind();
+            //Area.Text = "";
+            //Area.Items.Clear();
+            //Area.AppendDataBoundItems = true;
+            //Area.Items.Add("All");
+            //Area.SelectedIndex = 0;
+            //Area.DataSource = getArea();
+            //Area.DataTextField = "RevenueUnitName";
+            //Area.DataValueField = "RevenueUnitName";
+            //Area.DataBind();
         }
 
         protected void grid_BranchAcceptance_PreRender(object sender, EventArgs e)

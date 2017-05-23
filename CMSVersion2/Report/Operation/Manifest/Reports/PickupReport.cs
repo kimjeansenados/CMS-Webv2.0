@@ -26,8 +26,9 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             objectDataSource.DataSource = dataTable;
             table1.DataSource = objectDataSource;
 
+            txtDate.Value = ReportGlobalModel.Date;
             txtArea.Value = ReportGlobalModel.Area;
-            txtBCO.Value = ReportGlobalModel.Driver;
+            txtBCO.Value = ReportGlobalModel.Branch;
             txtChecker.Value = ReportGlobalModel.Checker;
 
             txtPrintedDate.Value = DateTime.Now.ToString();

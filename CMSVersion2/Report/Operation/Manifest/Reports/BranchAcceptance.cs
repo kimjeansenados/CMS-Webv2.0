@@ -24,7 +24,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             table1.DataSource = objectDataSource;
 
             txtDate.Value = ReportGlobalModel.Date;
-            txtArea.Value = ReportGlobalModel.Branch; //BRANCH
+            txtArea.Value = ReportGlobalModel.Area; //BRANCH
             txtDriver.Value = ReportGlobalModel.Driver;
             txtChecker.Value = ReportGlobalModel.Checker;
             txtBatch.Value = ReportGlobalModel.Batch;
