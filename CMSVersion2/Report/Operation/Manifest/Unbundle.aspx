@@ -22,15 +22,12 @@
             <div class="row">
 
                 <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
-                <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow" AutoPostBack="true"></telerik:RadDatePicker>
+                <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow" AutoPostBack="true" OnSelectedDateChanged="Date_SelectedDateChanged"></telerik:RadDatePicker>
                 &nbsp;&nbsp;
                  
                 <telerik:RadLabel runat="server" Text="Sack #:"></telerik:RadLabel>
                  <telerik:RadComboBox ID="SackNumber" runat="server" Skin="Glow" MarkFirstMatch="true" AllowCustomText="true" 
                      AppendDataBoundItems="true">
-                    <Items>
-                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
-                    </Items>
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
 
@@ -46,14 +43,14 @@
                 &nbsp;&nbsp;
 
 
-                <telerik:RadLabel runat="server" Text="Origin(City):"></telerik:RadLabel>
+               <%-- <telerik:RadLabel runat="server" Text="Origin(City):"></telerik:RadLabel>
                  <telerik:RadComboBox ID="Origin" runat="server" Skin="Glow" MarkFirstMatch="true" AllowCustomText="true"
                      AppendDataBoundItems="true" AutoPostBack="true">
                     <Items>
                         <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
                     </Items>
                 </telerik:RadComboBox>
-                &nbsp;&nbsp;
+                &nbsp;&nbsp;--%>
 
                 <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" AutoPostBack="true" OnClick="Search_Click"> </telerik:RadButton>
                 <telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click"> </telerik:RadButton>

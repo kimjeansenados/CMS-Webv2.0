@@ -40,15 +40,6 @@ namespace CMSVersion2.Report.Operation.Manifest {
         protected global::Telerik.Web.UI.RadComboBox BCO;
         
         /// <summary>
-        /// Area control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox Area;
-        
-        /// <summary>
         /// Batch control.
         /// </summary>
         /// <remarks>

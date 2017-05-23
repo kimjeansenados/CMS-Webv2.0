@@ -22,26 +22,32 @@ namespace CMSVersion2.Report.Operation.Manifest
         {
             if (!IsPostBack)
             {
+                Date.SelectedDate = DateTime.Now;
+
                 BCO.DataSource = getBranchCorpOffice();
                 BCO.DataTextField = "BranchCorpOfficeName";
                 BCO.DataValueField = "BranchCorpOfficeCode";
                 BCO.DataBind();
 
-                BundleNumber.DataSource = getBundle();
+                BundleNumber.DataSource = getBundleNumber();
                 BundleNumber.DataTextField = "SackNo";
                 BundleNumber.DataValueField = "SackNo";
                 BundleNumber.DataBind();
-
-                Destination.DataSource = getCityBCO();
-                Destination.DataTextField = "CityName";
-                Destination.DataValueField = "CityName";
-                Destination.DataBind();
+                BundleNumber.SelectedIndex = 0;
+                
             }
         }
 
         public DataTable getBranchCorpOffice()
         {
             DataSet data = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
+            DataTable dt = new DataTable();
+            dt = data.Tables[0];
+            return dt;
+        }
+        public DataTable getBundleNumber()
+        {
+            DataSet data = BLL.Report.BundleReport.GetBundleNumber(getConstr.ConStrCMS , Date.SelectedDate.Value.ToString("dd MMM yyyy"));
             DataTable dt = new DataTable();
             dt = data.Tables[0];
             return dt;
@@ -64,39 +70,33 @@ namespace CMSVersion2.Report.Operation.Manifest
         public DataTable getBundle()
         {
             //DateTime date =
-            string bundlenumber = "All";
-            string destination = "All";
+            string bundlenumber = "";
             string bco = "All";
             string date = "";
 
             try
             {
+                date = Date.SelectedDate.Value.ToString("dd MMM yyyy");
                 bco = BCO.SelectedValue;
                 bundlenumber = BundleNumber.SelectedItem.Text.ToString();
-                destination = Destination.SelectedItem.Text.ToString();
-                date = Date.SelectedDate.Value.ToString("dd MMM yyyy");
             }
             catch (Exception)
             {
-                date = "";
+                //date = "";
             }
 
-            DataSet data = BLL.Report.BundleReport.GetBundle(getConstr.ConStrCMS, date, bundlenumber, destination, bco);
+            DataSet data = BLL.Report.BundleReport.GetBundle(getConstr.ConStrCMS, date, bundlenumber, bco);
             DataTable dt = new DataTable();
             dt = data.Tables[0];
 
             //PRINTING
             GetColumnDataFromDataTable getColumn = new GetColumnDataFromDataTable();
-            date = (date == null) ? "All" : date;
-            bundlenumber = (bundlenumber == null) ? "All" : bundlenumber;
-            bco = (bco == null) ? "All" : bco;
 
             ReportGlobalModel.Report = "Bundle";
             ReportGlobalModel.table1 = dt;
             ReportGlobalModel.Date = date;        
             ReportGlobalModel.SackNo = bundlenumber;
             ReportGlobalModel.Destination = bco;
-            ReportGlobalModel.Weight = "";
             ReportGlobalModel.ScannedBy = getColumn.get_Column_DataView(dt, "SCANNEDBY");
             
             return dt;
@@ -120,15 +120,15 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         protected void BCO_SelectedIndexChanged(object sender, Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventArgs e)
         {
-            Destination.Text = "";
-            Destination.Items.Clear();
-            Destination.AppendDataBoundItems = true;
-            Destination.Items.Add("All");
-            Destination.SelectedIndex = 0;
-            Destination.DataSource = getCityBCO();
-            Destination.DataTextField = "CityName";
-            Destination.DataValueField = "CityName";
-            Destination.DataBind();
+            //Destination.Text = "";
+            //Destination.Items.Clear();
+            //Destination.AppendDataBoundItems = true;
+            //Destination.Items.Add("All");
+            //Destination.SelectedIndex = 0;
+            //Destination.DataSource = getCityBCO();
+            //Destination.DataTextField = "CityName";
+            //Destination.DataValueField = "CityName";
+            //Destination.DataBind();
         }
 
         protected void btnPrint_Click(object sender, EventArgs e)
@@ -137,6 +137,17 @@ namespace CMSVersion2.Report.Operation.Manifest
             RadWindow1.NavigateUrl = "http://" + host + "/" + WebPathName + "/Report/ReportViewerForm1.aspx";
             string script = "function f(){$find(\"" + RadWindow1.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
+        }
+
+        protected void Date_SelectedDateChanged(object sender, Telerik.Web.UI.Calendar.SelectedDateChangedEventArgs e)
+        {
+            BundleNumber.Text = "";
+            BundleNumber.Items.Clear();
+            BundleNumber.DataSource = getBundleNumber();
+            BundleNumber.DataTextField = "SackNo";
+            BundleNumber.DataValueField = "SackNo";
+            BundleNumber.DataBind();
+            BundleNumber.SelectedIndex = 0;
         }
     }
 }

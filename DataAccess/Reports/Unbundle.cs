@@ -10,7 +10,7 @@ namespace DataAccess.Reports
 {
     public class Unbundle
     {
-        public static DataSet GetUnbundle(string conSTR, string DateStr, string SackNoStr, string OriginStr , string BCO)
+        public static DataSet GetUnbundle(string conSTR, string DateStr, string SackNoStr , string BCO)
         {
             using (SqlConnection con = new SqlConnection(conSTR))
             {
@@ -18,7 +18,7 @@ namespace DataAccess.Reports
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
                 da.SelectCommand.Parameters.Add("@DATE", SqlDbType.VarChar).Value = DateStr;
                 da.SelectCommand.Parameters.Add("@SACKNO", SqlDbType.VarChar).Value = SackNoStr;
-                da.SelectCommand.Parameters.Add("@ORIGIN", SqlDbType.VarChar).Value = OriginStr;
+                //da.SelectCommand.Parameters.Add("@ORIGIN", SqlDbType.VarChar).Value = OriginStr;
                 da.SelectCommand.Parameters.Add("@BCO", SqlDbType.VarChar).Value = BCO;
                 DataSet ds = new DataSet();
                 da.Fill(ds);

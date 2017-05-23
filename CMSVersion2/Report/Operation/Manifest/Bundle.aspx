@@ -19,15 +19,12 @@
 
             <div class="row">
                 <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
-                <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow" AutoPostBack="true"></telerik:RadDatePicker>
+                <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow" AutoPostBack="true" OnSelectedDateChanged="Date_SelectedDateChanged"></telerik:RadDatePicker>
                 &nbsp;&nbsp;
 
                 <telerik:RadLabel runat="server" Text="Sack #:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="BundleNumber" runat="server" MarkFirstMatch="true" AllowCustomText="true"
                     Skin="Glow" AppendDataBoundItems="true">
-                    <Items>
-                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
-                    </Items>
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
 
@@ -42,14 +39,14 @@
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
 
-                <telerik:RadLabel runat="server" Text="Destination(City):"></telerik:RadLabel>
+<%--                <telerik:RadLabel runat="server" Text="Destination(City):"></telerik:RadLabel>
                  <telerik:RadComboBox ID="Destination" runat="server" MarkFirstMatch="true" AllowCustomText="true"  AutoPostBack="true"
                      Skin="Glow" AppendDataBoundItems="true">
                     <Items>
                         <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
                     </Items>
                 </telerik:RadComboBox>
-                &nbsp;&nbsp;
+                &nbsp;&nbsp;--%>
 
                 <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" AutoPostBack="true" OnClick="Search_Click"> </telerik:RadButton>
                 <telerik:RadButton ID="btnPrint" Skin="Glow" OnClick="btnPrint_Click" 
@@ -79,16 +76,17 @@
                     <MasterTableView CommandItemDisplay="Top" Width="100%" Font-Size="Smaller">
                         <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ShowExportToWordButton="false" ShowExportToCsvButton="false" ShowAddNewRecordButton="false" ShowRefreshButton="false" />
                         <Columns>
+                            <telerik:GridBoundColumn DataField="No" HeaderText="#" ></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="AWBNO" HeaderText="AWB #" FooterText="TOTAL: "></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="SHIPPER" HeaderText="SHIPPER"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="CONSIGNEE" HeaderText="CONSIGNEE"></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="CONSIGNEE ADDRESS" HeaderText="CONSIGNEE ADDRESS"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="CONSIGNEEADDRESS" HeaderText="CONSIGNEE ADDRESS"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="COMMODITY" HeaderText="COMMODITY"></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="COMMODITY TYPE" HeaderText="COMMODITY TYPE"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="COMMODITYTYPE" HeaderText="COMMODITY TYPE"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="QTY" HeaderText="QTY" Aggregate="Sum" FooterText=" "></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="AGW" HeaderText="AGW" Aggregate="Sum" FooterText=" "></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="SERVICE MODE" HeaderText="SERVICE MODE"></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="PAY MODE" HeaderText="PAY MODE"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="SERVICEMODE" HeaderText="SERVICE MODE"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="PAYMODE" HeaderText="PAY MODE"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="SCANNEDBY" HeaderText="SCANNED BY"></telerik:GridBoundColumn>
                         </Columns>
                         <HeaderStyle Font-Size="Smaller" Font-Bold="true" />

@@ -55,14 +55,14 @@
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
 
-                <telerik:RadLabel runat="server" Text="Area:"></telerik:RadLabel>
+<%--                <telerik:RadLabel runat="server" Text="Area:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="Area" runat="server" Skin="Glow" AllowCustomText="true" MarkFirstMatch="true"
                     AppendDataBoundItems="true" AutoPostBack="true">
                     <Items>
                         <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
                     </Items>
                 </telerik:RadComboBox>
-                &nbsp;&nbsp;
+                &nbsp;&nbsp;--%>
 
                 <telerik:RadLabel runat="server" Text="Batch:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="Batch" runat="server" Skin="Glow" AllowCustomText="true" MarkFirstMatch="true" 
@@ -100,14 +100,14 @@
                             <telerik:GridBoundColumn DataField="No" HeaderText="#" HeaderStyle-Width="20px"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="AWBNO" HeaderText="AWB #" FooterText="TOTAL: "></telerik:GridBoundColumn>
 
-                            <telerik:GridBoundColumn DataField="RECIEVED QTY" HeaderText="RECIEVED QTY"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="SCANNED QTY" HeaderText="SCANNED QTY"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="DISCREPENCY QTY" HeaderText="DISCREPENCY QTY"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="TOTAL QTY" HeaderText="TOTAL QTY" FooterText=" " Aggregate="Sum"></telerik:GridBoundColumn>
 
                              <telerik:GridBoundColumn DataField="DRIVER" HeaderText="DRIVER"></telerik:GridBoundColumn>
                              <telerik:GridBoundColumn DataField="CHECKER" HeaderText="CHECKER"></telerik:GridBoundColumn>
                              <telerik:GridBoundColumn DataField="BATCH" HeaderText="BATCH"></telerik:GridBoundColumn>
-                             <telerik:GridBoundColumn DataField="SCANNEDBY" HeaderText="SCANNED BY"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="CHECKER" HeaderText="CHECKER"></telerik:GridBoundColumn>
                         </Columns>
                         <HeaderStyle Font-Size="Smaller" Font-Bold="true" />
                         <FooterStyle Font-Bold="true" />

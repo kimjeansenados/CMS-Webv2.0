@@ -10,7 +10,7 @@ namespace DataAccess.Reports
 {
     public class Bundle
     {
-        public static DataSet GetBundle(string conSTR , string date , string bundlenumber , string  destination, string BCO)
+        public static DataSet GetBundle(string conSTR , string date , string bundlenumber , string BCO)
         {
             using (SqlConnection con = new SqlConnection(conSTR ))
             {
@@ -18,8 +18,22 @@ namespace DataAccess.Reports
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
                 da.SelectCommand.Parameters.Add("@DATE", SqlDbType.VarChar).Value = date;
                 da.SelectCommand.Parameters.Add("@BUNDLE", SqlDbType.VarChar).Value = bundlenumber;
-                da.SelectCommand.Parameters.Add("@DESTINATION", SqlDbType.VarChar).Value = destination;
+               // da.SelectCommand.Parameters.Add("@DESTINATION", SqlDbType.VarChar).Value = destination;
                 da.SelectCommand.Parameters.Add("@BCO", SqlDbType.VarChar).Value = BCO;
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+
+        }
+
+        public static DataSet GetBundleNumber(string conSTR, string date)
+        {
+            using (SqlConnection con = new SqlConnection(conSTR))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("sp_view_Reports_GetBundleNumber", con);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.Add("@DATE", SqlDbType.VarChar).Value = date;
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 return ds;

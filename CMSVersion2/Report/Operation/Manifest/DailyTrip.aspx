@@ -74,6 +74,7 @@
                         <CommandItemSettings ShowExportToExcelButton="true" 
                             ShowExportToPdfButton="true" ShowExportToWordButton="false" ShowExportToCsvButton="false" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />
                         <Columns>
+                            <telerik:GridBoundColumn DataField="No" HeaderText="#"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="AirwayBillNo" HeaderText="AWB #" FooterText="Total: " Aggregate="Custom"></telerik:GridBoundColumn>
 
                             <telerik:GridBoundColumn DataField="Consignee" HeaderText="CONSIGNEE"></telerik:GridBoundColumn>
@@ -82,12 +83,12 @@
                             <telerik:GridBoundColumn DataField="AGW" HeaderText="AGW" Aggregate="Sum" FooterText=" "></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="ServiceModeName" HeaderText="SERVICE MODE"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="PaymentModeName" HeaderText="PAY MODE" Exportable="false"></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="Driver" HeaderText="DRIVER"></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="Checker" HeaderText="CHECKER"></telerik:GridBoundColumn>
+                            <%--<telerik:GridBoundColumn DataField="Driver" HeaderText="DRIVER"></telerik:GridBoundColumn>--%>
+                            <%--<telerik:GridBoundColumn DataField="Checker" HeaderText="CHECKER"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="PlateNo" HeaderText="PLATE #"></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="BatchName" HeaderText="BATCH"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="BatchName" HeaderText="BATCH"></telerik:GridBoundColumn>--%>
                             <telerik:GridBoundColumn DataField="Amount" HeaderText="AMOUNT" Aggregate="Sum" FooterText=" "></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="SCANNEDBY" HeaderText="SCANNED BY"></telerik:GridBoundColumn>
+                            <%--<telerik:GridBoundColumn DataField="SCANNEDBY" HeaderText="SCANNED BY"></telerik:GridBoundColumn>--%>
                         </Columns>
                         <GroupByExpressions>
                             <telerik:GridGroupByExpression>
