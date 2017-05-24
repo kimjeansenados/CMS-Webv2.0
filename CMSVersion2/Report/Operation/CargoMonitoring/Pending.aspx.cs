@@ -15,7 +15,11 @@ namespace CMSVersion2.Report.Operation.CargoMonitoring
         public static string WebPathName = ConfigurationManager.ConnectionStrings["iiswebname"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(!IsPostBack)
+            {
+                Date1.SelectedDate = DateTime.Now;
+                Date2.SelectedDate = DateTime.Now;
+            }
         }
 
         public DataTable getHold()

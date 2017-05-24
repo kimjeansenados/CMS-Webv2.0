@@ -25,6 +25,13 @@ namespace CMSVersion2.Report.Finance.Sales.Reports
             DataTable dataTable = ReportGlobalModel.table1;
             objectDataSource.DataSource = dataTable;
             table1.DataSource = objectDataSource;
+            txtFrom.Value = ReportGlobalModel.Date;
+            textBox6.Value = ReportGlobalModel.Origin;
+            textBox8.Value= ReportGlobalModel.Destination;
+            textBox12.Value= ReportGlobalModel.ShipMode;
+            textBox10.Value= ReportGlobalModel.CommodityType;
+            textBox16.Value= ReportGlobalModel.PayMode;
+            textBox14.Value = ReportGlobalModel.User;
         }
     }
 }

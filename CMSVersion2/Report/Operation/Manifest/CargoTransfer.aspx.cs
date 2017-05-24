@@ -30,6 +30,8 @@ namespace CMSVersion2.Report.Operation.Manifest
                 Destination.DataTextField = "BranchCorpOfficeName";
                 Destination.DataValueField = "BranchCorpOfficeCode";
                 Destination.DataBind();
+
+                Date.SelectedDate = DateTime.Now;
             }
         }
 

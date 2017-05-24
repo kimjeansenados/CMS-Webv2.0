@@ -34,7 +34,7 @@
                     AllowPaging="True" ShowFooter="true"
                     PageSize="10" ClientSettings-Scrolling-AllowScroll="true"  
                     AllowFilteringByColumn="false" OnPreRender="grid_Delivered_PreRender"
-                    AutoGenerateColumns="true" Height="500px" ItemStyle-Wrap="false"
+                    AutoGenerateColumns="false" Height="500px" ItemStyle-Wrap="false"
                     AllowSorting="true" OnNeedDataSource="grid_Delivered_NeedDataSource">
 
                      <ExportSettings HideStructureColumns="true" FileName="Cargo Monitoring - Delivered" ExportOnlyData="true"
@@ -51,7 +51,37 @@
                     </ExportSettings>      
                      <MasterTableView CommandItemDisplay="Top" Font-Size="Smaller">
                         <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ExportToPdfText="PDF" ShowExportToWordButton="false" ShowExportToCsvButton="false" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />
-                         
+                         <Columns>
+                            <telerik:GridBoundColumn DataField="NO" HeaderText="#" HeaderStyle-Width="20px"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="TRANSACTION DATE" HeaderText="TRANSACTION DATE"></telerik:GridBoundColumn>
+
+                            <telerik:GridBoundColumn DataField="AWB" HeaderText="AWB"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="ORIGIN BCO" HeaderText="ORIGIN BCO"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="DESTINATION BCO" HeaderText="DESTINATION BCO"></telerik:GridBoundColumn>
+
+                             <telerik:GridBoundColumn DataField="SHIPPER" HeaderText="SHIPPER"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="SHIPPER #" HeaderText="SHIPPER #"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="SHIPPER ADDRESS" HeaderText="SHIPPER ADDRESS"></telerik:GridBoundColumn>
+                            
+                              <telerik:GridBoundColumn DataField="CONSIGNEE" HeaderText="CONSIGNEE"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="CONSIGNEE #" HeaderText="CONSIGNEE #"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="CONSIGNEE ADDRESS" HeaderText="CONSIGNEE ADDRESS"></telerik:GridBoundColumn>
+
+
+                              <telerik:GridBoundColumn DataField="QTY" HeaderText="QTY"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="WEIGHT" HeaderText="WEIGHT"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="PAYMODE" HeaderText="PAYMODE"></telerik:GridBoundColumn>
+
+                              <telerik:GridBoundColumn DataField="AMOUNT" HeaderText="AMOUNT"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="STATUS" HeaderText="STATUS"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="REMARKS" HeaderText="REMARKS"></telerik:GridBoundColumn>
+
+                               <telerik:GridBoundColumn DataField="DELIVEREDBY" HeaderText="DELIVEREDBY"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="INBOUNDDATE" HeaderText="INBOUNDDATE"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="DELIVEREDDATE" HeaderText="DELIVEREDDATE"></telerik:GridBoundColumn>
+
+                          
+                        </Columns>
                      </MasterTableView>
                 </telerik:RadGrid>
             </div>

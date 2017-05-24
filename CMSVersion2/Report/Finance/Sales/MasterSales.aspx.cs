@@ -53,6 +53,9 @@ namespace CMSVersion2.Report.Finance.Sales
                 User.DataValueField = "FullName";
                 User.DataBind();
 
+                Date1.SelectedDate = DateTime.Now;
+                Date2.SelectedDate = DateTime.Now;
+
             }
         }
 
@@ -148,6 +151,13 @@ namespace CMSVersion2.Report.Finance.Sales
 
             ReportGlobalModel.Report = "MasterSaless";
             ReportGlobalModel.table1 = dt;
+            ReportGlobalModel.Date = Date1.SelectedDate.Value.ToString("dd MMM yyyy") + " " + " - " + Date2.SelectedDate.Value.ToString("dd MMM yyyy");
+            ReportGlobalModel.Origin = BCOShipperStr;
+            ReportGlobalModel.Destination = BCOConsigneeStr;
+            ReportGlobalModel.ShipMode = ShipModeStr;
+            ReportGlobalModel.CommodityType = ComTypeStr;
+            ReportGlobalModel.PayMode = PayModeStr;
+            ReportGlobalModel.User = UserStr;
 
             return dt;
         }

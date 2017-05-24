@@ -33,5 +33,9 @@ namespace CMSVersion2.Models
         public static DataTable table4 { get; set; }
 
         public static String User { get; set; }
+
+        public static String ShipMode { get; set; }
+        public static String PayMode { get; set; }
+
     }
 }

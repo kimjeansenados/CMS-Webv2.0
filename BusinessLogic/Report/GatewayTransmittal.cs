@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using DAL = DataAccess;
 
 namespace BusinessLogic.Report
@@ -24,9 +25,9 @@ namespace BusinessLogic.Report
             return DAL.Reports.CargoTransfer.GetCargoTransfer(conSTR , date1, origin, destination );
         }
 
-        public static DataSet GetHoldCargo(string conSTR)
+        public static DataSet GetHoldCargo(string conSTR, DateTime dateFrom, DateTime dateTo, string bco)
         {
-            return DAL.Reports.HoldCargo.GetGatewayOutbound(conSTR);
+            return DAL.Reports.HoldCargo.GetGatewayOutbound(conSTR, dateFrom, dateTo, bco);
         }
         
         public static DataSet GetGatewayList(string conSTR , string date)

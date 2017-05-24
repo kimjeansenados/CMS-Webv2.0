@@ -1531,30 +1531,6 @@
     <Compile Include="Report\Operation\CargoMonitoring\Misrouted.aspx.designer.cs">
       <DependentUpon>Misrouted.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Report\Operation\CargoMonitoring\Reports\DeliveredReport.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\Operation\CargoMonitoring\Reports\DeliveredReport.Designer.cs" />
-    <Compile Include="Report\Operation\CargoMonitoring\Reports\HoldReport.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\Operation\CargoMonitoring\Reports\HoldReport.Designer.cs" />
-    <Compile Include="Report\Operation\CargoMonitoring\Reports\MisroutedReport.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\Operation\CargoMonitoring\Reports\MisroutedReport.Designer.cs" />
-    <Compile Include="Report\Operation\CargoMonitoring\Reports\OffloadedReport.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\Operation\CargoMonitoring\Reports\OffloadedReport.Designer.cs" />
-    <Compile Include="Report\Operation\CargoMonitoring\Reports\PendingReport.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\Operation\CargoMonitoring\Reports\PendingReport.Designer.cs" />
-    <Compile Include="Report\Operation\CargoMonitoring\Reports\RUDReport.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\Operation\CargoMonitoring\Reports\RUDReport.Designer.cs" />
     <Compile Include="Report\Operation\CargoMonitoring\Offloaded.aspx.cs">
       <DependentUpon>Offloaded.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1568,6 +1544,42 @@
     </Compile>
     <Compile Include="Report\Operation\CargoMonitoring\Pending.aspx.designer.cs">
       <DependentUpon>Pending.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\DeliveredReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\DeliveredReport.designer.cs">
+      <DependentUpon>DeliveredReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\HoldReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\HoldReport.designer.cs">
+      <DependentUpon>HoldReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\MisroutedReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\MisroutedReport.designer.cs">
+      <DependentUpon>MisroutedReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\OffloadedReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\OffloadedReport.designer.cs">
+      <DependentUpon>OffloadedReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\PendingReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\PendingReport.designer.cs">
+      <DependentUpon>PendingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\RUDReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\CargoMonitoring\Reports\RUDReport.designer.cs">
+      <DependentUpon>RUDReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\Operation\CargoMonitoring\RUD.aspx.cs">
       <DependentUpon>RUD.aspx</DependentUpon>
@@ -1856,12 +1868,24 @@
     <EmbeddedResource Include="Report\Finance\Sales\Reports\SalesPerUserLevelReport.resx">
       <DependentUpon>SalesPerUserLevelReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\DeliveredReport.resx" />
-    <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\HoldReport.resx" />
-    <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\MisroutedReport.resx" />
-    <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\OffloadedReport.resx" />
-    <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\PendingReport.resx" />
-    <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\RUDReport.resx" />
+    <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\DeliveredReport.resx">
+      <DependentUpon>DeliveredReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\HoldReport.resx">
+      <DependentUpon>HoldReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\MisroutedReport.resx">
+      <DependentUpon>MisroutedReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\OffloadedReport.resx">
+      <DependentUpon>OffloadedReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\PendingReport.resx">
+      <DependentUpon>PendingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\RUDReport.resx">
+      <DependentUpon>RUDReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\Operation\Manifest\Reports\BranchAcceptance.resx">
       <DependentUpon>BranchAcceptance.cs</DependentUpon>
     </EmbeddedResource>

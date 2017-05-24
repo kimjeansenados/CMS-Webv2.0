@@ -101,13 +101,13 @@
                             <telerik:GridBoundColumn DataField="AWBNO" HeaderText="AWB #" FooterText="TOTAL: "></telerik:GridBoundColumn>
 
                             <telerik:GridBoundColumn DataField="SCANNED QTY" HeaderText="SCANNED QTY"></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="DISCREPENCY QTY" HeaderText="DISCREPENCY QTY"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="DISCREPENCY QTY" HeaderText="DISCREPANCY QTY"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="TOTAL QTY" HeaderText="TOTAL QTY" FooterText=" " Aggregate="Sum"></telerik:GridBoundColumn>
 
                              <telerik:GridBoundColumn DataField="DRIVER" HeaderText="DRIVER"></telerik:GridBoundColumn>
                              <telerik:GridBoundColumn DataField="CHECKER" HeaderText="CHECKER"></telerik:GridBoundColumn>
                              <telerik:GridBoundColumn DataField="BATCH" HeaderText="BATCH"></telerik:GridBoundColumn>
-                             <telerik:GridBoundColumn DataField="CHECKER" HeaderText="CHECKER"></telerik:GridBoundColumn>
+                            <%-- <telerik:GridBoundColumn DataField="CHECKER" HeaderText="CHECKER"></telerik:GridBoundColumn>--%>
                         </Columns>
                         <HeaderStyle Font-Size="Smaller" Font-Bold="true" />
                         <FooterStyle Font-Bold="true" />

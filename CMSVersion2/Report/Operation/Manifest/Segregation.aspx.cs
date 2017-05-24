@@ -50,6 +50,7 @@ namespace CMSVersion2.Report.Operation.Manifest
                 Destination.DataValueField = "CityName";
                 Destination.DataBind();
 
+                Date.SelectedDate = DateTime.Now;
             }
         }
 
