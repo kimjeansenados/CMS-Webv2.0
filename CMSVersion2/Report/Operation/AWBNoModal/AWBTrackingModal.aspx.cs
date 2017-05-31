@@ -23,15 +23,60 @@ namespace CMSVersion2.Report.Operation.AWBNoModal
                 }
                 else
                 {
+                    int numberOfRecords = 0;
                     string awbNo = Request.QueryString["Id"].ToString();
                     lblAwbNumber.Value = awbNo;
-                    LoadSignature(lblAwbNumber.Value);
+
+                    DataTable Data = GetAwbNoInformation(awbNo);
+                    numberOfRecords = Data.Rows.Count;
+
+                    if (numberOfRecords > 0)
+                    {
+                        LoadSignature(lblAwbNumber.Value);
+                        FillValue(Data);
+                    }
+                        
+                    
 
                 }
             }
         }
 
-       
+        public void FillValue(DataTable Data)
+        {
+            int counter = 0;
+            foreach (DataRow row in Data.Rows)
+            {
+                if (counter == 0)
+                {
+                    try
+                    {
+                        txtAwb.Text = row["AirwayBillNo"].ToString();
+                        txtShipper.Text = row["Shipper"].ToString();
+                        txtCommodity.Text = row["CommodityName"].ToString();
+
+                        txtOrigin.Text = row["Origin"].ToString();
+                        txtDestination.Text = row["Destination"].ToString();
+                        txtQuantity.Text = row["Quantity"].ToString();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
+
+                    counter++;
+                }
+            }
+        }
+
+        public DataTable GetAwbNoInformation(string awbNo)
+        {
+            DataSet data = BLL.AirwayBill.GetAwbInfoByAwbNo(awbNo, getConstr.ConStrCMS);
+            DataTable convertdata = new DataTable();
+            convertdata = data.Tables[0];
+            return convertdata;
+        }
+
         public DataTable GetDetailsAwbNoInformation(string awbNo)
         {
             DataSet data = BLL.AirwayBill.SignaturePOD(awbNo, getConstr.ConStrCMS);
@@ -78,7 +123,9 @@ namespace CMSVersion2.Report.Operation.AWBNoModal
                         try
                         {
                             string sign = row["Signature"].ToString();
-                            if(!String.IsNullOrEmpty(sign))
+                            string status = row["DeliveryStatusName"].ToString();
+                            string date = row["CreatedDate"].ToString();
+                            if (!String.IsNullOrEmpty(sign))
                             {
                                 byte[] signature = DecompressImage((byte[])row["Signature"]);
                                 if (signature != null && signature.Length > 0)
@@ -88,6 +135,9 @@ namespace CMSVersion2.Report.Operation.AWBNoModal
                                     Image1.ImageUrl = "data:image/png;base64," + base64String;
                                     string receivedBy = row["ReceivedBy"].ToString();
                                     lblName.Text = receivedBy;
+                                    txtDeliveryStatus.Text = status;
+                                    txtDatedelivered.Text = date;
+
 
                                 }
                             }

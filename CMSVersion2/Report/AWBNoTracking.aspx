@@ -25,10 +25,38 @@
              <div class="row">
                  <div class="col-md-12">
                      <div class="col-md-4">
+                        
                          <telerik:RadLabel ID="lblAwb" runat="server" Text="Airway Bill:" Width="30%" Font-Bold="true"></telerik:RadLabel>
                          <telerik:RadLabel ID="txtAwb" runat="server" Width="50%"></telerik:RadLabel>
+
+                         <telerik:RadLabel ID="lblShipper" runat="server" Text="Shipper:" Width="30%" Font-Bold="true"></telerik:RadLabel>
+                         <telerik:RadLabel ID="txtShipper" runat="server" Width="50%"></telerik:RadLabel>   
+                        
+                         <telerik:RadLabel ID="lblConsignee" runat="server" Text="Consignee:" Width="30%" Font-Bold="true"></telerik:RadLabel>
+                         <telerik:RadLabel ID="txtConsignee" runat="server" Width="50%"></telerik:RadLabel>  
+                         
+                         <telerik:RadLabel ID="lblPayMode" runat="server" Text="PayMode:" Width="30%" Font-Bold="true"></telerik:RadLabel>
+                         <telerik:RadLabel ID="txtPayMode" runat="server" Width="50%"></telerik:RadLabel>  
+                         
+                         <telerik:RadLabel ID="Commodity" runat="server" Text="Commodity:" Width="30%" Font-Bold="true"></telerik:RadLabel>
+                         <telerik:RadLabel ID="txtCommodity" runat="server" Width="50%"></telerik:RadLabel>    
+                        
                      </div><!--col-md-4(1)-->
+                     <div class="col-md-4">
+                         <telerik:RadLabel ID="RadLabel3" runat="server" Width="30%"></telerik:RadLabel>
+                         <telerik:RadLabel ID="RadLabel4" runat="server" Width="50%"></telerik:RadLabel>
+
+                         <telerik:RadLabel ID="lblOrigin" runat="server" Text="Origin:" Width="30%" Font-Bold="true"></telerik:RadLabel>
+                         <telerik:RadLabel ID="txtOrigin" runat="server" Width="50%"></telerik:RadLabel>
+
+                         <telerik:RadLabel ID="lblDestination" runat="server" Text="Destination:" Width="30%" Font-Bold="true"></telerik:RadLabel>
+                         <telerik:RadLabel ID="txtDestination" runat="server" Width="50%"></telerik:RadLabel>
+
+                         <telerik:RadLabel ID="lblQuantity" runat="server" Text="Quantity:" Width="30%" Font-Bold="true"></telerik:RadLabel>
+                         <telerik:RadLabel ID="txtQuantity" runat="server" Width="50%"></telerik:RadLabel>
+                     </div><!--col-md-4(2)-->
                  </div><!--col-md-12-->
+
             </div><!--row3-->
             <br />
             <div class="row">
@@ -77,7 +105,7 @@
 
             <telerik:RadWindowManager RenderMode="Mobile" ID="RadWindowManager1" runat="server" EnableShadow="true">
                             <Windows>
-                               <telerik:RadWindow RenderMode="Mobile" ID="ViewSignature" runat="server" Title="POD" Height="500px"
+                               <telerik:RadWindow RenderMode="Mobile" ID="ViewSignature" runat="server" Title="POD" Height="450px"
                                     Width="700px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar="false" AutoSize="false"
                                     Modal="true" Behaviors="Close,Move">
                                 </telerik:RadWindow>

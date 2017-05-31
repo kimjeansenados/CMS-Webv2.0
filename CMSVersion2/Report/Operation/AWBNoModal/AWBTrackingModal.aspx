@@ -7,15 +7,27 @@
     <title></title>
     <style type="text/css">
         .center {
-    /*margin: auto;
-    width: 80%;
-    padding: 10px;*/
-    text-align: center;
-}
+        /*margin: auto;
+        width: 80%;
+        padding: 10px;*/
+        text-align: center;
+        }
 
         #lblName, #RadLabel1
         {
-            vertical-align: middle;
+        vertical-align: middle;
+        }
+
+        .box-border {
+        /*border-style: double;
+        border-width: thin;*/
+        border-top:2px solid; 
+        border-bottom: 2px solid;
+        }
+
+        .div-border {
+        border-style: solid;
+        border-width: thick;
         }
     </style>
 </head>
@@ -54,17 +66,73 @@
                                
         </telerik:RadGrid>--%>
 
-        <div class="center">
-            <asp:Panel runat="server" ID="Panel2" HorizontalAlign="Center">
-                <asp:Image ID="Image1" runat="server" ImageAlign="Middle"/>
-                 
-            </asp:Panel>
-            
-            <hr />
-           <telerik:RadLabel ID="RadLabel1" runat="server" Font-Bold="true" Text="Received By:"></telerik:RadLabel>
-           <telerik:RadLabel ID="lblName" runat="server" Font-Bold="true"></telerik:RadLabel>
-        </div>
+        <div class="div-border">
 
+            <div>
+                <telerik:RadLabel ID="lblDateDelivered" runat="server" Text="Date Received:" Width="30%" Font-Bold="true"></telerik:RadLabel>
+                <telerik:RadLabel ID="txtDatedelivered" runat="server" Width="50%"></telerik:RadLabel>
+
+                <telerik:RadLabel ID="lblPOD" runat="server" Text="POD for AWB Number:" Width="30%" Font-Bold="true"></telerik:RadLabel>
+                <telerik:RadLabel ID="txtAwb" runat="server" Width="50%" Font-Bold="true"></telerik:RadLabel>
+
+                <div class="box-border">
+                    <telerik:RadLabel ID="RadLabel2" runat="server" Text="Delivery Details:" Font-Bold="true"></telerik:RadLabel>
+                </div>
+                
+                 <div class="row">
+                        <div class="col-md-12">
+                    <div class="col-md-6">
+                        <telerik:RadLabel ID="RadLabel1" runat="server" Font-Bold="true" Text="Received By:" Width="30%"></telerik:RadLabel>
+                        <telerik:RadLabel ID="lblName" runat="server" Width="50%"></telerik:RadLabel>
+
+                        <telerik:RadLabel ID="lblSignature" runat="server" Text="Signature:" Width="30%" Font-Bold="true"></telerik:RadLabel>
+                        <asp:Panel runat="server" ID="Panel2" HorizontalAlign="Center" Width="50%">
+                            <asp:Image ID="Image1" runat="server" Height="80" Width="100"/>
+                        </asp:Panel>
+                    </div>
+
+                    <div class="col-md-6">
+                        <telerik:RadLabel ID="lblDeliveryStatus" runat="server" Font-Bold="true" Text="Delivery Status:" Width="30%"></telerik:RadLabel>
+                        <telerik:RadLabel ID="txtDeliveryStatus" runat="server" Width="50%"></telerik:RadLabel>
+
+                        <telerik:RadLabel ID="lblDestination" runat="server" Font-Bold="true" Text="Destination:" Width="30%"></telerik:RadLabel>
+                        <telerik:RadLabel ID="txtDestination" runat="server" Width="50%"></telerik:RadLabel>
+                    </div>
+                </div>
+                 </div>
+             
+
+                 <div class="box-border">
+                    <telerik:RadLabel ID="RadLabel3" runat="server" Text="Shipment Details:" Font-Bold="true"></telerik:RadLabel>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="col-md-4">
+                            <telerik:RadLabel ID="lblShipper" runat="server" Font-Bold="true" Text="Shipper:" Width="30%"></telerik:RadLabel>
+                            <telerik:RadLabel ID="txtShipper" runat="server" Width="50%"></telerik:RadLabel>
+
+                            <telerik:RadLabel ID="lblOrigin" runat="server" Font-Bold="true" Text="Origin:" Width="30%"></telerik:RadLabel>
+                            <telerik:RadLabel ID="txtOrigin" runat="server" Width="50%"></telerik:RadLabel>
+                     
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                             <telerik:RadLabel ID="lblCommodity" runat="server" Font-Bold="true" Text="Commodity:" Width="30%"></telerik:RadLabel>
+                            <telerik:RadLabel ID="txtCommodity" runat="server" Width="50%"></telerik:RadLabel>
+                        
+                            <telerik:RadLabel ID="lblQuantity" runat="server" Font-Bold="true" Text="Quantity:" Width="30%"></telerik:RadLabel>
+                            <telerik:RadLabel ID="txtQuantity" runat="server" Width="50%"></telerik:RadLabel>
+
+                           
+                        </div>
+                    </div>
+                </div>
+  
+            </div>
+        </div>
     </div>
     </form>
 </body>

@@ -122,7 +122,7 @@
             </div><!--row4-->
             <telerik:RadWindowManager RenderMode="Mobile" ID="RadWindowManager1" runat="server" EnableShadow="true">
                             <Windows>
-                               <telerik:RadWindow RenderMode="Mobile" ID="ViewSignature" runat="server" Title="POD" Height="500px"
+                               <telerik:RadWindow RenderMode="Mobile" ID="ViewSignature" runat="server" Title="POD" Height="450px"
                                     Width="700px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar="false" AutoSize="false"
                                     Modal="true" Behaviors="Close,Move">
                                 </telerik:RadWindow>

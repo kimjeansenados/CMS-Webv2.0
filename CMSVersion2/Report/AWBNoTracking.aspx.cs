@@ -82,7 +82,15 @@ namespace CMSVersion2.Report
                     try
                     {
                         txtAwb.Text = row["AirwayBillNo"].ToString();
-                       
+                        txtShipper.Text = row["Shipper"].ToString();
+                        txtConsignee.Text = row["Consignee"].ToString();
+                        txtPayMode.Text = row["PaymentModeName"].ToString();
+                        txtCommodity.Text = row["CommodityName"].ToString();
+
+                        txtOrigin.Text = row["Origin"].ToString();
+                        txtDestination.Text = row["Destination"].ToString();
+                        txtQuantity.Text = row["Quantity"].ToString();
+
                     }
                     catch (Exception ex)
                     {

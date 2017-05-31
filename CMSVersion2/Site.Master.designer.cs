@@ -292,15 +292,6 @@ namespace CMSVersion2 {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor Delivered;
         
         /// <summary>
-        /// Hold control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor Hold;
-        
-        /// <summary>
         /// Misrouted control.
         /// </summary>
         /// <remarks>

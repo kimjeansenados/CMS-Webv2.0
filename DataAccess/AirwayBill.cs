@@ -48,6 +48,19 @@ namespace DataAccess
 
         }
 
+        public static DataSet GetDeliveryDetailsInfoByAwbNo(string awbNo, string conSTR)
+        {
+            using (SqlConnection con = new SqlConnection(conSTR))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("sp_AwbNo_Delivery", con);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.Add("@AwbNo", SqlDbType.NVarChar).Value = awbNo;
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+        }
+
 
     }
 }

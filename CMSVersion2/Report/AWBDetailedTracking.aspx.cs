@@ -21,21 +21,33 @@ namespace CMSVersion2.Report
         {
             string awbNo = "";
             int numberOfRecords = 0;
+            int deliveryDataRecords = 0;
             if (!String.IsNullOrEmpty(txtAwbNo.Text))
             {
                 awbNo = txtAwbNo.Text;
                 DataTable Data = GetAwbNoInformation(awbNo);
+                DataTable deliveryData = GetDeliveryDetailsInfoByAwbNo(awbNo);
                 numberOfRecords = Data.Rows.Count;
+                deliveryDataRecords = deliveryData.Rows.Count;
 
-                if(numberOfRecords > 0)
+
+                if (numberOfRecords > 0)
                 {
                     FillValue(Data);
                     radGridAwbNo.DataSource = GetDetailsAwbNoInformation(awbNo);
                     radGridAwbNo.Rebind();
                     radGridAwbNo.DataBind();
                     //LoadSignature(awbNo);
-                    lblReceivedBy.Visible = true;
-                    signLink.Visible = true;
+                    if(deliveryDataRecords > 0)
+                    {
+                        lblReceivedBy.Visible = true;
+                        signLink.Visible = true;
+                    }
+                    else
+                    {
+                        lblReceivedBy.Visible = false;
+                        signLink.Visible = false;
+                    }
                 }
                 else
                 {
@@ -88,6 +100,17 @@ namespace CMSVersion2.Report
             convertdata = data.Tables[0];
             return convertdata;
         }
+
+        public DataTable GetDeliveryDetailsInfoByAwbNo(string awbNo)
+        {
+            DataSet data = BLL.AirwayBill.GetDeliveryDetailsInfoByAwbNo(awbNo, getConstr.ConStrCMS);
+            DataTable convertdata = new DataTable();
+            convertdata = data.Tables[0];
+            return convertdata;
+        }
+
+        
+
 
         public DataTable GetDetailsAwbNoInformation(string awbNo)
         {
