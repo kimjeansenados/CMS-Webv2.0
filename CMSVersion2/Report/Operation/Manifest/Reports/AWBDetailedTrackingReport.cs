@@ -50,7 +50,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             //group1.GroupFooter = groupFooterSection1;
             //group1.GroupHeader = groupHeaderSection1;
 
-            //rpt_AWBDetailedTracking.Groups.Add(group1);
+            //table1.Groups.Add(group1);
 
             //Telerik.Reporting.TableGroup group1 = new Telerik.Reporting.TableGroup();
             //group1.Name = "Group1";
