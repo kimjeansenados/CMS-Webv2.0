@@ -97,15 +97,21 @@
                        </telerik:RadGrid>
                  </div><!--row4-->
             <br />
+
+                <div class="row">
+                     
+                     <telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click" Visible="false"> </telerik:RadButton>
+                  </div><!--row4-->
                  <div class="row">
                         <telerik:RadLabel ID="lblReceivedBy" runat="server" Text="Received By:" Font-Bold="true" Visible="false"></telerik:RadLabel>
                        <a href="#" runat="server" onClick="handleHyperLinkClick();" visible="false" id="signLink"> View POD </a>
                            
+                   <%--  <telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click"> </telerik:RadButton>--%>
                   </div><!--row4-->
 
             <telerik:RadWindowManager RenderMode="Mobile" ID="RadWindowManager1" runat="server" EnableShadow="true">
                             <Windows>
-                               <telerik:RadWindow RenderMode="Mobile" ID="ViewSignature" runat="server" Title="POD" Height="450px"
+                               <telerik:RadWindow RenderMode="Mobile" ID="ViewSignature" runat="server" Title="POD" Height="470px"
                                     Width="700px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar="false" AutoSize="false"
                                     Modal="true" Behaviors="Close,Move">
                                 </telerik:RadWindow>

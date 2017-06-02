@@ -1,9 +1,12 @@
-﻿using System;
+﻿using CMSVersion2.Models;
+using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.IO.Compression;
+using System.Web;
+using Telerik.Web.UI;
 using BLL = BusinessLogic;
 using Tools = utilities;
 
@@ -12,6 +15,7 @@ namespace CMSVersion2.Report.Operation.AWBNoModal
     public partial class AWBTrackingModal : System.Web.UI.Page
     {
         Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
+        public static string WebPathName = ConfigurationManager.ConnectionStrings["iiswebname"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
             //radGridSignature.MasterTableView.CommandItemSettings.ShowAddNewRecordButton = false;
@@ -32,6 +36,7 @@ namespace CMSVersion2.Report.Operation.AWBNoModal
 
                     if (numberOfRecords > 0)
                     {
+                        ReportGlobalModel.Report = "POD";
                         LoadSignature(lblAwbNumber.Value);
                         FillValue(Data);
                     }
@@ -58,6 +63,14 @@ namespace CMSVersion2.Report.Operation.AWBNoModal
                         txtOrigin.Text = row["Origin"].ToString();
                         txtDestination.Text = row["Destination"].ToString();
                         txtQuantity.Text = row["Quantity"].ToString();
+
+                        ReportGlobalModel.AirwayBillNo = row["AirwayBillNo"].ToString();
+                        ReportGlobalModel.ShipperName = row["Shipper"].ToString();
+                        ReportGlobalModel.CommodityType = row["CommodityName"].ToString();
+                        ReportGlobalModel.Origin = row["Origin"].ToString();
+                        ReportGlobalModel.Destination = row["Destination"].ToString();
+                        ReportGlobalModel.Quantity = row["Quantity"].ToString();
+
                     }
                     catch (Exception ex)
                     {
@@ -138,6 +151,11 @@ namespace CMSVersion2.Report.Operation.AWBNoModal
                                     txtDeliveryStatus.Text = status;
                                     txtDatedelivered.Text = date;
 
+                                    ReportGlobalModel.SignedBy = receivedBy;
+                                    ReportGlobalModel.DeliveryStatus = status;
+                                    ReportGlobalModel.Signature = signature;
+                                    ReportGlobalModel.Date = date;
+
 
                                 }
                             }
@@ -155,6 +173,14 @@ namespace CMSVersion2.Report.Operation.AWBNoModal
                 //string empName = (string)GetDetailsAwbNoInformation(awbNo).Rows[0]["EmployeeName"];
                 //lblName.Text = empName;
             }
+        }
+
+        protected void Print_Click(object sender, EventArgs e)
+        {
+            string host = HttpContext.Current.Request.Url.Authority;
+            RadWindow1.NavigateUrl = "http://" + host + "/" + WebPathName + "/Report/ReportViewerForm1.aspx";
+            string script = "function f(){$find(\"" + RadWindow1.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
+            RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
 
 

@@ -1,5 +1,9 @@
-﻿using System;
+﻿using CMSVersion2.Models;
+using System;
+using System.Configuration;
 using System.Data;
+using System.Web;
+using Telerik.Web.UI;
 using BLL = BusinessLogic;
 using Tools = utilities;
 
@@ -9,12 +13,13 @@ namespace CMSVersion2.Report
     {
         #region Properties
         Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
+        public static string WebPathName = ConfigurationManager.ConnectionStrings["iiswebname"].ConnectionString;
         #endregion
 
         #region Events
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ReportGlobalModel.Report = "AWBDetailedTracking";
         }
 
         protected void btnSearchAwbNo_Click(object sender, EventArgs e)
@@ -33,6 +38,8 @@ namespace CMSVersion2.Report
 
                 if (numberOfRecords > 0)
                 {
+                    ReportGlobalModel.Report = "AWBDetailedTracking";
+                    Print.Visible = true;
                     FillValue(Data);
                     radGridAwbNo.DataSource = GetDetailsAwbNoInformation(awbNo);
                     radGridAwbNo.Rebind();
@@ -117,6 +124,7 @@ namespace CMSVersion2.Report
             DataSet data = BLL.AirwayBill.GetDetailsAwbNo(awbNo,1, getConstr.ConStrCMS);
             DataTable convertdata = new DataTable();
             convertdata = data.Tables[0];
+            ReportGlobalModel.table1 = convertdata;
             return convertdata;
         }
 
@@ -146,6 +154,18 @@ namespace CMSVersion2.Report
                         txtOrigin.Text = row["Origin"].ToString();
                         txtDestination.Text = row["Destination"].ToString();
                         txtQuantity.Text = row["Quantity"].ToString();
+
+                        ReportGlobalModel.AirwayBillNo = row["AirwayBillNo"].ToString();
+                        ReportGlobalModel.ShipperName = row["Shipper"].ToString();
+                        ReportGlobalModel.Consignee= row["Consignee"].ToString();
+                        ReportGlobalModel.PayMode = row["PaymentModeName"].ToString();
+                        ReportGlobalModel.CommodityType = row["CommodityName"].ToString();
+
+                        ReportGlobalModel.Origin = row["Origin"].ToString();
+                        ReportGlobalModel.Destination = row["Destination"].ToString();
+                        ReportGlobalModel.Quantity = row["Quantity"].ToString();
+
+
                     }
                     catch (Exception ex)
                     {
@@ -155,6 +175,14 @@ namespace CMSVersion2.Report
                     counter++;
                 }
             }
+        }
+
+        protected void Print_Click(object sender, EventArgs e)
+        {
+            string host = HttpContext.Current.Request.Url.Authority;
+            RadWindow1.NavigateUrl = "http://" + host + "/" + WebPathName + "/Report/ReportViewerForm1.aspx";
+            string script = "function f(){$find(\"" + RadWindow1.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
+            RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
         }
         #endregion
     }

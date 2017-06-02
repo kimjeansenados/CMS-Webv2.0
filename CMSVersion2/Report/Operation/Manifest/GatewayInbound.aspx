@@ -26,7 +26,7 @@
         }
     </style>
 
-<div class="wrapper">
+<%--<div class="wrapper">--%>
 <div class="wrapper">
     <div id="page-wrapper">
         <div class="container">

@@ -65,6 +65,7 @@
                                 </MasterTableView>
                                
         </telerik:RadGrid>--%>
+        <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" AutoSize="true" AutoSizeBehaviors="HeightProportional" Width="1300px" Skin="Glow" VisibleStatusbar="false"></telerik:RadWindow>
 
         <div class="div-border">
 
@@ -133,6 +134,8 @@
   
             </div>
         </div>
+
+       <%-- <telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click"> </telerik:RadButton>--%>
     </div>
     </form>
 </body>

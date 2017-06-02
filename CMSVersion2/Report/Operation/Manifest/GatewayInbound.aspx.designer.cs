@@ -67,6 +67,15 @@ namespace CMSVersion2.Report.Operation.Manifest {
         protected global::Telerik.Web.UI.RadButton Search;
         
         /// <summary>
+        /// Print control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadButton Print;
+        
+        /// <summary>
         /// gridPickupCargo control.
         /// </summary>
         /// <remarks>

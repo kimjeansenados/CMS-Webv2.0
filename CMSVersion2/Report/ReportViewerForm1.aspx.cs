@@ -96,6 +96,21 @@
                     clientReportSource.Identifier = typeof(ReportCollection).AssemblyQualifiedName;
                     break;
 
+                //AWB Tracking
+                case "POD":
+                    clientReportSource.Identifier = typeof(PODReport).AssemblyQualifiedName;
+                    break;
+
+               
+                case "AWBDetailedTracking":
+                    clientReportSource.Identifier = typeof(rpt_AWBDetailedTracking).AssemblyQualifiedName;
+                    break;
+
+               
+                case "AWBTracking":
+                    clientReportSource.Identifier = typeof(AWBTrackingReport).AssemblyQualifiedName;
+                    break;
+
 
                 default:
                     clientReportSource.Identifier = typeof(Report1).AssemblyQualifiedName;

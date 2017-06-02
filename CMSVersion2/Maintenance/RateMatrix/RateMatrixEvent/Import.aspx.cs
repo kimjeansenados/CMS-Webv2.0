@@ -76,7 +76,7 @@ namespace CMSVersion2.Maintenance.RateMatrix.RateMatrix
 
         protected void AsyncUpload1_FileUploaded(object sender, FileUploadedEventArgs e)
         {
-            string path = Server.MapPath("~/Uploads/");
+            string path = Server.MapPath("~/Upload/");
             e.File.SaveAs(path + e.File.GetName());
         }
 
@@ -86,7 +86,7 @@ namespace CMSVersion2.Maintenance.RateMatrix.RateMatrix
 
             foreach (UploadedFile f in RadAsyncUpload2.UploadedFiles)
             {
-                string path = Server.MapPath("~/Uploads/");
+                string path = Server.MapPath("~/Upload/");
                 //f.File.SaveAs(path + f.File.GetName());
                 var filename = f.FileName;
 
@@ -135,7 +135,7 @@ namespace CMSVersion2.Maintenance.RateMatrix.RateMatrix
             string ID = Request.QueryString["ID"].ToString();
             if (ID != "")
             {
-                DAL.RateMatrix.DeleteWB(new Guid(ID), getConstr.ConStrCMS);
+               // DAL.RateMatrix.DeleteWB(new Guid(ID), getConstr.ConStrCMS);
                 int counter = 1;
 
 

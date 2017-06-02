@@ -36,6 +36,12 @@ namespace CMSVersion2.Models
 
         public static String ShipMode { get; set; }
         public static String PayMode { get; set; }
+        public static String ShipperName { get; set; }
+        public static String Quantity { get; set; }
+        public static String SignedBy { get; set; }
+        public static String DeliveryStatus { get; set; }
+        public static byte[] Signature { get; set; }
+        public static String Consignee { get; set; }
 
     }
 }

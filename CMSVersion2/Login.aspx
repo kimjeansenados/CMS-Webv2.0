@@ -45,6 +45,8 @@
 </style>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.js"></script>
+     <script src="Scripts/bootstrap.min.js"></script>
 </head>
 <body>
     <%--<form id="form1" runat="server">--%>
@@ -185,10 +187,10 @@
 
         <!-- Script to Activate the Carousel -->
        <!-- jQuery -->
-        <script src="Scripts/jquery.js"></script>
+     <%--   <script src="Scripts/jquery.js"></script>
         
         <!-- Bootstrap Core JavaScript -->
-        <script src="Scripts/bootstrap.min.js"></script>
+        <script src="Scripts/bootstrap.min.js"></script>--%>
         
 
         <!-- Script to Activate the Carousel -->

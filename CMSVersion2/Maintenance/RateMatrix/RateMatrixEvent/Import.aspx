@@ -27,6 +27,8 @@
             top.location.href = top.location.href;
 
         }
+
+        
     </script>
 </head>
 <body runat="server">
@@ -42,8 +44,20 @@
                 <div class="buttons">
                     <br />
                   <%-- <label for="email" class="cols-sm-2 control-label">Commodity Type</label>--%>
-                    <telerik:RadAsyncUpload ID="RadAsyncUpload2" Skin="Glow" Visible="true" OnClientFilesUploaded="fileUploaded" OnFileUploaded="AsyncUpload1_FileUploaded"
-                        HideFileInput="True" runat="server" Localization-Select="Import From Excel File" AllowedFileExtensions=".xlsx, .xls" Font-Size="14px"></telerik:RadAsyncUpload>
+
+                       <telerik:RadAsyncUpload Skin="Glow" runat="server" ID="RadAsyncUpload2" 
+                                            HideFileInput="true" 
+                                            AllowedFileExtensions=".xls,.xlsx"
+                                            OnClientFilesUploaded="fileUploaded"
+                                            OnFileUploaded="AsyncUpload1_FileUploaded"
+                                            Localization-Select="Import File"
+                                           InputSize="150"
+                                            />
+
+                  <%--  <telerik:RadAsyncUpload ID="RadAsyncUpload2" Skin="Glow" OnClientFilesUploaded="fileUploaded" OnFileUploaded="AsyncUpload1_FileUploaded"
+                        HideFileInput="True" runat="server" Localization-Select="Import From Excel File" AllowedFileExtensions=".xlsx, .xls" Font-Size="14px"></telerik:RadAsyncUpload>--%>
+                    <br />
+                    <br />
                     <br />
                     
 
@@ -116,7 +130,7 @@
                                 </MasterTableView>
                                 <ClientSettings>
                                     <Selecting AllowRowSelect="true"></Selecting>
-                                    <ClientEvents OnRowDblClick="RowDblClick"></ClientEvents>
+                                    <%--<ClientEvents OnRowDblClick="RowDblClick"></ClientEvents>--%>
                                 </ClientSettings>
                             </telerik:RadGrid>
                 <br />
@@ -133,9 +147,7 @@
                  <br />
                  <br />
                  <br />
-                 <telerik:RadButton ID="RadButton4" runat="server" Text="" OnClick="RadButton4_Click" Width="1px" >
-
-</telerik:RadButton>
+                 <telerik:RadButton ID="RadButton4" runat="server" Text="" OnClick="RadButton4_Click" Width="1px" ></telerik:RadButton>
 
             </div>
 
@@ -144,5 +156,14 @@
 
     </div>
         </form>
+     <telerik:RadCodeBlock runat="server">
+           <script type="text/javascript">
+            function fileUploaded(sender, args) {
+                 document.getElementById("<%= RadButton4.ClientID %>").click();
+            }
+    </script>
+     </telerik:RadCodeBlock>
+
+  
 </body>
 </html>
