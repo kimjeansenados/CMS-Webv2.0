@@ -53,7 +53,15 @@ namespace BusinessLogic
 
         public static List<Invoice> GetInvoices(DateTime start, DateTime end, string ConnectionString)
         {
+            //DataTable dt = DAL.Invoice.GetInvoice(start, end, ConnectionString).Tables[0];
+            //dt.TableName = "Invoice";
+            //System.IO.StringWriter writer = new System.IO.StringWriter();
+            //dt.WriteXml(writer, true);
+            
+            //return writer.ToString();
             return Invoices( DAL.Invoice.GetInvoice(start, end, ConnectionString));
+
+
         }
 
         private static List<Invoice> Invoices(DataSet data)
