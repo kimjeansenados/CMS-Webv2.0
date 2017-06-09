@@ -49,6 +49,7 @@
     <Compile Include="Department.cs" />
     <Compile Include="Flight.cs" />
     <Compile Include="AwbIssuance.cs" />
+    <Compile Include="GPS.cs" />
     <Compile Include="Graph.cs" />
     <Compile Include="Invoice.cs" />
     <Compile Include="Position.cs" />

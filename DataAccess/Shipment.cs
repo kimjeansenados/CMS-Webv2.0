@@ -22,5 +22,18 @@ namespace DataAccess
                 return ds;
             }
         }
+
+        public static DataSet GetShipmentTonnageByUser(Guid userid,string Constr)
+        {
+            using (SqlConnection con = new SqlConnection(Constr))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("sp_view_ShipmentTonnageByUser", con);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.Add("@userid", SqlDbType.UniqueIdentifier).Value = userid;
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+        }
     }
 }

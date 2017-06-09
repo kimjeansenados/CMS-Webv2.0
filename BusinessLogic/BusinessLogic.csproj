@@ -50,6 +50,7 @@
     <Compile Include="BillingPeriod.cs" />
     <Compile Include="Department.cs" />
     <Compile Include="Flight.cs" />
+    <Compile Include="GPS.cs" />
     <Compile Include="Graph.cs" />
     <Compile Include="Industry.cs" />
     <Compile Include="Invoice.cs" />
