@@ -71,7 +71,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox21.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox21.Style.Font.Bold = true;
             this.textBox21.Style.Font.Name = "Calibri";
-            this.textBox21.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Pixel(11D);
+            this.textBox21.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Pixel(12D);
             this.textBox21.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Bottom;
             this.textBox21.TextWrap = true;
             this.textBox21.Value = "Time";
