@@ -247,6 +247,7 @@
     <Content Include="Corporate\StatementOfAccountAdjustment\AddStatementOfAccountAdjustment.aspx" />
     <Content Include="Corporate\StatementOfAccountPrint\StatementOfAccountPrint.aspx" />
     <Content Include="Customer\Customer.aspx" />
+    <Content Include="Error\UnderMaintenance.aspx" />
     <Content Include="Error\UnderMaintenancePage.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -733,6 +734,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error\UnderMaintenance.aspx.cs">
+      <DependentUpon>UnderMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error\UnderMaintenance.aspx.designer.cs">
+      <DependentUpon>UnderMaintenance.aspx</DependentUpon>
     </Compile>
     <Compile Include="Error\UnderMaintenancePage.aspx.cs">
       <DependentUpon>UnderMaintenancePage.aspx</DependentUpon>

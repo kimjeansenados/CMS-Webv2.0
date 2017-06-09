@@ -8,7 +8,7 @@
             <br/>
             <br/>
             <h3 style="font-style:italic" class="subtitle">We're working hard to launch our website and we'll be ready very soon.</h3>
-            <h4 >This is page is under maintenance.</h4>
+            <h4 >This page is under maintenance.</h4>
             </div>
             <br/><br/><br/><br/><br/>
             <br/><br/><br/><br/><br/>
