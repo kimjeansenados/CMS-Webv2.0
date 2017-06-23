@@ -43,6 +43,8 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.txtBundleNumber = new Telerik.Reporting.TextBox();
             this.textBox2 = new Telerik.Reporting.TextBox();
             this.txtDestination = new Telerik.Reporting.TextBox();
+            this.textBox40 = new Telerik.Reporting.TextBox();
+            this.txtOriginBco = new Telerik.Reporting.TextBox();
             this.detail = new Telerik.Reporting.DetailSection();
             this.table1 = new Telerik.Reporting.Table();
             this.textBox22 = new Telerik.Reporting.TextBox();
@@ -258,7 +260,9 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox4,
             this.txtBundleNumber,
             this.textBox2,
-            this.txtDestination});
+            this.txtDestination,
+            this.textBox40,
+            this.txtOriginBco});
             this.pageHeaderSection1.Name = "pageHeaderSection1";
             // 
             // textBox1
@@ -346,9 +350,9 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             // 
             // textBox2
             // 
-            this.textBox2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(4.4402775764465332D), Telerik.Reporting.Drawing.Unit.Inch(1.1000789403915405D));
+            this.textBox2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(4.439847469329834D), Telerik.Reporting.Drawing.Unit.Inch(1.4021621942520142D));
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.90617114305496216D), Telerik.Reporting.Drawing.Unit.Inch(0.29992109537124634D));
+            this.textBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.0628515481948853D), Telerik.Reporting.Drawing.Unit.Inch(0.29992109537124634D));
             this.textBox2.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox2.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox2.Style.Font.Bold = true;
@@ -356,13 +360,13 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox2.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox2.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox2.TextWrap = false;
-            this.textBox2.Value = "BCO:";
+            this.textBox2.Value = "Destination BCO:";
             // 
             // txtDestination
             // 
-            this.txtDestination.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(5.3465275764465332D), Telerik.Reporting.Drawing.Unit.Inch(1.1000789403915405D));
+            this.txtDestination.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(5.5027775764465332D), Telerik.Reporting.Drawing.Unit.Inch(1.4021621942520142D));
             this.txtDestination.Name = "txtDestination";
-            this.txtDestination.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.4864535331726074D), Telerik.Reporting.Drawing.Unit.Inch(0.29992109537124634D));
+            this.txtDestination.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.3297731876373291D), Telerik.Reporting.Drawing.Unit.Inch(0.29992109537124634D));
             this.txtDestination.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
             this.txtDestination.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.txtDestination.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
@@ -373,6 +377,35 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.txtDestination.TextWrap = false;
             this.txtDestination.Value = "";
             // 
+            // textBox40
+            // 
+            this.textBox40.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(4.4402775764465332D), Telerik.Reporting.Drawing.Unit.Inch(1.1000789403915405D));
+            this.textBox40.Name = "textBox40";
+            this.textBox40.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.0628515481948853D), Telerik.Reporting.Drawing.Unit.Inch(0.29992109537124634D));
+            this.textBox40.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox40.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
+            this.textBox40.Style.Font.Bold = true;
+            this.textBox40.Style.Font.Name = "Calibri";
+            this.textBox40.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
+            this.textBox40.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox40.TextWrap = false;
+            this.textBox40.Value = "Origin BCO:";
+            // 
+            // txtOriginBco
+            // 
+            this.txtOriginBco.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(5.5027775764465332D), Telerik.Reporting.Drawing.Unit.Inch(1.1000789403915405D));
+            this.txtOriginBco.Name = "txtOriginBco";
+            this.txtOriginBco.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.3297731876373291D), Telerik.Reporting.Drawing.Unit.Inch(0.29992109537124634D));
+            this.txtOriginBco.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.txtOriginBco.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
+            this.txtOriginBco.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
+            this.txtOriginBco.Style.Font.Bold = false;
+            this.txtOriginBco.Style.Font.Name = "Calibri";
+            this.txtOriginBco.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
+            this.txtOriginBco.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.txtOriginBco.TextWrap = false;
+            this.txtOriginBco.Value = "";
+            // 
             // detail
             // 
             this.detail.Height = Telerik.Reporting.Drawing.Unit.Inch(1.2000001668930054D);
@@ -382,16 +415,16 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             // 
             // table1
             // 
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.34375008940696716D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.34375005960464478D)));
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.56458979845047D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.95972603559494019D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.95972597599029541D)));
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.98227089643478394D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.93820798397064209D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.77083367109298706D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.84375065565109253D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.43750008940696716D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.51041644811630249D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.76041716337203979D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.93820792436599731D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.77083361148834229D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.84375059604644775D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.43750005960464478D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.51041632890701294D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.760417103767395D)));
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.69791603088378906D)));
             this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.18749991059303284D)));
             this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.40000000596046448D)));
@@ -746,7 +779,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox37.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
             this.textBox37.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Bottom;
             this.textBox37.StyleName = "";
-            this.textBox37.Value = "= Fields.No";
+            this.textBox37.Value = "= RowNumber()";
             // 
             // textBox38
             // 
@@ -958,6 +991,8 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.detail,
             this.pageFooterSection1});
             this.Name = "BundleReport";
+            this.PageSettings.ContinuousPaper = false;
+            this.PageSettings.Landscape = true;
             this.PageSettings.Margins = new Telerik.Reporting.Drawing.MarginsU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(1D));
             this.PageSettings.PaperKind = System.Drawing.Printing.PaperKind.Letter;
             styleRule1.Selectors.AddRange(new Telerik.Reporting.Drawing.ISelector[] {
@@ -1030,5 +1065,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
         private Telerik.Reporting.TextBox textBox37;
         private Telerik.Reporting.TextBox textBox38;
         private Telerik.Reporting.TextBox textBox36;
+        private Telerik.Reporting.TextBox textBox40;
+        private Telerik.Reporting.TextBox txtOriginBco;
     }
 }

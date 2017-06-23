@@ -23,50 +23,102 @@ namespace CMSVersion2.Report.Operation.Manifest
             if (!IsPostBack)
             {
 
-                DataView view = new DataView(getSegregationData());
-                DataTable distinctValuesDriver = view.ToTable(true, "Driver");
-                Driver.DataSource = distinctValuesDriver;
-                Driver.DataTextField = "Driver";
-                Driver.DataValueField = "Driver";
-                Driver.DataBind();
-                DataTable distinctValuesChecker = view.ToTable(true, "Checker");
-                Checker.DataSource = distinctValuesChecker;
-                Checker.DataTextField = "Checker";
-                Checker.DataValueField = "Checker";
-                Checker.DataBind();
+                //DataView view = new DataView(getSegregationData());
+                //DataTable distinctValuesDriver = view.ToTable(true, "Driver");
+                //Driver.DataSource = distinctValuesDriver;
+                //Driver.DataTextField = "Driver";
+                //Driver.DataValueField = "Driver";
+                //Driver.DataBind();
+                //DataTable distinctValuesChecker = view.ToTable(true, "Checker");
+                ////Checker.DataSource = distinctValuesChecker;
+                ////Checker.DataTextField = "Checker";
+                ////Checker.DataValueField = "Checker";
+                ////Checker.DataBind();
 
-                PlateNo.DataSource = getSegregationData();
-                PlateNo.DataTextField = "PlateNo";
-                PlateNo.DataValueField = "PlateNo";
-                PlateNo.DataBind();
+                //PlateNo.DataSource = getSegregationData();
+                //PlateNo.DataTextField = "PlateNo";
+                //PlateNo.DataValueField = "PlateNo";
+                //PlateNo.DataBind();
 
-                BCO.DataSource = getBranchCorpOffice();
-                BCO.DataTextField = "BranchCorpOfficeName";
-                BCO.DataValueField = "BranchCorpOfficeCode";
-                BCO.DataBind();
+                //BCO.DataSource = getBranchCorpOffice();
+                //BCO.DataTextField = "BranchCorpOfficeName";
+                //BCO.DataValueField = "BranchCorpOfficeCode";
+                //BCO.DataBind();
 
-                Destination.DataSource = getCityBCO();
-                Destination.DataTextField = "CityName";
-                Destination.DataValueField = "CityName";
-                Destination.DataBind();
-
+                //Destination.DataSource = getCityBCO();
+                //Destination.DataTextField = "CityName";
+                //Destination.DataValueField = "CityName";
+                //Destination.DataBind();
+                LoadInit();
                 Date.SelectedDate = DateTime.Now;
+                DateTo.SelectedDate = DateTime.Now;
             }
         }
 
-        public DataTable getCityBCO()
+        private void LoadInit()
         {
-            string bco = "All";
-            try
-            {
-                bco = BCO.SelectedValue;
-            }
-            catch (Exception) { }
-            DataSet data = BLL.City.GetCityByBCO(getConstr.ConStrCMS, bco);
-            DataTable dt = new DataTable();
-            dt = data.Tables[0];
-            return dt;
+            LoadOriginBranchCorpOffice();
+            LoadDestBranchCorpOffice();
+            LoadPlateNo();
+            LoadDriver();
+            LoadBatch();
         }
+
+        private void LoadOriginBranchCorpOffice()
+        {
+            rcbOriginBco.DataSource = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
+            rcbOriginBco.DataValueField = "BranchCorpOfficeId";
+            rcbOriginBco.DataTextField = "BranchCorpOfficeName";
+            rcbOriginBco.DataBind();
+        }
+
+        private void LoadDestBranchCorpOffice()
+        {
+            rcbDestinationBCO.DataSource = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
+            rcbDestinationBCO.DataValueField = "BranchCorpOfficeId";
+            rcbDestinationBCO.DataTextField = "BranchCorpOfficeName";
+            rcbDestinationBCO.DataBind();
+        }
+
+        private void LoadDriver()
+        {
+            Driver.DataSource = BLL.Report.GatewayTransmittal.GetSGDriverList(getConstr.ConStrCMS);
+            Driver.DataValueField = "Driver";
+            Driver.DataTextField = "Driver";
+            Driver.DataBind();
+        }
+
+        private void LoadPlateNo()
+        {
+            PlateNo.DataSource = BLL.Report.GatewayTransmittal.GetCTPlateNo(getConstr.ConStrCMS);
+            PlateNo.DataValueField = "PlateNo";
+            PlateNo.DataTextField = "PlateNo";
+            PlateNo.DataBind();
+        }
+
+        private void LoadBatch()
+        {
+            rcbBatch.DataSource = BLL.Batch.GetBatchByBatchCode(getConstr.ConStrCMS, "segregation");
+            rcbBatch.DataValueField = "BatchId";
+            rcbBatch.DataTextField = "BatchName";
+            rcbBatch.DataBind();
+        }
+
+
+
+        //public DataTable getCityBCO()
+        //{
+        //    string bco = "All";
+        //    try
+        //    {
+        //        bco = BCO.SelectedValue;
+        //    }
+        //    catch (Exception) { }
+        //    DataSet data = BLL.City.GetCityByBCO(getConstr.ConStrCMS, bco);
+        //    DataTable dt = new DataTable();
+        //    dt = data.Tables[0];
+        //    return dt;
+        //}
 
         public DataTable getBranchCorpOffice()
         {
@@ -79,26 +131,61 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         public DataTable getSegregationData()
         {
-            string DateStr = "";
-            string DriverStr = "All";
-            string CheckerStr = "All";
-            string PlateNoStr = "All";
-            string BCOStr = "All";
-            string CityStr = "All";
+            DateTime? DateFromStr = new DateTime();
+            DateTime? DateToStr = new DateTime();
+
+            DateTime? Date1 = new DateTime();
+            DateTime? Date2 = new DateTime();
+
+            Guid? destbcoid = new Guid();
+            Guid? originbcoid = new Guid();
+            Guid? batchid = new Guid();
+            string driverStr = "";
+            string plateNoStr = "";
+            string CheckerStr = "";
             try
             {
-                DriverStr = Driver.SelectedItem.Text.ToString();
-                CheckerStr = Checker.SelectedItem.Text.ToString();
-                PlateNoStr = PlateNo.SelectedItem.Text.ToString();
-                BCOStr = BCO.SelectedItem.Text.ToString();
-                CityStr = Destination.SelectedItem.Text.ToString();
-                DateStr = Date.SelectedDate.Value.ToString("dd MMM yyyy");
+                DateFromStr = Date.SelectedDate.Value;
+                DateToStr = DateTo.SelectedDate.Value;
+
+                Date1 = DateFromStr;
+                Date2 = DateToStr;
+                driverStr = Driver.SelectedItem.Text;
+                plateNoStr = PlateNo.SelectedItem.Text;
+
+                //ORIGIN BCO
+                if (rcbOriginBco.SelectedItem.Text == "All")
+                {
+                    originbcoid = null;
+                }
+                else
+                {
+                    originbcoid = Guid.Parse(rcbOriginBco.SelectedValue.ToString());
+                }
+                //DEST BCO
+                if (rcbDestinationBCO.SelectedItem.Text == "All")
+                {
+                    destbcoid = null;
+                }
+                else
+                {
+                    destbcoid = Guid.Parse(rcbDestinationBCO.SelectedValue.ToString());
+                }
+                //Batch
+                if (rcbBatch.SelectedItem.Text == "All")
+                {
+                    batchid = null;
+                }
+                else
+                {
+                    batchid = Guid.Parse(rcbBatch.SelectedValue.ToString());
+                }
             }
             catch (Exception)
             {
-                DateStr = "";
+               
             }
-            DataSet data = BLL.Report.SegregationReport.GetSegregation(getConstr.ConStrCMS, DateStr, DriverStr, CheckerStr, PlateNoStr, BCOStr, CityStr);
+            DataSet data = BLL.Report.SegregationReport.GetSegregation(getConstr.ConStrCMS, DateFromStr, DateToStr, destbcoid, originbcoid, driverStr, plateNoStr, batchid);
             DataTable dt = new DataTable();
             dt = data.Tables[0];
 
@@ -106,18 +193,18 @@ namespace CMSVersion2.Report.Operation.Manifest
             //PRINTING
             GetColumnDataFromDataTable getColumn = new GetColumnDataFromDataTable();
 
-            DateStr = (DateStr == null) ? "All" : DateStr;
-            DriverStr = (DriverStr == null) ? "All" : DriverStr;
-            CheckerStr = (CheckerStr == null) ? "All" : CheckerStr;
-            PlateNoStr = (PlateNoStr == null) ? "All" : PlateNoStr;
+            //DateStr = (DateStr == null) ? "All" : DateStr;
+            //DriverStr = (DriverStr == null) ? "All" : DriverStr;
+            //CheckerStr = (CheckerStr == null) ? "All" : CheckerStr;
+            //PlateNoStr = (PlateNoStr == null) ? "All" : PlateNoStr;
 
             ReportGlobalModel.Report = "Segregation";
             ReportGlobalModel.table1 = dt;
 
-            ReportGlobalModel.Date = DateStr;
-            ReportGlobalModel.Driver = DriverStr;
+            ReportGlobalModel.Date = Date1.Value.ToShortDateString() + "" + "-" + "" + Date2.Value.ToShortDateString();
+            ReportGlobalModel.Driver = driverStr;
             ReportGlobalModel.Checker = CheckerStr;
-            ReportGlobalModel.PlateNo = PlateNoStr;
+            ReportGlobalModel.PlateNo = plateNoStr;
 
 
             return dt;
@@ -141,15 +228,15 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         protected void BCO_SelectedIndexChanged(object sender, Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventArgs e)
         {
-            Destination.Text = "";
-            Destination.Items.Clear();
-            Destination.AppendDataBoundItems = true;
-            Destination.Items.Add("All");
-            Destination.SelectedIndex = 0;
-            Destination.DataSource = getCityBCO();
-            Destination.DataTextField = "CityName";
-            Destination.DataValueField = "CityName";
-            Destination.DataBind();
+            //Destination.Text = "";
+            //Destination.Items.Clear();
+            //Destination.AppendDataBoundItems = true;
+            //Destination.Items.Add("All");
+            //Destination.SelectedIndex = 0;
+            //Destination.DataSource = getCityBCO();
+            //Destination.DataTextField = "CityName";
+            //Destination.DataValueField = "CityName";
+            //Destination.DataBind();
         }
 
         protected void Print_Click(object sender, EventArgs e)

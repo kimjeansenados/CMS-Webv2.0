@@ -22,43 +22,87 @@ namespace CMSVersion2.Report.Operation.Manifest
         {
             if (!IsPostBack)
             {
-                BCO.DataSource = getBranchCorpOffice();
-                BCO.DataTextField = "BranchCorpOfficeName";
-                BCO.DataValueField = "BranchCorpOfficeCode";
-                BCO.DataBind();
-
-                Batch.DataSource = getBatch();
-                Batch.DataTextField = "BatchName";
-                Batch.DataValueField = "BatchName";
-                Batch.DataBind();
-
-                Gateway.DataSource = getGatewayList();
-                Gateway.DataTextField = "Gateway";
-                Gateway.DataValueField = "Gateway";
-                Gateway.SelectedIndex = 0;
-                Gateway.DataBind();
-
                 Date.SelectedDate = DateTime.Now;
-                
+                DateTo.SelectedDate = DateTime.Now;
+                LoadInit();
             }
         }
 
-        public DataTable getGatewayList()
+
+        private void LoadInit()
         {
-            string DateStr = "";
-            try
-            {
-                DateStr = Date.SelectedDate.Value.ToString("dd MMM yyyy");
-            }
-            catch (Exception) {
-                DateStr = "";
-            }
-
-            DataSet data = BLL.Report.GatewayTransmittal.GetGatewayList(getConstr.ConStrCMS , DateStr);
-            DataTable dt = new DataTable();
-            dt = data.Tables[0];
-            return dt;
+            LoadBranchCorpOffice();
+            LoadDestBranchCorpOffice();
+            LoadDriver();
+            LoadGateway();
+            LoadBatch();
+            LoadCommodityType();
         }
+
+        private void LoadBranchCorpOffice()
+        {
+            rcbOriginBco.DataSource = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
+            rcbOriginBco.DataValueField = "BranchCorpOfficeId";
+            rcbOriginBco.DataTextField = "BranchCorpOfficeName";
+            rcbOriginBco.DataBind();
+        }
+
+        private void LoadDestBranchCorpOffice()
+        {
+            rcbDestBco.DataSource = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
+            rcbDestBco.DataValueField = "BranchCorpOfficeId";
+            rcbDestBco.DataTextField = "BranchCorpOfficeName";
+            rcbDestBco.DataBind();
+        }
+
+        private void LoadDriver()
+        {
+            rcbDriver.DataSource = BLL.Report.GatewayTransmittal.GetGTDriverList(getConstr.ConStrCMS);
+            rcbDriver.DataValueField = "Driver";
+            rcbDriver.DataTextField = "Driver";
+            rcbDriver.DataBind();
+        }
+
+        private void LoadGateway()
+        {
+            rcbGateway.DataSource = BLL.Report.GatewayTransmittal.GetGatewayList(getConstr.ConStrCMS);
+            rcbGateway.DataValueField = "Gateway";
+            rcbGateway.DataTextField = "Gateway";
+            rcbGateway.DataBind();
+        }
+
+        private void LoadBatch()
+        {
+            rcbBatch.DataSource = BLL.Batch.GetBatchByBatchCode(getConstr.ConStrCMS, "gatewaytransmittal");
+            rcbBatch.DataValueField = "BatchId";
+            rcbBatch.DataTextField = "BatchName";
+            rcbBatch.DataBind();
+        }
+
+        private void LoadCommodityType()
+        {
+            rcbCommodityType.DataSource = BLL.CommodityType.GetCommodityType(getConstr.ConStrCMS);
+            rcbCommodityType.DataValueField = "CommodityTypeId";
+            rcbCommodityType.DataTextField = "CommodityTypeName";
+            rcbCommodityType.DataBind();
+        }
+        
+        //public DataTable getGatewayList()
+        //{
+        //    string DateStr = "";
+        //    try
+        //    {
+        //        DateStr = Date.SelectedDate.Value.ToString("dd MMM yyyy");
+        //    }
+        //    catch (Exception) {
+        //        DateStr = "";
+        //    }
+
+        //    DataSet data = BLL.Report.GatewayTransmittal.GetGatewayList(getConstr.ConStrCMS , DateStr);
+        //    DataTable dt = new DataTable();
+        //    dt = data.Tables[0];
+        //    return dt;
+        //}
 
         public DataTable getBatch()
         {
@@ -79,34 +123,102 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         public DataTable getGatewayTranmittal()
         {
-            string DateStr = "";
-            string GatewayStr = "";
-            string BCOStr = "All";
-            string BatchStr = "All";
+            DateTime? DateFromStr = new DateTime();
+            DateTime? DateToStr = new DateTime();
+
+            DateTime? Date1 = new DateTime();
+            DateTime? Date2 = new DateTime();
+
+            Guid? originbcoid = new Guid();
+            Guid? destbcoid = new Guid();
+            Guid? batchid = new Guid();
+            Guid? commoditytypeid = new Guid();
+
+            string driverStr = "";
+            string gatewayStr = "";
+            string mawb = "";
 
             try
             {
-                GatewayStr = Gateway.SelectedItem.Text.ToString();
-                BCOStr = BCO.SelectedItem.Text.ToString();
-                BatchStr = Batch.SelectedItem.Text.ToString();
-                DateStr = Date.SelectedDate.Value.ToString("dd MMM yyyy");
+                DateFromStr = Date.SelectedDate.Value;
+                DateToStr = DateTo.SelectedDate.Value;
+
+                Date1 = DateFromStr;
+                Date2 = DateToStr;
+
+                driverStr = rcbDriver.Text.ToString();
+                gatewayStr = rcbGateway.Text.ToString();
+                mawb = txtMawb.Text.ToString();
+
+                if(mawb != "")
+                {
+                    originbcoid = null;
+                    destbcoid = null;
+                    batchid = null;
+                    commoditytypeid = null;
+                    driverStr = "All";
+                    gatewayStr = "All";
+                    DateFromStr = null;
+                    DateToStr = null;
+                }
+                else
+                {
+                    //BCO
+                    if (rcbOriginBco.SelectedItem.Text == "All")
+                    {
+                        originbcoid = null;
+                    }
+                    else
+                    {
+                        originbcoid = Guid.Parse(rcbOriginBco.SelectedValue.ToString());
+                    }
+                    //DEST BCO
+                    if (rcbDestBco.SelectedItem.Text == "All")
+                    {
+                        destbcoid = null;
+                    }
+                    else
+                    {
+                        destbcoid = Guid.Parse(rcbDestBco.SelectedValue.ToString());
+                    }
+                    //Batch
+                    if (rcbBatch.SelectedItem.Text == "All")
+                    {
+                        batchid = null;
+                    }
+                    else
+                    {
+                        batchid = Guid.Parse(rcbBatch.SelectedValue.ToString());
+                    }
+                    //CommoditTYpe
+                    if (rcbCommodityType.SelectedItem.Text == "All")
+                    {
+                        commoditytypeid = null;
+                    }
+                    else
+                    {
+                        commoditytypeid = Guid.Parse(rcbCommodityType.SelectedValue.ToString());
+                    }
+                }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                DateStr = "";
+                //DateStr = "";
+                Console.WriteLine(ex.ToString());
             }
 
-            DataSet data = BLL.Report.GatewayTransmittal.GetGWTransmittal(getConstr.ConStrCMS, DateStr , GatewayStr , BCOStr , BatchStr);
+            DataSet data = BLL.Report.GatewayTransmittal.GetGWTransmittal(getConstr.ConStrCMS, DateFromStr , DateToStr, originbcoid, destbcoid, batchid,commoditytypeid, driverStr, gatewayStr, mawb);
             DataTable dt = new DataTable();
             dt = data.Tables[0];
 
             ReportGlobalModel.Report = "GWTransmittal";
             ReportGlobalModel.table1 = dt;
-            ReportGlobalModel.Date = DateStr;
-            ReportGlobalModel.Gateway = GatewayStr;
-            ReportGlobalModel.Branch = BCOStr;
-            ReportGlobalModel.Batch = BatchStr;
+            ReportGlobalModel.Date = Date1.Value.ToShortDateString() + "" + "-" + "" + Date2.Value.ToShortDateString();
+            ReportGlobalModel.Gateway = gatewayStr;
+            ReportGlobalModel.Branch = rcbOriginBco.SelectedItem.Text;
+            ReportGlobalModel.Batch = rcbBatch.SelectedItem.Text;
 
+            txtMawb.Text = "";
             return dt;
 
         }
@@ -137,12 +249,12 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         protected void Date_SelectedDateChanged(object sender, Telerik.Web.UI.Calendar.SelectedDateChangedEventArgs e)
         {
-            Gateway.Items.Clear();
-            Gateway.DataSource = getGatewayList();
-            Gateway.DataTextField = "Gateway";
-            Gateway.DataValueField = "Gateway";
-            Gateway.SelectedIndex = 0;
-            Gateway.DataBind();
+            //Gateway.Items.Clear();
+            //Gateway.DataSource = getGatewayList();
+            //Gateway.DataTextField = "Gateway";
+            //Gateway.DataValueField = "Gateway";
+            //Gateway.SelectedIndex = 0;
+            //Gateway.DataBind();
         }
     }
 }

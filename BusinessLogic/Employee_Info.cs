@@ -20,6 +20,24 @@ namespace BusinessLogic
             return DAL.EmployeeInfo.GetEmployeeNames(conStr);
         }
 
+        //DeliveredBy
+        public static DataSet GetDeliveredBy(string conStr)
+        {
+            return DAL.EmployeeInfo.GetDeliveredBy(conStr);
+        }
+
+        //DeliveredBy bco id
+        public static DataSet GetDeliveredByBcoId(string conStr, Guid bcoid)
+        {
+            return DAL.EmployeeInfo.GetDeliveredByBcoId(conStr, bcoid);
+        }
+
+        //DeliveredBy bco id and revenueunitid
+        public static DataSet GetDeliveredByRevenue(string conStr, Guid bcoid, Guid revenueunitid)
+        {
+            return DAL.EmployeeInfo.GetDeliveredByRevenue(conStr, bcoid, revenueunitid);
+        }
+
         public static DataSet GetEmployeeName(string conStr)
         {
             return DAL.EmployeeInfo.GetEmployeeName(conStr);

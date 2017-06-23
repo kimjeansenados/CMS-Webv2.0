@@ -193,5 +193,56 @@ namespace DataAccess
             }
         }
 
+        //Get all Delivered By
+        public static DataSet GetDeliveredBy(string conStr)
+        {
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_view_Reports_DeliveredBy", con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter("sp_view_Reports_DeliveredBy", con);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    return ds;
+                }
+            }
+        }
+
+        //Get all Delivered By BCO Id
+        public static DataSet GetDeliveredByBcoId(string conStr, Guid bcoid)
+        {
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_view_Reports_DeliveredByBCO", con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter("sp_view_Reports_DeliveredByBCO", con);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add("@BcoId", SqlDbType.UniqueIdentifier).Value = bcoid;
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    return ds;
+                }
+            }
+        }
+
+        //Get all Delivered By RevenueUnit Id and BCo
+        public static DataSet GetDeliveredByRevenue(string conStr, Guid bcoid, Guid revenueunitid)
+        {
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_view_Reports_DeliveredByRevenueUnit", con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter("sp_view_Reports_DeliveredByRevenueUnit", con);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add("@BcoId", SqlDbType.UniqueIdentifier).Value = bcoid;
+                    da.SelectCommand.Parameters.Add("@RevenueUnitId", SqlDbType.UniqueIdentifier).Value = revenueunitid;
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    return ds;
+                }
+            }
+        }
+
     }
 }

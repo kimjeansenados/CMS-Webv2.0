@@ -24,16 +24,79 @@ namespace CMSVersion2.Report.Operation.Manifest
             if (!IsPostBack)
             {
 
-                BCO.DataSource = getBranchCorpOffice();
-                BCO.DataTextField = "BranchCorpOfficeName";
-                BCO.DataValueField = "BranchCorpOfficeCode";
-                BCO.DataBind();
+                LoadInit();
+                Date.SelectedDate = DateTime.Now;
+                DateTo.SelectedDate = DateTime.Now;
 
-                Area.DataSource = getArea();
+            }
+        }
+
+        private void LoadInit()
+        {
+            LoadBranchCorpOffice();
+            LoadRevenueUnitName();
+            LoadBatch();
+            LoadPaymentMode();
+        }
+
+        private void LoadBranchCorpOffice()
+        {
+            BCO.DataSource = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
+            BCO.DataValueField = "BranchCorpOfficeId";
+            BCO.DataTextField = "BranchCorpOfficeName";
+            BCO.DataBind();
+        }
+
+        private void LoadRevenueUnitName()
+        {
+            DataTable revenueUnitName = BLL.Revenue_Info.getAllRevenueUnit(getConstr.ConStrCMS).Tables[0];
+            Area.DataSource = revenueUnitName;
+            Area.DataTextField = "RevenueUnitName";
+            Area.DataValueField = "RevenueUnitId";
+            Area.DataBind();
+
+            RadComboBoxItem item1 = new RadComboBoxItem();
+            item1.Text = "All";
+            item1.Value = "All";
+            Area.Items.Add(item1);
+            Area.SelectedValue = "All";
+        }
+        private void LoadBatch()
+        {
+            rcbBatch.DataSource = BLL.Batch.GetBatchByBatchCode(getConstr.ConStrCMS, "distribution");
+            rcbBatch.DataValueField = "BatchId";
+            rcbBatch.DataTextField = "BatchName";
+            rcbBatch.DataBind();
+        }
+
+        private void LoadPaymentMode()
+        {
+            rcbPaymentMode.DataSource = BLL.PaymentMode.GetPaymentMode(getConstr.ConStrCMS);
+            rcbPaymentMode.DataValueField = "PaymentModeId";
+            rcbPaymentMode.DataTextField = "PaymentModeName";
+            rcbPaymentMode.DataBind();
+        }
+
+
+        private void populateRevenueUnitNameByBCOId()
+        {
+            string bco = BCO.SelectedItem.Text;
+            Guid bcoId;
+            if (bco != "All")
+            {
+                bcoId = Guid.Parse(BCO.SelectedValue.ToString());
+
+                DataTable LocationList = BLL.Revenue_Info.getRevenueUnitByBCOId(bcoId, getConstr.ConStrCMS).Tables[0];
+                Area.DataSource = LocationList;
                 Area.DataTextField = "RevenueUnitName";
-                Area.DataValueField = "RevenueUnitName";
+                Area.DataValueField = "RevenueUnitId";
                 Area.DataBind();
 
+                RadComboBoxItem item1 = new RadComboBoxItem();
+                item1.Text = "All";
+                item1.Value = "All";
+                Area.Items.Add(item1);
+                Area.SelectedValue = "All";
             }
         }
 
@@ -67,21 +130,66 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         public DataTable getDailyTripData()
         {
-            string DateStr = "";
-            string BCOStr = "All";
-            string AreaStr = "All";
+            DateTime? DateFromStr = new DateTime();
+            DateTime? DateToStr = new DateTime();
+            
+            Guid? bcoid = new Guid();
+            Guid? revenueUnitId = new Guid();
+            Guid? batchid = new Guid();
+            Guid? paymentmodeid = new Guid();
+            
             try
             {
-                BCOStr = BCO.SelectedItem.Text;
-                AreaStr = Area.SelectedItem.Text.ToString();
-                DateStr = Date.SelectedDate.Value.ToString("dd MMM yyyy");
+                DateFromStr = Date.SelectedDate.Value;
+                DateToStr = DateTo.SelectedDate.Value;
+                //BCO
+                if (BCO.SelectedItem.Text == "All")
+                {
+                    bcoid = null;
+                }
+                else
+                {
+                    bcoid = Guid.Parse(BCO.SelectedValue.ToString());
+                }
+
+                //revenueUnit
+                if (Area.SelectedItem.Text == "All")
+                {
+                    revenueUnitId = null;
+                }
+                else
+                {
+                    revenueUnitId = Guid.Parse(Area.SelectedValue.ToString());
+                }
+
+                //batch
+                if (rcbBatch.SelectedItem.Text == "All")
+                {
+                    batchid = null;
+                }
+                else
+                {
+                    batchid = Guid.Parse(rcbBatch.SelectedValue.ToString());
+                }
+
+                //paymentmode
+                if (rcbPaymentMode.SelectedItem.Text == "All")
+                {
+                    paymentmodeid = null;
+                }
+                else
+                {
+                    paymentmodeid = Guid.Parse(rcbPaymentMode.SelectedValue.ToString());
+                }
+
+
             }   
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
-                DateStr = "";
+                
             }
-            DataSet data = BLL.Report.DailyTripReport.GetDailyTrip(getConstr.ConStrCMS, DateStr, AreaStr, BCOStr);
+            DataSet data = BLL.Report.DailyTripReport.GetDailyTrip(getConstr.ConStrCMS, DateFromStr, DateToStr, bcoid,revenueUnitId,batchid,paymentmodeid);
             DataTable dt = new DataTable();
             dt = data.Tables[0];
             
@@ -105,12 +213,12 @@ namespace CMSVersion2.Report.Operation.Manifest
 
             //PRINTING
             GetColumnDataFromDataTable getColumn = new GetColumnDataFromDataTable();
-            DateStr = (DateStr == null) ? "All" : DateStr;
-            AreaStr = (AreaStr == null) ? "All" : AreaStr;
+            //DateStr = (DateStr == null) ? "All" : DateStr;
+            //AreaStr = (AreaStr == null) ? "All" : AreaStr;
 
             ReportGlobalModel.Report = "DailyTrip";
-            ReportGlobalModel.Date = DateStr;
-            ReportGlobalModel.Area = AreaStr;
+            ReportGlobalModel.Date = DateFromStr.Value.ToShortDateString() + "" + "-" + "" + DateToStr.Value.ToShortDateString();
+            ReportGlobalModel.Area = Area.SelectedItem.Text;
             ReportGlobalModel.Driver = getColumn.get_Column_DataView(dt, "Driver");
             ReportGlobalModel.Checker = getColumn.get_Column_DataView(dt, "Checker");
             ReportGlobalModel.PlateNo = getColumn.get_Column_DataView(dt, "PlateNo");
@@ -140,16 +248,17 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         protected void BCO_SelectedIndexChanged(object sender, Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventArgs e)
         {
-            Area.Text = "";
-            Area.Items.Clear();
-            Area.AppendDataBoundItems = true;
-            Area.Items.Add("All");
-            Area.SelectedIndex = 0;
+            //Area.Text = "";
+            //Area.Items.Clear();
+            //Area.AppendDataBoundItems = true;
+            //Area.Items.Add("All");
+            //Area.SelectedIndex = 0;
 
-            Area.DataSource = getArea();
-            Area.DataTextField = "RevenueUnitName";
-            Area.DataValueField = "RevenueUnitName";
-            Area.DataBind();
+            //Area.DataSource = getArea();
+            //Area.DataTextField = "RevenueUnitName";
+            //Area.DataValueField = "RevenueUnitName";
+            //Area.DataBind();
+            populateRevenueUnitNameByBCOId();
         }
 
         protected void grid_DailyTripReport_PreRender(object sender, EventArgs e)

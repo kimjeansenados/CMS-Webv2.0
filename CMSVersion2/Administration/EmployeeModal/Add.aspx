@@ -47,8 +47,8 @@
                         <div class="">
                            <telerik:RadLabel ID="lbl_Fname" runat="server" Text="First Name" Width="30%"></telerik:RadLabel>
                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtFirstname" Enabled="True" runat="server"></telerik:RadTextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFirstname"
-                                    ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                           <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFirstname"
+                                    ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                             <br /> 
                             <br /> 
 
@@ -59,8 +59,8 @@
 
                             <telerik:RadLabel ID="lbl_Lname" runat="server" Text="Last Name" Width="30%"></telerik:RadLabel>
                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtLastname" Enabled="True" runat="server"></telerik:RadTextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtLastname"
-                                    ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtLastname"
+                                    ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                             <br />
                             <br /> 
 

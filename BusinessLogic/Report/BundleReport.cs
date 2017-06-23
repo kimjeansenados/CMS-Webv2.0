@@ -10,9 +10,9 @@ namespace BusinessLogic.Report
 {
     public class BundleReport
     {
-        public static DataSet GetBundle(string conSTR, string date, string bundlenumber , string bco)
+        public static DataSet GetBundle(string conSTR, DateTime? dateFrom, DateTime? dateTo, Guid? bcoId, Guid? destbcoId, string sackNumber)
         {
-            return DAL.Reports.Bundle.GetBundle(conSTR , date , bundlenumber , bco);
+            return DAL.Reports.Bundle.GetBundle(conSTR , dateFrom, dateTo, bcoId, destbcoId, sackNumber);
         }
 
         public static DataSet GetBundleNumber(string conSTR, string date)

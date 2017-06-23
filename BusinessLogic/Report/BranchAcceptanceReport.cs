@@ -9,9 +9,9 @@ namespace BusinessLogic.Report
 {
     public class BranchAcceptanceReport
     {
-        public static DataSet GetBranchAcceptance(string conSTR,  string Date  , string Batch , string BCO)
+        public static DataSet GetBranchAcceptance(string conSTR, DateTime? dateFrom, DateTime? dateTo, Guid? bcoId, Guid? bsoId, string driver, Guid? BatchId)
         {
-            return DAL.Reports.BranchAcceptance.GetBranchAcceptance(conSTR , Date  , Batch , BCO);
+            return DAL.Reports.BranchAcceptance.GetBranchAcceptance(conSTR , dateFrom, dateTo, bcoId, bsoId, driver, BatchId);
         }
     }
 }

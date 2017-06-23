@@ -87,5 +87,20 @@ namespace DataAccess
                     }
                 }
         }
+
+        public static DataSet GetBranchAcceptanceDriver(string conStr)
+        {
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_view_BranchAcceptanceDriver", con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter("sp_view_BranchAcceptanceDriver", con);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    return ds;
+                }
+            }
+        }
     }
 }

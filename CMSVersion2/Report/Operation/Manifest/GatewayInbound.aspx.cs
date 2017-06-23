@@ -21,43 +21,93 @@ namespace CMSVersion2.Report.Operation.Manifest
         {
             if (!IsPostBack)
             {
-                BCO.DataSource = getBranchCorpOffice();
-                BCO.DataTextField = "BranchCorpOfficeName";
-                BCO.DataValueField = "BranchCorpOfficeCode";
-                BCO.DataBind();
+                //BCO.DataSource = getBranchCorpOffice();
+                //BCO.DataTextField = "BranchCorpOfficeName";
+                //BCO.DataValueField = "BranchCorpOfficeCode";
+                //BCO.DataBind();
 
-                Gateway.DataSource = getGatewayList();
-                Gateway.DataTextField = "Gateway";
-                Gateway.DataValueField = "Gateway";
-                Gateway.SelectedIndex = 0;
-                Gateway.DataBind();
+                //Gateway.DataSource = getGatewayList();
+                //Gateway.DataTextField = "Gateway";
+                //Gateway.DataValueField = "Gateway";
+                //Gateway.SelectedIndex = 0;
+                //Gateway.DataBind();
 
-                ComType.DataSource = getComType();
-                ComType.DataTextField = "CommodityTypeName";
-                ComType.DataValueField = "CommodityTypeName";
-                ComType.DataBind();
+                //ComType.DataSource = getComType();
+                //ComType.DataTextField = "CommodityTypeName";
+                //ComType.DataValueField = "CommodityTypeName";
+                //ComType.DataBind();
 
                 Date.SelectedDate = DateTime.Now;
+                DateTo.SelectedDate = DateTime.Now;
+                LoadInit();
             }
         }
 
-        public DataTable getGatewayList()
+        private void LoadInit()
         {
-            string DateStr = "";
-            try
-            {
-                DateStr = Date.SelectedDate.Value.ToString("dd MMM yyyy");
-            }
-            catch (Exception)
-            {
-                DateStr = "";
-            }
-
-            DataSet data = BLL.Report.GatewayTransmittal.GetGatewayInBoundList(getConstr.ConStrCMS, DateStr);
-            DataTable dt = new DataTable();
-            dt = data.Tables[0];
-            return dt;
+            LoadOriginBranchCorpOffice();
+            LoadDestBranchCorpOffice();
+            LoadGateway();
+            LoadCommodityType();
+            LoadFlightNumber();
         }
+        private void LoadOriginBranchCorpOffice()
+        {
+            rcbOrigin.DataSource = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
+            rcbOrigin.DataValueField = "BranchCorpOfficeId";
+            rcbOrigin.DataTextField = "BranchCorpOfficeName";
+            rcbOrigin.DataBind();
+        }
+
+        private void LoadDestBranchCorpOffice()
+        {
+            rcbDestBCO.DataSource = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
+            rcbDestBCO.DataValueField = "BranchCorpOfficeId";
+            rcbDestBCO.DataTextField = "BranchCorpOfficeName";
+            rcbDestBCO.DataBind();
+        }
+
+        private void LoadGateway()
+        {
+            Gateway.DataSource = BLL.Report.GatewayTransmittal.GetGatewayInBoundList(getConstr.ConStrCMS);
+            Gateway.DataValueField = "Gateway";
+            Gateway.DataTextField = "Gateway";
+            Gateway.DataBind();
+        }
+
+        private void LoadCommodityType()
+        {
+            ComType.DataSource = BLL.CommodityType.GetCommodityType(getConstr.ConStrCMS);
+            ComType.DataValueField = "CommodityTypeId";
+            ComType.DataTextField = "CommodityTypeName";
+            ComType.DataBind();
+        }
+
+        private void LoadFlightNumber()
+        {
+            rcbFlightNo.DataSource = BLL.Report.GatewayTransmittal.GetGIFlightNumberList(getConstr.ConStrCMS);
+            rcbFlightNo.DataValueField = "FlightNumber";
+            rcbFlightNo.DataTextField = "FlightNumber";
+            rcbFlightNo.DataBind();
+        }
+
+        //public DataTable getGatewayList()
+        //{
+        //    string DateStr = "";
+        //    try
+        //    {
+        //        DateStr = Date.SelectedDate.Value.ToString("dd MMM yyyy");
+        //    }
+        //    catch (Exception)
+        //    {
+        //        DateStr = "";
+        //    }
+
+        //    DataSet data = BLL.Report.GatewayTransmittal.GetGatewayInBoundList(getConstr.ConStrCMS, DateStr);
+        //    DataTable dt = new DataTable();
+        //    dt = data.Tables[0];
+        //    return dt;
+        //}
 
         public DataTable getComType()
         {
@@ -76,33 +126,88 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         public DataTable getGatewayTranmittal()
         {
-            string DateStr = "";
-            string GatewayStr = "";
-            string BCOStr = "All";
-            string ComTypeStr = "All";
+            DateTime? DateFromStr = new DateTime();
+            DateTime? DateToStr = new DateTime();
+
+            DateTime? Date1 = new DateTime();
+            DateTime? Date2 = new DateTime();
+
+            Guid? originbcoid = new Guid();
+            Guid? destbcoid = new Guid();
+            Guid? commoditytypeid = new Guid();
+            string gatewayStr = "All";
+            string flightNumberStr = "All";
+            string mawb = "";
 
             try
             {
-                GatewayStr = Gateway.SelectedItem.Text.ToString();
-                BCOStr = BCO.SelectedItem.Text.ToString();
-                ComTypeStr = ComType.SelectedItem.Text.ToString();
-                DateStr = Date.SelectedDate.Value.ToString("dd MMM yyyy");
+                DateFromStr = Date.SelectedDate.Value;
+                DateToStr = DateTo.SelectedDate.Value;
+
+                Date1 = DateFromStr;
+                Date2 = DateToStr;
+                gatewayStr = Gateway.SelectedItem.Text;
+                flightNumberStr = rcbFlightNo.SelectedItem.Text;
+                mawb = txtMawb.Text;
+
+                if (mawb != "")
+                {
+                    DateFromStr = null;
+                    DateToStr = null;
+                    originbcoid = null;
+                    destbcoid = null;
+                    commoditytypeid = null;
+                    flightNumberStr = "All";
+                    gatewayStr = "All";
+                }
+                else
+                {
+                    //ORIGIN BCO
+                    if (rcbOrigin.SelectedItem.Text == "All")
+                    {
+                        originbcoid = null;
+                    }
+                    else
+                    {
+                        originbcoid = Guid.Parse(rcbOrigin.SelectedValue.ToString());
+                    }
+                    //DEST BCO
+                    if (rcbDestBCO.SelectedItem.Text == "All")
+                    {
+                        destbcoid = null;
+                    }
+                    else
+                    {
+                        destbcoid = Guid.Parse(rcbDestBCO.SelectedValue.ToString());
+                    }
+                    //CommoditTYpe
+                    if (ComType.SelectedItem.Text == "All")
+                    {
+                        commoditytypeid = null;
+                    }
+                    else
+                    {
+                        commoditytypeid = Guid.Parse(ComType.SelectedValue.ToString());
+                    }
+                }
+
             }
             catch (Exception)
             {
-                DateStr = "";
+                
             }
 
-            DataSet data = BLL.Report.GatewayTransmittal.GetGWInbound(getConstr.ConStrCMS, DateStr, GatewayStr, BCOStr, ComTypeStr);
+            DataSet data = BLL.Report.GatewayTransmittal.GetGWInbound(getConstr.ConStrCMS, DateFromStr,DateToStr,destbcoid,originbcoid,gatewayStr,commoditytypeid,flightNumberStr,mawb);
             DataTable dt = new DataTable();
             dt = data.Tables[0];
 
             ReportGlobalModel.Report = "GWInbound";
             ReportGlobalModel.table1 = dt;
-            ReportGlobalModel.Date = DateStr;
-            ReportGlobalModel.Gateway = GatewayStr;
-            ReportGlobalModel.CommodityType = ComTypeStr;
+            ReportGlobalModel.Date = Date1.Value.ToShortDateString() + "" + "-" + "" + Date2.Value.ToShortDateString();
+            ReportGlobalModel.Gateway = Gateway.SelectedItem.Text;
+            ReportGlobalModel.CommodityType = ComType.SelectedItem.Text;
 
+            txtMawb.Text = "";
             return dt;
         }
 
@@ -121,12 +226,12 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         protected void Date_SelectedDateChanged(object sender, Telerik.Web.UI.Calendar.SelectedDateChangedEventArgs e)
         {
-            Gateway.Items.Clear();
-            Gateway.DataSource = getGatewayList();
-            Gateway.DataTextField = "Gateway";
-            Gateway.DataValueField = "Gateway";
-            Gateway.SelectedIndex = 0;
-            Gateway.DataBind();
+            //Gateway.Items.Clear();
+            //Gateway.DataSource = getGatewayList();
+            //Gateway.DataTextField = "Gateway";
+            //Gateway.DataValueField = "Gateway";
+            //Gateway.SelectedIndex = 0;
+            //Gateway.DataBind();
         }
 
         protected void gridPickupCargo_PreRender(object sender, EventArgs e)

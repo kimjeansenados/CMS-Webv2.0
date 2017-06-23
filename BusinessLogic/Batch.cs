@@ -34,5 +34,10 @@ namespace BusinessLogic
         {
             return DAL.Batch.GetBatchByBatchCode(conSTR, code);
         }
+
+        public static DataSet GetBranchAcceptanceDriver(string conSTR)
+        {
+            return DAL.Batch.GetBranchAcceptanceDriver(conSTR);
+        }
     }
 }

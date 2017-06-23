@@ -10,7 +10,7 @@ namespace DataAccess.Reports
 {
     public class CargoMonitoring
     {
-        public static DataSet GetCargoMonitoringDelivered(string conSTR, DateTime? date1, DateTime? date2)
+        public static DataSet GetCargoMonitoringDelivered(string conSTR, DateTime? date1, DateTime? date2, Guid? bcoid, Guid? revenueunitid, Guid? deliveredbyid, Guid? deliverystatusid)
         {
             using (SqlConnection con = new SqlConnection(conSTR))
             {
@@ -18,6 +18,10 @@ namespace DataAccess.Reports
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
                 da.SelectCommand.Parameters.Add("@DATE1", SqlDbType.Date).Value = date1;
                 da.SelectCommand.Parameters.Add("@DATE2", SqlDbType.Date).Value = date2;
+                da.SelectCommand.Parameters.Add("@BcoId", SqlDbType.UniqueIdentifier).Value = (object)bcoid ?? DBNull.Value;
+                da.SelectCommand.Parameters.Add("@RevenueUnitId", SqlDbType.UniqueIdentifier).Value = (object)revenueunitid ?? DBNull.Value;
+                da.SelectCommand.Parameters.Add("@DeliveredById", SqlDbType.UniqueIdentifier).Value = (object)deliveredbyid ?? DBNull.Value;
+                da.SelectCommand.Parameters.Add("@DeliveredStatusId", SqlDbType.UniqueIdentifier).Value = (object)deliverystatusid ?? DBNull.Value;
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 return ds;

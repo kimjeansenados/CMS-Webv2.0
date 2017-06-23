@@ -29,6 +29,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             txtDate.Value = ReportGlobalModel.Date;
             txtBundleNumber.Value = ReportGlobalModel.SackNo;
             txtDestination.Value = ReportGlobalModel.Destination;
+            txtOriginBco.Value = ReportGlobalModel.Origin;
             //txtWeight.Value = "";
             
             txtRemarks.Value = ReportGlobalModel.Remarks;

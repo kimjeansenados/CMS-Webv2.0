@@ -21,36 +21,42 @@
 
             <div class="row">
 
-                <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
+                <telerik:RadLabel runat="server" Text="Date From:"></telerik:RadLabel>
                 <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow" AutoPostBack="true" OnSelectedDateChanged="Date_SelectedDateChanged"></telerik:RadDatePicker>
                 &nbsp;&nbsp;
-                 
-                <telerik:RadLabel runat="server" Text="Sack #:"></telerik:RadLabel>
-                 <telerik:RadComboBox ID="SackNumber" runat="server" Skin="Glow" MarkFirstMatch="true" AllowCustomText="true" 
-                     AppendDataBoundItems="true">
-                </telerik:RadComboBox>
+
+                  <telerik:RadLabel runat="server" Text="Date To:"></telerik:RadLabel>
+                <telerik:RadDatePicker ID="DateTo" runat="server" Skin="Glow" AutoPostBack="true" OnSelectedDateChanged="Date_SelectedDateChanged"></telerik:RadDatePicker>
                 &nbsp;&nbsp;
 
-                <telerik:RadLabel runat="server" Text="BCO:"></telerik:RadLabel>
-                <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="220px" 
+
+                <telerik:RadLabel runat="server" Text="Destination BCO:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="DestBCO" runat="server" Skin="Glow" Width="200px" 
                     AppendDataBoundItems="true" EnableTextSelection="true" 
                     AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" 
-                    AutoPostBack="true" OnSelectedIndexChanged="BCO_SelectedIndexChanged">
+                    AutoPostBack="true">
                     <Items>
                         <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
                     </Items>
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
 
-
-               <%-- <telerik:RadLabel runat="server" Text="Origin(City):"></telerik:RadLabel>
-                 <telerik:RadComboBox ID="Origin" runat="server" Skin="Glow" MarkFirstMatch="true" AllowCustomText="true"
-                     AppendDataBoundItems="true" AutoPostBack="true">
+                 <telerik:RadLabel runat="server" Text="Origin BCO:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="rcbOriginBco" runat="server" Skin="Glow" Width="200px" 
+                    AppendDataBoundItems="true" EnableTextSelection="true" 
+                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" 
+                    AutoPostBack="true">
                     <Items>
-                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                        <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
                     </Items>
                 </telerik:RadComboBox>
-                &nbsp;&nbsp;--%>
+                &nbsp;&nbsp;
+            </div>
+            <br />
+            <div class="row">
+                <telerik:RadLabel ID="lblAwb" runat="server" Text="Sack Number:"></telerik:RadLabel>
+                <telerik:RadTextBox Width="200px" RenderMode="Mobile" ID="txtSackNumber" Enabled="True" runat="server"></telerik:RadTextBox>
+
 
                 <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" AutoPostBack="true" OnClick="Search_Click"> </telerik:RadButton>
                 <telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click"> </telerik:RadButton>

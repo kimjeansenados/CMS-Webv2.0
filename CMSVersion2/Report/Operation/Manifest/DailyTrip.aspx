@@ -20,8 +20,12 @@
 
             <div class="row">
 
-                <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
+                <telerik:RadLabel runat="server" Text="Date From:"></telerik:RadLabel>
                 <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow" AutoPostBack="true"></telerik:RadDatePicker>
+                &nbsp;&nbsp;
+
+                 <telerik:RadLabel runat="server" Text="Date To:"></telerik:RadLabel>
+                <telerik:RadDatePicker ID="DateTo" runat="server" Skin="Glow" AutoPostBack="true"></telerik:RadDatePicker>
                 &nbsp;&nbsp;
 
                 
@@ -37,6 +41,19 @@
 
                 <telerik:RadLabel runat="server" Text="Area:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="Area" runat="server" Skin="Glow" AllowCustomText="true" MarkFirstMatch="true"
+                    AutoPostBack="true">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                 &nbsp;&nbsp;
+
+               
+            </div>
+            <br />
+            <div class="row">
+                  <telerik:RadLabel runat="server" Text="Batch:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="rcbBatch" runat="server" Skin="Glow" AllowCustomText="true" MarkFirstMatch="true"
                     AppendDataBoundItems="true" AutoPostBack="true">
                     <Items>
                         <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
@@ -44,11 +61,21 @@
                 </telerik:RadComboBox>
                  &nbsp;&nbsp;
 
-                 <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" AutoPostBack="true" OnClick="Search_Click"> </telerik:RadButton>
+                  <telerik:RadLabel runat="server" Text="Payment Mode:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="rcbPaymentMode" runat="server" Skin="Glow" AllowCustomText="true" MarkFirstMatch="true"
+                    AppendDataBoundItems="true" AutoPostBack="true">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                 &nbsp;&nbsp;
+
+
+                <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" AutoPostBack="true" OnClick="Search_Click"> </telerik:RadButton>
                 <telerik:RadButton ID="btnPrint" Skin="Glow" OnClick="btnPrint_Click"
                     runat="server" Text="PRINT" AutoPostBack="true"></telerik:RadButton>
             </div>
-            <br />
+             <br />
             <div class="row">
                 <telerik:RadGrid ID="grid_DailyTripReport" runat="server" Skin="Glow" 
                     OnNeedDataSource="grid_DailyTripReport_NeedDataSource"
@@ -74,7 +101,7 @@
                         <CommandItemSettings ShowExportToExcelButton="true" 
                             ShowExportToPdfButton="true" ShowExportToWordButton="false" ShowExportToCsvButton="false" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />
                         <Columns>
-                            <telerik:GridBoundColumn DataField="No" HeaderText="#"></telerik:GridBoundColumn>
+                            <%--<telerik:GridBoundColumn DataField="No" HeaderText="#"></telerik:GridBoundColumn>--%>
                             <telerik:GridBoundColumn DataField="AirwayBillNo" HeaderText="AWB #" FooterText="Total: " Aggregate="Custom"></telerik:GridBoundColumn>
 
                             <telerik:GridBoundColumn DataField="Consignee" HeaderText="CONSIGNEE"></telerik:GridBoundColumn>

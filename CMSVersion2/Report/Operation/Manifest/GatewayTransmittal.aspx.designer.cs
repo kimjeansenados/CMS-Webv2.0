@@ -31,31 +31,85 @@ namespace CMSVersion2.Report.Operation.Manifest {
         protected global::Telerik.Web.UI.RadDatePicker Date;
         
         /// <summary>
-        /// Gateway control.
+        /// DateTo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox Gateway;
+        protected global::Telerik.Web.UI.RadDatePicker DateTo;
         
         /// <summary>
-        /// BCO control.
+        /// rcbOriginBco control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox BCO;
+        protected global::Telerik.Web.UI.RadComboBox rcbOriginBco;
         
         /// <summary>
-        /// Batch control.
+        /// rcbDestBco control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox Batch;
+        protected global::Telerik.Web.UI.RadComboBox rcbDestBco;
+        
+        /// <summary>
+        /// rcbDriver control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadComboBox rcbDriver;
+        
+        /// <summary>
+        /// rcbGateway control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadComboBox rcbGateway;
+        
+        /// <summary>
+        /// rcbBatch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadComboBox rcbBatch;
+        
+        /// <summary>
+        /// rcbCommodityType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadComboBox rcbCommodityType;
+        
+        /// <summary>
+        /// lblAwb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel lblAwb;
+        
+        /// <summary>
+        /// txtMawb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadTextBox txtMawb;
         
         /// <summary>
         /// Search control.

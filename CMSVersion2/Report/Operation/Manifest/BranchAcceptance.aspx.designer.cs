@@ -31,6 +31,15 @@ namespace CMSVersion2.Report.Operation.Manifest {
         protected global::Telerik.Web.UI.RadDatePicker Date;
         
         /// <summary>
+        /// DateTo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadDatePicker DateTo;
+        
+        /// <summary>
         /// BCO control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,24 @@ namespace CMSVersion2.Report.Operation.Manifest {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadComboBox BCO;
+        
+        /// <summary>
+        /// Area control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadComboBox Area;
+        
+        /// <summary>
+        /// rcbDriver control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadComboBox rcbDriver;
         
         /// <summary>
         /// Batch control.

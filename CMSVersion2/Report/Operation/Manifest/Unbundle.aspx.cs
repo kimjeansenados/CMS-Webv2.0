@@ -20,24 +20,32 @@ namespace CMSVersion2.Report.Operation.Manifest
             {
 
                 Date.SelectedDate = DateTime.Now;
-
-                SackNumber.DataSource = getBundleNumber();
-                SackNumber.DataTextField = "SackNo";
-                SackNumber.DataValueField = "SackNo";
-                SackNumber.DataBind();
-                SackNumber.SelectedIndex = 0;
-
-                BCO.DataSource = getBranchCorpOffice();
-                BCO.DataTextField = "BranchCorpOfficeName";
-                BCO.DataValueField = "BranchCorpOfficeCode";
-                BCO.DataBind();
-
-                //Origin.DataSource = getCity();
-                //Origin.DataTextField = "CityName";
-                //Origin.DataValueField = "CityName";
-                //Origin.DataBind();
-
+                DateTo.SelectedDate = DateTime.Now;
+                LoadInit();
             }
+        }
+
+        private void LoadInit()
+        {
+            LoadDestBranchCorpOffice();
+            LoadOriginBranchCorpOffice();
+
+        }
+
+        private void LoadDestBranchCorpOffice()
+        {
+            DestBCO.DataSource = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
+            DestBCO.DataValueField = "BranchCorpOfficeId";
+            DestBCO.DataTextField = "BranchCorpOfficeName";
+            DestBCO.DataBind();
+        }
+
+        private void LoadOriginBranchCorpOffice()
+        {
+            rcbOriginBco.DataSource = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
+            rcbOriginBco.DataValueField = "BranchCorpOfficeId";
+            rcbOriginBco.DataTextField = "BranchCorpOfficeName";
+            rcbOriginBco.DataBind();
         }
 
         public DataTable getBundleNumber()
@@ -57,55 +65,95 @@ namespace CMSVersion2.Report.Operation.Manifest
             return dt;
         }
 
-        public DataTable getCity()
-        {
-            string bco = "All";
-            try
-            {
-                bco = BCO.SelectedValue;
-            }
-            catch (Exception) { }
-            DataSet data = BLL.City.GetCityByBCO(getConstr.ConStrCMS, bco);
-            DataTable dt = new DataTable();
-            dt = data.Tables[0];
-            return dt;
-        }
+        //public DataTable getCity()
+        //{
+        //    string bco = "All";
+        //    try
+        //    {
+        //        bco = BCO.SelectedValue;
+        //    }
+        //    catch (Exception) { }
+        //    DataSet data = BLL.City.GetCityByBCO(getConstr.ConStrCMS, bco);
+        //    DataTable dt = new DataTable();
+        //    dt = data.Tables[0];
+        //    return dt;
+        //}
 
         public DataTable getUnbundle()
         {
-            string DateStr = "";
-            string SackNoStr = "";
-            string BCOStr = "All";
+            Guid? originbcoId = new Guid();
+            Guid? destbcoId = new Guid();
+            
+            DateTime? DateFromStr = new DateTime();
+            DateTime? DateToStr = new DateTime();
+
+            DateTime? Date1 = new DateTime();
+            DateTime? Date2 = new DateTime();
+            string sackNumber = "";
+
             try
             {
-                DateStr = Date.SelectedDate.Value.ToString("dd MMM yyyy");
-                BCOStr = BCO.SelectedValue;
-                SackNoStr = SackNumber.SelectedItem.Text.ToString();
-               
-                //OriginStr = Origin.SelectedItem.Text.ToString();
+                DateFromStr = Date.SelectedDate.Value;
+                DateToStr = DateTo.SelectedDate.Value;
+                sackNumber = txtSackNumber.Text.ToString();
+
+                Date1 = DateFromStr;
+                Date2 = DateToStr;
+
+
+                if (sackNumber != "")
+                {
+                    DateFromStr = null;
+                    DateToStr = null;
+                    originbcoId = null;
+                    destbcoId = null;
+                }
+                else
+                {
+                    //DEST
+                    if (DestBCO.SelectedItem.Text == "All")
+                    {
+                        destbcoId = null;
+                    }
+                    else
+                    {
+                        destbcoId = Guid.Parse(DestBCO.SelectedValue.ToString());
+                    }
+                    //BCO
+                    if (rcbOriginBco.SelectedItem.Text == "All")
+                    {
+                        originbcoId = null;
+                    }
+                    else
+                    {
+                        originbcoId = Guid.Parse(rcbOriginBco.SelectedValue.ToString());
+                    }
+                }
+             
             }
             catch (Exception)
             {
                 //DateStr = "";
             }
-            DataSet data = BLL.Report.UnbundleReport.GetBundle(getConstr.ConStrCMS, DateStr, SackNoStr, BCOStr);
+            DataSet data = BLL.Report.UnbundleReport.GetUnBundle(getConstr.ConStrCMS, DateFromStr, DateToStr, destbcoId,originbcoId,sackNumber);
             DataTable dt = new DataTable();
             dt = data.Tables[0];
 
             //PRINTING
             GetColumnDataFromDataTable getColumn = new GetColumnDataFromDataTable();
 
-            DateStr = (DateStr == null) ? "All" : DateStr;
-            SackNoStr = (SackNoStr == null) ? "All" : SackNoStr;
+            //DateStr = (DateStr == null) ? "All" : DateStr;
+            //SackNoStr = (SackNoStr == null) ? "All" : SackNoStr;
             //OriginStr = (OriginStr == null) ? "All" : OriginStr;
 
             ReportGlobalModel.Report = "Unbundle";
             ReportGlobalModel.table1 = dt;
 
-            ReportGlobalModel.Date = DateStr;
-            ReportGlobalModel.SackNo = SackNoStr;
-            ReportGlobalModel.Origin = BCOStr;
-            
+            ReportGlobalModel.Date = Date1.Value.ToShortDateString() + "" + "-" + "" + Date2.Value.ToShortDateString();
+            ReportGlobalModel.SackNo = getColumn.get_Column_DataView(dt, "SACKNO");
+            ReportGlobalModel.Origin = rcbOriginBco.SelectedItem.Text;
+
+            txtSackNumber.Text = "";
             return dt;
         }
 
@@ -149,13 +197,13 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         protected void Date_SelectedDateChanged(object sender, Telerik.Web.UI.Calendar.SelectedDateChangedEventArgs e)
         {
-            SackNumber.Text = "";
-            SackNumber.Items.Clear();
-            SackNumber.DataSource = getBundleNumber();
-            SackNumber.DataTextField = "SackNo";
-            SackNumber.DataValueField = "SackNo";
-            SackNumber.DataBind();
-            SackNumber.SelectedIndex = 0;
+            //SackNumber.Text = "";
+            //SackNumber.Items.Clear();
+            //SackNumber.DataSource = getBundleNumber();
+            //SackNumber.DataTextField = "SackNo";
+            //SackNumber.DataValueField = "SackNo";
+            //SackNumber.DataBind();
+            //SackNumber.SelectedIndex = 0;
         }
     }
 }

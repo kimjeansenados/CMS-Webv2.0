@@ -10,7 +10,7 @@ namespace DataAccess.Reports
 {
     public class BranchAcceptance
     {
-        public static DataSet GetBranchAcceptance(string conSTR, string Date, string Batch , string BCO)
+        public static DataSet GetBranchAcceptance(string conSTR, DateTime? dateFrom, DateTime? dateTo, Guid? bcoId, Guid? bsoId,string driver, Guid? BatchId)
         {
             try {
                 using (SqlConnection con = new SqlConnection(conSTR))
@@ -18,11 +18,13 @@ namespace DataAccess.Reports
 
                     SqlDataAdapter da = new SqlDataAdapter("sp_view_Reports_BranchAcceptance", con);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add("@DATE", SqlDbType.VarChar).Value = Date;
-                    //da.SelectCommand.Parameters.Add("@AREA", SqlDbType.VarChar).Value = Area;
-                    da.SelectCommand.Parameters.Add("@BATCH", SqlDbType.VarChar).Value = Batch;
-                    da.SelectCommand.Parameters.Add("@BCO", SqlDbType.VarChar).Value = BCO;
-
+                    da.SelectCommand.Parameters.Add("@DateFrom", SqlDbType.Date).Value = (object)dateFrom ?? DBNull.Value;
+                    da.SelectCommand.Parameters.Add("@DateTo", SqlDbType.Date).Value = (object)dateTo ?? DBNull.Value;
+                    da.SelectCommand.Parameters.Add("@BcoId", SqlDbType.UniqueIdentifier).Value = (object)bcoId ?? DBNull.Value;
+                    da.SelectCommand.Parameters.Add("@BsoId", SqlDbType.UniqueIdentifier).Value = (object)bsoId ?? DBNull.Value;
+                    da.SelectCommand.Parameters.Add("@Driver", SqlDbType.VarChar,100).Value = driver;
+                    da.SelectCommand.Parameters.Add("@Batchid", SqlDbType.UniqueIdentifier).Value = BatchId;
+                    
                     DataSet ds = new DataSet();
                     da.Fill(ds);
                     return ds;

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GatewayInbound.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.GatewayInbound" %>
+﻿<%@ Page Title="Gateway Inbound" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GatewayInbound.aspx.cs" Inherits="CMSVersion2.Report.Operation.Manifest.GatewayInbound" %>
 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
@@ -45,22 +45,20 @@
 
              <div class="row">
 
-                <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
+                <telerik:RadLabel runat="server" Text="Date From:"></telerik:RadLabel>
                 <telerik:RadDatePicker ID="Date" runat="server" OnSelectedDateChanged="Date_SelectedDateChanged"
                     AutoPostBack="true" Width="115px" Skin="Glow" DateInput-DateFormat="MM/dd/yyyy">
                 </telerik:RadDatePicker>                
                 &nbsp;&nbsp;
 
-                <telerik:RadLabel runat="server" Text="Gateway"></telerik:RadLabel>
-                <telerik:RadComboBox ID="Gateway" runat="server" Skin="Glow" AutoPostBack="true"
-                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true"
-                    AppendDataBoundItems="true">
-                </telerik:RadComboBox>
-
+                   <telerik:RadLabel runat="server" Text="Date To:"></telerik:RadLabel>
+                <telerik:RadDatePicker ID="DateTo" runat="server"
+                    AutoPostBack="true" Width="130px" Skin="Glow" DateInput-DateFormat="MM/dd/yyyy">
+                </telerik:RadDatePicker>                
                 &nbsp;&nbsp;
 
-                <telerik:RadLabel runat="server" Text="BCO:"></telerik:RadLabel>
-                <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="250px" 
+                <telerik:RadLabel runat="server" Text="Destination BCO:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="rcbDestBCO" runat="server" Skin="Glow" Width="250px" 
                     AppendDataBoundItems="true" EnableTextSelection="true" 
                     AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" AutoPostBack="true">
                     <Items>
@@ -69,15 +67,56 @@
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
 
+                   <telerik:RadLabel runat="server" Text="Origin BCO:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="rcbOrigin" runat="server" Skin="Glow" Width="250px" 
+                    AppendDataBoundItems="true" EnableTextSelection="true" 
+                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" AutoPostBack="true">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                &nbsp;&nbsp;
+
+              
+            </div>
+            <br />
+            <div class="row">
+                  <telerik:RadLabel runat="server" Text="Gateway"></telerik:RadLabel>
+                <telerik:RadComboBox ID="Gateway" runat="server" Skin="Glow" AutoPostBack="true"
+                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true"
+                    AppendDataBoundItems="true">
+                     <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+
+                &nbsp;&nbsp;
+
                 <telerik:RadLabel runat="server" Text="Commodity Type:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="ComType" runat="server" Skin="Glow" EnableTextSelection="true"
-                    AppendDataBoundItems="true" Width="115px" AutoPostBack="true" MarkFirstMatch="true"    
+                    AppendDataBoundItems="true" Width="200px" AutoPostBack="true" MarkFirstMatch="true"    
                     AutoCompleteSeparator="" AllowCustomText="true">
                     <Items>
                         <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
                     </Items>
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
+
+                <telerik:RadLabel runat="server" Text="Flight Number:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="rcbFlightNo" runat="server" Skin="Glow" EnableTextSelection="true"
+                    AppendDataBoundItems="true" Width="200px" AutoPostBack="true" MarkFirstMatch="true"    
+                    AutoCompleteSeparator="" AllowCustomText="true">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                &nbsp;&nbsp;
+                
+            </div>
+            <br />
+            <div class="row">
+                <telerik:RadLabel ID="lblAwb" runat="server" Text="MAWB:"></telerik:RadLabel>
+                <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtMawb" Enabled="True" runat="server"></telerik:RadTextBox>
 
                 <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow"  AutoPostBack="true" OnClick="Search_Click"> </telerik:RadButton>
                 <telerik:RadButton ID="Print" runat="server" Text="Print" Skin="Glow" AutoPostBack="true" OnClick="Print_Click"> </telerik:RadButton>
@@ -89,7 +128,7 @@
                     AllowPaging="True" OnPreRender="gridPickupCargo_PreRender"
                     PageSize="10"  
                     AllowFilteringByColumn="false"
-                    AutoGenerateColumns="true"
+                    AutoGenerateColumns="false"
                     AllowSorting="true" 
                     ExportSettings-Pdf-ForceTextWrap="false"                     
                     ClientSettings-Scrolling-AllowScroll="true" OnNeedDataSource="gridPickupCargo_NeedDataSource"                   
@@ -100,6 +139,21 @@
                         <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="false" 
                             ShowExportToWordButton="false" ShowExportToCsvButton="false" 
                             ShowAddNewRecordButton="false"  ShowRefreshButton="false"/>
+
+                          <Columns>
+                            <%--<telerik:GridBoundColumn DataField="No" HeaderText="#"></telerik:GridBoundColumn>--%>
+                            <telerik:GridBoundColumn DataField="AWB" HeaderText="AWB #"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="Gateway" HeaderText="Gateway"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="Origin" HeaderText="Origin"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="Qty" HeaderText="QTY"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="MAWB" HeaderText="MAWB"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="Flight #" HeaderText="Flight #"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="Commodity Type" HeaderText="Commodity Type"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="SCANNEDBY" HeaderText="Scanned By"></telerik:GridBoundColumn>
+                          
+                        </Columns>
+
+
 
 
                     </MasterTableView>

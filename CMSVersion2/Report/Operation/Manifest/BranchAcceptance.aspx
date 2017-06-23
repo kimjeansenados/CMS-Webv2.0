@@ -41,11 +41,19 @@
             <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" AutoSize="true" AutoSizeBehaviors="HeightProportional" Width="1300px" Skin="Glow" VisibleStatusbar="false"></telerik:RadWindow>
 
             <div class="row">
-                <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
+                <telerik:RadLabel runat="server" Text="Date From:"></telerik:RadLabel>
                 <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow" AutoPostBack="true">
                 </telerik:RadDatePicker>
 
                 &nbsp;&nbsp;
+
+                <telerik:RadLabel runat="server" Text="Date To:"></telerik:RadLabel>
+                <telerik:RadDatePicker ID="DateTo" runat="server" Skin="Glow" AutoPostBack="true">
+                </telerik:RadDatePicker>
+
+                &nbsp;&nbsp;
+
+
                 <telerik:RadLabel runat="server" Text="BCO:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" AllowCustomText="true" MarkFirstMatch="true" 
                     AppendDataBoundItems="true" Width="260px" AutoPostBack="true" OnSelectedIndexChanged="BCO_SelectedIndexChanged">
@@ -55,14 +63,28 @@
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
 
-<%--                <telerik:RadLabel runat="server" Text="Area:"></telerik:RadLabel>
+                <telerik:RadLabel runat="server" Text="Area:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="Area" runat="server" Skin="Glow" AllowCustomText="true" MarkFirstMatch="true"
-                    AppendDataBoundItems="true" AutoPostBack="true">
+                    AutoPostBack="true">
                     <Items>
                         <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
                     </Items>
                 </telerik:RadComboBox>
-                &nbsp;&nbsp;--%>
+                &nbsp;&nbsp;
+
+                
+            </div>
+            <br />
+            <div class="row">
+                 <telerik:RadLabel runat="server" Text="Driver:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="rcbDriver" runat="server" Skin="Glow" AllowCustomText="true" MarkFirstMatch="true" 
+                    AppendDataBoundItems="true" AutoPostBack="true">
+                     <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                &nbsp;&nbsp;
+
 
                 <telerik:RadLabel runat="server" Text="Batch:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="Batch" runat="server" Skin="Glow" AllowCustomText="true" MarkFirstMatch="true" 
@@ -79,7 +101,8 @@
                 <telerik:RadButton ID="btnPrint" Skin="Glow" OnClick="btnPrint_Click" 
                     runat="server" Text="PRINT" AutoPostBack="true"></telerik:RadButton>
             </div>
-            <br />
+              <br />
+
             <div class="row">
                 
                 <telerik:RadGrid ID="grid_BranchAcceptance" runat="server" Skin="Glow"

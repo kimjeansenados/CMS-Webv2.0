@@ -77,7 +77,9 @@ namespace CMSVersion2.Administration.EmployeeModal
 
         private void PopulateRevenueUnitName()
         {
-            DataTable revenueUnitName = BLL.Revenue_Info.getRevenueUnit(new Guid(rcbRevenueUnitType.SelectedValue.ToString()), getConstr.ConStrCMS).Tables[0];
+            //DataTable revenueUnitName = BLL.Revenue_Info.getRevenueUnit(new Guid(rcbRevenueUnitType.SelectedValue.ToString()), getConstr.ConStrCMS).Tables[0];
+            //DataTable revenueUnitName = BLL.Revenue_Info.getAllRevenueUnit(getConstr.ConStrCMS).Tables[0];
+            DataTable revenueUnitName = BLL.Revenue_Info.getRevenueUnitByBCO(new Guid(rcbRevenueUnitType.SelectedValue.ToString()), new Guid(rcbBranchCorpOffice.SelectedValue.ToString()), getConstr.ConStrCMS).Tables[0];
             rcbRevenueUnitName.DataSource = revenueUnitName;
             rcbRevenueUnitName.DataTextField = "RevenueUnitName";
             rcbRevenueUnitName.DataValueField = "RevenueUnitId";

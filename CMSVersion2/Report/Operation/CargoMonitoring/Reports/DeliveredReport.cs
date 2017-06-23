@@ -27,7 +27,7 @@ namespace CMSVersion2.Report.Operation.CargoMonitoring.Reports
             table1.DataSource = objectDataSource;
 
             txtFrom.Value = ReportGlobalModel.Date;
-            txtTo.Value = ReportGlobalModel.Remarks; 
+            
         }
     }
 }

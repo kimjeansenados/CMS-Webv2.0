@@ -23,20 +23,36 @@ namespace CMSVersion2.Report.Operation.Manifest
             if (!IsPostBack)
             {
                 Date.SelectedDate = DateTime.Now;
+                DateTo.SelectedDate = DateTime.Now;
+                LoadInit();
 
-                BCO.DataSource = getBranchCorpOffice();
-                BCO.DataTextField = "BranchCorpOfficeName";
-                BCO.DataValueField = "BranchCorpOfficeCode";
-                BCO.DataBind();
 
-                BundleNumber.DataSource = getBundleNumber();
-                BundleNumber.DataTextField = "SackNo";
-                BundleNumber.DataValueField = "SackNo";
-                BundleNumber.DataBind();
-                BundleNumber.SelectedIndex = 0;
-                
             }
         }
+
+        private void LoadInit()
+        {
+            LoadBranchCorpOffice();
+            LoadDestBranchCorpOffice();
+           
+        }
+
+        private void LoadBranchCorpOffice()
+        {
+            BCO.DataSource = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
+            BCO.DataValueField = "BranchCorpOfficeId";
+            BCO.DataTextField = "BranchCorpOfficeName";
+            BCO.DataBind();
+        }
+
+        private void LoadDestBranchCorpOffice()
+        {
+            rcbDestBco.DataSource = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
+            rcbDestBco.DataValueField = "BranchCorpOfficeId";
+            rcbDestBco.DataTextField = "BranchCorpOfficeName";
+            rcbDestBco.DataBind();
+        }
+
 
         public DataTable getBranchCorpOffice()
         {
@@ -69,23 +85,62 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         public DataTable getBundle()
         {
-            //DateTime date =
-            string bundlenumber = "";
-            string bco = "All";
-            string date = "";
+            
+            DateTime? DateFromStr = new DateTime();
+            DateTime? DateToStr = new DateTime();
+            Guid? bcoid = new Guid();
+            Guid? destbcoid = new Guid();
+            string sackNumber = "";
+
+            DateTime? Date1 = new DateTime();
+            DateTime? Date2 = new DateTime();
 
             try
             {
-                date = Date.SelectedDate.Value.ToString("dd MMM yyyy");
-                bco = BCO.SelectedValue;
-                bundlenumber = BundleNumber.SelectedItem.Text.ToString();
+                DateFromStr = Date.SelectedDate.Value;
+                DateToStr = DateTo.SelectedDate.Value;
+                sackNumber = txtSackNumber.Text.ToString();
+
+                Date1 = DateFromStr;
+                Date2 = DateToStr;
+
+                if (sackNumber != "")
+                {
+                    DateFromStr = null;
+                    DateToStr = null;
+                    bcoid = null;
+                    destbcoid = null;
+                }
+                
+                //BCO
+                if (BCO.SelectedItem.Text == "All")
+                {
+                    bcoid = null;
+                }
+                else
+                {
+                    bcoid = Guid.Parse(BCO.SelectedValue.ToString());
+                }
+                //DEST BCO
+                if (rcbDestBco.SelectedItem.Text == "All")
+                {
+                    destbcoid = null;
+                }
+                else
+                {
+                    destbcoid = Guid.Parse(rcbDestBco.SelectedValue.ToString());
+                }
+
+
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
+
                 //date = "";
             }
 
-            DataSet data = BLL.Report.BundleReport.GetBundle(getConstr.ConStrCMS, date, bundlenumber, bco);
+            DataSet data = BLL.Report.BundleReport.GetBundle(getConstr.ConStrCMS, DateFromStr,DateToStr,bcoid,destbcoid, sackNumber);
             DataTable dt = new DataTable();
             dt = data.Tables[0];
 
@@ -94,11 +149,13 @@ namespace CMSVersion2.Report.Operation.Manifest
 
             ReportGlobalModel.Report = "Bundle";
             ReportGlobalModel.table1 = dt;
-            ReportGlobalModel.Date = date;        
-            ReportGlobalModel.SackNo = bundlenumber;
-            ReportGlobalModel.Destination = bco;
+            ReportGlobalModel.Date = Date1.Value.ToShortDateString() + "" + "-" + "" + Date2.Value.ToShortDateString();
+            ReportGlobalModel.SackNo = getColumn.get_Column_DataView(dt, "SACKNO");
+            ReportGlobalModel.Origin = BCO.SelectedItem.Text;
+            ReportGlobalModel.Destination = rcbDestBco.SelectedItem.Text;
             ReportGlobalModel.ScannedBy = getColumn.get_Column_DataView(dt, "SCANNEDBY");
-            
+
+            txtSackNumber.Text = "";
             return dt;
         }
 
@@ -141,13 +198,13 @@ namespace CMSVersion2.Report.Operation.Manifest
 
         protected void Date_SelectedDateChanged(object sender, Telerik.Web.UI.Calendar.SelectedDateChangedEventArgs e)
         {
-            BundleNumber.Text = "";
-            BundleNumber.Items.Clear();
-            BundleNumber.DataSource = getBundleNumber();
-            BundleNumber.DataTextField = "SackNo";
-            BundleNumber.DataValueField = "SackNo";
-            BundleNumber.DataBind();
-            BundleNumber.SelectedIndex = 0;
+            //BundleNumber.Text = "";
+            //BundleNumber.Items.Clear();
+            //BundleNumber.DataSource = getBundleNumber();
+            //BundleNumber.DataTextField = "SackNo";
+            //BundleNumber.DataValueField = "SackNo";
+            //BundleNumber.DataBind();
+            //BundleNumber.SelectedIndex = 0;
         }
     }
 }

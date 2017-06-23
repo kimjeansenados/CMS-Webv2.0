@@ -10,9 +10,9 @@ namespace BusinessLogic.Report
 {
     public class CargoMonitoring
     {
-        public static DataSet GetCargoMonitoringDelivered(string conSTR, DateTime? date1, DateTime? date2)
+        public static DataSet GetCargoMonitoringDelivered(string conSTR, DateTime? date1, DateTime? date2, Guid? bcoid, Guid? revenueunitid, Guid? deliveredbyid, Guid? deliverystatusid)
         {
-            return DAL.Reports.CargoMonitoring.GetCargoMonitoringDelivered(conSTR, date1, date2);
+            return DAL.Reports.CargoMonitoring.GetCargoMonitoringDelivered(conSTR, date1, date2, bcoid,revenueunitid, deliveredbyid, deliverystatusid);
         }
 
         public static DataSet GetCargoMonitoringHold(string conSTR, DateTime? date1, DateTime? date2)

@@ -49,6 +49,51 @@ namespace CMSVersion2.Report.Operation.CargoMonitoring {
         protected global::Telerik.Web.UI.RadDatePicker Date2;
         
         /// <summary>
+        /// rcbBco control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadComboBox rcbBco;
+        
+        /// <summary>
+        /// rcbRevenueUnitType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadComboBox rcbRevenueUnitType;
+        
+        /// <summary>
+        /// rcbRevenueUnit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadComboBox rcbRevenueUnit;
+        
+        /// <summary>
+        /// rcbDeliveredBy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadComboBox rcbDeliveredBy;
+        
+        /// <summary>
+        /// rcbStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadComboBox rcbStatus;
+        
+        /// <summary>
         /// Search control.
         /// </summary>
         /// <remarks>
