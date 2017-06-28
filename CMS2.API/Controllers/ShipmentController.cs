@@ -39,6 +39,13 @@ namespace CMS2.API.Controllers
             //return new HttpResponseMessage() { Content = new StringContent(result.ToString(), Encoding.UTF8, "application/xml") };
         }
 
+        public HttpResponseMessage gettonnagebyarea(Guid areaid)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["Cms"].ConnectionString;
+            return Request.CreateResponse(HttpStatusCode.OK, BAL.Shipment.GetShipmentTonnageByArea(areaid, connectionString));
+            
+        }
+
 
     }
 }

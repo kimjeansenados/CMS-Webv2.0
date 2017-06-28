@@ -35,6 +35,26 @@ namespace BusinessLogic
             _tonnage.CommodityTonnages = _tons;
             return _tonnage;
         }
+
+        public static ShipmentTonnage GetShipmentTonnageByArea(Guid AreaID, string Constr)
+        {
+            DataSet ds = DAL.Shipment.GetShipmentTonnageByArea(AreaID, Constr);
+            ShipmentTonnage _tonnage = new ShipmentTonnage();
+            DataTable dt1 = ds.Tables[0];
+            DataTable dt2 = ds.Tables[1];
+            DataTable dt3 = ds.Tables[2];
+
+            _tonnage.AirwayBillCount = (int)dt3.Rows[0][0];
+            _tonnage.TotalTonnage = (decimal)dt1.Rows[0]["Tonnage"];
+
+            List<CommodityTonnage> _tons = new List<CommodityTonnage>();
+            foreach (DataRow row in dt2.Rows)
+            {
+                _tons.Add(new CommodityTonnage { Name = row[0].ToString(), Tonnage = (int)row[1] });
+            }
+            _tonnage.CommodityTonnages = _tons;
+            return _tonnage;
+        }
     }
 
     public class ShipmentTonnage

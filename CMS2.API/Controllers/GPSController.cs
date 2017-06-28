@@ -12,11 +12,7 @@ namespace CMS2.API.Controllers
     [RoutePrefix("GPS/Trucks")]
     public class GPSController : ApiController
     {
-        // GET: api/GPS
-        //public IEnumerable<string> Get()
-        //{
-        //    return new string[] { "value1", "value2" };
-        //}
+       
         string connectionString = ConfigurationManager.ConnectionStrings["GPS"].ConnectionString;
 
         

@@ -87,6 +87,7 @@
     <Compile Include="Report\SalesPerUserLevelReport.cs" />
     <Compile Include="Report\SegregationReport.cs" />
     <Compile Include="Report\UnbundleReport.cs" />
+    <Compile Include="RevenueUnitType.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="Shipment.cs" />
     <Compile Include="ShipMode.cs" />

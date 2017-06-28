@@ -107,31 +107,36 @@
     <Reference Include="Telerik.Reporting.Services.WebApi, Version=11.0.17.201, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
     <Reference Include="Telerik.Reporting.XpsRendering, Version=11.0.17.201, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
     <Reference Include="Telerik.ReportViewer.Html5.WebForms, Version=11.0.17.201, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
-    <Reference Include="Telerik.Web.UI">
-      <HintPath>C:\Users\Dev - Kim\Desktop\CMS Web Version\Webv2.0\CMS-Webv2.0\CMSVersion2\bin\Telerik.Web.UI.dll</HintPath>
+    <Reference Include="Telerik.Web.Spreadsheet">
+      <HintPath>..\lib\RCAJAX\2017.1.118.45\AdditionalLibraries\Bin45\Telerik.Web.Spreadsheet.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Web.UI.Skins">
-      <HintPath>C:\Users\Dev - Kim\Desktop\CMS Web Version\Webv2.0\CMS-Webv2.0\CMSVersion2\bin\Telerik.Web.UI.Skins.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Core, Version=2017.1.109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Web.UI, Version=2017.1.118.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\AP CARGO - Back-up\CMS Web Central\CMS Web Central - (03-21-2017)\cmsversion2\Bin\Telerik.Windows.Documents.Core.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2017.1.118.45\Telerik.Web.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Flow, Version=2017.1.109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Web.UI.Skins, Version=2017.1.118.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\AP CARGO - Back-up\CMS Web Central\CMS Web Central - (03-21-2017)\cmsversion2\Bin\Telerik.Windows.Documents.Flow.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2017.1.118.45\Telerik.Web.UI.Skins.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2017.1.109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2017.1.116.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\AP CARGO - Back-up\CMS Web Central\CMS Web Central - (03-21-2017)\cmsversion2\Bin\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2017.1.118.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2017.1.109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2017.1.116.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\AP CARGO - Back-up\CMS Web Central\CMS Web Central - (03-21-2017)\cmsversion2\Bin\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2017.1.118.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Flow.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Zip, Version=2017.1.109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2017.1.116.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\AP CARGO - Back-up\CMS Web Central\CMS Web Central - (03-21-2017)\cmsversion2\Bin\Telerik.Windows.Zip.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2017.1.118.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2017.1.116.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2017.1.118.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2017.1.116.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2017.1.118.45\AdditionalLibraries\Bin45\Telerik.Windows.Zip.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
