@@ -56,6 +56,7 @@
     <Compile Include="Reason.cs" />
     <Compile Include="Remarks.cs" />
     <Compile Include="Reports\BCOSalesSummary.cs" />
+    <Compile Include="Reports\BookingReport.cs" />
     <Compile Include="Reports\BranchAcceptance.cs" />
     <Compile Include="Reports\Bundle.cs" />
     <Compile Include="Reports\CargoMonitoring.cs" />

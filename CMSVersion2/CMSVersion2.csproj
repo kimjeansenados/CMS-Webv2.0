@@ -371,6 +371,7 @@
     <Content Include="Report\Operation\CargoMonitoring\Offloaded.aspx" />
     <Content Include="Report\Operation\CargoMonitoring\Pending.aspx" />
     <Content Include="Report\Operation\CargoMonitoring\RUD.aspx" />
+    <Content Include="Report\Operation\Manifest\Booking.aspx" />
     <Content Include="Report\Operation\Manifest\BranchAcceptance.aspx" />
     <Content Include="Report\Operation\Manifest\Bundle.aspx" />
     <Content Include="Report\Operation\Manifest\CargoTransfer.aspx" />
@@ -1596,6 +1597,13 @@
     <Compile Include="Report\Operation\CargoMonitoring\RUD.aspx.designer.cs">
       <DependentUpon>RUD.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Report\Operation\Manifest\Booking.aspx.cs">
+      <DependentUpon>Booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\Booking.aspx.designer.cs">
+      <DependentUpon>Booking.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Report\Operation\Manifest\BranchAcceptance.aspx.cs">
       <DependentUpon>BranchAcceptance.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1664,6 +1672,12 @@
     </Compile>
     <Compile Include="Report\Operation\Manifest\Reports\AWBTrackingReport .Designer.cs">
       <DependentUpon>AWBTrackingReport .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\Reports\BookingReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\Reports\BookingReport.Designer.cs">
+      <DependentUpon>BookingReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\Operation\Manifest\Reports\BranchAcceptance.cs">
       <SubType>Component</SubType>
@@ -1914,6 +1928,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Operation\Manifest\Reports\AWBTrackingReport .resx">
       <DependentUpon>AWBTrackingReport .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Operation\Manifest\Reports\BookingReport.resx">
+      <DependentUpon>BookingReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Operation\Manifest\Reports\BranchAcceptance.resx">
       <DependentUpon>BranchAcceptance.cs</DependentUpon>

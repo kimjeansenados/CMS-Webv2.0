@@ -73,6 +73,7 @@
     <Compile Include="Reason.cs" />
     <Compile Include="Remarks.cs" />
     <Compile Include="Report\BCOSalesSummaryReport.cs" />
+    <Compile Include="Report\BookingReport.cs" />
     <Compile Include="Report\BranchAcceptanceReport.cs" />
     <Compile Include="Report\BundleReport.cs" />
     <Compile Include="Report\CargoMonitoring.cs" />

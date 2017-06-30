@@ -416,6 +416,18 @@ namespace CMSVersion2
 
         #region Report
         #region Operation - Manifest
+        protected void clickBookingReport(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
+            {
+                string usersession = Session["UsernameSession"].ToString();
+                byte[] EncryptedUsername = Tools.Encryption.EncryptPassword(usersession);
+                GlobalCode.menuName = "Operation";
+                Session["UserNameSession"] = usersession;
+                Response.Redirect("~/Report/Operation/Manifest/Booking.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+            }
+        }
+        
         //Pickup Cargo
         protected void clickPickUpCargo(object sender, EventArgs e)
         {

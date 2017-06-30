@@ -96,6 +96,7 @@
                                         <li class="dropdown dropdown-submenu">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="return false;">Manifest</a>
                                             <ul class="dropdown-menu">
+                                                <li><a runat="server" id="Booking" onserverclick="clickBookingReport">Booking</a></li>
                                                 <li><a runat="server" id="PickupCargo" onserverclick="clickPickUpCargo">Pickup Cargo</a></li>
                                                 <li><a runat="server" id="BranchAcceptance" onserverclick="clickBranchAcceptance">Branch Acceptance</a></li>
                                                 <li><a runat="server" id="Bundle" onserverclick="clickBundle">Bundle</a></li>

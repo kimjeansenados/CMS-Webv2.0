@@ -17,6 +17,9 @@
             switch (ReportGlobalModel.Report)
             {
                 //OPERATION -> MANIFEST
+                case "Booking":
+                    clientReportSource.Identifier = typeof(BookingReport).AssemblyQualifiedName;
+                    break;
                 case "PickUpCargo":
                     clientReportSource.Identifier = typeof(PickupReport).AssemblyQualifiedName;
                     break;
