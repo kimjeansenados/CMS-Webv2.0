@@ -186,7 +186,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BranchCorpOfficeController.cs" />
     <Compile Include="Controllers\CityController.cs" />
-    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\GPSController.cs" />
     <Compile Include="Controllers\RevenueUnitController.cs" />
     <Compile Include="Controllers\RevenueUnitTypeController.cs" />
