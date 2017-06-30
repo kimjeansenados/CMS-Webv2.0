@@ -159,11 +159,29 @@ namespace CMSVersion2
                         DataList();
                         FormCookies(item);
 
+                        //foreach (string access in listofMenuAccess)
+                        //{
+                        //    if (listofMenuAccess.IndexOf(access) == 0)
+                        //    {
+                        //        firstAccess = access;
+                        //    }
+                        //}
                         foreach (string access in listofMenuAccess)
                         {
-                            if (listofMenuAccess.IndexOf(access) == 0)
+                            //if (listofMenuAccess.IndexOf(access) == 0)
+                            //if (access.Equals("Dashboard"))
+                            // {
+                            //     firstAccess = access;
+                            // }
+                            if (listofMenuAccess.Contains("Dashboard"))
+                            {
+                                firstAccess = "Dashboard";
+                                break;
+                            }
+                            else
                             {
                                 firstAccess = access;
+                                break;
                             }
                         }
 
@@ -179,7 +197,7 @@ namespace CMSVersion2
                         BLL.UserRole.UpdateLoginDate(Login1.UserName, getConstr.ConStrCMS);
                         foreach (string itemAccess in listofMenuAccess)
                         {
-                            if (itemAccess.Contains("Dashboard"))
+                            if (listofMenuAccess.Contains("Dashboard"))
                             {
                                 if (firstLogin == true)
                                 {
