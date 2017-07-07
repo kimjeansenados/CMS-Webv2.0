@@ -37,6 +37,13 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.Status
             GlobalCode.globalCode = statusCode;
         }
 
+        protected override void OnInit(EventArgs e)
+        {
+            base.OnInit(e);
+            Page.Title = "Add Status";
+        }
+
+
 
 
         protected void btnSave_Click(object sender, EventArgs e)

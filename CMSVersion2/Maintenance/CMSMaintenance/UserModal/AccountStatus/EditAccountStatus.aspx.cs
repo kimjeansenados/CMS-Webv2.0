@@ -57,7 +57,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.AccountStatus
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Edit Account Type";
+            this.Page.Title = "Edit Account Status";
         }
 
 

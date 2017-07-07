@@ -465,7 +465,7 @@
                     </div>
                     <br />
                     <br />
-                    <div class="col-md-2" style="text-align: right">Acount Type</div>
+                    <div class="col-md-2" style="text-align: right">Account Type</div>
                     <div class="col-md-2">
                         <telerik:RadComboBox ID="rcbAccountType" Skin="Glow" runat="server"></telerik:RadComboBox>
                     </div>

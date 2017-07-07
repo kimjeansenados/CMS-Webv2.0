@@ -18,13 +18,31 @@ namespace CMSVersion2.Report.Finance.Sales
         {
             if (!IsPostBack)
             {
-
-                Client.DataSource = getClient();
-                Client.DataTextField = "Name";
-                Client.DataValueField = "Name";
-                Client.DataBind();
+                InitLoad();
+                Date1.SelectedDate = DateTime.Now;
+                Date2.SelectedDate = DateTime.Now;
+                //Client.DataSource = getClient();
+                //Client.DataTextField = "Name";
+                //Client.DataValueField = "Name";
+                //Client.DataBind();
             }
         }
+
+        private void InitLoad()
+        {
+            LoadClients();
+        }
+
+        private void LoadClients()
+        {
+            rcbClient.DataSource = BLL.Clients.GetClients(getConstr.ConStrCMS);
+            rcbClient.DataValueField = "ClientID";
+            rcbClient.DataTextField = "Name";
+            rcbClient.DataBind();
+        }
+
+
+
         public DataTable getClient()
         {
             DataSet data = BLL.Clients.GetClients(getConstr.ConStrCMS);
@@ -51,7 +69,7 @@ namespace CMSVersion2.Report.Finance.Sales
             }
             try
             {
-                client = Client.SelectedItem.Text.ToString();
+                client = rcbClient.SelectedItem.Text.ToString();
             }
             catch (Exception)
             {

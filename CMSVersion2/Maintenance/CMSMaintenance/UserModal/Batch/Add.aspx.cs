@@ -29,6 +29,12 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.Batch
             }
         }
 
+        protected override void OnInit(EventArgs e)
+        {
+            base.OnInit(e);
+            this.Page.Title = "Add Batch";
+        }
+
 
         private void BatchCode(string batchCode)
         {

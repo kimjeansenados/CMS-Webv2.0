@@ -25,6 +25,12 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.Remarks
             }
         }
 
+        protected override void OnInit(EventArgs e)
+        {
+            base.OnInit(e);
+            this.Page.Title = "Add Remarks";
+        }
+
         private void RemarkCode(string remarkCode)
         {
             GlobalCode.globalCode = remarkCode;

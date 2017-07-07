@@ -63,6 +63,7 @@
     <Compile Include="Reports\CargoTransfer.cs" />
     <Compile Include="Reports\CollectionReport.cs" />
     <Compile Include="Reports\DailyTrip.cs" />
+    <Compile Include="Reports\FLM_Qtyby_Commodity.cs" />
     <Compile Include="Reports\GatewayInbound.cs" />
     <Compile Include="Reports\GatewayOutbound.cs" />
     <Compile Include="Reports\GatewayTransmittal.cs" />

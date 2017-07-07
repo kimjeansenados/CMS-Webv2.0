@@ -182,12 +182,12 @@
                             <br />
                             <telerik:RadWindowManager RenderMode="Mobile" ID="RadWindowManager1" runat="server" EnableShadow="true">
                                 <Windows>
-                                    <telerik:RadWindow RenderMode="Mobile" ID="UserListDialog" runat="server" Title="Editing record" Height="450px"
+                                    <telerik:RadWindow RenderMode="Mobile" ID="UserListDialog" runat="server" Title="Editing record" Height="550px"
                                         Width="500px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" Skin="Glow"
                                         Modal="true" Behaviors="Close,Move">
                                     </telerik:RadWindow>
 
-                                     <telerik:RadWindow RenderMode="Auto" ID="AddUser" runat="server" Title="Adding record" Height="400px" Skin="Glow"
+                                     <telerik:RadWindow RenderMode="Auto" ID="AddUser" runat="server" Title="Adding record" Height="500px" Skin="Glow"
                                         Width="500px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
                                         Modal="true" Behaviors="Close,Move"  >
                                     </telerik:RadWindow>

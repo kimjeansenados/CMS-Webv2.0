@@ -323,9 +323,9 @@
                     </div>
                     <div class="col-md-4">
 
-                        <telerik:RadButton ID="btnGI_Origin_Add" Skin="Glow" runat="server" Text="ADD"></telerik:RadButton>
-                        <telerik:RadButton ID="btnGI_Origin_Edit" Skin="Glow" runat="server" Text="EDIT"></telerik:RadButton>
-                        <telerik:RadButton ID="btnGI_Origin_Delete" Skin="Glow" runat="server" Text="DELETE"></telerik:RadButton>
+                        <telerik:RadButton ID="btnGI_Origin_Add" Skin="Glow" runat="server" Text="ADD" Enabled="false"></telerik:RadButton>
+                        <telerik:RadButton ID="btnGI_Origin_Edit" Skin="Glow" runat="server" Text="EDIT" Enabled="false"></telerik:RadButton>
+                        <telerik:RadButton ID="btnGI_Origin_Delete" Skin="Glow" runat="server" Text="DELETE" Enabled="false"></telerik:RadButton>
                     </div>
                     <br />
                     <br />

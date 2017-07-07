@@ -79,6 +79,7 @@
     <Compile Include="Report\CargoMonitoring.cs" />
     <Compile Include="Report\CollectionReport.cs" />
     <Compile Include="Report\DailyTripReport.cs" />
+    <Compile Include="Report\FLM_Qtyby_Commodity.cs" />
     <Compile Include="Report\GatewayTransmittal.cs" />
     <Compile Include="Report\MasterSalesReport.cs" />
     <Compile Include="Report\PickupCargoManifestReport.cs" />

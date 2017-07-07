@@ -15,6 +15,7 @@
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     
+    <link rel="shortcut icon" type="image/x-icon" href="Images/emblem.png" />
     <style type="text/css">
         .removeClass {
            pointer-events: none;
@@ -146,6 +147,15 @@
                                 <li><a runat="server" class="removeClass" id="Booking" onserverclick="clickBooking">Booking</a></li>--%>
                                 <li><a runat="server" class="removeClass" id="AWBDetailedTracking" onserverclick="clickawbDetailedTracking">AWB Detailed Tracking</a></li>
                                 <li><a runat="server" class="removeClass" id="AWBTracking" onserverclick="clickawbTracking">AWB Tracking</a></li>
+                            
+                                <li class="dropdown dropdown-submenu">
+                                    <a href="#" class="dropdown-toggle removeClass" id="FLM" runat="server" data-toggle="dropdown" onclick="return false;">FLM</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a runat="server" id="QtybyCommodity" onserverclick="clickQtybyCommodity">Quantity by Commodity Type</a></li>
+                                        <li><a runat="server" id="WtbyCommodity" onserverclick="clickWtbyCommodity">Weight by Commodity Type</a></li>                          
+                                    </ul>
+                                </li>
+                            
                             </ul>
                         </li>
                         <li class="dropdown">

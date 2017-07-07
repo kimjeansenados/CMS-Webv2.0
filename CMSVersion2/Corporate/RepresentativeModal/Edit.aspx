@@ -28,6 +28,19 @@
             top.location.href = top.location.href;
 
         }
+
+function getRadWindow1() 
+{
+  var oWindow = null;
+  if (window.radWindow) oWindow = window.radWindow;
+  else if (window.frameElement.radWindow) oWindow = window.frameElement.radWindow;
+  return oWindow;
+}
+
+function closeWindow() 
+{
+  getRadWindow1().close();
+}
     </script>
 </head>
 <body>
@@ -150,7 +163,8 @@
                        
                 <div id="footer">
                  <telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click"></telerik:RadButton>
-                 <telerik:RadButton ID="btnCancel" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click"></telerik:RadButton>
+                 <%--<telerik:RadButton ID="btnCancel" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click"></telerik:RadButton>--%>
+                    <telerik:RadButton ID="btnCancel" runat="server" AutoPostBack="false" Text="Cancel" OnClientClicked="closeWindow" CausesValidation="false"></telerik:RadButton>
                 </div>
             </div>
 

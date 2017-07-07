@@ -42,7 +42,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.BranchGateway
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Insert Area";
+            this.Page.Title = "Add Gateway Sat Office";
         }
 
         public DataTable GetAreaDetails(Guid ID)

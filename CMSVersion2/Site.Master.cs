@@ -1091,6 +1091,36 @@ namespace CMSVersion2
             }
 
         }
+
+        protected void clickQtybyCommodity(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
+            {
+                string usersession = Session["UsernameSession"].ToString();
+                byte[] EncryptedUsername = Tools.Encryption.EncryptPassword(usersession);
+                //HtmlAnchor anchor = (HtmlAnchor)Page.Master.FindControl("FLM");
+                //string text = anchor.InnerText;
+                //GlobalCode.menuName = text;
+                GlobalCode.menuName = "FLM";
+                Session["UserNameSession"] = usersession;
+                Response.Redirect("~/Report/FLM/FLM_Qtyby_Commodity.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+            }
+        }
+
+        protected void clickWtbyCommodity(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
+            {
+                string usersession = Session["UsernameSession"].ToString();
+                byte[] EncryptedUsername = Tools.Encryption.EncryptPassword(usersession);
+                //HtmlAnchor anchor = (HtmlAnchor)Page.Master.FindControl("FLM");
+                //string text = anchor.InnerText;
+                //GlobalCode.menuName = text;
+                GlobalCode.menuName = "FLM";
+                Session["UserNameSession"] = usersession;
+                Response.Redirect("~/Report/FLM/FLM_Wtby_Commodity.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+            }
+        }
         #endregion
 
 

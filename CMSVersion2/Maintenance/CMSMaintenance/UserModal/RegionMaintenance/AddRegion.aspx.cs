@@ -66,7 +66,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.RegionMaintenance
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Insert Region";
+            this.Page.Title = "Add Region";
         }
 
         public DataTable GetRegionDetails(Guid ID)

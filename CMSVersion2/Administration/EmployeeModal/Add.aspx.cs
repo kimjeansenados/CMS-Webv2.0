@@ -154,17 +154,51 @@ namespace CMSVersion2.Administration.EmployeeModal
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            string host = HttpContext.Current.Request.Url.Authority;
-            Guid deparmentId = new Guid(rcbDepartment.SelectedItem.Value.ToString());
-            Guid positionid = new Guid(rcbPosition.SelectedItem.Value.ToString());
-            Guid assignedtoareaId = new Guid(rcbRevenueUnitName.SelectedItem.Value.ToString());
+            try
+            {
+                string host = HttpContext.Current.Request.Url.Authority;
+                Guid deparmentId = new Guid(rcbDepartment.SelectedItem.Value.ToString());
+                Guid positionid = new Guid(rcbPosition.SelectedItem.Value.ToString());
+                Guid assignedtoareaId = new Guid(rcbRevenueUnitName.SelectedItem.Value.ToString());
+                //string license = dpLicense.SelectedDate.Value.ToString();
+                DateTime? licensedate = new DateTime();
 
-            Guid ID = new Guid("11111111-1111-1111-1111-111111111111");
-            BLL.Employee_Info.InsertEmployee(deparmentId, positionid, assignedtoareaId, txtFirstname.Text, txtLastname.Text, txtMiddlename.Text,
-               dpBirthDate.SelectedDate.Value, txtTel.Text, txtMobile.Text, txtEmail.Text, txtLicense.Text, dpLicense.SelectedDate.Value, ID, getConstr.ConStrCMS);
+                DateTime? selectedDate = dpLicense.SelectedDate;
+               
+                if (selectedDate != null)
+                {
+                    //date = selectedDate.Value.ToShortDateString();//or selectedDate.Value.ToString("d");
+                    licensedate = selectedDate.Value;
+                }
+                else
+                {
+                    //handle the case when user has not selected any date, and selectedDate is null
+                    licensedate = null;
+                }
 
-            string script = "<script>CloseOnReload()</" + "script>";
-            ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
+                //if (license.Contains("1/1/1900") || license == null)
+                //{
+                //    DateTime now = DateTime.Now;
+                //    licensedate = now;
+                //}
+                //else
+                //{
+                //    licensedate = dpLicense.SelectedDate.Value;
+                //}
+
+                Guid ID = new Guid("11111111-1111-1111-1111-111111111111");
+                BLL.Employee_Info.InsertEmployee(deparmentId, positionid, assignedtoareaId, txtFirstname.Text, txtLastname.Text, txtMiddlename.Text,
+                   dpBirthDate.SelectedDate.Value, txtTel.Text, txtMobile.Text, txtEmail.Text, txtLicense.Text, licensedate, ID, getConstr.ConStrCMS);
+
+                string script = "<script>CloseOnReload()</" + "script>";
+                ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
+            }
+            catch(Exception ex)
+            {
+
+            }
+
+           
 
         }
 

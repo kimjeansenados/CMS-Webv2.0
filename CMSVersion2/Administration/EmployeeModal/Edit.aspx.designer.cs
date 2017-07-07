@@ -67,15 +67,6 @@ namespace CMSVersion2.Administration.EmployeeModal {
         protected global::Telerik.Web.UI.RadTextBox txtFirstname;
         
         /// <summary>
-        /// RequiredFieldValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-        
-        /// <summary>
         /// lbl_Mname control.
         /// </summary>
         /// <remarks>
@@ -110,15 +101,6 @@ namespace CMSVersion2.Administration.EmployeeModal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtLastname;
-        
-        /// <summary>
-        /// RequiredFieldValidator2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
         /// lbl_Birthday control.
@@ -211,15 +193,6 @@ namespace CMSVersion2.Administration.EmployeeModal {
         protected global::Telerik.Web.UI.RadComboBox rcbBranchCorpOffice;
         
         /// <summary>
-        /// RequiredFieldValidator6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
-        
-        /// <summary>
         /// lbl_AssignedTo control.
         /// </summary>
         /// <remarks>
@@ -238,15 +211,6 @@ namespace CMSVersion2.Administration.EmployeeModal {
         protected global::Telerik.Web.UI.RadComboBox rcbRevenueUnitType;
         
         /// <summary>
-        /// RequiredFieldValidator4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
-        
-        /// <summary>
         /// lbl_Location control.
         /// </summary>
         /// <remarks>
@@ -263,15 +227,6 @@ namespace CMSVersion2.Administration.EmployeeModal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadComboBox rcbRevenueUnitName;
-        
-        /// <summary>
-        /// RequiredFieldValidator5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
         
         /// <summary>
         /// lbl_Department control.

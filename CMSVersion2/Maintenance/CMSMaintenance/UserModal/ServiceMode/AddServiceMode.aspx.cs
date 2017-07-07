@@ -46,7 +46,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.ServiceMode
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Add Service Type";
+            this.Page.Title = "Add Service Mode";
         }
 
 

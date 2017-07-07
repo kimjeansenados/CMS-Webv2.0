@@ -24,8 +24,13 @@
                 <telerik:RadDatePicker ID="Date2" runat="server" Skin="Glow" AutoPostBack="true"></telerik:RadDatePicker>
                 &nbsp;&nbsp;&nbsp;
                  <telerik:RadLabel ID="bcolabel" runat="server" Text="Client:"></telerik:RadLabel>
-                 <telerik:RadComboBox ID="Client" runat="server" Skin="Glow" Width="220px"
+                 <%--<telerik:RadComboBox ID="Client" runat="server" Skin="Glow" Width="220px"
                      AllowCustomText="true" MarkFirstMatch="true" AutoPostBack="true">
+                </telerik:RadComboBox>--%>
+                 <telerik:RadComboBox ID="rcbClient" runat="server" Skin="Glow" Width="220px" 
+                    AppendDataBoundItems="true" EnableTextSelection="true" 
+                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" AutoPostBack="true">
+                   
                 </telerik:RadComboBox>
 
                  &nbsp;&nbsp;

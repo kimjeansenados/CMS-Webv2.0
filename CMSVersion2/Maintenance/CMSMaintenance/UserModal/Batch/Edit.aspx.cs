@@ -45,6 +45,12 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.Batch
             }
         }
 
+        protected override void OnInit(EventArgs e)
+        {
+            base.OnInit(e);
+            this.Page.Title = "Edit Batch";
+        }
+
 
         public DataTable GetBatchById(Guid ID)
         {

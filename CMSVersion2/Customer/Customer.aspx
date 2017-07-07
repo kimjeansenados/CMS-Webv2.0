@@ -36,9 +36,11 @@
                             </telerik:RadAjaxManager>
                             <telerik:RadAjaxLoadingPanel runat="server" ID="gridLoadingPanel"></telerik:RadAjaxLoadingPanel>
                            
-                            <telerik:RadGrid ID="RadGrid2" OnItemCreated="RadGrid2_ItemCreated"
+                            <!--OnItemCreated="RadGrid2_ItemCreated"-->
+                            <telerik:RadGrid ID="RadGrid2" 
                                 runat="server" AllowPaging="True" ExportSettings-Excel-DefaultCellAlignment="Right"
-                                PageSize="10" Skin="Glow" AllowSorting="true" OnItemCommand="RadGrid2_ItemCommand1"
+                                PageSize="10" Skin="Glow" AllowSorting="true" 
+                                OnItemCommand="RadGrid2_ItemCommand1"
                                 
                                 DataKeyNames="ClientId" CommandItemDisplay="Top"
                                 OnNeedDataSource="RadGrid2_NeedDataSource"> 
@@ -82,19 +84,19 @@
                                             <HeaderStyle />
 
                                         </telerik:GridDateTimeColumn>
-                                        <telerik:GridTemplateColumn UniqueName="TemplateEditColumn" AllowFiltering="false" Exportable="false">
+                                       <%-- <telerik:GridTemplateColumn UniqueName="TemplateEditColumn" AllowFiltering="false" Exportable="false">
                                             <ItemTemplate>
                                                 <asp:HyperLink  ID="EditLink" runat="server" Text="Edit"></asp:HyperLink>
                                             </ItemTemplate>
-                                        </telerik:GridTemplateColumn>
+                                        </telerik:GridTemplateColumn>--%>
                                     <%--    <telerik:GridButtonColumn  CommandName="Delete" Text="Delete" UniqueName="DeleteColumn" HeaderText="">
                                             <HeaderStyle />
                                         </telerik:GridButtonColumn>--%>
-                                         <telerik:GridButtonColumn ConfirmText="Are you sure you want to deactivate this user?" ButtonType="LinkButton" Exportable="false"
+                                       <%--  <telerik:GridButtonColumn ConfirmText="Are you sure you want to deactivate this user?" ButtonType="LinkButton" Exportable="false"
                                             ConfirmDialogType="RadWindow" ConfirmDialogHeight="150px" ConfirmTitle="Deactivate User" 
                                              CommandName="Delete" Text="Delete" UniqueName="DeleteColumn" HeaderText="">
                                             <HeaderStyle />
-                                        </telerik:GridButtonColumn>
+                                        </telerik:GridButtonColumn>--%>
                                     </Columns>
 
                                    
@@ -144,7 +146,7 @@
                                     var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
                                     grid.get_masterTableView().selectItem(rowControl, true);
                                         
-                                    window.radopen("UserModal/EditForm_csharp.aspx?UserId=" + id, "UserListDialog");
+                                    window.radopen("CustomerModal/EditCustomer.aspx?UserId=" + id, "UserListDialog");
                                     return false;
                                 }
                                 function ShowInsertForm() {

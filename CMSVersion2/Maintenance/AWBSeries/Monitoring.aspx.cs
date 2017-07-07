@@ -96,8 +96,7 @@ namespace CMSVersion2.Maintenance.AWBSeries
             rdcArea.DataTextField = "RevenueUnitName";
             rdcArea.DataValueField = "RevenueUnitId";
             rdcArea.DataBind();
-
-        }
+         }
 
         private void LoadArea()
         {
@@ -116,7 +115,6 @@ namespace CMSVersion2.Maintenance.AWBSeries
             rcbName.DataTextField = "FullName";
             rcbName.DataValueField = "EmployeeId";
             rcbName.DataBind();
-
         }
 
         private void LoadAwbSeries()

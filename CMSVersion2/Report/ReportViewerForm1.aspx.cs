@@ -6,6 +6,7 @@
     using Finance.Sales.Reports;
     using Finance.Collect;
     using CargoMonitoring.Reports;
+    using FLM.Report;
 
     public partial class ReportViewerForm1 : System.Web.UI.Page
     {
@@ -112,6 +113,14 @@
                
                 case "AWBTracking":
                     clientReportSource.Identifier = typeof(AWBTrackingReport).AssemblyQualifiedName;
+                    break;
+
+                //FLM
+                case "QtybyCommodity":
+                    clientReportSource.Identifier = typeof(FLM_Qtyby_Commodity).AssemblyQualifiedName;
+                    break;
+                case "WtbyCommodity":
+                    clientReportSource.Identifier = typeof(FLM_Wtby_Commodity).AssemblyQualifiedName;
                     break;
 
 

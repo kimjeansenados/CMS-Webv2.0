@@ -55,7 +55,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.ServiceType
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Edit Service-Type";
+            this.Page.Title = "Edit Service Type";
         }
 
 
