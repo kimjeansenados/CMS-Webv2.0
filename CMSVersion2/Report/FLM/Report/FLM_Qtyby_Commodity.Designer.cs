@@ -237,7 +237,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox41.Style.BackgroundColor = System.Drawing.Color.Silver;
             this.textBox41.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox41.Style.Font.Name = "Calibri";
-            this.textBox41.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+            this.textBox41.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox41.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox41.StyleName = "";
             this.textBox41.Value = "TOTAL";
@@ -537,7 +537,7 @@ namespace CMSVersion2.Report.FLM.Report
             // 
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.125001072883606D), Telerik.Reporting.Drawing.Unit.Inch(0.29375001788139343D));
-            this.textBox7.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+            this.textBox7.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.textBox7.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox7.StyleName = "";
             this.textBox7.Value = "TOTAL";
@@ -717,7 +717,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox42.Name = "textBox42";
             this.textBox42.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.79166662693023682D), Telerik.Reporting.Drawing.Unit.Inch(0.23958343267440796D));
             this.textBox42.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
-            this.textBox42.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+            this.textBox42.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox42.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox42.StyleName = "";
             this.textBox42.Value = "= ((Fields.Col_0) + (Fields.Col_1) + (Fields.Col_2) + (Fields.Col_3) + (Fields.Co" +
@@ -728,7 +728,7 @@ namespace CMSVersion2.Report.FLM.Report
             // 
             this.textBox43.Name = "textBox43";
             this.textBox43.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.79166662693023682D), Telerik.Reporting.Drawing.Unit.Inch(0.29375001788139343D));
-            this.textBox43.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+            this.textBox43.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox43.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox43.StyleName = "";
             this.textBox43.Value = "= SUM(CDbl(((Fields.Col_0) + (Fields.Col_1) + (Fields.Col_2) + (Fields.Col_3) + (" +

@@ -8,10 +8,10 @@
         <div class="container">
             <!--- PAGE HEADER--->
             <div class="row">
-                <h3>Quantity by Commodity</h3>
+                <h3>Quantity by Commodity Type</h3>
                 <ol class="breadcrumb">
                     <li>FLM</li>
-                    <li>Quantity by Commodity</li>
+                    <li>Quantity by Commodity Type</li>
                 </ol>
             </div>
             <!--- PAGE BODY--->
@@ -76,7 +76,7 @@
                             <telerik:GridBoundColumn DataField="Col_8" HeaderText="J. Courier - NMAP" Aggregate="Sum"  FooterText=" "></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="Col_9" HeaderText="K. Courier - NLAP" Aggregate="Sum"   FooterText=" "></telerik:GridBoundColumn>
                             
-                            <telerik:GridCalculatedColumn HeaderText="TOTAL" DataType="System.Int32" DataFields="Col_0,Col_1,Col_2,Col_3,Col_4,Col_5,Col_6,Col_7,Col_8,Col_9" Expression="{0}+{1}+{2}+{3}+{4}+{5}+{6}+{7}+{8}+{9}" FooterText=" " Aggregate="Sum">
+                            <telerik:GridCalculatedColumn HeaderText="TOTAL" DataType="System.Int32" DataFields="Col_0,Col_1,Col_2,Col_3,Col_4,Col_5,Col_6,Col_7,Col_8,Col_9" Expression="{0}+{1}+{2}+{3}+{4}+{5}+{6}+{7}+{8}+{9}" FooterText=" " Aggregate="Sum" ItemStyle-HorizontalAlign="Right">
                             </telerik:GridCalculatedColumn>
                             
                         </Columns>
