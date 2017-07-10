@@ -221,14 +221,18 @@
             </div>
             </div><!--wrapper-->
         </div><!--container-->
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - AP CARGO CMS Application</p>
-            </footer>
-        </div>
+
+        
+            <div class="container body-content">
+           
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+                <hr />
+                <footer>
+                    <p>&copy; <%: DateTime.Now.Year %> - AP CARGO CMS Application</p>
+                </footer>
+            </div>
+       
         <script src="Scripts/jquery.js"></script>
         <script src="Scripts/bootstrap.min.js"></script>
     </form>

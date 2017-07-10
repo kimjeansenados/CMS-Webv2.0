@@ -21,15 +21,52 @@
                <div class="row">
                    <div class="col-md-12">
                        <telerik:RadLabel ID="lblBco" runat="server" Text="BCO:"></telerik:RadLabel>
-                        <telerik:RadComboBox ID="rdcBCO" runat="server"  Width="230px" AutoPostBack="true" Skin="Glow" OnSelectedIndexChanged="rdcBCO_SelectedIndexChanged"></telerik:RadComboBox>
+                       <telerik:RadComboBox ID="rdcBCO" runat="server" Skin="Glow" Width="220px" 
+                        AppendDataBoundItems="true" EnableTextSelection="true" 
+                        AutoCompleteSeparator="None" MarkFirstMatch="true" AutoPostBack="true" OnSelectedIndexChanged="rdcBCO_SelectedIndexChanged">
+                            <Items>
+                                <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
+                            </Items>
+                        </telerik:RadComboBox>
+                        
+                      <%-- <telerik:RadComboBox ID="rdcBCO" runat="server"  Width="230px" AutoPostBack="true" Skin="Glow" OnSelectedIndexChanged="rdcBCO_SelectedIndexChanged"></telerik:RadComboBox>--%>
                       
                        <telerik:RadLabel ID="lblArea" runat="server" Text="Area:"></telerik:RadLabel>
-                       <telerik:RadComboBox ID="rcbRevenueType" runat="server" Skin="Glow" AutoPostBack="true" OnTextChanged="rcbRevenueType_TextChanged" OnSelectedIndexChanged="rcbRevenueType_SelectedIndexChanged"></telerik:RadComboBox>
+                       <telerik:RadComboBox ID="rcbRevenueType" runat="server" Skin="Glow" Width="150px" 
+                        AppendDataBoundItems="true" EnableTextSelection="true" 
+                        AutoCompleteSeparator="None" MarkFirstMatch="true" AutoPostBack="true" OnTextChanged="rcbRevenueType_TextChanged" OnSelectedIndexChanged="rcbRevenueType_SelectedIndexChanged">
+                            <Items>
+                                <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
+                            </Items>
+                        </telerik:RadComboBox>
+                       <%--<telerik:RadComboBox ID="rcbRevenueType" runat="server" Skin="Glow" AutoPostBack="true" OnTextChanged="rcbRevenueType_TextChanged" OnSelectedIndexChanged="rcbRevenueType_SelectedIndexChanged"></telerik:RadComboBox>--%>
 
-                       <telerik:RadComboBox ID="rdcArea" runat="server" Width="200px" Skin="Glow" AutoPostBack="true" OnSelectedIndexChanged="rdcArea_SelectedIndexChanged"></telerik:RadComboBox>
-                       <telerik:RadComboBox ID="rcbName" Skin="Glow" Height="200px" runat="server" AutoPostBack="true"></telerik:RadComboBox>
+                       <%--<telerik:RadComboBox ID="rdcArea" runat="server" Width="200px" Skin="Glow" AutoPostBack="true" OnSelectedIndexChanged="rdcArea_SelectedIndexChanged"></telerik:RadComboBox>--%>
+                       <telerik:RadComboBox ID="rdcArea" runat="server" Skin="Glow" Width="180px" 
+                        AppendDataBoundItems="true" EnableTextSelection="true" 
+                        AutoCompleteSeparator="None" MarkFirstMatch="true" AutoPostBack="true" OnSelectedIndexChanged="rdcArea_SelectedIndexChanged">
+                            <Items>
+                                <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
+                            </Items>
+                        </telerik:RadComboBox>
+                       <%--<telerik:RadComboBox ID="rcbName" Skin="Glow" Height="200px" runat="server" AutoPostBack="true"></telerik:RadComboBox>--%>
+                       <telerik:RadComboBox ID="rcbName" runat="server" Skin="Glow" Width="180px" 
+                        AppendDataBoundItems="true" EnableTextSelection="true" 
+                        AutoCompleteSeparator="None" MarkFirstMatch="true" AutoPostBack="true">
+                            <Items>
+                                <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
+                            </Items>
+                        </telerik:RadComboBox>
 
-                       <telerik:RadComboBox ID="rcbAwbSeries" Skin="Glow" Width="150px" Height="200px" runat="server" AutoPostBack="true"></telerik:RadComboBox>
+
+                       <%--<telerik:RadComboBox ID="rcbAwbSeries" Skin="Glow" Width="150px" Height="200px" runat="server" AutoPostBack="true"></telerik:RadComboBox>--%>
+                        <telerik:RadComboBox ID="rcbAwbSeries" runat="server" Skin="Glow" Width="180px" 
+                        AppendDataBoundItems="true" EnableTextSelection="true" 
+                        AutoCompleteSeparator="None" MarkFirstMatch="true" AutoPostBack="true">
+                            <Items>
+                                <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
+                            </Items>
+                        </telerik:RadComboBox>
                       <telerik:RadButton ID="btnSearchEmployee" runat="server" Skin="Glow" Text="SEARCH" OnClick="btnSearch_Click"></telerik:RadButton>
                 </div>
                </div>

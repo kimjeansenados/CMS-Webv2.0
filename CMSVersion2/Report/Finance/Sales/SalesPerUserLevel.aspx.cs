@@ -21,6 +21,9 @@ namespace CMSVersion2.Report.Finance.Sales
                 BCO.DataTextField = "BranchCorpOfficeCode";
                 BCO.DataValueField = "BranchCorpOfficeId";
                 BCO.DataBind();
+
+                Date1.SelectedDate = DateTime.Now;
+                Date2.SelectedDate = DateTime.Now;
             }
         }
         public DataTable getBCO()

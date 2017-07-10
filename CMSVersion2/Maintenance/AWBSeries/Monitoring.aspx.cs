@@ -71,7 +71,7 @@ namespace CMSVersion2.Maintenance.AWBSeries
             rcbRevenueType.DataBind();
         }
 
-        public DataTable GetAWBSeriesbySearch(Guid bcoId, Guid revenueUnitTypeId, Guid revenueUnitId, Guid empId, Guid awbSeriesId, string constr)
+        public DataTable GetAWBSeriesbySearch(Guid? bcoId, Guid? revenueUnitTypeId, Guid? revenueUnitId, Guid? empId, Guid? awbSeriesId, string constr)
         {
             DataSet data = BLL.AwbSeries.GetAwbSeriesbySearch(bcoId, revenueUnitTypeId, revenueUnitId, empId, awbSeriesId, constr);
             DataTable convertdata = new DataTable();
@@ -89,15 +89,6 @@ namespace CMSVersion2.Maintenance.AWBSeries
 
         }
 
-        private void populateRevenueUnitNameByBCO()
-        {
-            DataTable LocationList = BLL.Revenue_Info.getRevenueUnitByBCO(new Guid(rcbRevenueType.SelectedValue.ToString()), new Guid(rdcBCO.SelectedValue.ToString()), getConstr.ConStrCMS).Tables[0];
-            rdcArea.DataSource = LocationList;
-            rdcArea.DataTextField = "RevenueUnitName";
-            rdcArea.DataValueField = "RevenueUnitId";
-            rdcArea.DataBind();
-         }
-
         private void LoadArea()
         {
             DataTable area = BLL.Revenue_Info.getAllRevenueUnit(getConstr.ConStrCMS).Tables[0];
@@ -108,14 +99,84 @@ namespace CMSVersion2.Maintenance.AWBSeries
 
         }
 
+        private void populateRevenueUnitNameByBCO()
+        {
+            //DataTable LocationList = BLL.Revenue_Info.getRevenueUnitByBCO(new Guid(rcbRevenueType.SelectedValue.ToString()), new Guid(rdcBCO.SelectedValue.ToString()), getConstr.ConStrCMS).Tables[0];
+            //rdcArea.DataSource = LocationList;
+            //rdcArea.DataTextField = "RevenueUnitName";
+            //rdcArea.DataValueField = "RevenueUnitId";
+            //rdcArea.DataBind();
+            string type = rcbRevenueType.SelectedItem.Text;
+            string bco = rdcBCO.SelectedItem.Text;
+            Guid bcoId;
+            Guid revenueTypeId;
+            if (bco != "All" && type == "All")
+            {
+                RadComboBoxItem item1 = new RadComboBoxItem();
+                item1.Text = "All";
+                item1.Value = "All";
+                rdcArea.Items.Add(item1);
+                rdcArea.SelectedValue = "All";
+
+                bcoId = Guid.Parse(rdcBCO.SelectedValue.ToString());
+
+                DataTable LocationList = BLL.Revenue_Info.getRevenueUnitByBCOId(bcoId, getConstr.ConStrCMS).Tables[0];
+                rdcArea.DataSource = LocationList;
+                rdcArea.DataTextField = "RevenueUnitName";
+                rdcArea.DataValueField = "RevenueUnitId";
+                rdcArea.DataBind();
+
+               
+            }
+            else if (type != "All" && bco != "All")
+            {
+                RadComboBoxItem item1 = new RadComboBoxItem();
+                item1.Text = "All";
+                item1.Value = "All";
+                rdcArea.Items.Add(item1);
+                rdcArea.SelectedValue = "All";
+
+                revenueTypeId = Guid.Parse(rcbRevenueType.SelectedValue.ToString());
+                bcoId = Guid.Parse(rdcBCO.SelectedValue.ToString());
+
+                DataTable LocationList = BLL.Revenue_Info.getRevenueUnitByBCO(revenueTypeId, bcoId, getConstr.ConStrCMS).Tables[0];
+                rdcArea.DataSource = LocationList;
+                rdcArea.DataTextField = "RevenueUnitName";
+                rdcArea.DataValueField = "RevenueUnitId";
+                rdcArea.DataBind();
+
+               
+
+            }
+        }
+
+       
+
         private void populateEmployeeByArea()
         {
-            DataTable LocationList = BLL.Employee_Info.GetEmployeeBySearch(new Guid(rdcBCO.SelectedValue.ToString()), new Guid(rcbRevenueType.SelectedValue.ToString()), new Guid(rdcArea.SelectedValue.ToString()), getConstr.ConStrCMS).Tables[0];
-            rcbName.DataSource = LocationList;
-            rcbName.DataTextField = "FullName";
-            rcbName.DataValueField = "EmployeeId";
-            rcbName.DataBind();
+            string bco = rdcBCO.SelectedItem.Text;
+            string type = rcbRevenueType.SelectedItem.Text;
+            string area = rdcArea.SelectedItem.Text;
+            if (bco != "All" && type != "All" && area != "All")
+            {
+                DataTable LocationList = BLL.Employee_Info.GetEmployeeBySearch(new Guid(rdcBCO.SelectedValue.ToString()), new Guid(rcbRevenueType.SelectedValue.ToString()), new Guid(rdcArea.SelectedValue.ToString()), getConstr.ConStrCMS).Tables[0];
+                rcbName.DataSource = LocationList;
+                rcbName.DataTextField = "FullName";
+                rcbName.DataValueField = "EmployeeId";
+                rcbName.DataBind();
+            }
+
+            //DataTable LocationList = BLL.Employee_Info.GetEmployeeBySearch(new Guid(rdcBCO.SelectedValue.ToString()), new Guid(rcbRevenueType.SelectedValue.ToString()), new Guid(rdcArea.SelectedValue.ToString()), getConstr.ConStrCMS).Tables[0];
+            //rcbName.DataSource = LocationList;
+            //rcbName.DataTextField = "FullName";
+            //rcbName.DataValueField = "EmployeeId";
+            //rcbName.DataBind();
+
         }
+
+
+
+
 
         private void LoadAwbSeries()
         {
@@ -128,12 +189,86 @@ namespace CMSVersion2.Maintenance.AWBSeries
         }
         #endregion
 
+        public DataTable getSeriesMonitoringData()
+        {
+            Guid? bcoid = new Guid();
+            Guid? revenueUnitTypeId = new Guid();
+            Guid? revenueUnitId = new Guid();
+            Guid? employeeId = new Guid();
+            Guid? awbseriesid = new Guid();
+            DataTable dt = new DataTable();
+
+            try
+            {
+                // BCO
+                if (rdcBCO.SelectedItem.Text == "All")
+                {
+                    bcoid = null;
+                }
+                else
+                {
+                    bcoid = Guid.Parse(rdcBCO.SelectedValue.ToString());
+                }
+
+                // REVENUE TYPE
+                if (rcbRevenueType.SelectedItem.Text == "All")
+                {
+                    revenueUnitTypeId = null;
+                }
+                else
+                {
+                    revenueUnitTypeId = Guid.Parse(rcbRevenueType.SelectedValue.ToString());
+                }
+
+                // REVENUE UNIT
+                if (rdcArea.SelectedItem.Text == "All")
+                {
+                    revenueUnitId = null;
+                }
+                else
+                {
+                    revenueUnitId = Guid.Parse(rdcArea.SelectedValue.ToString());
+                }
+
+                // EMPLOYEE
+                if (rcbName.SelectedItem.Text == "All")
+                {
+                    employeeId = null;
+                }
+                else
+                {
+                    employeeId = Guid.Parse(rcbName.SelectedValue.ToString());
+                }
+
+                // AWB SERIES
+                if (rcbAwbSeries.SelectedItem.Text == "All")
+                {
+                    awbseriesid = null;
+                }
+                else
+                {
+                    awbseriesid = Guid.Parse(rcbAwbSeries.SelectedValue.ToString());
+                }
+
+                dt = GetAWBSeriesbySearch(bcoid, revenueUnitTypeId, revenueUnitId, employeeId, awbseriesid,getConstr.ConStrCMS);
+                //dt = data.Tables[0];
+            }
+            catch (Exception)
+            {
+
+            }
+            return dt;
+        }
+
+
 
         #region Events
         #region RadGrid Events
         protected void radGridAwbSeriesMonitoring_NeedDataSource(object sender, Telerik.Web.UI.GridNeedDataSourceEventArgs e)
         {
-            radGridAwbSeriesMonitoring.DataSource = GetAllAwbSeriesMonitoring();
+            //radGridAwbSeriesMonitoring.DataSource = GetAllAwbSeriesMonitoring();
+            radGridAwbSeriesMonitoring.DataSource = getSeriesMonitoringData();
+            
         }
         #endregion
 
@@ -166,32 +301,36 @@ namespace CMSVersion2.Maintenance.AWBSeries
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            Guid bcoId = new Guid();
-            Guid revenueUnitTypeId = new Guid();
-            Guid revenueUnitid = new Guid();
-            Guid empId = new Guid();
-            Guid awbSeriesId = new Guid();
+            radGridAwbSeriesMonitoring.DataSource = getSeriesMonitoringData();
+            radGridAwbSeriesMonitoring.Rebind();
+            radGridAwbSeriesMonitoring.DataBind();
+            
+            //Guid bcoId = new Guid();
+            //Guid revenueUnitTypeId = new Guid();
+            //Guid revenueUnitid = new Guid();
+            //Guid empId = new Guid();
+            //Guid awbSeriesId = new Guid();
 
-            try
-            {
-                bcoId = Guid.Parse(rdcBCO.SelectedValue.ToString());
-                revenueUnitTypeId = Guid.Parse(rcbRevenueType.SelectedValue.ToString());
-                revenueUnitid = Guid.Parse(rdcArea.SelectedValue.ToString());
-                empId = Guid.Parse(rcbName.SelectedValue.ToString());
-                awbSeriesId = Guid.Parse(rcbAwbSeries.SelectedValue.ToString());
+            //try
+            //{
+            //    bcoId = Guid.Parse(rdcBCO.SelectedValue.ToString());
+            //    revenueUnitTypeId = Guid.Parse(rcbRevenueType.SelectedValue.ToString());
+            //    revenueUnitid = Guid.Parse(rdcArea.SelectedValue.ToString());
+            //    empId = Guid.Parse(rcbName.SelectedValue.ToString());
+            //    awbSeriesId = Guid.Parse(rcbAwbSeries.SelectedValue.ToString());
 
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex);
+            //}
 
-            if (bcoId != null)
-            {
-                radGridAwbSeriesMonitoring.DataSource = GetAWBSeriesbySearch(bcoId, revenueUnitTypeId, revenueUnitid, empId, awbSeriesId, getConstr.ConStrCMS);
-                radGridAwbSeriesMonitoring.Rebind();
-                radGridAwbSeriesMonitoring.DataBind();
-            }
+            //if (bcoId != null)
+            //{
+            //    radGridAwbSeriesMonitoring.DataSource = GetAWBSeriesbySearch(bcoId, revenueUnitTypeId, revenueUnitid, empId, awbSeriesId, getConstr.ConStrCMS);
+            //    radGridAwbSeriesMonitoring.Rebind();
+            //    radGridAwbSeriesMonitoring.DataBind();
+            //}
 
 
 

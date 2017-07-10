@@ -19,10 +19,15 @@ namespace BusinessLogic
         {
             return DAL.AwbSeries.GetAwbSeries(conSTR);
         }
-         public static DataSet GetAwbSeriesbySearch(Guid bcoId, Guid revenueUnitTypeId, Guid revenueUnitId, Guid empId, Guid awbSeriesId, string constr)
+        //public static DataSet GetAwbSeriesbySearch(Guid bcoId, Guid revenueUnitTypeId, Guid revenueUnitId, Guid empId, Guid awbSeriesId, string constr)
+        //{
+        //    return DAL.AwbSeries.GetAwbSeriesbySearch(bcoId, revenueUnitTypeId, revenueUnitId, empId, awbSeriesId, constr);
+        //}
+        public static DataSet GetAwbSeriesbySearch(Guid? bcoId, Guid? revenueUnitTypeId, Guid? revenueUnitId, Guid? empId, Guid? awbSeriesId, string constr)
         {
             return DAL.AwbSeries.GetAwbSeriesbySearch(bcoId, revenueUnitTypeId, revenueUnitId, empId, awbSeriesId, constr);
         }
+
 
         public static DataSet GetAllSeriesMonitoring(string conSTR)
         {

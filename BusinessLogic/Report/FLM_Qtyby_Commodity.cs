@@ -14,9 +14,19 @@ namespace BusinessLogic.Report
             return DAL.Reports.FLM_Qtyby_Commodity.GetQtybyCommodity(conSTR, dateFrom, dateTo, bcoId);
         }
 
+        public static DataSet GetQtybyCommodityAll(string conSTR, DateTime? dateFrom, DateTime? dateTo)
+        {
+            return DAL.Reports.FLM_Qtyby_Commodity.GetQtybyCommodityAll(conSTR, dateFrom, dateTo);
+        }
+
         public static DataSet GetWtbyCommodity(string conSTR, DateTime? dateFrom, DateTime? dateTo, string bcoId)
         {
             return DAL.Reports.FLM_Qtyby_Commodity.GetWtbyCommodity(conSTR, dateFrom, dateTo, bcoId);
+        }
+
+        public static DataSet GetWtbyCommodityAll(string conSTR, DateTime? dateFrom, DateTime? dateTo)
+        {
+            return DAL.Reports.FLM_Qtyby_Commodity.GetWtbyCommodityAll(conSTR, dateFrom, dateTo);
         }
     }
 }

@@ -20,6 +20,10 @@
                     <hr />
                 </div><!--col-lg-12-->
             </div><!--row1-->
+             <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server">
+            </telerik:RadAjaxLoadingPanel>
+            <telerik:RadAjaxPanel ID="RadAjaxPanel1" runat="server" LoadingPanelID="RadAjaxLoadingPanel1">
+            
              <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" AutoSize="true" AutoSizeBehaviors="HeightProportional" Width="1300px" Skin="Glow" VisibleStatusbar="false"></telerik:RadWindow>
             <div class="row">
                 <div class="col-md-12">
@@ -137,6 +141,7 @@
                                 </telerik:RadWindow>
                           </Windows>
                    </telerik:RadWindowManager>
+                </telerik:RadAjaxPanel>
 
             <telerik:RadCodeBlock runat="server">
             <script type="text/javascript">

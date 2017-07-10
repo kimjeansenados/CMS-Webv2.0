@@ -48,7 +48,7 @@ namespace CMSVersion2.Report.FLM
             string bcoid = "";           
             DateTime DateFromStr = new DateTime();
             DateTime DateToStr = new DateTime();
-
+            DataTable dt = new DataTable();
             try
             {
                 DateFromStr = Date.SelectedDate.Value;
@@ -57,11 +57,15 @@ namespace CMSVersion2.Report.FLM
                 //BCO
                 if (BCO.SelectedItem.Text == "All")
                 {
-                    bcoid = "";
+                    //bcoid = "";
+                    DataSet data = BLL.Report.FLM_Qtyby_Commodity.GetQtybyCommodityAll(getConstr.ConStrCMS, DateFromStr, DateToStr);
+                    dt = data.Tables[0];
                 }
                 else
                 {
                     bcoid = BCO.SelectedItem.Text;
+                    DataSet data = BLL.Report.FLM_Qtyby_Commodity.GetQtybyCommodity(getConstr.ConStrCMS, DateFromStr, DateToStr, bcoid);
+                    dt = data.Tables[0];
                 }
                 
             }
@@ -70,9 +74,9 @@ namespace CMSVersion2.Report.FLM
                 Console.WriteLine(ex.ToString());
             }
 
-            DataSet data = BLL.Report.FLM_Qtyby_Commodity.GetQtybyCommodity(getConstr.ConStrCMS, DateFromStr, DateToStr, bcoid);
-            DataTable dt = new DataTable();
-            dt = data.Tables[0];
+            //DataSet data = BLL.Report.FLM_Qtyby_Commodity.GetQtybyCommodity(getConstr.ConStrCMS, DateFromStr, DateToStr, bcoid);
+            //DataTable dt = new DataTable();
+            //dt = data.Tables[0];
             
             //FOR PRINTING
             GetColumnDataFromDataTable getColumn = new GetColumnDataFromDataTable();

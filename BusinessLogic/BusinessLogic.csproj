@@ -48,6 +48,7 @@
     <Compile Include="AwbSeries.cs" />
     <Compile Include="Batch.cs" />
     <Compile Include="BillingPeriod.cs" />
+    <Compile Include="Dashboard.cs" />
     <Compile Include="Department.cs" />
     <Compile Include="Flight.cs" />
     <Compile Include="GPS.cs" />
