@@ -298,7 +298,7 @@ namespace CMSVersion2
                         Login1.UserName, // Username associated with ticket
                         DateTime.Now, // Date/time issued
                         DateTime.Now.AddMinutes(30), // Date/time to expire
-                        false, // "true" for a persistent user cookie
+                        true, // "true" for a persistent user cookie
                         item, // User-data, in this case the roles
                         FormsAuthentication.FormsCookiePath);// Path cookie valid for
 

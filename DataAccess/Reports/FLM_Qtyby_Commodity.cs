@@ -36,7 +36,7 @@ namespace DataAccess.Reports
 
         }
 
-        public static DataSet GetQtybyCommodityAll(string conSTR, DateTime? dateFrom, DateTime? dateTo)
+        public static DataSet GetQtybyCommodityAll(string conSTR, DateTime? dateFrom, DateTime? dateTo, string BCO)
         {
             try
             {
@@ -48,7 +48,7 @@ namespace DataAccess.Reports
 
                     da.SelectCommand.Parameters.Add("@DateFrom", SqlDbType.Date).Value = (object)dateFrom ?? DBNull.Value;
                     da.SelectCommand.Parameters.Add("@DateTo", SqlDbType.Date).Value = (object)dateTo ?? DBNull.Value;
-                    
+                    da.SelectCommand.Parameters.Add("@BCO", SqlDbType.VarChar).Value = (object)BCO ?? DBNull.Value;
                     DataSet ds = new DataSet();
                     da.Fill(ds);
                     return ds;
@@ -87,7 +87,7 @@ namespace DataAccess.Reports
 
         }
 
-        public static DataSet GetWtbyCommodityAll(string conSTR, DateTime? dateFrom, DateTime? dateTo)
+        public static DataSet GetWtbyCommodityAll(string conSTR, DateTime? dateFrom, DateTime? dateTo, string BCO)
         {
             try
             {
@@ -99,7 +99,8 @@ namespace DataAccess.Reports
 
                     da.SelectCommand.Parameters.Add("@DateFrom", SqlDbType.Date).Value = (object)dateFrom ?? DBNull.Value;
                     da.SelectCommand.Parameters.Add("@DateTo", SqlDbType.Date).Value = (object)dateTo ?? DBNull.Value;
-                    
+                    da.SelectCommand.Parameters.Add("@BCO", SqlDbType.VarChar).Value = (object)BCO ?? DBNull.Value;
+
                     DataSet ds = new DataSet();
                     da.Fill(ds);
                     return ds;

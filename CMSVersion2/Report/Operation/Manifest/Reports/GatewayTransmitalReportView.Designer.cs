@@ -21,6 +21,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             Telerik.Reporting.TableGroup tableGroup10 = new Telerik.Reporting.TableGroup();
             Telerik.Reporting.TableGroup tableGroup11 = new Telerik.Reporting.TableGroup();
             Telerik.Reporting.TableGroup tableGroup12 = new Telerik.Reporting.TableGroup();
+            Telerik.Reporting.TableGroup tableGroup13 = new Telerik.Reporting.TableGroup();
             Telerik.Reporting.Drawing.StyleRule styleRule1 = new Telerik.Reporting.Drawing.StyleRule();
             this.textBox21 = new Telerik.Reporting.TextBox();
             this.textBox23 = new Telerik.Reporting.TextBox();
@@ -78,6 +79,9 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.txtPrintedBy = new Telerik.Reporting.TextBox();
             this.textBox8 = new Telerik.Reporting.TextBox();
             this.txtPrintedDate = new Telerik.Reporting.TextBox();
+            this.textBox7 = new Telerik.Reporting.TextBox();
+            this.textBox9 = new Telerik.Reporting.TextBox();
+            this.textBox30 = new Telerik.Reporting.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // textBox21
@@ -374,58 +378,63 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             // 
             // table1
             // 
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.38403517007827759D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.3840351402759552D)));
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(1.2350244522094727D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.99999994039535522D)));
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(1.0473699569702148D)));
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(1.0473699569702148D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(1.6692472696304321D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(1.5928760766983032D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.61096632480621338D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.77461975812911987D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(1.6692473888397217D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(1.5928761959075928D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.6109662652015686D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.77461963891983032D)));
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(1.047371506690979D)));
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(1.047371506690979D)));
             this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.28000003099441528D)));
-            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.40000003576278687D)));
+            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.40000006556510925D)));
             this.table1.Body.SetCellContent(0, 0, this.textBox22);
             this.table1.Body.SetCellContent(0, 1, this.txtAwb);
-            this.table1.Body.SetCellContent(0, 2, this.textBox11);
-            this.table1.Body.SetCellContent(0, 3, this.textBox13);
-            this.table1.Body.SetCellContent(0, 4, this.textBox15);
-            this.table1.Body.SetCellContent(0, 5, this.textBox17);
-            this.table1.Body.SetCellContent(0, 6, this.textBox19);
-            this.table1.Body.SetCellContent(0, 7, this.textBox24);
-            this.table1.Body.SetCellContent(0, 8, this.textBox26);
-            this.table1.Body.SetCellContent(0, 9, this.textBox28);
+            this.table1.Body.SetCellContent(0, 3, this.textBox11);
+            this.table1.Body.SetCellContent(0, 4, this.textBox13);
+            this.table1.Body.SetCellContent(0, 5, this.textBox15);
+            this.table1.Body.SetCellContent(0, 6, this.textBox17);
+            this.table1.Body.SetCellContent(0, 7, this.textBox19);
+            this.table1.Body.SetCellContent(0, 8, this.textBox24);
+            this.table1.Body.SetCellContent(0, 9, this.textBox26);
+            this.table1.Body.SetCellContent(0, 10, this.textBox28);
             this.table1.Body.SetCellContent(1, 0, this.textBox31);
             this.table1.Body.SetCellContent(1, 1, this.textBox37);
-            this.table1.Body.SetCellContent(1, 2, this.textBox38);
-            this.table1.Body.SetCellContent(1, 3, this.textBox40);
-            this.table1.Body.SetCellContent(1, 4, this.textBox41);
-            this.table1.Body.SetCellContent(1, 5, this.textBox42);
-            this.table1.Body.SetCellContent(1, 6, this.textBox43);
-            this.table1.Body.SetCellContent(1, 7, this.textBox44);
-            this.table1.Body.SetCellContent(1, 8, this.textBox45);
-            this.table1.Body.SetCellContent(1, 9, this.textBox46);
+            this.table1.Body.SetCellContent(1, 3, this.textBox38);
+            this.table1.Body.SetCellContent(1, 4, this.textBox40);
+            this.table1.Body.SetCellContent(1, 5, this.textBox41);
+            this.table1.Body.SetCellContent(1, 6, this.textBox42);
+            this.table1.Body.SetCellContent(1, 7, this.textBox43);
+            this.table1.Body.SetCellContent(1, 8, this.textBox44);
+            this.table1.Body.SetCellContent(1, 9, this.textBox45);
+            this.table1.Body.SetCellContent(1, 10, this.textBox46);
+            this.table1.Body.SetCellContent(0, 2, this.textBox9);
+            this.table1.Body.SetCellContent(1, 2, this.textBox30);
             tableGroup1.Name = "tableGroup";
             tableGroup1.ReportItem = this.textBox21;
             tableGroup2.Name = "tableGroup1";
             tableGroup2.ReportItem = this.textBox23;
-            tableGroup3.Name = "group1";
-            tableGroup3.ReportItem = this.textBox12;
-            tableGroup4.Name = "group3";
-            tableGroup4.ReportItem = this.textBox14;
-            tableGroup5.Name = "group4";
-            tableGroup5.ReportItem = this.textBox16;
-            tableGroup6.Name = "group5";
-            tableGroup6.ReportItem = this.textBox18;
-            tableGroup7.Name = "group6";
-            tableGroup7.ReportItem = this.textBox20;
-            tableGroup8.Name = "group7";
-            tableGroup8.ReportItem = this.textBox25;
-            tableGroup9.Name = "group8";
-            tableGroup9.ReportItem = this.textBox27;
-            tableGroup10.Name = "group9";
-            tableGroup10.ReportItem = this.textBox29;
+            tableGroup3.Name = "group";
+            tableGroup3.ReportItem = this.textBox7;
+            tableGroup4.Name = "group1";
+            tableGroup4.ReportItem = this.textBox12;
+            tableGroup5.Name = "group3";
+            tableGroup5.ReportItem = this.textBox14;
+            tableGroup6.Name = "group4";
+            tableGroup6.ReportItem = this.textBox16;
+            tableGroup7.Name = "group5";
+            tableGroup7.ReportItem = this.textBox18;
+            tableGroup8.Name = "group6";
+            tableGroup8.ReportItem = this.textBox20;
+            tableGroup9.Name = "group7";
+            tableGroup9.ReportItem = this.textBox25;
+            tableGroup10.Name = "group8";
+            tableGroup10.ReportItem = this.textBox27;
+            tableGroup11.Name = "group9";
+            tableGroup11.ReportItem = this.textBox29;
             this.table1.ColumnGroups.Add(tableGroup1);
             this.table1.ColumnGroups.Add(tableGroup2);
             this.table1.ColumnGroups.Add(tableGroup3);
@@ -436,6 +445,7 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.table1.ColumnGroups.Add(tableGroup8);
             this.table1.ColumnGroups.Add(tableGroup9);
             this.table1.ColumnGroups.Add(tableGroup10);
+            this.table1.ColumnGroups.Add(tableGroup11);
             this.table1.DataSource = null;
             this.table1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.textBox22,
@@ -467,15 +477,18 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.textBox20,
             this.textBox25,
             this.textBox27,
-            this.textBox29});
+            this.textBox29,
+            this.textBox7,
+            this.textBox9,
+            this.textBox30});
             this.table1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.19999997317790985D), Telerik.Reporting.Drawing.Unit.Inch(0.1000000610947609D));
             this.table1.Name = "table1";
-            tableGroup11.Groupings.Add(new Telerik.Reporting.Grouping(null));
-            tableGroup11.Name = "detailTableGroup";
-            tableGroup12.Name = "group11";
-            this.table1.RowGroups.Add(tableGroup11);
+            tableGroup12.Groupings.Add(new Telerik.Reporting.Grouping(null));
+            tableGroup12.Name = "detailTableGroup";
+            tableGroup13.Name = "group11";
             this.table1.RowGroups.Add(tableGroup12);
-            this.table1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(10.456252098083496D), Telerik.Reporting.Drawing.Unit.Inch(0.9800000786781311D));
+            this.table1.RowGroups.Add(tableGroup13);
+            this.table1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(11.456252098083496D), Telerik.Reporting.Drawing.Unit.Inch(0.9800000786781311D));
             // 
             // textBox22
             // 
@@ -892,6 +905,40 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
             this.txtPrintedDate.TextWrap = false;
             this.txtPrintedDate.Value = "";
             // 
+            // textBox7
+            // 
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(0.29999998211860657D));
+            this.textBox7.Style.BackgroundColor = System.Drawing.Color.Silver;
+            this.textBox7.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox7.Style.Font.Bold = true;
+            this.textBox7.Style.Font.Name = "Calibri";
+            this.textBox7.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(11D);
+            this.textBox7.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Bottom;
+            this.textBox7.StyleName = "";
+            this.textBox7.Value = "MAWB";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(0.28000003099441528D));
+            this.textBox9.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox9.Style.Font.Name = "Calibri";
+            this.textBox9.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox9.StyleName = "";
+            this.textBox9.Value = "= Fields.MAWB";
+            // 
+            // textBox30
+            // 
+            this.textBox30.Name = "textBox30";
+            this.textBox30.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(0.40000003576278687D));
+            this.textBox30.Style.Font.Bold = true;
+            this.textBox30.Style.Font.Name = "Calibri";
+            this.textBox30.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
+            this.textBox30.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(0D);
+            this.textBox30.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox30.StyleName = "";
+            // 
             // GatewayTransmitalReportView
             // 
             this.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
@@ -972,5 +1019,8 @@ namespace CMSVersion2.Report.Operation.Manifest.Reports
         private Telerik.Reporting.TextBox txtPrintedBy;
         private Telerik.Reporting.TextBox textBox8;
         private Telerik.Reporting.TextBox txtPrintedDate;
+        private Telerik.Reporting.TextBox textBox9;
+        private Telerik.Reporting.TextBox textBox30;
+        private Telerik.Reporting.TextBox textBox7;
     }
 }

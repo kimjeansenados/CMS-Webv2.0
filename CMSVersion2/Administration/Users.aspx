@@ -153,14 +153,7 @@
                                             Add new user
                                             </a>
                                         |    
-                                        
-                         <%--               <a href="#"  onclick="return ShowExportForm();" class="alink">
-                                            <img src="../images/emblem.png" alt="Print Preview" width="20">
-                                           Print Preview
-                                            </a>
-       |--%>
-                   
-                                 
+                                     
                                         <a href="" onclick="LoadRadGrid()" class="alink">
                                             <img src="../images/emblem.png" alt="Export to Excel" width="20">
                                             Refresh Data
@@ -200,6 +193,8 @@
                                 </Windows>
                             </telerik:RadWindowManager>
                         </telerik:RadAjaxPanel>
+
+
                         <telerik:RadCodeBlock runat="server">
                             <script type="text/javascript">
                                 function onRequestStart(sender, args) {

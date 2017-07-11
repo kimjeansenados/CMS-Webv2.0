@@ -34,10 +34,11 @@ namespace CMSVersion2
         void Session_Start(Object sender, EventArgs e)
         {
             if (Session.IsNewSession && Session["UsernameSession"] == null)
+            //if (Session.IsNewSession)
             {
                 Response.Redirect("~/Login.aspx");
             }
-           
+
         }
 
         void Application_BeginRequest(object sender, EventArgs e)

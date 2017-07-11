@@ -13,6 +13,24 @@ namespace CMSVersion2.Maintenance.AWBSeries {
     public partial class Monitoring {
         
         /// <summary>
+        /// RadAjaxLoadingPanel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadAjaxLoadingPanel RadAjaxLoadingPanel1;
+        
+        /// <summary>
+        /// RadAjaxPanel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadAjaxPanel RadAjaxPanel1;
+        
+        /// <summary>
         /// lblBco control.
         /// </summary>
         /// <remarks>

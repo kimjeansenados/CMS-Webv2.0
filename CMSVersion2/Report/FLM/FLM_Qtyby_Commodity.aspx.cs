@@ -58,7 +58,8 @@ namespace CMSVersion2.Report.FLM
                 if (BCO.SelectedItem.Text == "All")
                 {
                     //bcoid = "";
-                    DataSet data = BLL.Report.FLM_Qtyby_Commodity.GetQtybyCommodityAll(getConstr.ConStrCMS, DateFromStr, DateToStr);
+                    string bco = "";
+                    DataSet data = BLL.Report.FLM_Qtyby_Commodity.GetQtybyCommodityAll(getConstr.ConStrCMS, DateFromStr, DateToStr,bco);
                     dt = data.Tables[0];
                 }
                 else

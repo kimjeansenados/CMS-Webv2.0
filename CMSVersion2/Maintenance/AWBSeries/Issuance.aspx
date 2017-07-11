@@ -52,7 +52,9 @@
                  </div>
                 <br />
                 <br />--%>
-                
+                  <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
+
+                    <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
                 <div class="row">
                      <div class="col-md-12">
                                 <telerik:RadLabel ID="lblBco" runat="server" Text="BCO:"></telerik:RadLabel>
@@ -68,9 +70,7 @@
                 </div>
                 <br />
                  <br />
-                <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
-
-                    <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
+              
 
 
                         <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server" OnAjaxRequest="RadAjaxManager1_AjaxRequest">

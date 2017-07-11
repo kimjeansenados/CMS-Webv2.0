@@ -109,7 +109,8 @@ namespace CMSVersion2
                 //BCO
                 if (BCO.SelectedItem.Text == "All")
                 {
-                    DataSet data1 = BLL.Report.FLM_Qtyby_Commodity.GetQtybyCommodityAll(getConstr.ConStrCMS, DateFromStr, DateToStr);
+                    string bco = "";
+                    DataSet data1 = BLL.Report.FLM_Qtyby_Commodity.GetQtybyCommodityAll(getConstr.ConStrCMS, DateFromStr, DateToStr, bco);
                     return data1;
                 }
                 else
@@ -139,7 +140,8 @@ namespace CMSVersion2
                 //BCO
                 if (WtBCO.SelectedItem.Text == "All")
                 {
-                    DataSet data1 = BLL.Report.FLM_Qtyby_Commodity.GetWtbyCommodityAll(getConstr.ConStrCMS, DateFromStr, DateToStr);
+                    string bco = "";
+                    DataSet data1 = BLL.Report.FLM_Qtyby_Commodity.GetWtbyCommodityAll(getConstr.ConStrCMS, DateFromStr, DateToStr, bco);
                     return data1;
                 }
                 else
@@ -172,5 +174,12 @@ namespace CMSVersion2
             QtybyCommodityTypeChart.PlotArea.XAxis.DataLabelsField = "CityName";
         }
 
+        protected void QtybyCommodityTypeChart_PreRender(object sender, EventArgs e)
+        {
+            DataSet myDS = getQtybyCommodity();
+            QtybyCommodityTypeChart.DataSource = myDS;
+            QtybyCommodityTypeChart.DataBind();
+            QtybyCommodityTypeChart.PlotArea.XAxis.DataLabelsField = "CityName";
+        }
     }
 }

@@ -41,6 +41,28 @@
 
                     </div>
                 </div>
+                 <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server">
+            </telerik:RadAjaxLoadingPanel>
+            <telerik:RadAjaxPanel ID="RadAjaxPanel1" runat="server" LoadingPanelID="RadAjaxLoadingPanel1">
+
+
+                <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server" OnAjaxRequest="RadAjaxManager1_AjaxRequest">
+                                <AjaxSettings>
+                                    <telerik:AjaxSetting AjaxControlID="RadAjaxManager1">
+                                        <UpdatedControls>
+                                            <telerik:AjaxUpdatedControl ControlID="RadGrid2" LoadingPanelID="gridLoadingPanel"></telerik:AjaxUpdatedControl>
+                                        </UpdatedControls>
+                                    </telerik:AjaxSetting>
+                                    <telerik:AjaxSetting AjaxControlID="radgrid2">
+                                        <UpdatedControls>
+                                            <telerik:AjaxUpdatedControl ControlID="RadGrid2" LoadingPanelID="gridLoadingPanel"></telerik:AjaxUpdatedControl>
+                                        </UpdatedControls>
+                                    </telerik:AjaxSetting>
+                                </AjaxSettings>
+                            </telerik:RadAjaxManager>
+                            <telerik:RadAjaxLoadingPanel runat="server" ID="gridLoadingPanel"></telerik:RadAjaxLoadingPanel>
+
+
                 <!-- /.row -->
                 <div class="size-wide">
                     <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="radSearchEmployee" 
@@ -71,40 +93,6 @@
                 <br />
                  <br />
 
-              <%--  <div class="col-md-12 size-wide">
-                    <div class="col-md-8 size-wide">
-                         <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="RadSearchBox2"
-                        EnableAutoComplete="true"
-                        ShowSearchButton="false"
-                        Width="300">
-                        <DropDownSettings Width="300" />
-                    </telerik:RadSearchBox>
-
-                    </div>
-
-                </div>
-                --%>
-                          <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
-
-                        <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
-
-
-                            <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server" OnAjaxRequest="RadAjaxManager1_AjaxRequest">
-                                <AjaxSettings>
-                                    <telerik:AjaxSetting AjaxControlID="RadAjaxManager1">
-                                        <UpdatedControls>
-                                            <telerik:AjaxUpdatedControl ControlID="RadGrid2" LoadingPanelID="gridLoadingPanel"></telerik:AjaxUpdatedControl>
-                                        </UpdatedControls>
-                                    </telerik:AjaxSetting>
-                                    <telerik:AjaxSetting AjaxControlID="radgrid2">
-                                        <UpdatedControls>
-                                            <telerik:AjaxUpdatedControl ControlID="RadGrid2" LoadingPanelID="gridLoadingPanel"></telerik:AjaxUpdatedControl>
-                                        </UpdatedControls>
-                                    </telerik:AjaxSetting>
-                                </AjaxSettings>
-                            </telerik:RadAjaxManager>
-                            <telerik:RadAjaxLoadingPanel runat="server" ID="gridLoadingPanel"></telerik:RadAjaxLoadingPanel>
-                            
                            
                             <telerik:RadGrid ID="RadGrid2" OnItemCreated="RadGrid2_ItemCreated"
                                 runat="server" AllowPaging="True" ExportSettings-Excel-DefaultCellAlignment="Right"
@@ -239,7 +227,9 @@
                                     </telerik:RadWindow>
                                 </Windows>
                             </telerik:RadWindowManager>
-                        </telerik:RadAjaxPanel>
+                       
+                  </telerik:RadAjaxPanel>
+
                         <telerik:RadCodeBlock runat="server">
                             <script type="text/javascript">
                                 function onRequestStart(sender, args) {
@@ -306,7 +296,7 @@
 
                         </telerik:RadCodeBlock>
 
-                    </telerik:LayoutColumn>
+                   
             </div>
             <!-- /.container-fluid -->
 

@@ -37,6 +37,25 @@ namespace CMSVersion2.Maintenance.AWBSeries
         }
         #endregion
 
+        protected void RadAjaxManager1_AjaxRequest(object sender, AjaxRequestEventArgs e)
+        {
+            if (e.Argument == "Rebind")
+            {
+
+                radGridAwbIssuedSummary.MasterTableView.SortExpressions.Clear();
+                radGridAwbIssuedSummary.MasterTableView.GroupByExpressions.Clear();
+                radGridAwbIssuedSummary.Rebind();
+            }
+            else if (e.Argument == "RebindAndNavigate")
+            {
+                radGridAwbIssuedSummary.MasterTableView.SortExpressions.Clear();
+                radGridAwbIssuedSummary.MasterTableView.GroupByExpressions.Clear();
+                radGridAwbIssuedSummary.MasterTableView.CurrentPageIndex = radGridAwbIssuedSummary.MasterTableView.PageCount - 1;
+                radGridAwbIssuedSummary.Rebind();
+            }
+        }
+
+
 
         #region DataSources
         public DataTable GetAWBIssuance()

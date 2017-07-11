@@ -111,46 +111,76 @@
                                         </div>
                                     </div>
                                     <div class="panel-body" style="height: 500px; overflow: auto;">
-                                        <telerik:RadHtmlChart runat="server" OnLoad="QtybyCommodityTypeChart_Load" ID="QtybyCommodityTypeChart" Width="100%" Height="100%" Transitions="true" Skin="Silk">
+                                        <telerik:RadHtmlChart runat="server" OnLoad="QtybyCommodityTypeChart_Load" OnPreRender="QtybyCommodityTypeChart_PreRender" ID="QtybyCommodityTypeChart" Width="100%" Height="100%" Transitions="true" Skin="Silk">
                                             <PlotArea>
                                                 <Series>
                                                     <telerik:BarSeries Name="A. General Cargo" DataFieldY="Col_0" Stacked="true">
+                                                        <Appearance>
+                                                            <FillStyle BackgroundColor="#5c6bc0" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>
                                                     <telerik:BarSeries Name="C. Valuable Cargo" DataFieldY="Col_1" Stacked="true">
+                                                         <Appearance>
+                                                            <FillStyle BackgroundColor="#26c6da" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>
                                                     <telerik:BarSeries Name="D. Dangerous Cargo" DataFieldY="Col_2" Stacked="true">
+                                                         <Appearance>
+                                                            <FillStyle BackgroundColor="#9ccc65" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>
                                                     <telerik:BarSeries Name="E. Perishable Cargo" DataFieldY="Col_3" Stacked="true" Gap="1.5" Spacing="0.4">
+                                                         <Appearance>
+                                                            <FillStyle BackgroundColor="#ffa726" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>
                                                     <telerik:BarSeries Name="F. Courier - SAP" DataFieldY="Col_4" Stacked="true">
+                                                        <Appearance>
+                                                            <FillStyle BackgroundColor="#8d6e63" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>
                                                     <telerik:BarSeries Name="G. Courier - MAP" DataFieldY="Col_5" Stacked="true">
+                                                        <Appearance>
+                                                            <FillStyle BackgroundColor="#ff7043" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>
                                                     <telerik:BarSeries Name="H. Courier - LAP" DataFieldY="Col_6" Stacked="true">
+                                                        <Appearance>
+                                                            <FillStyle BackgroundColor="#78909c" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>
                                                     <telerik:BarSeries Name="I. Courier - NSAP" DataFieldY="Col_7" Stacked="true">
+                                                        <Appearance>
+                                                            <FillStyle BackgroundColor="#ef5350" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>
                                                     <telerik:BarSeries Name="J. Courier - NMAP" DataFieldY="Col_8" Stacked="true">
+                                                         <Appearance>
+                                                            <FillStyle BackgroundColor="#ec407" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>
                                                     <telerik:BarSeries Name="K. Courier - NLAP" DataFieldY="Col_9" Stacked="true">
+                                                        <Appearance>
+                                                            <FillStyle BackgroundColor="#ab47bc" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>
@@ -216,42 +246,72 @@
                                             <PlotArea>
                                                 <Series>
                                                     <telerik:BarSeries Name="A. General Cargo" DataFieldY="Col_0" Stacked="true">
+                                                        <Appearance>
+                                                            <FillStyle BackgroundColor="#5c6bc0" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>
                                                     <telerik:BarSeries Name="C. Valuable Cargo" DataFieldY="Col_1" Stacked="true">
+                                                         <Appearance>
+                                                            <FillStyle BackgroundColor="#26c6da" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>
                                                     <telerik:BarSeries Name="D. Dangerous Cargo" DataFieldY="Col_2" Stacked="true">
+                                                         <Appearance>
+                                                            <FillStyle BackgroundColor="#9ccc65" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>
                                                     <telerik:BarSeries Name="E. Perishable Cargo" DataFieldY="Col_3" Stacked="true" Gap="1.5" Spacing="0.4">
+                                                         <Appearance>
+                                                            <FillStyle BackgroundColor="#ffa726" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>
                                                     <telerik:BarSeries Name="F. Courier - SAP" DataFieldY="Col_4" Stacked="true">
+                                                        <Appearance>
+                                                            <FillStyle BackgroundColor="#8d6e63" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>
                                                     <telerik:BarSeries Name="G. Courier - MAP" DataFieldY="Col_5" Stacked="true">
+                                                        <Appearance>
+                                                            <FillStyle BackgroundColor="#ff7043" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>
                                                     <telerik:BarSeries Name="H. Courier - LAP" DataFieldY="Col_6" Stacked="true">
+                                                        <Appearance>
+                                                            <FillStyle BackgroundColor="#78909c" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>
                                                     <telerik:BarSeries Name="I. Courier - NSAP" DataFieldY="Col_7" Stacked="true">
+                                                        <Appearance>
+                                                            <FillStyle BackgroundColor="#ef5350" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>
                                                     <telerik:BarSeries Name="J. Courier - NMAP" DataFieldY="Col_8" Stacked="true">
+                                                         <Appearance>
+                                                            <FillStyle BackgroundColor="#ec407" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>
                                                     <telerik:BarSeries Name="K. Courier - NLAP" DataFieldY="Col_9" Stacked="true">
+                                                        <Appearance>
+                                                            <FillStyle BackgroundColor="#ab47bc" />
+                                                        </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
                                                     </telerik:BarSeries>

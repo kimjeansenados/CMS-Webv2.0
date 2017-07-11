@@ -33,6 +33,7 @@
    cursor: default;
 }
     </style>
+
 </head>
 <body>
      <form runat="server">
@@ -51,6 +52,7 @@
                     <img runat="server" src="~/Images/logo1.png" class="imageLogo"/>
                 </div>
                 <div class="navbar-collapse collapse">
+                    
                     <ul class="nav navbar-nav imageLogo">
                         <li  runat="server"><a href="#" class="removeClass" id="Dashboard" onserverclick="clickDashboard" runat="server">Dashboard</a></li>
                         <li class="dropdown">

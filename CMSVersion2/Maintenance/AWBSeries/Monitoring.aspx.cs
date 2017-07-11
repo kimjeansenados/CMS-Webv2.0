@@ -27,6 +27,24 @@ namespace CMSVersion2.Maintenance.AWBSeries
             }
         }
 
+        protected void RadAjaxManager1_AjaxRequest(object sender, AjaxRequestEventArgs e)
+        {
+            if (e.Argument == "Rebind")
+            {
+
+                radGridAwbSeriesMonitoring.MasterTableView.SortExpressions.Clear();
+                radGridAwbSeriesMonitoring.MasterTableView.GroupByExpressions.Clear();
+                radGridAwbSeriesMonitoring.Rebind();
+            }
+            else if (e.Argument == "RebindAndNavigate")
+            {
+                radGridAwbSeriesMonitoring.MasterTableView.SortExpressions.Clear();
+                radGridAwbSeriesMonitoring.MasterTableView.GroupByExpressions.Clear();
+                radGridAwbSeriesMonitoring.MasterTableView.CurrentPageIndex = radGridAwbSeriesMonitoring.MasterTableView.PageCount - 1;
+                radGridAwbSeriesMonitoring.Rebind();
+            }
+        }
+
         #region InitLoad
         public void InitLoad()
         {

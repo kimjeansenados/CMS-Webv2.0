@@ -14,9 +14,9 @@ namespace BusinessLogic.Report
             return DAL.Reports.FLM_Qtyby_Commodity.GetQtybyCommodity(conSTR, dateFrom, dateTo, bcoId);
         }
 
-        public static DataSet GetQtybyCommodityAll(string conSTR, DateTime? dateFrom, DateTime? dateTo)
+        public static DataSet GetQtybyCommodityAll(string conSTR, DateTime? dateFrom, DateTime? dateTo, string BCO)
         {
-            return DAL.Reports.FLM_Qtyby_Commodity.GetQtybyCommodityAll(conSTR, dateFrom, dateTo);
+            return DAL.Reports.FLM_Qtyby_Commodity.GetQtybyCommodityAll(conSTR, dateFrom, dateTo, BCO);
         }
 
         public static DataSet GetWtbyCommodity(string conSTR, DateTime? dateFrom, DateTime? dateTo, string bcoId)
@@ -24,9 +24,9 @@ namespace BusinessLogic.Report
             return DAL.Reports.FLM_Qtyby_Commodity.GetWtbyCommodity(conSTR, dateFrom, dateTo, bcoId);
         }
 
-        public static DataSet GetWtbyCommodityAll(string conSTR, DateTime? dateFrom, DateTime? dateTo)
+        public static DataSet GetWtbyCommodityAll(string conSTR, DateTime? dateFrom, DateTime? dateTo, string BCO)
         {
-            return DAL.Reports.FLM_Qtyby_Commodity.GetWtbyCommodityAll(conSTR, dateFrom, dateTo);
+            return DAL.Reports.FLM_Qtyby_Commodity.GetWtbyCommodityAll(conSTR, dateFrom, dateTo, BCO);
         }
     }
 }

@@ -15,6 +15,28 @@
                     <li>Summary</li>
                 </ol>
             </div>
+
+
+               
+            <telerik:RadAjaxPanel ID="RadAjaxPanel1" runat="server" LoadingPanelID="RadAjaxLoadingPanel1">
+
+                 <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server" OnAjaxRequest="RadAjaxManager1_AjaxRequest">
+                            <AjaxSettings>
+                                <telerik:AjaxSetting AjaxControlID="RadAjaxManager1">
+                                    <UpdatedControls>
+                                        <telerik:AjaxUpdatedControl ControlID="RadGrid2" LoadingPanelID="gridLoadingPanel"></telerik:AjaxUpdatedControl>
+                                    </UpdatedControls>
+                                </telerik:AjaxSetting>
+                                <telerik:AjaxSetting AjaxControlID="radgrid2">
+                                    <UpdatedControls>
+                                        <telerik:AjaxUpdatedControl ControlID="RadGrid2" LoadingPanelID="gridLoadingPanel"></telerik:AjaxUpdatedControl>
+                                    </UpdatedControls>
+                                </telerik:AjaxSetting>
+                            </AjaxSettings>
+                        </telerik:RadAjaxManager>
+
+                <telerik:RadAjaxLoadingPanel ID="gridLoadingPanel" runat="server">
+            </telerik:RadAjaxLoadingPanel>
                <div class="row">
                    <div class="col-md-12">
                       <telerik:RadLabel ID="lblDateFrom" runat="server" Text="Date From:"></telerik:RadLabel>
@@ -33,6 +55,8 @@
                </div>
                <br />
                
+
+
 
 
                <div class="row">
@@ -83,6 +107,19 @@
                     </telerik:RadGrid><!--RadGrid - radGridAwbIssuance-->
                    <br />
                </div><!--row-->
+                </telerik:RadAjaxPanel>
+                <telerik:RadCodeBlock runat="server">
+                    <script type="text/javascript">
+                                 function refreshGrid(arg) {
+                                    if (!arg) {
+                                        $find("<%= RadAjaxManager1.ClientID %>").ajaxRequest("Rebind");
+                                    }
+                                    else {
+                                        $find("<%= RadAjaxManager1.ClientID %>").ajaxRequest("RebindAndNavigate");
+                                    }
+                                }
+                    </script>
+                </telerik:RadCodeBlock>
            </div><!--container-->
        </div><!--page-wrapper-->
    </div><!--wrapper-->         

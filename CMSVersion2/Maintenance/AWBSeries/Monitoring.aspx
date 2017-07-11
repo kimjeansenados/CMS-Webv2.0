@@ -18,6 +18,13 @@
                        <hr />
                    </div>
                </div><!--row-->
+
+               <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server">
+            </telerik:RadAjaxLoadingPanel>
+            <telerik:RadAjaxPanel ID="RadAjaxPanel1" runat="server" LoadingPanelID="RadAjaxLoadingPanel1">
+       
+                       
+
                <div class="row">
                    <div class="col-md-12">
                        <telerik:RadLabel ID="lblBco" runat="server" Text="BCO:"></telerik:RadLabel>
@@ -72,8 +79,6 @@
                </div>
                <br />
                
-
-
                <div class="row">
 
                    <telerik:RadGrid runat="server" Skin="Glow" 
@@ -144,6 +149,19 @@
                     </telerik:RadGrid><!--RadGrid - radGridAwbIssuance-->
                    <br />
                </div><!--row-->
+        </telerik:RadAjaxPanel>
+               <telerik:RadCodeBlock runat="server">
+                   <script type="text/javascript">
+                            function onRequestStart(sender, args) {
+                                if (args.get_eventTarget().indexOf("Button") >= 0) {
+                                    args.set_enableAjax(false);
+                                }
+                            }
+
+                        
+                    </script>
+
+                </telerik:RadCodeBlock>
            </div><!--container-->
        </div><!--page-wrapper-->
    </div><!--wrapper-->        
