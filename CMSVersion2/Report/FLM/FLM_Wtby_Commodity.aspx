@@ -70,19 +70,18 @@
                             ShowAddNewRecordButton="false"  ShowRefreshButton="false" />
                        
                         <Columns>
-                            <telerik:GridBoundColumn DataField="CityName" HeaderText="Destination" FooterText="Total: " ></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="Col_0" HeaderText="A. General Cargo" Aggregate="Sum"  FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="Col_1" HeaderText="C. Valuable Cargo" Aggregate="Sum"  FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="Col_2" HeaderText="D. Dangerous Cargo"  Aggregate="Sum" FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="Col_3" HeaderText="E. Perishable Cargo" Aggregate="Sum"   FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="Col_4" HeaderText="F. Courier - SAP" Aggregate="Sum"  FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="Col_5" HeaderText="G. Courier - MAP"  Aggregate="Sum"  FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="Col_6" HeaderText="H. Courier - LAP" Aggregate="Sum"  FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="Col_7" HeaderText="I. Courier - NSAP" Aggregate="Sum"  FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="Col_8" HeaderText="J. Courier - NMAP" Aggregate="Sum"  FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
-                            <telerik:GridBoundColumn DataField="Col_9" HeaderText="K. Courier - NLAP" Aggregate="Sum"   FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
-                            
-                            <telerik:GridCalculatedColumn HeaderText="TOTAL" DataType="System.Double" DataFields="Col_0,Col_1,Col_2,Col_3,Col_4,Col_5,Col_6,Col_7,Col_8,Col_9" Expression="{0}+{1}+{2}+{3}+{4}+{5}+{6}+{7}+{8}+{9}" FooterText=" " Aggregate="Sum" ItemStyle-HorizontalAlign="Right">
+                           <telerik:GridBoundColumn DataField="CityName" HeaderText="Destination" FooterText="Total: "></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="General1Cargo" HeaderText="General Cargo" Aggregate="Sum"  FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="Valuable1Cargo" HeaderText="Valuable Cargo" Aggregate="Sum"  FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="Dangerous1Cargo" HeaderText="Dangerous Cargo"  Aggregate="Sum" FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="Perishable1Cargo" HeaderText="Perishable Cargo" Aggregate="Sum"   FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="Courier1_1SAP" HeaderText="Courier - SAP" Aggregate="Sum"  FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="Courier1_1MAP" HeaderText="Courier - MAP"  Aggregate="Sum"  FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="Courier1_1LAP" HeaderText="Courier - LAP" Aggregate="Sum"  FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="Courier1_1NSAP" HeaderText="Courier - NSAP" Aggregate="Sum"  FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="Courier1_1NMAP" HeaderText="Courier - NMAP" Aggregate="Sum"  FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="Courier1_1NLAP" HeaderText="Courier - NLAP" Aggregate="Sum"   FooterText=" " ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
+                            <telerik:GridCalculatedColumn HeaderText="TOTAL" DataType="System.Double" DataFields="General1Cargo,Valuable1Cargo,Dangerous1Cargo,Perishable1Cargo,Courier1_1SAP,Courier1_1MAP,Courier1_1LAP,Courier1_1NSAP,Courier1_1NMAP,Courier1_1NLAP" Expression="{0}+{1}+{2}+{3}+{4}+{5}+{6}+{7}+{8}+{9}" FooterText=" " Aggregate="Sum" ItemStyle-HorizontalAlign="Right">
                             </telerik:GridCalculatedColumn>
                             
                         </Columns>

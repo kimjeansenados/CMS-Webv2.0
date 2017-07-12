@@ -38,9 +38,9 @@ namespace CMSVersion2
         {
 
             #region Check if User can login to Web
-            
+
             // Initialize FormsAuthentication, for what it's worth
-           FormsAuthentication.Initialize();
+            FormsAuthentication.Initialize();
             bool canLogin = false;
             bool firstLogin = false;
             string fullname = "";
@@ -91,7 +91,7 @@ namespace CMSVersion2
             {
                 e.Authenticated = true;
                 FormsAuthentication.SetAuthCookie(Login1.UserName, true);
-                
+
 
                 byte[] EncryptedUsername = Tools.Encryption.EncryptPassword(Login1.UserName);
                 foreach (string item in listofRoles)
@@ -219,7 +219,7 @@ namespace CMSVersion2
                                 //Response.Redirect("~/Default.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
                                 //Response.Redirect("~/Settings/ManagePassword.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
                                 string result = BLL.UserRole.MenuFirstAccess(firstAccess, getConstr.ConStrCMS);
-                                if(result.Equals("NONE"))
+                                if (result.Equals("NONE"))
                                 {
                                     Response.Redirect("~/Settings/ManagePassword.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
                                 }
@@ -228,7 +228,7 @@ namespace CMSVersion2
                                     string port = result + "?PortalID=";
                                     Response.Redirect(port + Encoding.Unicode.GetString(EncryptedUsername));
                                 }
-                                
+
                             }
                         }
                     }
@@ -278,7 +278,7 @@ namespace CMSVersion2
             listofMenuAccess = getAccessMenuByUserName(Login1.UserName);
 
             result = listofMenu.Intersect(listofMenuAccess).ToList();
-           
+
             foreach (string row in result)
             {
                 UserAccessMenu useraccessModel = new UserAccessMenu();

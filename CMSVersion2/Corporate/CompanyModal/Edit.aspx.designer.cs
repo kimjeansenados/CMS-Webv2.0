@@ -76,58 +76,13 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadPageView RadPageView1;
         
         /// <summary>
-        /// Label1 control.
+        /// lbl_Fname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
-        /// Label3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
-        
-        /// <summary>
-        /// Label4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
-        
-        /// <summary>
-        /// Label5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
-        
-        /// <summary>
-        /// Label6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
-        
-        /// <summary>
-        /// Label46 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label46;
+        protected global::Telerik.Web.UI.RadLabel lbl_Fname;
         
         /// <summary>
         /// txtCompInfoAccountNo control.
@@ -139,6 +94,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadTextBox txtCompInfoAccountNo;
         
         /// <summary>
+        /// RadLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel1;
+        
+        /// <summary>
         /// txtCompInfoCompanyName control.
         /// </summary>
         /// <remarks>
@@ -146,6 +110,24 @@ namespace CMSVersion2.Corporate.CompanyModal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtCompInfoCompanyName;
+        
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
+        /// RadLabel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel2;
         
         /// <summary>
         /// txtCompInfoAddress1 control.
@@ -157,6 +139,24 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadTextBox txtCompInfoAddress1;
         
         /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        
+        /// <summary>
+        /// RadLabel3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel3;
+        
+        /// <summary>
         /// txtCompInfoAdress2 control.
         /// </summary>
         /// <remarks>
@@ -164,6 +164,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtCompInfoAdress2;
+        
+        /// <summary>
+        /// RadLabel4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel4;
         
         /// <summary>
         /// rcbCompInfoCity control.
@@ -175,6 +184,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadComboBox rcbCompInfoCity;
         
         /// <summary>
+        /// RadLabel5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel5;
+        
+        /// <summary>
         /// txtCompInfozipCode control.
         /// </summary>
         /// <remarks>
@@ -184,58 +202,13 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadTextBox txtCompInfozipCode;
         
         /// <summary>
-        /// Label7 control.
+        /// RadLabel6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
-        
-        /// <summary>
-        /// Label2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
-        
-        /// <summary>
-        /// Label9 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
-        
-        /// <summary>
-        /// Label10 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
-        
-        /// <summary>
-        /// Label11 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label11;
-        
-        /// <summary>
-        /// Label12 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label12;
+        protected global::Telerik.Web.UI.RadLabel RadLabel6;
         
         /// <summary>
         /// rcbCompInfoIndustry control.
@@ -247,13 +220,49 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadComboBox rcbCompInfoIndustry;
         
         /// <summary>
+        /// RadLabel7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel7;
+        
+        /// <summary>
         /// txtContactNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadTextBox txtContactNo;
+        protected global::Telerik.Web.UI.RadMaskedTextBox txtContactNo;
+        
+        /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        
+        /// <summary>
+        /// MaskedTextBoxRegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator MaskedTextBoxRegularExpressionValidator;
+        
+        /// <summary>
+        /// RadLabel8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel8;
         
         /// <summary>
         /// txtCompInfoTin control.
@@ -265,6 +274,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadTextBox txtCompInfoTin;
         
         /// <summary>
+        /// RadLabel9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel9;
+        
+        /// <summary>
         /// txtCompInfoWebsite control.
         /// </summary>
         /// <remarks>
@@ -274,6 +292,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadTextBox txtCompInfoWebsite;
         
         /// <summary>
+        /// RadLabel10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel10;
+        
+        /// <summary>
         /// txtCompInfoEmail control.
         /// </summary>
         /// <remarks>
@@ -281,6 +308,24 @@ namespace CMSVersion2.Corporate.CompanyModal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtCompInfoEmail;
+        
+        /// <summary>
+        /// emailValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator emailValidator;
+        
+        /// <summary>
+        /// RadLabel11 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel11;
         
         /// <summary>
         /// txtCompInfoPresident control.
@@ -301,31 +346,13 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadPageView RadPageView2;
         
         /// <summary>
-        /// Label8 control.
+        /// RadLabel12 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
-        
-        /// <summary>
-        /// Label13 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label13;
-        
-        /// <summary>
-        /// Label14 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label14;
+        protected global::Telerik.Web.UI.RadLabel RadLabel12;
         
         /// <summary>
         /// txtContactInContacPerson control.
@@ -337,6 +364,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadTextBox txtContactInContacPerson;
         
         /// <summary>
+        /// RadLabel13 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel13;
+        
+        /// <summary>
         /// txtContactInfoPostion control.
         /// </summary>
         /// <remarks>
@@ -344,6 +380,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtContactInfoPostion;
+        
+        /// <summary>
+        /// RadLabel14 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel14;
         
         /// <summary>
         /// txtContactInfoDept control.
@@ -355,40 +400,13 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadTextBox txtContactInfoDept;
         
         /// <summary>
-        /// Label15 control.
+        /// RadLabel15 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label15;
-        
-        /// <summary>
-        /// Label45 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label45;
-        
-        /// <summary>
-        /// Label16 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label16;
-        
-        /// <summary>
-        /// Label17 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label17;
+        protected global::Telerik.Web.UI.RadLabel RadLabel15;
         
         /// <summary>
         /// txtContactInfoMobile control.
@@ -397,7 +415,16 @@ namespace CMSVersion2.Corporate.CompanyModal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadTextBox txtContactInfoMobile;
+        protected global::Telerik.Web.UI.RadMaskedTextBox txtContactInfoMobile;
+        
+        /// <summary>
+        /// RadLabel16 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel16;
         
         /// <summary>
         /// txtContactInfoTelNo control.
@@ -406,7 +433,25 @@ namespace CMSVersion2.Corporate.CompanyModal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadTextBox txtContactInfoTelNo;
+        protected global::Telerik.Web.UI.RadMaskedTextBox txtContactInfoTelNo;
+        
+        /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        
+        /// <summary>
+        /// RadLabel17 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel17;
         
         /// <summary>
         /// txtContactInfoEmail control.
@@ -416,6 +461,24 @@ namespace CMSVersion2.Corporate.CompanyModal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtContactInfoEmail;
+        
+        /// <summary>
+        /// RegularExpressionValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
+        
+        /// <summary>
+        /// RadLabel18 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel18;
         
         /// <summary>
         /// txtContactInfoFax control.
@@ -436,67 +499,13 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadPageView RadPageView3;
         
         /// <summary>
-        /// Label18 control.
+        /// RadLabel19 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label18;
-        
-        /// <summary>
-        /// Label19 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label19;
-        
-        /// <summary>
-        /// Label20 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label20;
-        
-        /// <summary>
-        /// Label21 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label21;
-        
-        /// <summary>
-        /// Label22 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label22;
-        
-        /// <summary>
-        /// Label23 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label23;
-        
-        /// <summary>
-        /// Label24 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label24;
+        protected global::Telerik.Web.UI.RadLabel RadLabel19;
         
         /// <summary>
         /// rcbAccountType control.
@@ -508,6 +517,24 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadComboBox rcbAccountType;
         
         /// <summary>
+        /// RequiredFieldValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+        
+        /// <summary>
+        /// RadLabel20 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel20;
+        
+        /// <summary>
         /// rcbAccountStatus control.
         /// </summary>
         /// <remarks>
@@ -515,6 +542,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadComboBox rcbAccountStatus;
+        
+        /// <summary>
+        /// RadLabel21 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel21;
         
         /// <summary>
         /// rcbAcctInfoOrganizationType control.
@@ -526,6 +562,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadComboBox rcbAcctInfoOrganizationType;
         
         /// <summary>
+        /// RadLabel22 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel22;
+        
+        /// <summary>
         /// rcbAcctInfoMotherCompany control.
         /// </summary>
         /// <remarks>
@@ -533,6 +578,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadComboBox rcbAcctInfoMotherCompany;
+        
+        /// <summary>
+        /// RadLabel23 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel23;
         
         /// <summary>
         /// rcbBusinessType control.
@@ -544,6 +598,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadComboBox rcbBusinessType;
         
         /// <summary>
+        /// RadLabel24 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel24;
+        
+        /// <summary>
         /// rcbBillingPeriod control.
         /// </summary>
         /// <remarks>
@@ -551,6 +614,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadComboBox rcbBillingPeriod;
+        
+        /// <summary>
+        /// RadLabel25 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel25;
         
         /// <summary>
         /// rcbPaymentTerm control.
@@ -562,76 +634,13 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadComboBox rcbPaymentTerm;
         
         /// <summary>
-        /// Label25 control.
+        /// RadLabel26 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label25;
-        
-        /// <summary>
-        /// Label26 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label26;
-        
-        /// <summary>
-        /// Label27 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label27;
-        
-        /// <summary>
-        /// Label28 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label28;
-        
-        /// <summary>
-        /// Label29 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label29;
-        
-        /// <summary>
-        /// Label30 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label30;
-        
-        /// <summary>
-        /// Label31 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label31;
-        
-        /// <summary>
-        /// Label32 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label32;
+        protected global::Telerik.Web.UI.RadLabel RadLabel26;
         
         /// <summary>
         /// rcbPaymentMode control.
@@ -643,6 +652,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadComboBox rcbPaymentMode;
         
         /// <summary>
+        /// RadLabel27 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel27;
+        
+        /// <summary>
         /// dateApproved control.
         /// </summary>
         /// <remarks>
@@ -650,6 +668,24 @@ namespace CMSVersion2.Corporate.CompanyModal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadDatePicker dateApproved;
+        
+        /// <summary>
+        /// RequiredFieldValidator_DateApproved control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_DateApproved;
+        
+        /// <summary>
+        /// RadLabel28 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel28;
         
         /// <summary>
         /// rcbApprovedBy control.
@@ -661,6 +697,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadComboBox rcbApprovedBy;
         
         /// <summary>
+        /// RadLabel29 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel29;
+        
+        /// <summary>
         /// rcbBCO control.
         /// </summary>
         /// <remarks>
@@ -668,6 +713,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadComboBox rcbBCO;
+        
+        /// <summary>
+        /// RadLabel30 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel30;
         
         /// <summary>
         /// rcbArea control.
@@ -679,6 +733,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadComboBox rcbArea;
         
         /// <summary>
+        /// RadLabel31 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel31;
+        
+        /// <summary>
         /// txtAcctDiscount control.
         /// </summary>
         /// <remarks>
@@ -686,6 +749,24 @@ namespace CMSVersion2.Corporate.CompanyModal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtAcctDiscount;
+        
+        /// <summary>
+        /// RequiredFieldValidator6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
+        
+        /// <summary>
+        /// RadLabel32 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel32;
         
         /// <summary>
         /// txtAcctTax control.
@@ -697,6 +778,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadTextBox txtAcctTax;
         
         /// <summary>
+        /// RadLabel33 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel33;
+        
+        /// <summary>
         /// txtAcctCreditLimit control.
         /// </summary>
         /// <remarks>
@@ -704,6 +794,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtAcctCreditLimit;
+        
+        /// <summary>
+        /// RequiredFieldValidator7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
         
         /// <summary>
         /// RadPageView4 control.
@@ -850,58 +949,13 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadPageView RadPageView5;
         
         /// <summary>
-        /// Label34 control.
+        /// RadLabel34 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label34;
-        
-        /// <summary>
-        /// Label35 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label35;
-        
-        /// <summary>
-        /// Label36 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label36;
-        
-        /// <summary>
-        /// Label37 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label37;
-        
-        /// <summary>
-        /// Label38 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label38;
-        
-        /// <summary>
-        /// Label39 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label39;
+        protected global::Telerik.Web.UI.RadLabel RadLabel34;
         
         /// <summary>
         /// txtBillingInfoAdd1 control.
@@ -913,6 +967,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadTextBox txtBillingInfoAdd1;
         
         /// <summary>
+        /// RadLabel35 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel35;
+        
+        /// <summary>
         /// txtBillingInfoAdd2 control.
         /// </summary>
         /// <remarks>
@@ -920,6 +983,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtBillingInfoAdd2;
+        
+        /// <summary>
+        /// RadLabel36 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel36;
         
         /// <summary>
         /// rcbBillingInfoCity control.
@@ -931,6 +1003,24 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadComboBox rcbBillingInfoCity;
         
         /// <summary>
+        /// RequiredFieldValidator5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
+        
+        /// <summary>
+        /// RadLabel37 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel37;
+        
+        /// <summary>
         /// txtBillingInfoZipCode control.
         /// </summary>
         /// <remarks>
@@ -938,6 +1028,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtBillingInfoZipCode;
+        
+        /// <summary>
+        /// RadLabel38 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel38;
         
         /// <summary>
         /// txtBillingInfoContactPerson control.
@@ -949,6 +1048,15 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadTextBox txtBillingInfoContactPerson;
         
         /// <summary>
+        /// RadLabel39 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel39;
+        
+        /// <summary>
         /// txtBillingInfoPosition control.
         /// </summary>
         /// <remarks>
@@ -958,49 +1066,13 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadTextBox txtBillingInfoPosition;
         
         /// <summary>
-        /// Label40 control.
+        /// RadLabel40 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label40;
-        
-        /// <summary>
-        /// Label41 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label41;
-        
-        /// <summary>
-        /// Label42 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label42;
-        
-        /// <summary>
-        /// Label43 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label43;
-        
-        /// <summary>
-        /// Label44 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label44;
+        protected global::Telerik.Web.UI.RadLabel RadLabel40;
         
         /// <summary>
         /// txtBillingInfoDept control.
@@ -1012,13 +1084,40 @@ namespace CMSVersion2.Corporate.CompanyModal {
         protected global::Telerik.Web.UI.RadTextBox txtBillingInfoDept;
         
         /// <summary>
+        /// RadLabel41 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel41;
+        
+        /// <summary>
         /// txtBillingInfoContactNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadTextBox txtBillingInfoContactNo;
+        protected global::Telerik.Web.UI.RadMaskedTextBox txtBillingInfoContactNo;
+        
+        /// <summary>
+        /// RegularExpressionValidator5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator5;
+        
+        /// <summary>
+        /// RadLabel42 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel42;
         
         /// <summary>
         /// txtBillingInfoMobileNo control.
@@ -1027,7 +1126,16 @@ namespace CMSVersion2.Corporate.CompanyModal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadTextBox txtBillingInfoMobileNo;
+        protected global::Telerik.Web.UI.RadMaskedTextBox txtBillingInfoMobileNo;
+        
+        /// <summary>
+        /// RadLabel43 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel43;
         
         /// <summary>
         /// txtBillingInfoEmail control.
@@ -1037,6 +1145,24 @@ namespace CMSVersion2.Corporate.CompanyModal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtBillingInfoEmail;
+        
+        /// <summary>
+        /// RegularExpressionValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator4;
+        
+        /// <summary>
+        /// RadLabel44 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel44;
         
         /// <summary>
         /// txtBillingInfoFax control.

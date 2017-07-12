@@ -38,12 +38,20 @@ namespace CMSVersion2
             {
                 Response.Redirect("~/Login.aspx");
             }
+            //else
+            //{
+            //    Session["FullNameSession"] = true;
+            //    Session["UserNameSession"] = true;
+            //    Session["UserIdSession"] = true;
+
+            //    Application["Username"] = true;
+            //}
 
         }
 
         void Application_BeginRequest(object sender, EventArgs e)
         {
-          
+
         }
 
         //protected void Application_EndRequest(object sender, EventArgs e)
@@ -53,19 +61,19 @@ namespace CMSVersion2
 
         protected void Application_AuthenticateRequest(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void Application_Error(Object sender, EventArgs e)
         {
-            
+
         }
 
         protected void Session_End(Object sender, EventArgs e)
         {
             //EndSession();
         }
-        
+
         protected void Application_PreRequestHandlerExecute(object sender, EventArgs e)
         {
             bool executed = false;

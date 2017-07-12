@@ -261,7 +261,10 @@
         KKACiiigAooooAKKKKACiiigD//Z
 </value>
   </data>
-  <metadata name="$this.Zoom" type="System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>0.6666667</value>
-  </metadata>
+  <data name="textBox42.Value" xml:space="preserve">
+    <value>= ((Fields.General1Cargo) + (Fields.Valuable1Cargo) + (Fields.Dangerous1Cargo) + (Fields.Perishable1Cargo) + (Fields.Courier1_1SAP) + (Fields.Courier1_1MAP) + (Fields.Courier1_1LAP) + (Fields.Courier1_1NSAP) + (Fields.Courier1_1NMAP) + (Fields.Courier1_1NLAP))</value>
+  </data>
+  <data name="textBox43.Value" xml:space="preserve">
+    <value>= SUM(CDbl(((Fields.General1Cargo) + (Fields.Valuable1Cargo) + (Fields.Dangerous1Cargo) + (Fields.Perishable1Cargo) + (Fields.Courier1_1SAP) + (Fields.Courier1_1MAP) + (Fields.Courier1_1LAP) + (Fields.Courier1_1NSAP) + (Fields.Courier1_1NMAP) + (Fields.Courier1_1NLAP))))</value>
+  </data>
 </root>

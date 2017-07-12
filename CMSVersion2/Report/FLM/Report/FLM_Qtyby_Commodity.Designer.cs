@@ -522,7 +522,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox4.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox4.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox4.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox4.Value = "=Fields.Col_0";
+            this.textBox4.Value = "=Fields.General1Cargo";
             // 
             // textBox6
             // 
@@ -531,7 +531,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox6.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox6.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox6.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox6.Value = "=Fields.Col_1";
+            this.textBox6.Value = "=Fields.Valuable1Cargo";
             // 
             // textBox7
             // 
@@ -549,7 +549,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox8.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox8.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox8.StyleName = "";
-            this.textBox8.Value = "= SUM(CDbl(Fields.Col_0))";
+            this.textBox8.Value = "= SUM(CDbl(Fields.General1Cargo))";
             // 
             // textBox9
             // 
@@ -558,7 +558,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox9.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox9.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox9.StyleName = "";
-            this.textBox9.Value = "= SUM(CDbl(Fields.Col_1))";
+            this.textBox9.Value = "= SUM(CDbl(Fields.Valuable1Cargo))";
             // 
             // textBox11
             // 
@@ -568,7 +568,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox11.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox11.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox11.StyleName = "";
-            this.textBox11.Value = "=Fields.Col_2";
+            this.textBox11.Value = "=Fields.Dangerous1Cargo";
             // 
             // textBox12
             // 
@@ -577,7 +577,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox12.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox12.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox12.StyleName = "";
-            this.textBox12.Value = "= SUM(CDbl(Fields.Col_2))";
+            this.textBox12.Value = "= SUM(CDbl(Fields.Dangerous1Cargo))";
             // 
             // textBox14
             // 
@@ -587,7 +587,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox14.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox14.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox14.StyleName = "";
-            this.textBox14.Value = "=Fields.Col_3";
+            this.textBox14.Value = "=Fields.Perishable1Cargo";
             // 
             // textBox15
             // 
@@ -596,7 +596,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox15.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox15.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox15.StyleName = "";
-            this.textBox15.Value = "= SUM(CDbl(Fields.Col_3))";
+            this.textBox15.Value = "= SUM(CDbl(Fields.Perishable1Cargo))";
             // 
             // textBox17
             // 
@@ -606,7 +606,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox17.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox17.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox17.StyleName = "";
-            this.textBox17.Value = "=Fields.Col_4";
+            this.textBox17.Value = "=Fields.Courier1_1SAP";
             // 
             // textBox18
             // 
@@ -615,7 +615,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox18.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox18.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox18.StyleName = "";
-            this.textBox18.Value = "= SUM(CDbl(Fields.Col_4))";
+            this.textBox18.Value = "= SUM(CDbl(Fields.Courier1_1SAP))";
             // 
             // textBox20
             // 
@@ -625,7 +625,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox20.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox20.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox20.StyleName = "";
-            this.textBox20.Value = "=Fields.Col_5";
+            this.textBox20.Value = "=Fields.Courier1_1MAP";
             // 
             // textBox21
             // 
@@ -634,7 +634,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox21.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox21.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox21.StyleName = "";
-            this.textBox21.Value = "= SUM(CDbl(Fields.Col_5))";
+            this.textBox21.Value = "= SUM(CDbl(Fields.Courier1_1MAP))";
             // 
             // textBox23
             // 
@@ -644,7 +644,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox23.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox23.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox23.StyleName = "";
-            this.textBox23.Value = "=Fields.Col_6";
+            this.textBox23.Value = "=Fields.Courier1_1LAP";
             // 
             // textBox24
             // 
@@ -653,7 +653,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox24.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox24.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox24.StyleName = "";
-            this.textBox24.Value = "= SUM(CDbl(Fields.Col_6))";
+            this.textBox24.Value = "= SUM(CDbl(Fields.Courier1_1LAP))";
             // 
             // textBox26
             // 
@@ -663,7 +663,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox26.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox26.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox26.StyleName = "";
-            this.textBox26.Value = "=Fields.Col_7";
+            this.textBox26.Value = "=Fields.Courier1_1NSAP";
             // 
             // textBox27
             // 
@@ -672,7 +672,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox27.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox27.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox27.StyleName = "";
-            this.textBox27.Value = "= SUM(CDbl(Fields.Col_7))";
+            this.textBox27.Value = "= SUM(CDbl(Fields.Courier1_1NSAP))";
             // 
             // textBox29
             // 
@@ -682,7 +682,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox29.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox29.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox29.StyleName = "";
-            this.textBox29.Value = "=Fields.Col_8";
+            this.textBox29.Value = "=Fields.Courier1_1NMAP";
             // 
             // textBox30
             // 
@@ -691,7 +691,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox30.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox30.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox30.StyleName = "";
-            this.textBox30.Value = "= SUM(CDbl(Fields.Col_7))";
+            this.textBox30.Value = "= SUM(CDbl(Fields.Courier1_1NMAP))";
             // 
             // textBox34
             // 
@@ -701,7 +701,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox34.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox34.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox34.StyleName = "";
-            this.textBox34.Value = "=Fields.Col_9";
+            this.textBox34.Value = "=Fields.Courier1_1NLAP";
             // 
             // textBox36
             // 
@@ -710,7 +710,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox36.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox36.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox36.StyleName = "";
-            this.textBox36.Value = "= SUM(CDbl(Fields.Col_8))";
+            this.textBox36.Value = "= SUM(CDbl(Fields.Courier1_1NLAP))";
             // 
             // textBox42
             // 
@@ -720,9 +720,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox42.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox42.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox42.StyleName = "";
-            this.textBox42.Value = "= ((Fields.Col_0) + (Fields.Col_1) + (Fields.Col_2) + (Fields.Col_3) + (Fields.Co" +
-    "l_4) + (Fields.Col_5) + (Fields.Col_6) + (Fields.Col_7) + (Fields.Col_8) + (Fiel" +
-    "ds.Col_9))";
+            this.textBox42.Value = resources.GetString("textBox42.Value");
             // 
             // textBox43
             // 
@@ -731,9 +729,7 @@ namespace CMSVersion2.Report.FLM.Report
             this.textBox43.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox43.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox43.StyleName = "";
-            this.textBox43.Value = "= SUM(CDbl(((Fields.Col_0) + (Fields.Col_1) + (Fields.Col_2) + (Fields.Col_3) + (" +
-    "Fields.Col_4) + (Fields.Col_5) + (Fields.Col_6) + (Fields.Col_7) + (Fields.Col_8" +
-    ") + (Fields.Col_9))))";
+            this.textBox43.Value = resources.GetString("textBox43.Value");
             // 
             // objectDataSource1
             // 

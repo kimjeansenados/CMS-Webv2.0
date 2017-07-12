@@ -9,6 +9,7 @@ using BLL = BusinessLogic;
 using Tools = utilities;
 using DAL = DataAccess;
 using System.Data;
+using Telerik.Web.UI;
 
 namespace CMSVersion2
 {
@@ -160,18 +161,76 @@ namespace CMSVersion2
 
         protected void WtbyCommodityTypeChart_Load(object sender, EventArgs e)
         {
+            //DataSet myDS = getWtbyCommodity();
+            //WtbyCommodityTypeChart.DataSource = myDS;
+            //WtbyCommodityTypeChart.DataBind();
+            //WtbyCommodityTypeChart.PlotArea.XAxis.DataLabelsField = "CityName";
+
             DataSet myDS = getWtbyCommodity();
-            WtbyCommodityTypeChart.DataSource = myDS;
-            WtbyCommodityTypeChart.DataBind();
+            DataTable dt = new DataTable();
+            dt = myDS.Tables[0];
+            WtbyCommodityTypeChart.PlotArea.Series.Clear();
+
+            int numSeries = dt.Columns.Count - 1;
+            for (int i = 0; i < numSeries; i++)
+            {
+                BarSeries newSeries = new BarSeries();
+                newSeries.Stacked = true;
+                string name = dt.Columns[1 + i].Caption;
+                newSeries.DataFieldY = dt.Columns[1 + i].Caption;
+                newSeries.Name = (name.Replace("_", "-")).Replace("1", " ");
+                newSeries.LabelsAppearance.Visible = false;
+                newSeries.LabelsAppearance.Position = Telerik.Web.UI.HtmlChart.BarColumnLabelsPosition.OutsideEnd;
+                newSeries.LabelsAppearance.DataFormatString = "{0}";
+                newSeries.TooltipsAppearance.DataFormatString = "{0}";
+                WtbyCommodityTypeChart.PlotArea.Series.Add(newSeries);
+            }
+
             WtbyCommodityTypeChart.PlotArea.XAxis.DataLabelsField = "CityName";
+            WtbyCommodityTypeChart.DataSource = dt;
+            WtbyCommodityTypeChart.DataBind();
+
         }
 
         protected void QtybyCommodityTypeChart_Load(object sender, EventArgs e)
         {
             DataSet myDS = getQtybyCommodity();
-            QtybyCommodityTypeChart.DataSource = myDS;
-            QtybyCommodityTypeChart.DataBind();
+            DataTable dt = new DataTable();
+            dt = myDS.Tables[0];
+
+            QtybyCommodityTypeChart.PlotArea.Series.Clear();
+
+            int numSeries = dt.Columns.Count - 1;
+            for (int i = 0; i < numSeries; i++)
+            {
+                BarSeries newSeries = new BarSeries();
+                newSeries.Stacked = true;
+                string name = dt.Columns[1 + i].Caption;
+                newSeries.DataFieldY = dt.Columns[1 + i].Caption;
+                newSeries.Name = (name.Replace("_", "-")).Replace("1"," ");
+                newSeries.LabelsAppearance.Visible = false;
+                newSeries.LabelsAppearance.Position = Telerik.Web.UI.HtmlChart.BarColumnLabelsPosition.OutsideEnd;
+                newSeries.LabelsAppearance.DataFormatString = "{0}";
+                newSeries.TooltipsAppearance.DataFormatString = "{0}";
+                QtybyCommodityTypeChart.PlotArea.Series.Add(newSeries);
+            }
+
             QtybyCommodityTypeChart.PlotArea.XAxis.DataLabelsField = "CityName";
+            QtybyCommodityTypeChart.DataSource = dt;
+            QtybyCommodityTypeChart.DataBind();
+           
+
+
+            //QtybyCommodityTypeChart.PlotArea.Series.Clear();
+            //QtybyCommodityTypeChart.PlotArea.XAxis.Items.Clear();
+            ////foreach (DataRow row in myDS.Tables[0].Rows)
+            //{
+            //    BarSeries newSeries = new BarSeries();
+            //    newSeries.Name = row.Field
+            //    newSeries.Stacked = true;
+            //    QtybyCommodityTypeChart.PlotArea.Series.Add(newSeries);
+            //}
+
         }
 
         protected void QtybyCommodityTypeChart_PreRender(object sender, EventArgs e)

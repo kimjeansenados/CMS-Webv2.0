@@ -90,7 +90,8 @@ namespace CMSVersion2.Report.FLM
 
         protected void grid_QtyByCommodity_NeedDataSource(object sender, Telerik.Web.UI.GridNeedDataSourceEventArgs e)
         {
-            grid_QtyByCommodity.DataSource = getQtybyCommodity();
+           grid_QtyByCommodity.DataSource = getQtybyCommodity();
+          
         }
 
         protected void grid_QtyByCommodity_PreRender(object sender, EventArgs e)

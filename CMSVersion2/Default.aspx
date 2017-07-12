@@ -114,7 +114,7 @@
                                         <telerik:RadHtmlChart runat="server" OnLoad="QtybyCommodityTypeChart_Load" OnPreRender="QtybyCommodityTypeChart_PreRender" ID="QtybyCommodityTypeChart" Width="100%" Height="100%" Transitions="true" Skin="Silk">
                                             <PlotArea>
                                                 <Series>
-                                                    <telerik:BarSeries Name="A. General Cargo" DataFieldY="Col_0" Stacked="true">
+                                                  <%--  <telerik:BarSeries Name="[]" DataFieldY="[a gargfg ]" Stacked="true">
                                                         <Appearance>
                                                             <FillStyle BackgroundColor="#5c6bc0" />
                                                         </Appearance>
@@ -183,7 +183,7 @@
                                                         </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
-                                                    </telerik:BarSeries>
+                                                    </telerik:BarSeries>--%>
                                                 </Series>
                                                 <Appearance>
                                                     <FillStyle BackgroundColor="White" />
@@ -245,7 +245,7 @@
                                         <telerik:RadHtmlChart OnLoad="WtbyCommodityTypeChart_Load" runat="server" ID="WtbyCommodityTypeChart" Width="100%" Height="100%" Transitions="true" Skin="Silk">
                                             <PlotArea>
                                                 <Series>
-                                                    <telerik:BarSeries Name="A. General Cargo" DataFieldY="Col_0" Stacked="true">
+                                                   <%-- <telerik:BarSeries Name="A. General Cargo" DataFieldY="Col_0" Stacked="true">
                                                         <Appearance>
                                                             <FillStyle BackgroundColor="#5c6bc0" />
                                                         </Appearance>
@@ -314,7 +314,7 @@
                                                         </Appearance>
                                                         <LabelsAppearance DataFormatString="{0}" Position="OutsideEnd" Visible="false"></LabelsAppearance>
                                                         <TooltipsAppearance DataFormatString="{0}"></TooltipsAppearance>
-                                                    </telerik:BarSeries>
+                                                    </telerik:BarSeries>--%>
                                                 </Series>
                                                 <Appearance>
                                                     <FillStyle BackgroundColor="White" />

@@ -12,6 +12,13 @@
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
+          <script type="text/javascript">
+    function myFunction()
+    {   var username = '<%= Session["Username"] %>';
+        alert(username);
+    }
+</script>
+
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     
@@ -34,6 +41,8 @@
 }
     </style>
 
+  
+ 
 </head>
 <body>
      <form runat="server">
@@ -52,13 +61,13 @@
                     <img runat="server" src="~/Images/logo1.png" class="imageLogo"/>
                 </div>
                 <div class="navbar-collapse collapse">
-                    
+                   <%-- <button onclick="myFunction()">Click me</button>--%>
                     <ul class="nav navbar-nav imageLogo">
                         <li  runat="server"><a href="#" class="removeClass" id="Dashboard" onserverclick="clickDashboard" runat="server">Dashboard</a></li>
                         <li class="dropdown">
                             <a id="Maintenance" runat="server" href="#" class="dropdown-toggle removeClass" onclick="return false;" data-toggle="dropdown">Maintenance<b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a runat="server" class="removeClass" href="#" id="CMSMaintenance" onserverclick="clickmainMaintenance">CMS Maintenance</a></li>
+                                <li><a runat="server" class="removeClass" id="CMSMaintenance" onserverclick="clickmainMaintenance">CMS Maintenance</a></li>
                                 <li><a runat="server" class="removeClass" id="FlightInformation" onserverclick="clickFlightInformation">Flight Information</a></li>
                                 <li><a runat="server" class="removeClass" id="RateMatrix" onserverclick="clickRateMatrix">Rate Matrix</a></li>
                                 <li><a runat="server" class="removeClass" id="TrackNTrace" onserverclick="clickTrackNTrace">TrackNTrace</a></li>
