@@ -57,7 +57,8 @@
                     <telerik:RadAjaxLoadingPanel runat="server" ID="gridLoadingPanel"></telerik:RadAjaxLoadingPanel>
                     <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" DecorationZoneID="Grid" DecoratedControls="All" EnableRoundedCorners="false" />
                     <div id="Grid">
-                        <telerik:RadGrid ID="RadGrid2" ShowFooter ="true" FooterStyle-BackColor="#ffcc00" FooterStyle-Font-Bold="true" FooterStyle-HorizontalAlign="Right"
+                        <telerik:RadGrid ID="RadGrid2" ShowFooter ="true" FooterStyle-BackColor="#ffcc00" 
+                            FooterStyle-Font-Bold="true" FooterStyle-HorizontalAlign="Right"
                             runat="server" AllowPaging="True" Skin="Office2010Black" AllowSorting="True"
                             AllowFilteringByColumn="True"
                             DataKeyNames="CompanyId" CommandItemDisplay="Top"
