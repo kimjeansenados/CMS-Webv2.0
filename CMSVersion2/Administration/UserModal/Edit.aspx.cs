@@ -180,6 +180,8 @@ namespace CMSVersion2.Administration.UserModal
         {
             string script = "<script>RefreshParentPage()</" + "script>";
             ClientScript.RegisterStartupScript(this.GetType(), "RefreshParentPage", script);
+            //string close = "<script>CloseOnReload()</" + "script>";
+            //ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", close);
         }
     }
 }

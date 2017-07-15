@@ -33,7 +33,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.RevenueTypeMaintenanc
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Insert Revenue-Type";
+            this.Page.Title = "Add Revenue Unit Type";
         }
 
         public DataTable GetRUTbyID(Guid ID)

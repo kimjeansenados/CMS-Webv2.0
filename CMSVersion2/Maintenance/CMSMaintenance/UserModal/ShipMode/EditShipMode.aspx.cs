@@ -49,7 +49,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.ShipMode
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Edit Booking Status";
+            this.Page.Title = "Edit Ship Mode";
         }
 
         public DataTable GetShipMode(Guid ID)

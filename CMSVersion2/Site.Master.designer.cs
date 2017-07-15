@@ -184,6 +184,15 @@ namespace CMSVersion2 {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor Operation;
         
         /// <summary>
+        /// Booking control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor Booking;
+        
+        /// <summary>
         /// PickupCargo control.
         /// </summary>
         /// <remarks>
@@ -416,6 +425,33 @@ namespace CMSVersion2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor AWBTracking;
+        
+        /// <summary>
+        /// FLM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor FLM;
+        
+        /// <summary>
+        /// QtybyCommodity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor QtybyCommodity;
+        
+        /// <summary>
+        /// WtbyCommodity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor WtbyCommodity;
         
         /// <summary>
         /// Administration control.

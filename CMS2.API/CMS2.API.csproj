@@ -186,8 +186,11 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BranchCorpOfficeController.cs" />
     <Compile Include="Controllers\CityController.cs" />
+<<<<<<< HEAD
     <Compile Include="Controllers\CommodityController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
+=======
+>>>>>>> 0647aff67074991f0871ee6e0119c829f2154b03
     <Compile Include="Controllers\GPSController.cs" />
     <Compile Include="Controllers\RevenueUnitController.cs" />
     <Compile Include="Controllers\RevenueUnitTypeController.cs" />

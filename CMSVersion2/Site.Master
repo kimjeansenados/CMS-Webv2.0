@@ -12,9 +12,17 @@
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
+          <script type="text/javascript">
+    function myFunction()
+    {   var username = '<%= Session["Username"] %>';
+        alert(username);
+    }
+</script>
+
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     
+    <link rel="shortcut icon" type="image/x-icon" href="Images/emblem.png" />
     <style type="text/css">
         .removeClass {
            pointer-events: none;
@@ -32,6 +40,9 @@
    cursor: default;
 }
     </style>
+
+  
+ 
 </head>
 <body>
      <form runat="server">
@@ -50,12 +61,13 @@
                     <img runat="server" src="~/Images/logo1.png" class="imageLogo"/>
                 </div>
                 <div class="navbar-collapse collapse">
+                   <%-- <button onclick="myFunction()">Click me</button>--%>
                     <ul class="nav navbar-nav imageLogo">
                         <li  runat="server"><a href="#" class="removeClass" id="Dashboard" onserverclick="clickDashboard" runat="server">Dashboard</a></li>
                         <li class="dropdown">
                             <a id="Maintenance" runat="server" href="#" class="dropdown-toggle removeClass" onclick="return false;" data-toggle="dropdown">Maintenance<b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a runat="server" class="removeClass" href="#" id="CMSMaintenance" onserverclick="clickmainMaintenance">CMS Maintenance</a></li>
+                                <li><a runat="server" class="removeClass" id="CMSMaintenance" onserverclick="clickmainMaintenance">CMS Maintenance</a></li>
                                 <li><a runat="server" class="removeClass" id="FlightInformation" onserverclick="clickFlightInformation">Flight Information</a></li>
                                 <li><a runat="server" class="removeClass" id="RateMatrix" onserverclick="clickRateMatrix">Rate Matrix</a></li>
                                 <li><a runat="server" class="removeClass" id="TrackNTrace" onserverclick="clickTrackNTrace">TrackNTrace</a></li>
@@ -96,6 +108,7 @@
                                         <li class="dropdown dropdown-submenu">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="return false;">Manifest</a>
                                             <ul class="dropdown-menu">
+                                                <li><a runat="server" id="Booking" onserverclick="clickBookingReport">Booking</a></li>
                                                 <li><a runat="server" id="PickupCargo" onserverclick="clickPickUpCargo">Pickup Cargo</a></li>
                                                 <li><a runat="server" id="BranchAcceptance" onserverclick="clickBranchAcceptance">Branch Acceptance</a></li>
                                                 <li><a runat="server" id="Bundle" onserverclick="clickBundle">Bundle</a></li>
@@ -145,6 +158,15 @@
                                 <li><a runat="server" class="removeClass" id="Booking" onserverclick="clickBooking">Booking</a></li>--%>
                                 <li><a runat="server" class="removeClass" id="AWBDetailedTracking" onserverclick="clickawbDetailedTracking">AWB Detailed Tracking</a></li>
                                 <li><a runat="server" class="removeClass" id="AWBTracking" onserverclick="clickawbTracking">AWB Tracking</a></li>
+                            
+                                <li class="dropdown dropdown-submenu">
+                                    <a href="#" class="dropdown-toggle removeClass" id="FLM" runat="server" data-toggle="dropdown" onclick="return false;">FLM</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a runat="server" id="QtybyCommodity" onserverclick="clickQtybyCommodity">Quantity by Commodity Type</a></li>
+                                        <li><a runat="server" id="WtbyCommodity" onserverclick="clickWtbyCommodity">Weight by Commodity Type</a></li>                          
+                                    </ul>
+                                </li>
+                            
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -210,14 +232,18 @@
             </div>
             </div><!--wrapper-->
         </div><!--container-->
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - AP CARGO CMS Application</p>
-            </footer>
-        </div>
+
+        
+            <div class="container body-content">
+           
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+                <hr />
+                <footer>
+                    <p>&copy; <%: DateTime.Now.Year %> - AP CARGO CMS Application</p>
+                </footer>
+            </div>
+       
         <script src="Scripts/jquery.js"></script>
         <script src="Scripts/bootstrap.min.js"></script>
     </form>

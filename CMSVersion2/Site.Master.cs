@@ -84,46 +84,46 @@ namespace CMSVersion2
                 //if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
                 //{
                 if (!string.IsNullOrEmpty(Session["FullNameSession"] as string))
+                {
+                    string fullnamesession = Session["FullNameSession"].ToString();
+                    lblUserName.Text = fullnamesession;
+
+                    string[] file = Request.CurrentExecutionFilePath.Split('/');
+                    string fileName = file[file.Length - 1];
+                    string path = Server.MapPath(fileName);
+
+
+                    staticlistDetails = AppService.AppServiceMenus;
+
+                    foreach (UserAccessMenu link in staticlistDetails)
                     {
-                        string fullnamesession = Session["FullNameSession"].ToString();
-                        lblUserName.Text = fullnamesession;
-
-                        string[] file = Request.CurrentExecutionFilePath.Split('/');
-                        string fileName = file[file.Length - 1];
-                        string path = Server.MapPath(fileName);
-
-                    
-                        staticlistDetails = AppService.AppServiceMenus;
-
-                        foreach (UserAccessMenu link in staticlistDetails)
+                        HtmlAnchor home = (HtmlAnchor)Page.Master.FindControl(link.menuAccess);
+                        string cssToApply = "removeClass";
+                        string classAttribute = home.Attributes["class"];
+                        if (!string.IsNullOrEmpty(classAttribute))
                         {
-                            HtmlAnchor home = (HtmlAnchor)Page.Master.FindControl(link.menuAccess);
-                            string cssToApply = "removeClass";
-                            string classAttribute = home.Attributes["class"];
-                            if(!string.IsNullOrEmpty(classAttribute))
+                            if (classAttribute.Contains(cssToApply))
                             {
-                                if (classAttribute.Contains(cssToApply))
-                                {
-                                    home.Attributes.Remove("class");
-                                }
+                                home.Attributes.Remove("class");
                             }
-                            //if (string.IsNullOrEmpty(classAttribute))
-                            //{
-                            //    home.Attributes.Add("class", cssToApply);
-
-                            //}
-                            //else
-                            //{
-                            //    if (classAttribute.Contains(cssToApply))
-                            //    {
-                            //        home.Attributes.Remove("class");
-                            //    }
-                            //}
                         }
+                        //if (string.IsNullOrEmpty(classAttribute))
+                        //{
+                        //    home.Attributes.Add("class", cssToApply);
 
+                        //}
+                        //else
+                        //{
+                        //    if (classAttribute.Contains(cssToApply))
+                        //    {
+                        //        home.Attributes.Remove("class");
+                        //    }
+                        //}
                     }
+
+                }
                 //}
-                
+
 
             }
             //else
@@ -184,7 +184,7 @@ namespace CMSVersion2
                 //anchor.Attributes.Add("onclick", "~/Portal/ManageUsers.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Default.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -205,8 +205,8 @@ namespace CMSVersion2
                 GlobalCode.menuName = text;
                 // MainMaintenance.Attributes.Add("onclick", "~/Portal/MainMaintenance.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
                 Session["UserNameSession"] = usersession;
-                Response.Redirect("~/Maintenance/CMSMaintenance/CMSMaintenance.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername), false);
-               
+                Response.Redirect("~/Maintenance/CMSMaintenance/CMSMaintenance.aspx");
+
             }
             //  ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + "Hello" + "')", true);
 
@@ -224,7 +224,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = text;
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Maintenance/FlightInformation/FlightInformation.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-               
+
             }
 
         }
@@ -241,7 +241,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = text;
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Maintenance/RateMatrix/RateMatrixMain.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -258,7 +258,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = text;
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Maintenance/TrackNTrace/TrackNTrace.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -273,7 +273,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = text;
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Error/UnderMaintenancePage.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -290,7 +290,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "AWB Series";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Maintenance/AWBSeries/Issuance.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -306,7 +306,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "AWB Series";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Maintenance/AWBSeries/Summary.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-               
+
             }
 
         }
@@ -323,7 +323,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "AWB Series";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Maintenance/AWBSeries/Monitoring.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -342,7 +342,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Customer";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Customer/Customer.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-               
+
             }
 
         }
@@ -360,7 +360,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = text;
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Corporate/Company.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -376,7 +376,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = text;
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Corporate/Representative.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-               
+
             }
 
         }
@@ -392,7 +392,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = text;
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Corporate/ApprovingAuthority.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -408,7 +408,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = text;
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Corporate/StatementOfAccount.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -416,6 +416,18 @@ namespace CMSVersion2
 
         #region Report
         #region Operation - Manifest
+        protected void clickBookingReport(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
+            {
+                string usersession = Session["UsernameSession"].ToString();
+                byte[] EncryptedUsername = Tools.Encryption.EncryptPassword(usersession);
+                GlobalCode.menuName = "Operation";
+                Session["UserNameSession"] = usersession;
+                Response.Redirect("~/Report/Operation/Manifest/Booking.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+            }
+        }
+
         //Pickup Cargo
         protected void clickPickUpCargo(object sender, EventArgs e)
         {
@@ -428,7 +440,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Operation";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Report/Operation/Manifest/Pickup.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -445,7 +457,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Operation";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Report/Operation/Manifest/BranchAcceptance.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-               
+
             }
 
         }
@@ -462,7 +474,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Operation";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Report/Operation/Manifest/Bundle.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-               
+
             }
 
         }
@@ -479,7 +491,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Operation";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Report/Operation/Manifest/Unbundle.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-               
+
             }
 
         }
@@ -496,7 +508,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Operation";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Report/Operation/Manifest/Segregation.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -513,7 +525,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Operation";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Report/Operation/Manifest/DailyTrip.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-               
+
             }
 
         }
@@ -622,7 +634,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Operation";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Report/Operation/CargoMonitoring/Delivered.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-               
+
             }
 
         }
@@ -639,7 +651,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Operation";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Report/Operation/CargoMonitoring/Hold.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-               
+
             }
 
         }
@@ -656,7 +668,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Operation";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Report/Operation/CargoMonitoring/Misrouted.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -673,7 +685,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Operation";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Report/Operation/CargoMonitoring/Offloaded.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-               
+
             }
 
         }
@@ -690,7 +702,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Operation";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Report/Operation/CargoMonitoring/Pending.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -707,7 +719,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Operation";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Report/Operation/CargoMonitoring/RUD.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -726,7 +738,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Finance";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Report/Finance/Sales/MasterSales.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -743,7 +755,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Finance";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Report/Finance/Sales/SalesPerBCO.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-               
+
             }
 
         }
@@ -760,7 +772,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Finance";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Report/Finance/Sales/SalesPerShipMode.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-              
+
             }
 
         }
@@ -777,7 +789,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Finance";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Report/Finance/Sales/SalesPerClient.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-               
+
             }
 
         }
@@ -793,7 +805,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Finance";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Report/Finance/Sales/SalesPerRevenueUnit.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-               
+
             }
 
         }
@@ -809,7 +821,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Finance";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Report/Finance/Sales/SalesPerUserLevel.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-               
+
             }
 
         }
@@ -827,7 +839,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Finance";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Report/Finance/Collections1.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -879,7 +891,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = text;
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Error/UnderMaintenance.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-               
+
             }
 
         }
@@ -896,7 +908,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = text;
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Error/UnderMaintenance.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -913,7 +925,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = text;
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Error/UnderMaintenance.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -930,11 +942,11 @@ namespace CMSVersion2
                 GlobalCode.menuName = text;
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Error/UnderMaintenance.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
-        
+
 
         #endregion
 
@@ -951,7 +963,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = text;
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Administration/Users.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -967,7 +979,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = text;
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Administration/Employee.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-               
+
             }
 
         }
@@ -986,7 +998,7 @@ namespace CMSVersion2
         //        GlobalCode.menuName = text;
         //        Session["UserNameSession"] = usersession;
         //        Response.Redirect("~/Portal/ManageRoles.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-               
+
         //    }
 
         //}
@@ -1005,7 +1017,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = text;
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/UserAccess/UserRole/ManageUserRole.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -1021,7 +1033,7 @@ namespace CMSVersion2
                 GlobalCode.menuName = text;
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/UserAccess/Roles/ManageRoles.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-                
+
             }
 
         }
@@ -1041,7 +1053,7 @@ namespace CMSVersion2
                 Session.Clear();
                 Session.Abandon();
 
-              
+
                 // clear authentication cookie
                 HttpCookie cookie1 = new HttpCookie(FormsAuthentication.FormsCookieName, "");
                 cookie1.Expires = DateTime.Now.AddYears(-1);
@@ -1055,10 +1067,10 @@ namespace CMSVersion2
 
                 Response.Redirect("~/Login.aspx", true);
             }
-                //if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
-                //{
-                
-           // }
+            //if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
+            //{
+
+            // }
 
         }
         #endregion
@@ -1075,9 +1087,39 @@ namespace CMSVersion2
                 GlobalCode.menuName = "Settings";
                 Session["UserNameSession"] = usersession;
                 Response.Redirect("~/Settings/ManagePassword.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
-               
+
             }
 
+        }
+
+        protected void clickQtybyCommodity(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
+            {
+                string usersession = Session["UsernameSession"].ToString();
+                byte[] EncryptedUsername = Tools.Encryption.EncryptPassword(usersession);
+                //HtmlAnchor anchor = (HtmlAnchor)Page.Master.FindControl("FLM");
+                //string text = anchor.InnerText;
+                //GlobalCode.menuName = text;
+                GlobalCode.menuName = "FLM";
+                Session["UserNameSession"] = usersession;
+                Response.Redirect("~/Report/FLM/FLM_Qtyby_Commodity.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+            }
+        }
+
+        protected void clickWtbyCommodity(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
+            {
+                string usersession = Session["UsernameSession"].ToString();
+                byte[] EncryptedUsername = Tools.Encryption.EncryptPassword(usersession);
+                //HtmlAnchor anchor = (HtmlAnchor)Page.Master.FindControl("FLM");
+                //string text = anchor.InnerText;
+                //GlobalCode.menuName = text;
+                GlobalCode.menuName = "FLM";
+                Session["UserNameSession"] = usersession;
+                Response.Redirect("~/Report/FLM/FLM_Wtby_Commodity.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
+            }
         }
         #endregion
 

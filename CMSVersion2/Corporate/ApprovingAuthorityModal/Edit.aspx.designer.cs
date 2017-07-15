@@ -310,12 +310,12 @@ namespace CMSVersion2.Corporate.ApprovingAuthorityModal {
         protected global::Telerik.Web.UI.RadButton btnSave;
         
         /// <summary>
-        /// btnCancel control.
+        /// RadButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadButton btnCancel;
+        protected global::Telerik.Web.UI.RadButton RadButton1;
     }
 }

@@ -46,6 +46,7 @@
     <Compile Include="AirwayBill.cs" />
     <Compile Include="AwbSeries.cs" />
     <Compile Include="Batch.cs" />
+    <Compile Include="Dashboard.cs" />
     <Compile Include="Department.cs" />
     <Compile Include="Flight.cs" />
     <Compile Include="AwbIssuance.cs" />
@@ -56,12 +57,14 @@
     <Compile Include="Reason.cs" />
     <Compile Include="Remarks.cs" />
     <Compile Include="Reports\BCOSalesSummary.cs" />
+    <Compile Include="Reports\BookingReport.cs" />
     <Compile Include="Reports\BranchAcceptance.cs" />
     <Compile Include="Reports\Bundle.cs" />
     <Compile Include="Reports\CargoMonitoring.cs" />
     <Compile Include="Reports\CargoTransfer.cs" />
     <Compile Include="Reports\CollectionReport.cs" />
     <Compile Include="Reports\DailyTrip.cs" />
+    <Compile Include="Reports\FLM_Qtyby_Commodity.cs" />
     <Compile Include="Reports\GatewayInbound.cs" />
     <Compile Include="Reports\GatewayOutbound.cs" />
     <Compile Include="Reports\GatewayTransmittal.cs" />

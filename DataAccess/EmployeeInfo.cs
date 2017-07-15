@@ -108,7 +108,7 @@ namespace DataAccess
         }
 
         public static void InsertEmployee(Guid DepartmentId, Guid PositionId, Guid AssignedToAreaId, string firstname, string lastname, string middlename,
-            DateTime birthday, string telno, string mobileno, string email, string license, DateTime licenseExpiration,Guid createdby, string conStr)
+            DateTime birthday, string telno, string mobileno, string email, string license, DateTime? licenseExpiration,Guid createdby, string conStr)
         {
             using (SqlConnection con = new SqlConnection(conStr))
             {
@@ -126,7 +126,8 @@ namespace DataAccess
                     cmd.Parameters.Add("@mobileno", SqlDbType.VarChar).Value = mobileno;
                     cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
                     cmd.Parameters.Add("@license", SqlDbType.VarChar).Value = license;
-                    cmd.Parameters.Add("@licenseExpiration", SqlDbType.Date).Value = licenseExpiration;
+                    //cmd.Parameters.Add("@licenseExpiration", SqlDbType.Date).Value = licenseExpiration;
+                    cmd.Parameters.Add("@licenseExpiration", SqlDbType.Date).Value = (object)licenseExpiration ?? DBNull.Value;
                     cmd.Parameters.Add("@createdby", SqlDbType.UniqueIdentifier).Value = createdby;
                     con.Open();
                     cmd.ExecuteNonQuery();
@@ -135,7 +136,7 @@ namespace DataAccess
         }
 
         public static void UpdateEmployee(Guid EmployeeId, Guid departmentId, Guid positionId, string firstname, string lastname, string middlename,
-            DateTime birthday, string telno, string mobileno, string email, string license, DateTime licenseExpiration, 
+            DateTime birthday, string telno, string mobileno, string email, string license, DateTime? licenseExpiration, 
             Guid createdby, Guid assignedToAreaId, string conStr )
         {
             using (SqlConnection con = new SqlConnection(conStr))
@@ -154,7 +155,8 @@ namespace DataAccess
                     cmd.Parameters.Add("@mobileno", SqlDbType.VarChar).Value = mobileno;
                     cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
                     cmd.Parameters.Add("@license", SqlDbType.VarChar).Value = license;
-                    cmd.Parameters.Add("@licenseExpiration", SqlDbType.Date).Value = licenseExpiration;
+                    //cmd.Parameters.Add("@licenseExpiration", SqlDbType.Date).Value = licenseExpiration;
+                    cmd.Parameters.Add("@licenseExpiration", SqlDbType.Date).Value = (object)licenseExpiration ?? DBNull.Value;
                     cmd.Parameters.Add("@createdby", SqlDbType.UniqueIdentifier).Value = createdby;
                     cmd.Parameters.Add("@assignedToareaId", SqlDbType.UniqueIdentifier).Value = assignedToAreaId;
                     con.Open();

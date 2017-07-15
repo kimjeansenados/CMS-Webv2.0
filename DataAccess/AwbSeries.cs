@@ -38,17 +38,33 @@ namespace DataAccess
             }
         }
 
-        public static DataSet GetAwbSeriesbySearch(Guid bcoId, Guid revenueUnitTypeId, Guid revenueUnitId, Guid empId, Guid awbSeriesId, string constr)
+        //public static DataSet GetAwbSeriesbySearch(Guid bcoId, Guid revenueUnitTypeId, Guid revenueUnitId, Guid empId, Guid awbSeriesId, string constr)
+        //{
+        //    using (SqlConnection con = new SqlConnection(constr))
+        //    {
+        //        SqlDataAdapter da = new SqlDataAdapter("sp_view_SeriesMonitoring", con);
+        //        da.SelectCommand.CommandType = CommandType.StoredProcedure;
+        //        da.SelectCommand.Parameters.Add("@BcoId", SqlDbType.UniqueIdentifier).Value = bcoId;
+        //        da.SelectCommand.Parameters.Add("@TypeId", SqlDbType.UniqueIdentifier).Value = revenueUnitTypeId;
+        //        da.SelectCommand.Parameters.Add("@AreaId", SqlDbType.UniqueIdentifier).Value = revenueUnitId;
+        //        da.SelectCommand.Parameters.Add("@EmpId", SqlDbType.UniqueIdentifier).Value = empId;
+        //        da.SelectCommand.Parameters.Add("@AwbSeriesId", SqlDbType.UniqueIdentifier).Value = awbSeriesId;
+        //        DataSet ds = new DataSet();
+        //        da.Fill(ds);
+        //        return ds;
+        //    }
+        //}
+        public static DataSet GetAwbSeriesbySearch(Guid? bcoId, Guid? revenueUnitTypeId, Guid? revenueUnitId, Guid? empId, Guid? awbSeriesId, string constr)
         {
             using (SqlConnection con = new SqlConnection(constr))
             {
                 SqlDataAdapter da = new SqlDataAdapter("sp_view_SeriesMonitoring", con);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                da.SelectCommand.Parameters.Add("@BcoId", SqlDbType.UniqueIdentifier).Value = bcoId;
-                da.SelectCommand.Parameters.Add("@TypeId", SqlDbType.UniqueIdentifier).Value = revenueUnitTypeId;
-                da.SelectCommand.Parameters.Add("@AreaId", SqlDbType.UniqueIdentifier).Value = revenueUnitId;
-                da.SelectCommand.Parameters.Add("@EmpId", SqlDbType.UniqueIdentifier).Value = empId;
-                da.SelectCommand.Parameters.Add("@AwbSeriesId", SqlDbType.UniqueIdentifier).Value = awbSeriesId;
+                da.SelectCommand.Parameters.Add("@BcoId", SqlDbType.UniqueIdentifier).Value = (object)bcoId ?? DBNull.Value;
+                da.SelectCommand.Parameters.Add("@TypeId", SqlDbType.UniqueIdentifier).Value = (object)revenueUnitTypeId ?? DBNull.Value;
+                da.SelectCommand.Parameters.Add("@AreaId", SqlDbType.UniqueIdentifier).Value = (object)revenueUnitId ?? DBNull.Value;
+                da.SelectCommand.Parameters.Add("@EmpId", SqlDbType.UniqueIdentifier).Value = (object)empId ?? DBNull.Value;
+                da.SelectCommand.Parameters.Add("@AwbSeriesId", SqlDbType.UniqueIdentifier).Value = (object)awbSeriesId ?? DBNull.Value;
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 return ds;

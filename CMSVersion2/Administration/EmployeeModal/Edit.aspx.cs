@@ -46,14 +46,41 @@ namespace CMSVersion2.Administration.EmployeeModal
                                 bcoId.Selected = true;
                                 RadComboBoxItem revenueUnitTypeId = rcbRevenueUnitType.FindItemByValue(row["RevenueUnitTypeId"].ToString());
                                 revenueUnitTypeId.Selected = true;
-                                RadComboBoxItem RevenueUnitId = rcbRevenueUnitName.FindItemByValue(row["RevenueUnitId"].ToString());
-                                RevenueUnitId.Selected = true;
+                                PopulateRevenueUnitName();
+                                string revId = row["RevenueUnitId"].ToString();
+                                if(revId != "")
+                                {
+                                    Guid unitid = Guid.Parse(revId);
+                                    RadComboBoxItem RevenueUnitId = rcbRevenueUnitName.FindItemByValue(unitid.ToString());
+                                    RevenueUnitId.Selected = true;
+                                }
+                                
 
                                 string bdate = row["Birthdate"].ToString();
                                 string licenseExp = row["DriversLicenseExpiration"].ToString();
+                                if(licenseExp.Contains("1/1/1900") || licenseExp == null || licenseExp == "")
+                                {
+                                    //DateTime now = DateTime.Now;
+                                    //licenseExp = now.ToString();
+                                    txtLicenseExpiration.SelectedDate = null;
+                                }
+                                else
+                                {
+                                    txtLicenseExpiration.SelectedDate = Convert.ToDateTime(licenseExp);
+                                }
+                                if(bdate.Contains("1/1/1900") || bdate == null)
+                                {
+                                    //DateTime now = DateTime.Now;
+                                    //bdate = now.ToString();
+                                    txtBirthdate.SelectedDate = Convert.ToDateTime(bdate);
+                                }
+                                else
+                                {
+                                    txtBirthdate.SelectedDate = Convert.ToDateTime(bdate);
+                                }
 
-                                txtBirthdate.SelectedDate = Convert.ToDateTime(bdate);
-                                txtLicenseExpiration.SelectedDate = Convert.ToDateTime(licenseExp);
+                                //txtBirthdate.SelectedDate = Convert.ToDateTime(bdate);
+                                //txtLicenseExpiration.SelectedDate = Convert.ToDateTime(licenseExp);
 
 
                                 txtFirstname.Text = row["FirstName"].ToString();
@@ -139,7 +166,12 @@ namespace CMSVersion2.Administration.EmployeeModal
 
         private void PopulateRevenueUnitName()
         {
-            DataTable revenueUnitName = BLL.Revenue_Info.getRevenueUnit(new Guid(rcbRevenueUnitType.SelectedValue.ToString()), getConstr.ConStrCMS).Tables[0];
+            //DataTable revenueUnitName = BLL.Revenue_Info.getRevenueUnit(new Guid(rcbRevenueUnitType.SelectedValue.ToString()), getConstr.ConStrCMS).Tables[0];
+            //rcbRevenueUnitName.DataSource = revenueUnitName;
+            //rcbRevenueUnitName.DataTextField = "RevenueUnitName";
+            //rcbRevenueUnitName.DataValueField = "RevenueUnitId";
+            //rcbRevenueUnitName.DataBind();
+            DataTable revenueUnitName = BLL.Revenue_Info.getRevenueUnitByBCO(new Guid(rcbRevenueUnitType.SelectedValue.ToString()), new Guid(rcbBranchCorpOffice.SelectedValue.ToString()), getConstr.ConStrCMS).Tables[0];
             rcbRevenueUnitName.DataSource = revenueUnitName;
             rcbRevenueUnitName.DataTextField = "RevenueUnitName";
             rcbRevenueUnitName.DataValueField = "RevenueUnitId";
@@ -148,6 +180,11 @@ namespace CMSVersion2.Administration.EmployeeModal
 
         private void populateRevenueUnitNameByBCO()
         {
+            //DataTable LocationList = BLL.Revenue_Info.getRevenueUnitByBCO(new Guid(rcbRevenueUnitType.SelectedValue.ToString()), new Guid(rcbBranchCorpOffice.SelectedValue.ToString()), getConstr.ConStrCMS).Tables[0];
+            //rcbRevenueUnitName.DataSource = LocationList;
+            //rcbRevenueUnitName.DataTextField = "RevenueUnitName";
+            //rcbRevenueUnitName.DataValueField = "RevenueUnitId";
+            //rcbRevenueUnitName.DataBind();
             DataTable LocationList = BLL.Revenue_Info.getRevenueUnitByBCO(new Guid(rcbRevenueUnitType.SelectedValue.ToString()), new Guid(rcbBranchCorpOffice.SelectedValue.ToString()), getConstr.ConStrCMS).Tables[0];
             rcbRevenueUnitName.DataSource = LocationList;
             rcbRevenueUnitName.DataTextField = "RevenueUnitName";
@@ -214,16 +251,76 @@ namespace CMSVersion2.Administration.EmployeeModal
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            string host = HttpContext.Current.Request.Url.Authority;
-            Guid ID = new Guid("11111111-1111-1111-1111-111111111111");
-            BLL.Employee_Info.UpdateEmployee(new Guid(lblEmployeeID.Text), Guid.Parse(rcbDepartment.SelectedValue.ToString()), Guid.Parse(rcbPosition.SelectedValue.ToString()),
-                txtFirstname.Text, txtLastname.Text, txtMiddlename.Text,
-               txtBirthdate.SelectedDate.Value, txtTel.Text, txtMobile.Text, txtEmail.Text, txtLicense.Text, txtLicenseExpiration.SelectedDate.Value, ID,
-                Guid.Parse(rcbRevenueUnitName.SelectedValue.ToString()), getConstr.ConStrCMS);
-            string script = "<script>CloseOnReload()</" + "script>";
-            ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
+            try
+            {
+                string host = HttpContext.Current.Request.Url.Authority;
+                DateTime? licensedate = new DateTime();
+                DateTime? selectedlicenseDate = txtLicenseExpiration.SelectedDate;
 
-        }
+                DateTime birthdate = new DateTime();
+                DateTime? selectedbDate = txtBirthdate.SelectedDate;
+
+                if (selectedlicenseDate != null)
+                {
+                    licensedate = selectedlicenseDate.Value;
+                }
+                else
+                {
+                    //handle the case when user has not selected any date, and selectedDate is null
+                    licensedate = null;
+                }
+
+                if (selectedbDate != null)
+                {
+                    birthdate = selectedbDate.Value;
+                }
+                else
+                {
+                    //handle the case when user has not selected any date, and selectedDate is null
+                    birthdate = DateTime.Now;
+                }
+
+                //string license = txtLicenseExpiration.SelectedDate.Value.ToString();
+                //string bdate = txtBirthdate.SelectedDate.Value.ToString();
+                //DateTime licensedate = new DateTime();
+                //DateTime birthdate = new DateTime();
+                //if (license.Contains("1/1/1900") || license == null)
+                //{
+                //    DateTime now = DateTime.Now;
+                //    licensedate = now;
+                //}
+                //else
+                //{
+                //    licensedate = txtLicenseExpiration.SelectedDate.Value;
+                //}
+                //if (bdate.Contains("1/1/1900"))
+                //{
+                //    DateTime now = DateTime.Now;
+                //    birthdate = now;
+                //}
+                //else
+                //{
+                //    birthdate = txtLicenseExpiration.SelectedDate.Value;
+                //}
+
+
+                Guid ID = new Guid("11111111-1111-1111-1111-111111111111");
+                BLL.Employee_Info.UpdateEmployee(new Guid(lblEmployeeID.Text), Guid.Parse(rcbDepartment.SelectedValue.ToString()), Guid.Parse(rcbPosition.SelectedValue.ToString()),
+                    txtFirstname.Text, txtLastname.Text, txtMiddlename.Text,
+                   birthdate, txtTel.Text, txtMobile.Text, txtEmail.Text, txtLicense.Text, licensedate, ID,
+                    Guid.Parse(rcbRevenueUnitName.SelectedValue.ToString()), getConstr.ConStrCMS);
+                string script = "<script>CloseOnReload()</" + "script>";
+                ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
+            }
+            catch (Exception ex)
+            {
+                string script = "<script>alert('Invalid Drivers License Expiration Date/ Birthdate!.')</" + "script>";
+                ClientScript.RegisterStartupScript(GetType(), "Alert", script);
+            }
+
+            
+
+            }
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {

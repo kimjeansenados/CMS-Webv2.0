@@ -38,9 +38,9 @@ namespace CMSVersion2
         {
 
             #region Check if User can login to Web
-            
+
             // Initialize FormsAuthentication, for what it's worth
-           FormsAuthentication.Initialize();
+            FormsAuthentication.Initialize();
             bool canLogin = false;
             bool firstLogin = false;
             string fullname = "";
@@ -91,7 +91,7 @@ namespace CMSVersion2
             {
                 e.Authenticated = true;
                 FormsAuthentication.SetAuthCookie(Login1.UserName, true);
-                
+
 
                 byte[] EncryptedUsername = Tools.Encryption.EncryptPassword(Login1.UserName);
                 foreach (string item in listofRoles)
@@ -159,11 +159,29 @@ namespace CMSVersion2
                         DataList();
                         FormCookies(item);
 
+                        //foreach (string access in listofMenuAccess)
+                        //{
+                        //    if (listofMenuAccess.IndexOf(access) == 0)
+                        //    {
+                        //        firstAccess = access;
+                        //    }
+                        //}
                         foreach (string access in listofMenuAccess)
                         {
-                            if (listofMenuAccess.IndexOf(access) == 0)
+                            //if (listofMenuAccess.IndexOf(access) == 0)
+                            //if (access.Equals("Dashboard"))
+                            // {
+                            //     firstAccess = access;
+                            // }
+                            if (listofMenuAccess.Contains("Dashboard"))
+                            {
+                                firstAccess = "Dashboard";
+                                break;
+                            }
+                            else
                             {
                                 firstAccess = access;
+                                break;
                             }
                         }
 
@@ -179,7 +197,7 @@ namespace CMSVersion2
                         BLL.UserRole.UpdateLoginDate(Login1.UserName, getConstr.ConStrCMS);
                         foreach (string itemAccess in listofMenuAccess)
                         {
-                            if (itemAccess.Contains("Dashboard"))
+                            if (listofMenuAccess.Contains("Dashboard"))
                             {
                                 if (firstLogin == true)
                                 {
@@ -201,7 +219,7 @@ namespace CMSVersion2
                                 //Response.Redirect("~/Default.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
                                 //Response.Redirect("~/Settings/ManagePassword.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
                                 string result = BLL.UserRole.MenuFirstAccess(firstAccess, getConstr.ConStrCMS);
-                                if(result.Equals("NONE"))
+                                if (result.Equals("NONE"))
                                 {
                                     Response.Redirect("~/Settings/ManagePassword.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
                                 }
@@ -210,7 +228,7 @@ namespace CMSVersion2
                                     string port = result + "?PortalID=";
                                     Response.Redirect(port + Encoding.Unicode.GetString(EncryptedUsername));
                                 }
-                                
+
                             }
                         }
                     }
@@ -260,7 +278,7 @@ namespace CMSVersion2
             listofMenuAccess = getAccessMenuByUserName(Login1.UserName);
 
             result = listofMenu.Intersect(listofMenuAccess).ToList();
-           
+
             foreach (string row in result)
             {
                 UserAccessMenu useraccessModel = new UserAccessMenu();
@@ -280,7 +298,7 @@ namespace CMSVersion2
                         Login1.UserName, // Username associated with ticket
                         DateTime.Now, // Date/time issued
                         DateTime.Now.AddMinutes(30), // Date/time to expire
-                        false, // "true" for a persistent user cookie
+                        true, // "true" for a persistent user cookie
                         item, // User-data, in this case the roles
                         FormsAuthentication.FormsCookiePath);// Path cookie valid for
 

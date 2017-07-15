@@ -64,7 +64,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.RevenueTypeMaintenanc
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Edit Revenue-Type";
+            this.Page.Title = "Edit Revenue Unit Type";
         }
 
         public DataTable GetRUTbyID(Guid ID)

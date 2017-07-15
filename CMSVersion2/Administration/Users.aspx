@@ -153,14 +153,7 @@
                                             Add new user
                                             </a>
                                         |    
-                                        
-                         <%--               <a href="#"  onclick="return ShowExportForm();" class="alink">
-                                            <img src="../images/emblem.png" alt="Print Preview" width="20">
-                                           Print Preview
-                                            </a>
-       |--%>
-                   
-                                 
+                                     
                                         <a href="" onclick="LoadRadGrid()" class="alink">
                                             <img src="../images/emblem.png" alt="Export to Excel" width="20">
                                             Refresh Data
@@ -182,12 +175,12 @@
                             <br />
                             <telerik:RadWindowManager RenderMode="Mobile" ID="RadWindowManager1" runat="server" EnableShadow="true">
                                 <Windows>
-                                    <telerik:RadWindow RenderMode="Mobile" ID="UserListDialog" runat="server" Title="Editing record" Height="450px"
+                                    <telerik:RadWindow RenderMode="Mobile" ID="UserListDialog" runat="server" Title="Editing record" Height="550px"
                                         Width="500px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" Skin="Glow"
                                         Modal="true" Behaviors="Close,Move">
                                     </telerik:RadWindow>
 
-                                     <telerik:RadWindow RenderMode="Auto" ID="AddUser" runat="server" Title="Adding record" Height="400px" Skin="Glow"
+                                     <telerik:RadWindow RenderMode="Auto" ID="AddUser" runat="server" Title="Adding record" Height="500px" Skin="Glow"
                                         Width="500px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
                                         Modal="true" Behaviors="Close,Move"  >
                                     </telerik:RadWindow>
@@ -200,6 +193,8 @@
                                 </Windows>
                             </telerik:RadWindowManager>
                         </telerik:RadAjaxPanel>
+
+
                         <telerik:RadCodeBlock runat="server">
                             <script type="text/javascript">
                                 function onRequestStart(sender, args) {

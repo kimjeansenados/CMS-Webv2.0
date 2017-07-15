@@ -13,6 +13,15 @@ namespace CMSVersion2.Maintenance.AWBSeries {
     public partial class AWBIssuance {
         
         /// <summary>
+        /// RadAjaxPanel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadAjaxPanel RadAjaxPanel2;
+        
+        /// <summary>
         /// lblBco control.
         /// </summary>
         /// <remarks>
@@ -74,15 +83,6 @@ namespace CMSVersion2.Maintenance.AWBSeries {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadButton btnSearch;
-        
-        /// <summary>
-        /// RadAjaxPanel2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadAjaxPanel RadAjaxPanel2;
         
         /// <summary>
         /// RadAjaxManager1 control.

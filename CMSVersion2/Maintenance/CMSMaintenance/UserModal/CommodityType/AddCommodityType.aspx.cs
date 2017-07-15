@@ -25,7 +25,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.CommodityType
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Edit Commodity-Type";
+            this.Page.Title = "Add Commodity Type";
         }
 
         public DataTable GetCommodityTypeById(Guid ID)

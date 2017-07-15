@@ -24,7 +24,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.ShipMode
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Add Shipmode";
+            this.Page.Title = "Add Ship Mode";
         }
 
         public DataTable GetGroupIsland(Guid ID)

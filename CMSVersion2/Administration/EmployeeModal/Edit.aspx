@@ -44,8 +44,8 @@
                         <div class="">
                            <telerik:RadLabel ID="lbl_Fname" runat="server" Text="First Name" Width="30%"></telerik:RadLabel>
                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtFirstname" Enabled="True" runat="server"></telerik:RadTextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFirstname"
-                                    ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                       <%--     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFirstname"
+                                    ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                             <br /> 
                             <br /> 
 
@@ -56,13 +56,13 @@
 
                             <telerik:RadLabel ID="lbl_Lname" runat="server" Text="Last Name" Width="30%"></telerik:RadLabel>
                              <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtLastname" Enabled="True" runat="server"></telerik:RadTextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtLastname"
-                                    ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                           <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtLastname"
+                                    ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                             <br />
                             <br /> 
 
                             <telerik:RadLabel ID="lbl_Birthday" runat="server" Text="Birthday" Width="30%"></telerik:RadLabel>
-                             <telerik:RadDatePicker ID="txtBirthdate" MinDate="1950/1/1" ZIndex="11000"  runat="server" Width="230px"></telerik:RadDatePicker>
+                             <telerik:RadDatePicker ID="txtBirthdate" ZIndex="11000" SkipMinMaxDateValidationOnServer="true"  runat="server" Width="230px"></telerik:RadDatePicker>
                             <br />
                             <br /> 
 
@@ -86,22 +86,22 @@
                          <div class="">
                            <telerik:RadLabel ID="lbl_Bco" runat="server" Text="BCO" Width="30%"></telerik:RadLabel>
                            <telerik:RadComboBox Width="230px" ID="rcbBranchCorpOffice" runat="server" AutoPostBack="true" OnSelectedIndexChanged="rcbBranchCorpOffice_SelectedIndexChanged"></telerik:RadComboBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="rcbBranchCorpOffice"
-                                    ErrorMessage="*" ForeColor="Red" InitialValue="--Select Assignment--"></asp:RequiredFieldValidator>
+                              <%--  <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="rcbBranchCorpOffice"
+                                    ErrorMessage="*" ForeColor="Red" InitialValue="--Select Assignment--"></asp:RequiredFieldValidator>--%>
                             <br /> 
                             <br /> 
 
                             <telerik:RadLabel ID="lbl_AssignedTo" runat="server" Text="Assigned To" Width="30%"></telerik:RadLabel>
                             <telerik:RadComboBox Width="230px" ID="rcbRevenueUnitType" runat="server" AutoPostBack="true" OnTextChanged="rcbRevenueUnitType_TextChanged" OnSelectedIndexChanged="rcbRevenueUnitType_SelectedIndexChanged"></telerik:RadComboBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="rcbRevenueUnitType"
-                                    ErrorMessage="*" ForeColor="Red" InitialValue="--Select Assignment--"></asp:RequiredFieldValidator>
+                           <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="rcbRevenueUnitType"
+                                    ErrorMessage="*" ForeColor="Red" InitialValue="--Select Assignment--"></asp:RequiredFieldValidator>--%>
                             <br />
                             <br /> 
 
                             <telerik:RadLabel ID="lbl_Location" runat="server" Text="Location" Width="30%"></telerik:RadLabel>
                              <telerik:RadComboBox ID="rcbRevenueUnitName" runat="server" Width="230px" Height="200px"></telerik:RadComboBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="rcbRevenueUnitName"
-                                    ErrorMessage="*" ForeColor="Red" InitialValue="--Select Assignment--"></asp:RequiredFieldValidator>
+                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="rcbRevenueUnitName"
+                                    ErrorMessage="*" ForeColor="Red" InitialValue="--Select Assignment--"></asp:RequiredFieldValidator>--%>
                             <br />
                             <br /> 
 
@@ -121,7 +121,7 @@
                              <br /> 
 
                              <telerik:RadLabel ID="lbl_DLNumExp" runat="server" Text="Driver License Expiration" Width="30%"></telerik:RadLabel>
-                             <telerik:RadDatePicker ID="txtLicenseExpiration" Width="230px" MinDate="2017/1/1"  ZIndex="1100000" AutoPostBack ="false" runat="server"></telerik:RadDatePicker>
+                             <telerik:RadDatePicker ID="txtLicenseExpiration" SkipMinMaxDateValidationOnServer="true" Width="230px" ZIndex="1100000" AutoPostBack ="false" runat="server"></telerik:RadDatePicker>
                              
                         </div>
                         </div>

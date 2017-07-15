@@ -25,6 +25,12 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.Airlines
             }
         }
 
+        protected override void OnInit(EventArgs e)
+        {
+            base.OnInit(e);
+            this.Page.Title = "Add Airlines";
+        }
+
         private void AirlineCode(string airlineCode)
         {
             GlobalCode.globalCode = airlineCode;

@@ -43,7 +43,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.Reason
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Insert Reason";
+            this.Page.Title = "Add Reason";
         }
 
         protected void btnSave_Click(object sender, EventArgs e)

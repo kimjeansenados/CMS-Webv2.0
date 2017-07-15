@@ -740,6 +740,10 @@ namespace CMSVersion2.UserAccess.UserRole.UserRoleModal
                                     if (childcountExist == 1)
                                     {
                                         BLL.UserRole.UpdateMenuAccess(menuId, userId, createdBy, 1, getConstr.ConStrCMS);
+                                    }//Added
+                                    if(childcountExist == 0)
+                                    {
+                                        BLL.UserRole.InsertMenuAccess(menuId, userId, createdBy, getConstr.ConStrCMS);
                                     }
                                 }
 

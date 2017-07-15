@@ -26,7 +26,7 @@
         }
     </style>
 
-<div class="wrapper">
+
 <div class="wrapper">
     <div id="page-wrapper">
         <div class="container">
@@ -40,8 +40,14 @@
                 </ol>
             </div>
             <!--- PAGE BODY--->
-            <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" AutoSize="true" AutoSizeBehaviors="HeightProportional" Width="1300px" Skin="Glow" VisibleStatusbar="false"></telerik:RadWindow>
+            <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server">
+            </telerik:RadAjaxLoadingPanel>
+            <telerik:RadAjaxPanel ID="RadAjaxPanel1" runat="server" LoadingPanelID="RadAjaxLoadingPanel1">
 
+            <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" AutoSize="true" AutoSizeBehaviors="HeightProportional" Width="1300px" Skin="Glow" VisibleStatusbar="false"></telerik:RadWindow>
+            <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow2" AutoSize="true" AutoSizeBehaviors="HeightProportional" Width="1300px" Skin="Glow" VisibleStatusbar="false"></telerik:RadWindow>
+            
+            
 
             <div class="row">
 
@@ -158,7 +164,7 @@
                         <Columns>                           
                             <telerik:GridBoundColumn DataField="No" HeaderText="#" HeaderStyle-Width="20px"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="AWBNO" HeaderText="AWB #" FooterText="TOTAL: "></telerik:GridBoundColumn>
-
+                            <telerik:GridBoundColumn DataField="MAWB" HeaderText="MAWB"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="SHIPPER" HeaderText="SHIPPER"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="CONSIGNEE" HeaderText="CONSIGNEE"></telerik:GridBoundColumn>
                             <telerik:GridBoundColumn DataField="CONSIGNEE ADDRESS" HeaderText="CONSIGNEE ADDRESS"></telerik:GridBoundColumn>
@@ -179,6 +185,7 @@
                 </telerik:RadGrid>
                 <br />              
             </div>
+        </telerik:RadAjaxPanel>
         </div>
     </div>
 </div>

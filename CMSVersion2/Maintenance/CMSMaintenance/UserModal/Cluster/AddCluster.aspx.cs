@@ -34,7 +34,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.Cluster
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Insert Cluster";
+            this.Page.Title = "Add Cluster";
         }
 
         public DataTable GetClusterDetailsById(Guid ID)
