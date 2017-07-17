@@ -107,12 +107,11 @@
     <Reference Include="Telerik.Reporting.Services.WebApi, Version=11.0.17.201, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
     <Reference Include="Telerik.Reporting.XpsRendering, Version=11.0.17.201, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
     <Reference Include="Telerik.ReportViewer.Html5.WebForms, Version=11.0.17.201, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
-    <Reference Include="Telerik.Web.Spreadsheet">
-      <HintPath>..\lib\RCAJAX\2017.1.118.45\AdditionalLibraries\Bin45\Telerik.Web.Spreadsheet.dll</HintPath>
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>C:\Users\Dev - Kim\Desktop\CMS Web Version\Webv2.0\CMS-Webv2.0\CMSVersion2\bin\Telerik.Web.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Web.UI, Version=2017.1.118.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2017.1.118.45\Telerik.Web.UI.dll</HintPath>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>C:\Users\Dev - Kim\Desktop\CMS Web Version\Webv2.0\CMS-Webv2.0\CMSVersion2\bin\Telerik.Web.UI.Skins.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Web.UI.Skins, Version=2017.1.118.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
