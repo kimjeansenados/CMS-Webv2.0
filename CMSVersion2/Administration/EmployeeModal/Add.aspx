@@ -124,7 +124,7 @@
                              <br /> 
 
                              <telerik:RadLabel ID="lbl_DLNumExp" runat="server" Text="Driver License Expiration" Width="30%"></telerik:RadLabel>
-                             <telerik:RadDatePicker ID="dpLicense" Width="230px" MinDate="2017/1/1"  ZIndex="1100000" AutoPostBack ="false" runat="server"></telerik:RadDatePicker>
+                             <telerik:RadDatePicker ID="dpLicense" Width="230px" MinDate="1950/1/1"  ZIndex="1100000" AutoPostBack ="false" runat="server"></telerik:RadDatePicker>
                              
                         </div>
                         </div>

@@ -35,5 +35,18 @@ namespace DataAccess
                 return ds;
             }
         }
+
+        public static DataSet GetShipmentTonnageByArea(Guid AreaID, string Constr)
+        {
+            using (SqlConnection con = new SqlConnection(Constr))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("sp_view_ShipmentTonnageByArea", con);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.Add("@AreaId", SqlDbType.UniqueIdentifier).Value = AreaID;
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+        }
     }
 }

@@ -49,7 +49,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.GoodsDescription
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Add Good Description";
+            this.Page.Title = "Edit Goods Description";
         }
 
         public DataTable GetGroupIsland(Guid ID)

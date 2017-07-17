@@ -65,7 +65,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.City
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Insert City";
+            this.Page.Title = "Add City";
         }
 
         public DataTable GetCityDetails(Guid ID)

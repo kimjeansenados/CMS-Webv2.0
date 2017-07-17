@@ -49,7 +49,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.DeliveryRemark
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            Page.Title = "Add Delivery Remarks";
+            Page.Title = "Add Delivery Remark";
         }
 
 

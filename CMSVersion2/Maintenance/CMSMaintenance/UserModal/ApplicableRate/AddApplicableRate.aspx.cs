@@ -86,7 +86,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.ApplicableRate
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Insert Applicable-Rate";
+            this.Page.Title = "Add Applicable Rate";
         }
 
         public DataTable GetApplicableRate(Guid ID)

@@ -14,8 +14,14 @@
                     <li>Bundle</li>
                 </ol>
             </div>
+             <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow2" AutoSize="true" AutoSizeBehaviors="HeightProportional" Width="1300px" Skin="Glow" VisibleStatusbar="false"></telerik:RadWindow>
+            <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server">
+            </telerik:RadAjaxLoadingPanel>
+            <telerik:RadAjaxPanel ID="RadAjaxPanel1" runat="server" LoadingPanelID="RadAjaxLoadingPanel1">
             <!--- PAGE BODY--->
             <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" AutoSize="true" AutoSizeBehaviors="HeightProportional" Width="1300px" Skin="Glow" VisibleStatusbar="false"></telerik:RadWindow>
+
+            
 
             <div class="row">
                 <telerik:RadLabel runat="server" Text="Date From:"></telerik:RadLabel>
@@ -90,7 +96,7 @@
                     PageSize="10"  
                     AllowFilteringByColumn="false" ShowFooter="true"
                     AutoGenerateColumns="false" OnPreRender="grid_Bundle_PreRender"
-                    AllowSorting="true">
+                    AllowSorting="true" ClientSettings-Scrolling-AllowScroll="true" Height="400">
 
                     <ExportSettings FileName="Bundle" HideStructureColumns="true" ExportOnlyData="true" 
                         IgnorePaging="true" UseItemStyles="true">
@@ -127,6 +133,7 @@
                 </telerik:RadGrid>
                 <br />
             </div>
+            </telerik:RadAjaxPanel>
         </div>
     </div>
 </div>    

@@ -6,6 +6,7 @@
     using Finance.Sales.Reports;
     using Finance.Collect;
     using CargoMonitoring.Reports;
+    using FLM.Report;
 
     public partial class ReportViewerForm1 : System.Web.UI.Page
     {
@@ -17,6 +18,9 @@
             switch (ReportGlobalModel.Report)
             {
                 //OPERATION -> MANIFEST
+                case "Booking":
+                    clientReportSource.Identifier = typeof(BookingReport).AssemblyQualifiedName;
+                    break;
                 case "PickUpCargo":
                     clientReportSource.Identifier = typeof(PickupReport).AssemblyQualifiedName;
                     break;
@@ -109,6 +113,14 @@
                
                 case "AWBTracking":
                     clientReportSource.Identifier = typeof(AWBTrackingReport).AssemblyQualifiedName;
+                    break;
+
+                //FLM
+                case "QtybyCommodity":
+                    clientReportSource.Identifier = typeof(FLM_Qtyby_Commodity).AssemblyQualifiedName;
+                    break;
+                case "WtbyCommodity":
+                    clientReportSource.Identifier = typeof(FLM_Wtby_Commodity).AssemblyQualifiedName;
                     break;
 
 

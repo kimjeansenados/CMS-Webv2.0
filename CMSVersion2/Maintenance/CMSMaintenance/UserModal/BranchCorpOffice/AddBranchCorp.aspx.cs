@@ -34,7 +34,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.BranchCorpOffice
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Edit BranchCorp";
+            this.Page.Title = "Add Branch Corp Office";
         }
 
         public DataTable GetBranchCorpById(Guid ID)

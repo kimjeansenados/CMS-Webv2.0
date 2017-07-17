@@ -108,30 +108,34 @@
     <Reference Include="Telerik.Reporting.XpsRendering, Version=11.0.17.201, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
     <Reference Include="Telerik.ReportViewer.Html5.WebForms, Version=11.0.17.201, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
     <Reference Include="Telerik.Web.UI">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX R3 2016\Bin45\Telerik.Web.UI.dll</HintPath>
+      <HintPath>C:\Users\Dev - Kim\Desktop\CMS Web Version\Webv2.0\CMS-Webv2.0\CMSVersion2\bin\Telerik.Web.UI.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Web.UI.Skins">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX R3 2016\Bin45\Telerik.Web.UI.Skins.dll</HintPath>
+      <HintPath>C:\Users\Dev - Kim\Desktop\CMS Web Version\Webv2.0\CMS-Webv2.0\CMSVersion2\bin\Telerik.Web.UI.Skins.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Core, Version=2017.1.109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Web.UI.Skins, Version=2017.1.118.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\AP CARGO - Back-up\CMS Web Central\CMS Web Central - (03-21-2017)\cmsversion2\Bin\Telerik.Windows.Documents.Core.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2017.1.118.45\Telerik.Web.UI.Skins.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Flow, Version=2017.1.109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2017.1.116.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\AP CARGO - Back-up\CMS Web Central\CMS Web Central - (03-21-2017)\cmsversion2\Bin\Telerik.Windows.Documents.Flow.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2017.1.118.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2017.1.109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2017.1.116.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\AP CARGO - Back-up\CMS Web Central\CMS Web Central - (03-21-2017)\cmsversion2\Bin\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2017.1.118.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Flow.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2017.1.109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2017.1.116.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\AP CARGO - Back-up\CMS Web Central\CMS Web Central - (03-21-2017)\cmsversion2\Bin\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2017.1.118.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Zip, Version=2017.1.109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2017.1.116.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\AP CARGO - Back-up\CMS Web Central\CMS Web Central - (03-21-2017)\cmsversion2\Bin\Telerik.Windows.Zip.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2017.1.118.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2017.1.116.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2017.1.118.45\AdditionalLibraries\Bin45\Telerik.Windows.Zip.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -247,6 +251,7 @@
     <Content Include="Corporate\StatementOfAccountAdjustment\AddStatementOfAccountAdjustment.aspx" />
     <Content Include="Corporate\StatementOfAccountPrint\StatementOfAccountPrint.aspx" />
     <Content Include="Customer\Customer.aspx" />
+    <Content Include="Customer\CustomerModal\EditCustomer.aspx" />
     <Content Include="Error\UnderMaintenance.aspx" />
     <Content Include="Error\UnderMaintenancePage.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -268,6 +273,7 @@
     <Content Include="Maintenance\AWBSeries\IssuanceModal\Add.aspx" />
     <Content Include="Maintenance\AWBSeries\IssuanceModal\Edit.aspx" />
     <Content Include="Maintenance\AWBSeries\Monitoring.aspx" />
+    <Content Include="Maintenance\AWBSeries\Reports\AwbIssuanceExport.aspx" />
     <Content Include="Maintenance\AWBSeries\Summary.aspx" />
     <Content Include="Maintenance\CMSMaintenance\CMSMaintenance.aspx" />
     <Content Include="Maintenance\CMSMaintenance\UserModal\AccountStatus\AddAccountStatus.aspx" />
@@ -364,6 +370,8 @@
     <Content Include="Report\Finance\Sales\SalesPerRevenueUnit.aspx" />
     <Content Include="Report\Finance\Sales\SalesPerShipmode.aspx" />
     <Content Include="Report\Finance\Sales\SalesPerUserLevel.aspx" />
+    <Content Include="Report\FLM\FLM_Qtyby_Commodity.aspx" />
+    <Content Include="Report\FLM\FLM_Wtby_Commodity.aspx" />
     <Content Include="Report\Operation\AWBNoModal\AWBTrackingModal.aspx" />
     <Content Include="Report\Operation\CargoMonitoring\Delivered.aspx" />
     <Content Include="Report\Operation\CargoMonitoring\Hold.aspx" />
@@ -371,6 +379,7 @@
     <Content Include="Report\Operation\CargoMonitoring\Offloaded.aspx" />
     <Content Include="Report\Operation\CargoMonitoring\Pending.aspx" />
     <Content Include="Report\Operation\CargoMonitoring\RUD.aspx" />
+    <Content Include="Report\Operation\Manifest\Booking.aspx" />
     <Content Include="Report\Operation\Manifest\BranchAcceptance.aspx" />
     <Content Include="Report\Operation\Manifest\Bundle.aspx" />
     <Content Include="Report\Operation\Manifest\CargoTransfer.aspx" />
@@ -728,6 +737,13 @@
     <Compile Include="Customer\Customer.aspx.designer.cs">
       <DependentUpon>Customer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer\CustomerModal\EditCustomer.aspx.cs">
+      <DependentUpon>EditCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerModal\EditCustomer.aspx.designer.cs">
+      <DependentUpon>EditCustomer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -786,6 +802,13 @@
     </Compile>
     <Compile Include="Maintenance\AWBSeries\Monitoring.aspx.designer.cs">
       <DependentUpon>Monitoring.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\AWBSeries\Reports\AwbIssuanceExport.aspx.cs">
+      <DependentUpon>AwbIssuanceExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\AWBSeries\Reports\AwbIssuanceExport.aspx.designer.cs">
+      <DependentUpon>AwbIssuanceExport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Maintenance\AWBSeries\Summary.aspx.cs">
       <DependentUpon>Summary.aspx</DependentUpon>
@@ -1510,6 +1533,32 @@
     <Compile Include="Report\Finance\Sales\SalesPerUserLevel.aspx.designer.cs">
       <DependentUpon>SalesPerUserLevel.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Report\FLM\FLM_Qtyby_Commodity.aspx.cs">
+      <DependentUpon>FLM_Qtyby_Commodity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\FLM\FLM_Qtyby_Commodity.aspx.designer.cs">
+      <DependentUpon>FLM_Qtyby_Commodity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FLM\FLM_Wtby_Commodity.aspx.cs">
+      <DependentUpon>FLM_Wtby_Commodity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\FLM\FLM_Wtby_Commodity.aspx.designer.cs">
+      <DependentUpon>FLM_Wtby_Commodity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FLM\Report\FLM_Qtyby_Commodity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\FLM\Report\FLM_Qtyby_Commodity.designer.cs">
+      <DependentUpon>FLM_Qtyby_Commodity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FLM\Report\FLM_Wtby_Commodity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\FLM\Report\FLM_Wtby_Commodity.designer.cs">
+      <DependentUpon>FLM_Wtby_Commodity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\GetColumnDataFromDataTable.cs" />
     <Compile Include="Report\Operation\AWBNoModal\AWBTrackingModal.aspx.cs">
       <DependentUpon>AWBTrackingModal.aspx</DependentUpon>
@@ -1596,6 +1645,13 @@
     <Compile Include="Report\Operation\CargoMonitoring\RUD.aspx.designer.cs">
       <DependentUpon>RUD.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Report\Operation\Manifest\Booking.aspx.cs">
+      <DependentUpon>Booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\Booking.aspx.designer.cs">
+      <DependentUpon>Booking.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Report\Operation\Manifest\BranchAcceptance.aspx.cs">
       <DependentUpon>BranchAcceptance.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1664,6 +1720,12 @@
     </Compile>
     <Compile Include="Report\Operation\Manifest\Reports\AWBTrackingReport .Designer.cs">
       <DependentUpon>AWBTrackingReport .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\Reports\BookingReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Operation\Manifest\Reports\BookingReport.Designer.cs">
+      <DependentUpon>BookingReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\Operation\Manifest\Reports\BranchAcceptance.cs">
       <SubType>Component</SubType>
@@ -1894,6 +1956,12 @@
     <EmbeddedResource Include="Report\Finance\Sales\Reports\SalesPerUserLevelReport.resx">
       <DependentUpon>SalesPerUserLevelReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\FLM\Report\FLM_Qtyby_Commodity.resx">
+      <DependentUpon>FLM_Qtyby_Commodity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\FLM\Report\FLM_Wtby_Commodity.resx">
+      <DependentUpon>FLM_Wtby_Commodity.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\Operation\CargoMonitoring\Reports\DeliveredReport.resx">
       <DependentUpon>DeliveredReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -1914,6 +1982,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Operation\Manifest\Reports\AWBTrackingReport .resx">
       <DependentUpon>AWBTrackingReport .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Operation\Manifest\Reports\BookingReport.resx">
+      <DependentUpon>BookingReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Operation\Manifest\Reports\BranchAcceptance.resx">
       <DependentUpon>BranchAcceptance.cs</DependentUpon>

@@ -72,7 +72,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.SBF
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Add Shipment Basic-Fee";
+            this.Page.Title = "Edit Shipment Basic Fee";
         }
 
         public DataTable GetShipmentFeeDetailsById(Guid ID)

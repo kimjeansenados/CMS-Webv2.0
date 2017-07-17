@@ -15,8 +15,20 @@
                     <li>Delivered</li>
                 </ol>
             </div>
-            <div class="row">
+             <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server">
+                </telerik:RadAjaxLoadingPanel>
+                <telerik:RadAjaxPanel ID="RadAjaxPanel1" runat="server" LoadingPanelID="RadAjaxLoadingPanel1">
+
                 <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow1" AutoSize="true" AutoSizeBehaviors="HeightProportional" Width="1300px" Skin="Glow" VisibleStatusbar="false"></telerik:RadWindow>
+
+                 <telerik:RadWindow RenderMode="Lightweight" Behaviors="Close" runat="server" ID="RadWindow2" AutoSize="true" AutoSizeBehaviors="HeightProportional" Width="1300px" Skin="Glow" VisibleStatusbar="false"></telerik:RadWindow>
+                
+               
+
+               
+
+            <div class="row">
+
 
                 <telerik:RadLabel ID="RadLabel1" runat="server" Text="Date From:"></telerik:RadLabel>
                 <telerik:RadDatePicker ID="Date1" runat="server" Skin="Glow" AutoPostBack="true"></telerik:RadDatePicker>
@@ -141,6 +153,7 @@
                      </MasterTableView>
                 </telerik:RadGrid>
             </div>
+            </telerik:RadAjaxPanel>
         </div>
     </div>
 </div>

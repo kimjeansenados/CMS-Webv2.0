@@ -30,6 +30,14 @@
         
         }
     </script>
+    <style>
+        #footer
+        {
+            position: absolute;
+            right:    0;
+            bottom:   10px;
+        }
+    </style>
 </head>
 <body>
 <form id="form1" runat="server" >
@@ -106,23 +114,8 @@
                     <div class="col-xs-12">
                         
                         <div class="col-xs-4">
-                            
-                           <%-- <br />
-                            <br />
-                              
-                            <br />
-                            <br />
-                             <br />
-                            
-                            <br />
-                             <br />
-                             <br />--%>
-                             
-                        </div>
-
-                        <div class="col-xs-4">
                             <asp:Label ID="Label3" runat="server" Text="Employee Name"></asp:Label>
-                             <asp:DropDownList Width="230px" Height="20px"  ID="ddLEmployee" runat="server" Style="font-size: 12px;">
+                             <asp:DropDownList Width="230px" Height="30px"  ID="ddLEmployee" runat="server" Style="font-size: 12px;">
                                     <asp:ListItem>--Select Employee--</asp:ListItem>
 
                                 </asp:DropDownList>

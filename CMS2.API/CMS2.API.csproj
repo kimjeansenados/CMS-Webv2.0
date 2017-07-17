@@ -41,8 +41,8 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -74,16 +74,24 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
       <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
       <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -161,6 +169,7 @@
     <Content Include="Content\WebApiTestClient.styles.css" />
     <Content Include="Content\WebApiTestClient.views.html" />
     <Content Include="Global.asax" />
+    <None Include="Properties\PublishProfiles\myProfile.pubxml" />
     <None Include="Scripts\jquery-1.6.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.2.js" />
     <Content Include="Scripts\jquery-1.6.2.min.js" />
@@ -175,8 +184,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BranchCorpOfficeController.cs" />
+    <Compile Include="Controllers\CityController.cs" />
+<<<<<<< HEAD
+    <Compile Include="Controllers\CommodityController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+=======
+>>>>>>> 0647aff67074991f0871ee6e0119c829f2154b03
     <Compile Include="Controllers\GPSController.cs" />
+    <Compile Include="Controllers\RevenueUnitController.cs" />
+    <Compile Include="Controllers\RevenueUnitTypeController.cs" />
     <Compile Include="Controllers\ShipmentController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

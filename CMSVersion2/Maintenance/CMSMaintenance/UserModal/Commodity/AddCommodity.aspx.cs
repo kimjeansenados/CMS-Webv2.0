@@ -33,7 +33,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.Commodity
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Insert Commodity";
+            this.Page.Title = "Add Commodity";
         }
 
         public DataTable getCommodityDetails(Guid ID)

@@ -327,7 +327,7 @@ namespace CMSVersion2.Corporate.CompanyModal
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Add Company";
+            this.Page.Title = "Edit Company";
         }
 
         #region Initialization

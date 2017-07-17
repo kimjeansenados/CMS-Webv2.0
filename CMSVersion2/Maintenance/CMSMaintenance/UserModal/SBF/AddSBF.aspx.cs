@@ -50,7 +50,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.SBF
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Add Group Description";
+            this.Page.Title = "Add Shipment Basic Fee";
         }
 
         public DataTable GetGroupIsland(Guid ID)

@@ -64,7 +64,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.ProvinceMaintenance
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Insert Province";
+            this.Page.Title = "Add Province";
         }
 
         public DataTable GetProvinceById(Guid ID)

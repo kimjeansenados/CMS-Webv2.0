@@ -70,14 +70,14 @@ namespace BusinessLogic
 
 
         public static void InsertEmployee(Guid Departmentid, Guid PositionId, Guid AssignedToAreaId , string firstname, string lastname, string middlename,
-            DateTime birthday, string telno, string mobileno, string email, string license, DateTime licenseExpiration,Guid createdby, string conStr)
+            DateTime birthday, string telno, string mobileno, string email, string license, DateTime? licenseExpiration,Guid createdby, string conStr)
         {
              DAL.EmployeeInfo.InsertEmployee(Departmentid, PositionId, AssignedToAreaId, firstname, lastname, middlename,
                 birthday, telno, mobileno, email, license, licenseExpiration, createdby, conStr);
         }
 
         public static void UpdateEmployee(Guid EmployeeId, Guid departmentId, Guid positionId, string firstname, string lastname, string middlename,
-            DateTime birthday, string telno, string mobileno, string email, string license, DateTime licenseExpiration, Guid createdby, 
+            DateTime birthday, string telno, string mobileno, string email, string license, DateTime? licenseExpiration, Guid createdby, 
             Guid assignedToAreaId, string conStr)
         {
             DAL.EmployeeInfo.UpdateEmployee(EmployeeId, departmentId, positionId, firstname, lastname, middlename,

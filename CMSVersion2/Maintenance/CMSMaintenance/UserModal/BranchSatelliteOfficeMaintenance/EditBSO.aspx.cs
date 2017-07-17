@@ -80,7 +80,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.BranchSatelliteOffice
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Edit BSO";
+            this.Page.Title = "Edit Branch Sat Office";
         }
 
         public DataTable GetAreaDetails(Guid ID)

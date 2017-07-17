@@ -29,7 +29,29 @@
             top.location.href = top.location.href;
         
         }
+
+function getRadWindow1() 
+{
+  var oWindow = null;
+  if (window.radWindow) oWindow = window.radWindow;
+  else if (window.frameElement.radWindow) oWindow = window.frameElement.radWindow;
+  return oWindow;
+}
+
+function closeWindow() 
+{
+  getRadWindow1().close();
+}
+
     </script>
+     <style>
+        #footer
+        {
+            position: absolute;
+            right:    0;
+            bottom:   10px;
+        }
+    </style>
 </head>
 <body>
 <form id="form1" runat="server">
@@ -42,7 +64,7 @@
                <div class="page">
                     <div class="row">
 
-                        <div class="col-xs-4">
+                        <div class="col-xs-6">
                             <asp:Label ID="Label3" runat="server" Text="Employee Name"></asp:Label>
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtEmployeeName" Enabled="false" runat="server"></telerik:RadTextBox>
                             <br />
@@ -108,7 +130,7 @@
                      </div>
                     <div class="row">
                   <telerik:RadButton ID="RadButton1" runat="server" Text="Save" OnClick="Save_Click"></telerik:RadButton>
-                  <telerik:RadButton ID="RadButton2" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click" OnClientClicked="redirect"></telerik:RadButton>
+                  <telerik:RadButton ID="RadButton2" runat="server" AutoPostBack="false" Text="Cancel" OnClientClicked="closeWindow" CausesValidation="false"></telerik:RadButton>
 
                     </div>
                 </div>

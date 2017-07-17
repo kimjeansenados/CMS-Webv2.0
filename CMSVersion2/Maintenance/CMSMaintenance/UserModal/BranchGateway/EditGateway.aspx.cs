@@ -78,7 +78,7 @@ namespace CMSVersion2.Maintenance.CMSMaintenance.UserModal.BranchGateway
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Page.Title = "Edit Area";
+            this.Page.Title = "Edit Gateway Sat Office";
         }
 
         public DataTable GetAreaDetails(Guid ID)

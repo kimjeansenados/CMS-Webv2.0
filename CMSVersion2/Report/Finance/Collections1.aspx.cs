@@ -27,6 +27,9 @@ namespace CMSVersion2.Report.Finance
                 REVENUETYPE.DataTextField = "RevenueUnitTypeName";
                 REVENUETYPE.DataValueField = "RevenueUnitTypeName";
                 REVENUETYPE.DataBind();
+
+                Date1.SelectedDate = DateTime.Now;
+                Date2.SelectedDate = DateTime.Now;
             }
         }
 
