@@ -6,7 +6,7 @@
     <div id="wrapper">
    <div id="page-wrapper"  >
 
-            <div class="container-fluid" ">
+            <div class="container-fluid">
 
                <div class="row">
                 <h3><i class="glyphicon glyphicon-user"></i> CUSTOMER</h3>
