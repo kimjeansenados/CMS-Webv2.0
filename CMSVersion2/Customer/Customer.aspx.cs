@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
+using System.IO;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using Telerik.Web.UI;
 using BLL = BusinessLogic;
@@ -60,7 +62,20 @@ namespace CMSVersion2.Customer
             convertdata = data.Tables[0];
             return convertdata;
         }
+        public void RadAsyncUpload1_FileUploaded(object sender, FileUploadedEventArgs e)
+        {
+            try
+            {
+                string path = Server.MapPath("~/Upload/");
+                e.File.SaveAs(path + e.File.GetName());
+            }
+            catch (Exception ex)
+            {
+                
+            }
+           
 
+        }
 
 
         protected void RadGrid2_NeedDataSource(object sender, Telerik.Web.UI.GridNeedDataSourceEventArgs e)
@@ -108,5 +123,23 @@ namespace CMSVersion2.Customer
                 //3 for delete flagging
             }
         }
+
+        protected void BtnSubmit_Click(object sender, EventArgs e)
+        {
+            DataTable dt;
+
+            foreach (UploadedFile f in RadAsyncUpload1.UploadedFiles)
+            {
+                string path =  Server.MapPath("~/Upload/");
+                var filename = f.FileName;
+                //string sheetName = Utilities.ExcelUtililty.GetSheetName(path + filename);
+                dt = Utilities.ExcelUtililty.ReadExcelFile("Sheet1", path + filename);
+                int count = BLL.Clients.ImportClient(dt, getConstr.ConStrCMS);
+                CountUploaded.Text = "No of clients uploaded : " + count + " out of " + dt.Rows.Count;
+                RadGrid2.DataSource = GetEmployee();
+                RadGrid2.DataBind();
+            }
+        }
+
     }
 }

@@ -87,27 +87,15 @@ namespace CMSVersion2.Maintenance.RateMatrix.RateMatrix
             foreach (UploadedFile f in RadAsyncUpload2.UploadedFiles)
             {
                 string path = Server.MapPath("~/Upload/");
-                //f.File.SaveAs(path + f.File.GetName());
                 var filename = f.FileName;
 
                 dt = ReadExcelFile("Sheet1", path + filename);
 
                 RadGrid2.DataSource = dt;
-                RadGrid2.DataBind();
-                //string path = f.ContentLength
-                //f.File.SaveAs(path + e.File.GetName());
-
-                //var getvar = f.GetName();
-
-
-                //var filesize = Convert.ToInt32(f.ContentLength);
-                //var physicalSavePath = MapPath(relativePath) + filename;
-                //f.SaveAs("c:\\uploaded files\\" + f.GetName(), true);
+                RadGrid2.DataBind();                
             }
         }
-
-
-
+        
         protected void btnUpload_Click(object sender, EventArgs e)
         {
 

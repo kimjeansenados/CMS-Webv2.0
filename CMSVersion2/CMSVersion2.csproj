@@ -252,6 +252,7 @@
     <Content Include="Corporate\StatementOfAccountPrint\StatementOfAccountPrint.aspx" />
     <Content Include="Customer\Customer.aspx" />
     <Content Include="Customer\CustomerModal\EditCustomer.aspx" />
+    <Content Include="Customer\CustomerModal\Import.aspx" />
     <Content Include="Error\UnderMaintenance.aspx" />
     <Content Include="Error\UnderMaintenancePage.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -743,6 +744,13 @@
     </Compile>
     <Compile Include="Customer\CustomerModal\EditCustomer.aspx.designer.cs">
       <DependentUpon>EditCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerModal\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerModal\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
