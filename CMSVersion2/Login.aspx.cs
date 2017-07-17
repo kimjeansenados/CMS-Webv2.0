@@ -147,7 +147,7 @@ namespace CMSVersion2
                             else
                             {
                                 string port = result + "?PortalID=";
-                                Response.Redirect(port + Encoding.Unicode.GetString(EncryptedUsername));
+                                Response.Redirect(port + Encoding.UTF8.GetString(EncryptedUsername));
                             }
                             //Response.Redirect("~/Default.aspx?PortalID=" + Encoding.Unicode.GetString(EncryptedUsername));
 

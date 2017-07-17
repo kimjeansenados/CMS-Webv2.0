@@ -21,7 +21,7 @@ namespace SOA_Generation_Service
 
         Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
 
-        private string ConStr { get; }
+        private string ConStr { get; set; }
         private string FileName { get { return getConstr.SoaReportsPath; } }
         private int BillPeriodDays { get; set; }
         private string StatementOfAccountNo { get; set; }

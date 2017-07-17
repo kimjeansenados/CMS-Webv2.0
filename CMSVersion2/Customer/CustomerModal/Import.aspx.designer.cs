@@ -7,64 +7,37 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CMSVersion2.Customer {
+namespace CMSVersion2.Customer.CustomerModal {
     
     
-    public partial class Customer {
+    public partial class Import {
         
         /// <summary>
-        /// RadAsyncUpload1 control.
+        /// ScriptManager control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadAsyncUpload RadAsyncUpload1;
+        protected global::Telerik.Web.UI.RadScriptManager ScriptManager;
         
         /// <summary>
-        /// CountUploaded control.
+        /// RadWindow1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadLabel CountUploaded;
+        protected global::Telerik.Web.UI.RadWindow RadWindow1;
         
         /// <summary>
-        /// RadButton1 control.
+        /// RadAsyncUpload2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadButton RadButton1;
-        
-        /// <summary>
-        /// RadAjaxPanel2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadAjaxPanel RadAjaxPanel2;
-        
-        /// <summary>
-        /// RadAjaxManager1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadAjaxManager RadAjaxManager1;
-        
-        /// <summary>
-        /// gridLoadingPanel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadAjaxLoadingPanel gridLoadingPanel;
+        protected global::Telerik.Web.UI.RadAsyncUpload RadAsyncUpload2;
         
         /// <summary>
         /// RadGrid2 control.
@@ -76,39 +49,30 @@ namespace CMSVersion2.Customer {
         protected global::Telerik.Web.UI.RadGrid RadGrid2;
         
         /// <summary>
-        /// RadWindowManager1 control.
+        /// RadButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadWindowManager RadWindowManager1;
+        protected global::Telerik.Web.UI.RadButton RadButton1;
         
         /// <summary>
-        /// UserListDialog control.
+        /// RadButton2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadWindow UserListDialog;
+        protected global::Telerik.Web.UI.RadButton RadButton2;
         
         /// <summary>
-        /// AddUser control.
+        /// RadButton4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadWindow AddUser;
-        
-        /// <summary>
-        /// ShowExport control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadWindow ShowExport;
+        protected global::Telerik.Web.UI.RadButton RadButton4;
     }
 }
