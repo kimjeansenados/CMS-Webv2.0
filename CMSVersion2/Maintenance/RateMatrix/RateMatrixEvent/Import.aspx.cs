@@ -5,6 +5,7 @@ using DAL = DataAccess;
 using System.Data;
 using System.Data.OleDb;
 using System.IO;
+using System.Text;
 
 namespace CMSVersion2.Maintenance.RateMatrix.RateMatrix
 {
@@ -131,8 +132,8 @@ namespace CMSVersion2.Maintenance.RateMatrix.RateMatrix
                 foreach (GridDataItem item in RadGrid2.Items)
                 {
 
-                    string OriginCityName = item["OriginCityName"].Text;
-                    string DestinationCityName = item["DestinationCityName"].Text;
+                    string OriginCityName = item["OriginCityName"].Text.Trim() ;
+                    string DestinationCityName = item["DestinationCityName"].Text.Trim();
                     string p1to5Cost = item["1to5Cost"].Text;
                     string p6to49Cost = item["6to49Cost"].Text;
                     string p50to249Cost = item["50to249Cost"].Text;
@@ -145,7 +146,7 @@ namespace CMSVersion2.Maintenance.RateMatrix.RateMatrix
                     if (OriginCityId == "" || DestinationId == "")
                     {
                         ErrorsOnImport = ErrorsOnImport + "Error: Row[" + counter + "]  ";
-
+                        
                     }
                     else
                     {
@@ -159,6 +160,7 @@ namespace CMSVersion2.Maintenance.RateMatrix.RateMatrix
 
                 }
 
+                ErrorLogs(ErrorsOnImport);
                 string script = "<script>RefreshParentPage()</" + "script>";
                 //RadScriptManager.RegisterStartupScript(this, this.GetType(), "RefreshParentPage", script, false);
                 ClientScript.RegisterStartupScript(this.GetType(), "RefreshParentPage", script);
@@ -178,6 +180,25 @@ namespace CMSVersion2.Maintenance.RateMatrix.RateMatrix
             }
 
             return OriginCityID;
+        }
+
+        public  void ErrorLogs(string error)
+        {
+
+            DateTime LogDate = DateTime.Now;
+            string _fileName = "\\ErrorLogs_" + LogFileDate(LogDate) + ".txt";
+            string ErrorLogFile = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\APCARGO\\Logs";
+            System.IO.Directory.CreateDirectory(ErrorLogFile);
+            string message = error;
+            
+            File.AppendAllText(@ErrorLogFile + _fileName, LogDate.ToString("yyyy/MM/dd HH:mm:ss") +  " :: " + message + "\r\n");
+        }
+
+        private  string LogFileDate(DateTime logDate)
+        {
+            StringBuilder date = new StringBuilder();
+            date.AppendFormat("{0}{1}{2}", logDate.Year.ToString("0000"), logDate.Month.ToString("00"), logDate.Day.ToString("00"));
+            return date.ToString();
         }
     }
 }
