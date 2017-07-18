@@ -21,7 +21,7 @@
      <div id="wrapper">
    <div id="page-wrapper"  >
 
-            <div class="container" ">
+            <div class="container" >
 
                 <!-- Page Heading -->
                 <div class="row">
