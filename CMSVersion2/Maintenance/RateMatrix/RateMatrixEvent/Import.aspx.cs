@@ -160,7 +160,7 @@ namespace CMSVersion2.Maintenance.RateMatrix.RateMatrix
 
                 }
 
-                ErrorLogs(ErrorsOnImport);
+                //ErrorLogs(ErrorsOnImport);
                 string script = "<script>RefreshParentPage()</" + "script>";
                 //RadScriptManager.RegisterStartupScript(this, this.GetType(), "RefreshParentPage", script, false);
                 ClientScript.RegisterStartupScript(this.GetType(), "RefreshParentPage", script);
